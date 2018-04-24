@@ -1,0 +1,42 @@
+= CalConnect ISO TC 211 19160-6
+:docnumber: 19160
+:partnumber: 6
+:tc-docnumber: XXX
+:edition: 1
+:ref-docnumber: ISO 19160-6:2018(E)
+:copyright-year: 2018
+:language: en
+:title-intro-en: Addressing
+:title-main-en: Machine interchange syntax
+:title-intro-fr: Adressage
+:title-main-fr: Syntaxe d'échange de machines
+:doctype: international-standard
+:docstage: 10
+:docsubstage: 92
+:technical-committee-type: TC
+:technical-committee-number: 211
+:technical-committee: Geographic information / Geomantics
+:workgroup-type: WG
+:workgroup-number: 7
+:workgroup: Information communities
+:secretariat: SN
+:language: en
+:draft:
+:toc:
+:stem:
+:xrefstyle: short
+
+include::sections/01-scope.adoc[]
+include::sections/02-norm-refs.adoc[]
+include::sections/03-termsdef.adoc[]
+include::sections/0x-conformance.adoc[]
+include::sections/05-process.adoc[]
+include::sections/06-model.adoc[]
+include::sections/07-instances.adoc[]
+include::sections/0a-foreword.adoc[]
+include::sections/0b-intro.adoc[]
+include::sections/a1-abstract-tests.adoc[]
+include::sections/a2-usage.adoc[]
+include::sections/a3-example-objs.adoc[]
+include::sections/a4-examples.adoc[]
+include::sections/zz-references.adoc[]

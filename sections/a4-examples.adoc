@@ -1,0 +1,294 @@
+
+[[AnnexD]]
+[appendix,subtype=informative]
+== Examples
+
+=== Example of address profiles defined in ISO 19160-1
+==== ISO 19160-1 C2
+[source,json]
+----
+profile = {
+
+  id: "http://www.iso.org/tc211/tc211-minimal.adp",
+  type: "iso-19160-address-profile",
+  publisher: "http://www.iso.org/tc211/",
+  signature: "...",
+
+  name: "TC 211 Minimal Address Profile",
+  locale: {
+    language: "en",
+    script: "en",
+  },
+
+  addressComponents: {
+    addressLine: {
+      dataType: CharacterString,
+      minCardinality: 1,
+      maxCardinality: n
+    },
+  },
+
+  addressClasses: {
+    minimalAddress: {
+      availableFields: [
+        {
+          componentType: addressLine,
+          min: 1,
+          max: n,
+          description: "One line of this address",
+          require: true,
+        }
+      ],
+      displayTemplates: [
+        {
+          /* TODO */
+          orientation: horizontal,
+          text: "({{ addressLine }}\n)*"
+          }
+        }
+      ]
+    }
+  }
+}
+----
+
+Address Instance
+
+[source,json]
+----
+addressInstance1 = {
+  profile: "http://www.iso.org/tc211/tc211-minimal.adp",
+  components: [
+    {
+      type: addressLine,
+      value: 14 Church Street,
+    },
+    {
+      type: addressLine,
+      value: Hatfield
+    },
+    {
+      type: addressLine,
+      value: South Africa
+    }
+  ]
+}
+
+addressInstance2 = {
+  profile: "http://www.iso.org/tc211/tc211-minimal.adp",
+  components: [
+    {
+      type: addressLine,
+      value: Statue of Liberty
+    },
+    {
+      type: addressLine,
+      value: Liberty Island
+    },
+    {
+      type: addressLine,
+      value: New York
+    },
+    {
+      type: addressLine,
+      value: NY
+    }
+  ]
+}
+----
+
+==== ISO 19160-1 C3
+[source,json]
+----
+profile = {
+
+  id: "http://www.iso.org/tc211/tc211-sample.adp",
+  type: "iso-19160-address-profile",
+  publisher: "http://www.iso.org/tc211/",
+  signature: "...",
+
+  name: "TC 211 Minimal Address Profile",
+  locale: {
+    language: "en",
+    script: "en",
+  },
+
+  dataTypes: {
+    addressNumberValue: {
+      primitiveType: Integer,
+      maxValue: 10000,
+      minValue: 1,
+    },
+    boxNumberValue: {
+      primitiveType: Integer,
+      maxValue: 100000,
+      minValue: 1,
+    }
+  }
+
+  addressComponents: {
+    addressNumber: {
+      dataType: addressNumberValue,
+    },
+    boxNumber: {
+      dataType: boxNumberValue,
+    },
+
+    /* Table C.4. Address component type */
+    thoroughfareName: {
+      dataType: thoroughfareNameValue,
+    },
+    localityName: {
+      dataType: CharacterString,
+    },
+    postOfficeName: {
+      dataType: CharacterString
+    },
+    postCode: {
+      dataType: CharacterString
+    },
+    countryName: {
+      dataType: thoroughfareName,
+    }
+    addressNumber: {
+      dataType: addressedObjectIdentifier,
+    },
+  },
+
+  addressClasses: {
+    streetAddress: {
+      description: Street Address,
+      availableFields: [
+        {
+          componentType: addressNumber,
+          minCardinality: 1,
+          maxCardinality: 1,
+          required: true,
+        },
+        {
+          componentType: thoroughfareName,
+          minCardinality: 1,
+          maxCardinality: 1,
+          required: true,
+        },
+        {
+          componentType: placeName
+          dataType: CharacterString,
+          minCardinality: 1,
+          maxCardinality: 1,
+          required: true,
+        },
+        {
+          componentType: postCode
+          minCardinality: 1,
+          maxCardinality: 1,
+          required: true,
+        },
+        {
+          componentType: countryName
+          minCardinality: 1,
+          maxCardinality: 1,
+          required: false,
+        },
+      ],
+      displayTemplates: [
+        {
+          /* TODO */
+        }
+      ]
+    },
+    boxAddress: {
+      availableFields: [
+        {
+          componentType: boxNumber,
+          minCardinality: 1,
+          maxCardinality: 1,
+          required: true,
+        },
+        {
+          componentType: postOfficeName,
+          dataType: CharacterString,
+          minCardinality: 1,
+          maxCardinality: 1,
+          required: true,
+        },
+        {
+          componentType: postCode
+          minCardinality: 1,
+          maxCardinality: 1,
+          required: true,
+        },
+        {
+          componentType: countryName
+          minCardinality: 1,
+          maxCardinality: 1,
+          required: false,
+        },
+      ],
+      displayTemplates: [
+        {
+          /* TODO */
+        }
+      ]
+    }
+  }
+}
+----
+
+Address Instance
+
+[source,json]
+----
+addressInstance1 = {
+  profile: "http://www.iso.org/tc211/tc211-sample.adp#streetAddress",
+  components: [
+    {
+      type: addressNumber,
+      value: 99
+    },
+    {
+      type: thoroughfareName,
+      value: {
+        name: Lombardy,
+        type: Street
+      }
+    },
+    {
+      type: placeName,
+      value: The Hills,
+    },
+    {
+      type: postCode,
+      value: 0039,
+    },
+    {
+      type: countryName,
+      value: South Africa
+    }
+  ]
+}
+
+boxInstance1 = {
+  profile: "http://www.iso.org/tc211/tc211-sample.adp#boxAddress",
+  components: [
+    {
+      type: boxNumber,
+      value: 345
+    },
+    {
+      type: postOfficeName,
+      value: Orlando,
+    },
+    {
+      type: postCode,
+      value: 2020
+    },
+    {
+      type: countryName,
+      value: South Africa
+    }
+  ]
+}
+----
+
+

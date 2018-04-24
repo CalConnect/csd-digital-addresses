@@ -1,0 +1,91 @@
+
+[[AnnexB]]
+[appendix,subtype=informative]
+== Usage
+
+=== Accuracy and Verification
+
+[source=Stephane Garcia]
+****
+I think it should be important to specify how these local post office
+can verify an address. Maybe there is a link to the OGC geocoding API
+SWG ?
+****
+
+An authority, such as the local post office, could "verify" a
+structured address that it is confirmed that this address instance is a
+"deliverable address" through an AddressCapability.
+
+The owner of the address, such as the tenant of an office, could
+provide its signed, structured address on an electronic business card.
+This allows the recipient of the business card to know whether the
+senders address is authentic. If this address is verified to be a
+"deliverable address", the recipient will know that items sent to this
+address will very likely be deliverable.
+
+Extra steps need to be taken here to allow this.
+
+=== Address As Identity
+
+Addresses do not only specify a location, in some cases they are part
+of the identity. For example, in business cards, an address can mean
+more than just an address, such as with vanity value.
+
+This document must support this functionality for it to be useful in
+contact exchange.
+
+[NOTE]
+====
+TODO: This is a comment
+
+As an example, the following address while complete, is more difficult
+to read / remember compared with the intentionally incomplete one below.
+====
+
+[source]
+----
+Suites 1107-1111,
+Floor 11,
+Central Building,
+1-3 Pedder Street,
+Central,
+Central & Western District,
+Hong Kong Island,
+Hong Kong
+----
+
+[NOTE]
+====
+Preferred address, as equally understandable (and deliverable):
+====
+
+[source]
+----
+Suite 1111,
+1 Pedder Street,
+Central,
+Hong Kong
+----
+
+[NOTE]
+====
+TODO: This ends the comment
+====
+
+=== Address As Destination
+
+In certain cases, an address is expected to be reachable either by
+person and/or post.
+
+An address instance should support being used in conjunction with
+routing information, acting as a waypoint, and/or supporting a
+source-defined route.
+
+For example, written instructions on how to deliver to a place that is
+unambiguous but terribly difficult to locate.
+
+[NOTE]
+====
+E.g., some buildings have split floors -- rooms may have the same floor
+identifier, but is actually inaccessible from the same floor.
+====

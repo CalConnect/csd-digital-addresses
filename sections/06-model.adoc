@@ -1,0 +1,337 @@
+
+== Model
+
+=== General Structure
+
+This document specifies the "Address Interchange Object" models ("AXO")
+with following components.
+
+[source=Stephane Garcia]
+****
+I think here it could be very useful to distinguish elements from
+19160-1 from elements added by 19160-6
+****
+
+image::images/19160-6-uml.png[]
+
+[[clause_address_profile_definition]]
+=== Address Profile Definition (AddressProfileDescription)
+
+This is the top-level object and corresponds to an _address profile_
+(<<ISO191601,clause 4.16>>).
+
+It contains:
+
+* Attributes:
+
+** ID: Uri: a unique identifier of this address profile definition
+
+** Type: Uri: the intended usage of this profile
+
+** Description: String; textual description of this definition
+
+** TTL (time-to-live): Integer; how often should a user re-fetch this
+profile for updated information, in seconds.
+
+* One or more AddressClassDescription definitions
+
+* Zero or more UserDefinedDataType definition
+
+* One or more AddressComponentDescription definitions
+
+* Publisher information
+
+* Validity information
+
+* Localization information
+
+* Area applicability
+
+* Signature
+
+
+==== Validity Information (ValidityInformation)
+
+Validity is specified by:
+
+[source=Stephane Garcia]
+****
+Does it use CI_Date ?
+****
+
+* validTo: DateTime; the date and time when this object becomes valid.
+
+* validFrom: DateTime; the date and time when this object becomes invalid.
+
+* version: DateTime; issuance date/time of this object
+
+[source=Stephane Garcia]
+****
+version: Is it taken from MD_Identifier ?
+****
+
+[source=Ronald Tse]
+****
+version:
+It was meant to be a simplistic “version” that allows differentiation of different instances of the published data. Would usage of MD_Identifier here be an overkill, since it includes many other attributes like authority, code, codeSpace, and description? Or we could find a way to align with it?
+****
+
+[source=Stephane Garcia]
+****
+I don’t know, I just wanted to point out that there are some metadata elements in this document and if possible, they should be aligned with ISO 19115-1
+Having had a second look at it, I would also suggest that the publisher information should be of type CI_Party
+****
+
+
+==== Publisher Information (PublisherInformation)
+
+Publisher information includes:
+
+* publisherName: CharacterString; the name of the publisher;
+
+* publisherUri: Uri; the URI that identifies the publisher, preferably
+an accessible location on the Internet.
+
+==== Area Applicability (Area)
+
+[source=Serena Coetzee]
+****
+Move encoding to Annex.
+****
+
+Area information includes:
+
+* countries: <<ISO3166-1>> 2-letter `code[0..*]`; in which
+jurisdictions this profile is valid
+
+* spatial: SpatialPosition; spatial description of the applicable area
+
+These attributes are not mutually exclusive, i.e., both can exist at
+the same time.
+
+==== Spatial Position (SpatialPosition)
+Spatial position information includes:
+
+* geometry: Geometry[0..*]; <<ISO19107>> geometry description of the
+location
+
+* spatialRefSys: URI[0..1]; <<ISO19107>> Spatial Reference System
+identifier (in URI form) that describes the "geometry" attribute
+
+[source=Stephane Garcia]
+****
+spatialRefSys: I think geometry already has a spatialRefSys embedded.
+
+Here maybe you would like to reference the metadata element
+MD_ReferenceSystem from 19115-1 rather than ISO 19107
+****
+
+==== Localization Information (LocalizationInformation)
+
+[source=Serena Coetzee]
+****
+Move encoding to Annex.
+****
+
+[source=Stephane Garcia]
+****
+Does it use PT_Locale ?
+****
+
+[source=Ronald Tse]
+****
+We didn't intend to use PT_Locale but perhaps it could work better here:
+
+a) PT_Locale refers to ISO 3166-1, which contains three sets of codes:
+alpha-2, alpha-3 and numeric. For clarity purposes in implementation,
+could we lock it down to one set of these codes?
+
+Yes it would be a valid extension of ISO 19115
+
+b) MD_CharacterSetCode refers to an IANA character set registry which describes the "encoding" but not the "script" used. For example, Chinese can be represented in Traditional or Simplified script -- in the IANA character registry, the encoding for both are usually Unicode and represented as UTF-8. Perhaps we could represent the ISO 15924 "script code" in an adjacent attribute?
+
+I don't think adding an attribute to PT_Locale would be a valid extension of ISO 19115.
+
+I suggest leaving localization (or locale) with an attribute of type PT_Locale for the language / country code / encoding + leaving the attribute script.
+And also we should ask for a change in ISO 19115-1 to add “script” into PT_Locale if we think it is needed.
+
+****
+
+Localization information includes:
+
+* language: <<ISO639-1>> 2-letter code
+* script: <<ISO15924>> 4-letter Code
+
+=== Address Signature (AddressSignature)
+
+Signature information includes:
+
+* algorithm: <<ISO14888>> Algorithm OID; the signature algorithm used
+for this signature
+
+* publicKey: Uri; where the public key of the signer used for this
+signature is found
+
+* signature: CharacterString; the signature itself encoded in Base64
+format
+
+=== Address Class Description (AddressClassDescription)
+
+AddressClassDescription corresponds to the `addressClass` specified in
+<<ISO191601>>.
+
+An AddressClassDescription contains:
+
+* Attributes: ID, Description
+
+* One or more AddressComponentDescription
+
+* One DisplayTemplate
+
+* One InputTemplate
+
+=== Data Types
+
+==== Primitive Data Types
+
+Primitive data types are defined in <<ISO19103>>, including:
+
+* CharacterString
+* DateTime, Date, Time
+* Number, Integer, Decimal, Real
+* Vector
+* Boolean
+
+==== User Defined Data Types
+
+TODO: How to define a user defined data type?
+
+[source=Stephane Garcia]
+****
+Does MD_DatatypeCode help ?
+****
+
+User defined data types are defined within the profile that utilizes
+them. A user defined data type can be composed of multiple primitive
+data types, and constraints can be set on them.
+
+* coreType: AddressComponentDataType
+
+* constraints: DataTypeConstraints
+
+==== Data Type Constraints
+
+Constraints that can be set depend on the underlying data type. For
+example, the maximum number of Post Office Box numbers.
+
+[source=Stephane Garcia]
+****
+Constraints: Will there be a constraint codelist or is this free text.
+And if so, why not use OCL?
+****
+
+* Number types support "maxValue" and "minValue".
+* The "CharacterString" data type supports "maxLength" and "minLength".
+* TODO: More
+
+As a constraint, it is also possible to provide a fixed list of
+accepted values to this type, such as the number of states in a country
+or districts in a city.
+
+=== Address Component Description (AddressComponentDescription)
+
+AddressComponentDescription corresponds to the addressComponent defined
+in <<ISO191601>>.
+
+* Attributes: key, description
+
+* dataType: AddressComponentDataType; one or more
+
+[[clause_address_instance]]
+=== Address Instance (AddressInstance)
+
+An instance of an address that conforms to an address profile, it contains:
+
+* profileId: Uri
+
+* components: AddressComponentInstance one to many
+
+* signature: AddressSignature
+
+* cap: AddressCapability
+
+* spatialPosition: SpatialPosition; spatial location information of an
+address instance
+
+* validity: ValidityInformaion; validity period of an address instance
+
+=== Address Component Instance (AddressComponentInstance)
+
+An instance of an address component that belongs to an AddressInstance,
+it contains:
+
+* type: CharacterString; the name of the AddressComponentDescription it
+conforms to
+
+* values: DataTypeInstance; the values of an AddressComponentDataType,
+depending on the type this may be one or multiple values.
+
+=== Address Capability (AddressCapability)
+
+A flag tagged on an AddressInstance to mark that it has fulfilled
+certain criteria:
+
+* capability: Uri; what capability has this instance fulfilled
+
+* signature: AddressSignature; to ensure that the capability is marked
+by someone that is trusted for verification of this capability
+
+[[clause_address_display_template]]
+=== Address Display Template (AddressDisplayTemplate)
+
+TODO: This section should be filled in.
+
+A show template indicates how an address instance belonging to an
+addressClass should be shown to a user. This will be based on a subset
+of PADTL and may contain further extensions.
+
+This may be performed using SVG for its layout capabilities.
+
+The resulting language should fulfil these criteria:
+
+* Simple to use and easy to understand
+
+* Not verbose like XML
+
+* Allows flexible formatting, such as hiding certain lines when there
+is not enough space
+
+* Can be specified by the profile authority, as well as by the address
+owner ("my address should be shown this way").
+
+Each DisplayTemplate should also provide an example for display
+purposes (e.g., Help section).
+
+DisplayTemplates should support RTL languages as well as horizontal and
+vertical layouts.
+
+<<clause_address_input_template>>
+=== Address Input Template (AddressInputTemplate)
+
+This section shows how an Input Form can be rendered according to the
+addressClass requirements. It should be assumed that users will not
+often be able to enter an address thoroughly in the correct, detailed
+structure. Therefore, the form should be easy to understand and take
+into account that easy addressClass switching is important.
+
+An application that adheres to this document may find that it is
+easiest for the user to first select the appropriate addressClass, then
+allowing users to (or automatically) add necessary components as they
+type.
+
+A sample input should be provided for illustration purposes.
+
+InputTemplates should support right-to-left languages as well as
+horizontal and vertical layouts.
+
+This section has to be completed.

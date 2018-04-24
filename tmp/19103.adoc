@@ -1,0 +1,17 @@
+= ISO 19103
+
+== Primitive types
+
+DateTime
+- Time
+- Date
+
+Number
+- Decimal
+- Integer
+- Real
+
+Boolean
+Vector
+CharacterString
+

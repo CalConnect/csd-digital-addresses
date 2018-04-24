@@ -1,0 +1,201 @@
+
+[[AnnexC]]
+[appendix,subtype=informative]
+== Examples Of Objects Specified In This Document
+
+=== AddressProfileDescription
+
+An AddressProfileDescription can be specified in the following object
+structure (in JSON)
+
+[source=Stephane Garcia]
+****
+Does this standard recommend JSON implementation? If not, shouldn’t
+there also be an example in XML as it is the common implementation
+language in 19139?
+****
+
+[source,json]
+----
+{
+
+  id: "http://www.iso.org/tc211/tc211-sample.adp",
+  type: "iso-19160-address-profile",
+  publisher: "http://www.iso.org/tc211/",
+  signature: "...",
+
+  name: "TC 211 Minimal Address Profile",
+  localization: {
+    language: "en",
+    script: "en",
+  },
+
+area: {
+  countries: ["uk"],
+},
+
+  dataTypes: {
+    addressedObjectIdentifier: {
+      primitiveType: Integer,
+    }
+  }
+  addressComponents: { ... }
+  addressClasses: { ... }
+}
+----
+
+=== AddressClassDescription
+An AddressClassDescription can be specified in the following object structure (in JSON)
+
+[source,json]
+----
+addressClasses: {
+  streetAddress: {
+    description: Street Address,
+    availableFields: [ (addressComponent) 1..* ... ]
+displayTemplate: { ... ],
+inputTemplte: {}
+
+  }
+}
+----
+
+=== ValidityInformation
+
+[source,json]
+----
+validity: {
+validFrom: 20171129Z000000,
+validTo: 20191129Z000000
+}
+----
+
+=== PublisherInformation
+
+[source,json]
+----
+publisher: {
+publisherName: UK Post Office,
+publisherUri: https://www.post.co.uk
+}
+----
+
+=== LocalizationInformation
+
+[source,json]
+----
+publisher: {
+language: en,
+script: Latn
+}
+----
+
+=== AddressSignature
+
+
+[source,json]
+----
+signature: {
+algorithm: 1.2.3.4.5.6.7.8.9,
+publicKey: https://www.post.co.uk/profile-signature.key,
+signature: BOLVMNoGNM1TLglnlxgm0a9t
+}
+----
+
+=== AddressClassDescription
+
+
+[source,json]
+----
+addressClassDescription: {
+id: streetAddress,
+description: A typical street address,
+addressComponents: [ ... ],
+displayTemplate: { ... },
+inputTemplate: { ... },
+}
+----
+
+=== User Defined Data Types
+
+[source,json]
+----
+dataTypes: {[
+  name: addressNumberValue,
+coreType: Integer,
+constraints: [ ... ],
+])
+----
+
+=== Data Type Constraints
+
+[source,json]
+----
+constraints: [{
+  maxValue: 10000,
+  minValue: 1,
+}]
+----
+
+=== AddressComponentDescription
+
+[source,json]
+----
+addressComponentDescription: {
+key: addressNumber,
+description: Street number,
+datatype: addressNumberValue
+}
+----
+
+=== AddressInstance
+
+[source,json]
+----
+addressInstance: {
+profileId: https://standards.iso.org/19160/-6/profiles/uk.adp,
+components: [ ... ],
+signature: { ... },
+cap: [ ... ]
+}
+----
+
+=== AddressComponentInstance
+
+[source,json]
+----
+addressComponentInstance: {
+type: addressNumber,
+values: [ 1001 ]
+}
+----
+
+=== AddressCapability
+
+[source,json]
+----
+addressCapability: {
+capability: https://standards.iso.org/19160/-6/capabilities/specified,
+signature: [ ... ]
+}
+----
+
+=== Address Display Template (AddressDisplayTemplate)
+This section should be filled in.
+
+[source,json]
+----
+addressDisplayTemplate: {
+...
+}
+----
+
+=== Address Input Template (AddressInputTemplate)
+This section should be filled in.
+
+[source,json]
+----
+addressInputTemplate: {
+...
+}
+----

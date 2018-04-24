@@ -1,0 +1,154 @@
+{
+  "profile": "$profile-identifier",
+
+  "thoroughfare": [
+    {
+      "level": "1",
+      "name": "Queen's",
+      "name_prefix": "",
+      "type": {
+        "preceding": "",
+        "succeeding": "Road"
+      },
+      "qualifier": {
+        "preceding": "",
+        "succeeding": "Central"
+      }
+    },
+    {
+      "level": "2",
+      "name": "Paix",
+      "name_prefix": "",
+      "type": {
+        "preceding": "Rue",
+        "succeeding": ""
+      },
+      "qualifier": {
+        "preceding": "de la",
+        "succeeding": ""
+      }
+    },
+    {
+      "level": "3",
+      "name": "Tiny",
+      "name_prefix": "",
+      "type": {
+        "preceding": "",
+        "succeeding": "Path"
+      },
+      "qualifier": {
+        "preceding": "",
+        "succeeding": "at the end"
+      }
+    }
+  ],
+
+  "postcode": "EC4Y 0HQ",
+
+  "locality": {
+
+    "region": [
+      {
+        "type": "Province",
+        "indicator": "Anhui"
+      },
+      {
+        "type": "Hefei Shi",
+        "indicator": "City"
+      }
+    ],
+
+    "district": [
+      {
+        "type": "County",
+        "indicator": "Chengfeng Xian"
+      },
+      {
+        "type": "Shuangdun Zhen",
+        "indicator": "City"
+      }
+    ],
+
+    "town": "Lubei Cun",
+    "service_qualifier": "BORDEUAX CEDEX 3"
+  },
+
+  "country": {
+    "name": "United Kingdom",
+    "code": "GB",
+    "mcr": "British Anartic Territory"
+  },
+
+  "delivery_identifier": [
+    {
+      "type": "PO Box",
+      "indicator": "246810"
+    }
+  ],
+
+  "address_identifier": {
+    "premises": [
+      {
+        "type": "",
+        "indicator": "10",
+        "indicator_suffix": "A"
+      },
+      {
+        "type": "House",
+        "indicator": "3",
+        "indicator_suffix": ""
+      }
+    ],
+
+    "extension": "Box 12 next to door",
+
+    "building": [
+      {
+        "level": 1,
+        "indicator": "London",
+        "type": {
+          "preceding": "The Tower Of",
+          "succeeding": ""
+        }
+      },
+      {
+        "level": 2,
+        "indicator": "White",
+        "type": {
+          "preceding": "",
+          "succeeding": "Tower"
+        }
+      }
+    ],
+
+    "wing": {
+      "type": "Chapel",
+      "indicator": "Chapel of St John the Evangelist"
+    },
+
+    "stairwell": {
+      "type": "Stairwell",
+      "indicator": "4"
+    },
+
+    "floor": {
+      "type": "Floor",
+      "indicator": "11"
+    },
+
+    "door": {
+      "type": "Suite",
+      "indicator": "1111"
+    }
+  },
+
+  "supplementary": "The mailbox opposite the dog house",
+  "defining_authority": "Royal Mail",
+  "routing": "Via Germany",
+
+  "script": "Armn",
+  "language": "ja"
+
+}
+
+

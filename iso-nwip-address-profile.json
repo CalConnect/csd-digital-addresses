@@ -1,0 +1,510 @@
+{
+  "id": "http://www.iso.org/19160/address-profile/us.asn1",
+
+  "title": "delivery point specification",
+  "description": " Delivery point specification is composed of country level information, defining authority, locality, postcode, thoroughfare, addressed object identifier, service point identifier and supplementary delivery point data",
+  "upu_element": 40,
+
+  "definitions": {
+
+    "thoroughfare": {
+
+      "type": "object",
+      "title": "thoroughfare",
+      "description": "Element which identifies the road or part of a road or other access route along which a delivery point can be accessed, either directly or via a secondary or tertiary road or access route.",
+
+      "additionalProperties": false,
+      "required": [ "levels" ],
+      "upu_element": 21,
+
+      "notes": [
+        "This element appears in the delivery point specification segment.  It comprises subelements for three occurrences, specified as primary, secondary and tertiary. Within each occurrence there are sub-elements for name, name prefix, type and qualifier, with the latter two having preceding or succeeding positions of parts of thoroughfare qualifier.",
+        "For addressing purposes, a thoroughfare need not be on land, e.g. a canal or river might serve as a thoroughfare in the address of a houseboat or of a construction on the bank.",
+        "A thoroughfare name may uniquely identify the thoroughfare or may need to be supplemented with type and qualifier information or other elements in order to be unique in the required context.",
+        "A thoroughfare name prefix may be used to separate connecting words without sorting significance from the main part of the name of the thoroughfare.",
+        "A thoroughfare type indicates the category or type of thoroughfare. Thoroughfare type can be used to distinguish between instances in the locality which have the same thoroughfare name. Thoroughfare type is separated from thoroughfare name and thoroughfare qualifier because it may have different abbreviation rules and/or a sorting significance which differs from its relative position in printed representations.",
+        "Thoroughfare type may precede or follow thoroughfare name in printed representations; its position may depend on national, regional and/or linguistic considerations, or may be specific to the thoroughfare concerned. For example, in Belgium, French language thoroughfare types, such as boulevard and drêve du generally precede the thoroughfare name, whilst their Flemish equivalents, laan and dreef, follow the thoroughfare name.",
+        "A thoroughfare qualifier distinguishes between different parts or instances of thoroughfare, within a locality, which have the same thoroughfare name and thoroughfare type.",
+        "Thoroughfare qualifier may be separated from thoroughfare name if it has different abbreviation rules and/or has a position in printed representations which is not adjacent to thoroughfare name or thoroughfare type. Its position in printed representations – at the beginning, between thoroughfare name and thoroughfare type, or at the end – may be determined by national, regional and/or linguistic considerations, or may be specific to the thoroughfare concerned.",
+        "A secondary thoroughfare identifies the road or part of a road or other thoroughfare in which a delivery point may be reached and which is accessed via primary thoroughfare.",
+        "A tertiary thoroughfare identifies the road or part of a road or other thoroughfare in which a delivery point may be reached and which is accessed via a primary thoroughfare and secondary thoroughfare."
+      ],
+
+      "examples": [
+        "San Marcos, Pine Ridge, Main, 6th, Charles de Gaulle.",
+        "Directionals such as North, SW and qualifiers such as Little, Upper are examples",
+        "“de la” in Avenue de la Republique, “of the” in Avenue of the Americas are examples of thoroughfare name prefix.",
+        "Avenue, Beach, Canal, Lane, Place, Road, Square, Street are examples of thoroughfare type."
+      ],
+
+      "type": "object",
+
+      "properties": {
+        "levels": {
+          "type": "array",
+          "minLength": "1",
+          "maxLength": "3",
+          "items": {
+            "type": "object",
+            "required": [ "name", "name_prefix", "type" ],
+            "properties": {
+              "name": { "type": "string" },
+              "name_prefix": { "type": "string" },
+              "type": {
+                "title": "thoroughfare type",
+                "type": "object",
+                "properties": {
+                  "name": { "type": "string" },
+                  "preceding": { "type": "string" },
+                  "suceeding": { "type": "string" }
+                }
+              },
+              "qualifier": {
+                "title": "thoroughfare qualifier",
+                "type": "object",
+                "properties": {
+                  "name": { "type": "string" },
+                  "preceding": { "type": "string" },
+                  "suceeding": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+
+    },
+
+    "postcode": {
+      "title": "postcode",
+      "description": "Element designating the code used for the sorting of mail.",
+      "type": "string",
+
+      "upu_element": 13,
+      "notes": [
+        "This element appears in the delivery point specification segment.",
+        "Some countries structure postcodes in two or more parts, with one part identifying the delivery region or postal processing facility at which delivery sorting should take place, the second defining the delivery office or route, within the area covered by that facility, and the third, if used, indicating the specific delivery point. For example, most French postcodes commence with the 2-digit number of the Département; British ones are separated into two parts, with the first being a two, three or four character code which indicates the postal district and the second identifying a delivery address or set of addresses within this.",
+        "Postcodes are sometimes referred to as postal codes, ZIPs or ZIP Codes.",
+        "Postcodes are not used in all countries. In many cases they are complementary information, providing only an encoded representation of locality, the (part of the) delivery route which includes the delivery point concerned and, possibly, the individual delivery point on that delivery route.",
+        "A postcode can relate to a single delivery point or to a group of delivery points which are related in postal processing terms, usually by virtue of their being served by a single delivery office or being on a single delivery route. It may, however, relate to other grouping parameters, such as special services.",
+        "Though normally having long-term, national significance, postcodes can be operator specific (c.f. Hays DX codes in the United Kingdom) and might have only temporary existence, as when a special postcode is assigned to handle mail resulting from a charity appeal, or when an existing assignment of codes is reformed due to changes in the scope or magnitude of delivery point distribution.",
+        "Though defined primarily for the purpose of sorting mail, postcodes are often used, outside the postal processing context, for other purposes. In particular, many organizations use them in marketing databases to link potential customer characteristics to geographic areas."
+      ]
+
+    },
+
+
+    "delivery_identifier": {
+      "title": "delivery service identifier",
+      "description": "Element which designates a delivery point, or a group of delivery points from which the postal operator may choose one, by reference to a defined identifier, rather than by reference to its physical location.",
+      "type": "array",
+
+      "upu_element": 19,
+      "examples": [
+        "Post office box numbers, BP (Boîte Postale), PRIVATE BAG, poste restante and business reply services."
+      ],
+      "notes": [
+        "A postal delivery service identifier appears in the delivery point specification segment.  It comprises sub-elements for two positions (alternate) with two parts: delivery service type and delivery service indicator for each position. A delivery service type is a sub-element indicating the type of delivery service. A delivery service indicator is a sub-element designating a specific delivery point, within the category identified by delivery service type, within, or accessed for postal delivery services via, the locality."
+      ],
+
+      "minItems": 1,
+      "maxItems": 2,
+      "items": {
+        {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "string" },
+              "indicator": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+
+
+    "region": {
+      "title": "region",
+      "type": "array",
+      "description": "Element specifying the geographic or administrative area of the country in which the town is situated.",
+      "upu_element": 15,
+      "notes": [
+        "This element appears in the delivery point specification segment. It comprises subelements for levels of region, each with positions, with a type and indicator for each level and position.",
+        "Regions are generally related to administrative rather than to postal geography."
+      ],
+      "examples": [
+        "Examples include French Departments, German Länder, British Counties and American States."
+      ],
+      "minItems": 1,
+      "items": {
+        "level": { "type": "integer" },
+        "positions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "properties": {
+              "type": { "type": "string" },
+              "indicator": { "type": "string" },
+              "position": { "type": "integer" }
+            }
+          }
+        }
+      }
+    },
+
+
+    "district": {
+      "title": "district",
+      "type": "array",
+      "description": "Element indicating the name of the area within or adjacent to the town in which a delivery point is located, or via which it is accessed.",
+
+      "upu_element": 17,
+      "examples": [
+        "Hamlet, Estate, Sector, Arrondissement, Conjunto, Colonia Juarez, Kebele 4, Moo"
+      ],
+      "notes": [
+        "This element appears in the delivery point specification segment. It comprises subelements for levels of district, each with positions, with a type and indicator for each level and position.",
+        "A district may be a commonly known name for an area, or it may be an area assigned for postal or administrative purposes. A district or sector may be one of a number of areas with a similar naming structure that may include a type and indicator structure.",
+        "“district” is used by some countries for high level administrative divisions that are mapped to element region while element district is reserved for sub-divisions of town."
+      ],
+
+      "minItems": 1,
+
+      "items": {
+        "type": "object",
+        "properties": {
+          "level": { "type": "integer" },
+          "positions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": { "type": "string" },
+                "indicator": { "type": "string" },
+                "position": { "type": "integer" }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "town": {
+      "title": "town",
+      "type": "string",
+      "description": "Element indicating the name of the populated place in which a delivery point is located, or near to or via which the delivery point is accessed.",
+      "upu_element": 16,
+      "notes": [
+        "This element appears in the delivery point specification segment."
+      ]
+    },
+
+    "service_qualifier": {
+      "title": "service_qualifier",
+      "type": "string",
+      "description": "Element designating the name of the distribution office used for delivery services.",
+      "upu_element": 35,
+      "examples": [
+        "BORDEAUX CEDEX, NANTES CEDEX 1, FUTUROSCOPE CEDEX."
+      ],
+      "notes": [
+        "This element appears in the delivery point specification segment."
+      ]
+    },
+
+    "country_name": {
+      "title": "country name",
+      "type": "string",
+      "description": "Element designating the country, dependency or area of geopolitical interest, in which a delivery point is located or via which the delivery point is accessed.",
+      "upu_element": 14,
+      "notes": [
+        "This element appears in the delivery point specification segment.",
+        "In specifying the country name, the language used may be significant.",
+        "Mobile delivery points, such as mobile homes and ships, might not be (permanently) located in or accessed via a particular country. Nevertheless, they are associated with a country and locality for delivery point specification purposes. Depending on the situation, these might correspond either to the place of registration or to the place in which the delivery point is currently located or is expected to move."
+      ]
+    },
+
+    "country_code": {
+      "title": "country code",
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 2,
+
+      "description": "Element designating the ISO 3166-1 code for the country, territory or area of geopolitical interest, in which a delivery point is located or via which the delivery point is accessed.",
+      "upu_element": 41,
+      "examples": [
+        "FR, NL, NZ"
+      ],
+      "notes": [
+        "This element appears in the delivery point specification segment.",
+        "The ISO 3166-1 two character alphabetic representation is specified.",
+        "In certain circumstances the country code may appear in an address presentation for cross border mail."
+      ]
+    },
+
+    "mcr": {
+      "title": "multi-country region",
+      "type": "string",
+      "description": "Element indicating a region in which the country, territory, or area of geopolitical interest is located and by which it may be more effectively recognized.",
+      "upu_element": 43,
+      "examples": [
+        "British West Indies (BWI)"
+      ],
+      "notes": [
+        "This element appears in the delivery point specification segment."
+      ]
+    },
+
+    "routing": {
+      "title": "international routing information",
+      "type": "string",
+      "description": "Element indicating how a country, territory or area of geopolitical interest may be reached.",
+      "upu_element": 44,
+      "examples": [
+        "VIA CAPE TOWN"
+      ],
+      "notes": [
+        "This element appears in the delivery point specification segment."
+      ]
+    },
+
+
+    "premises": {
+      "title": "premises identifier",
+      "type": "array",
+      "description": "Element designating the area, or the object on an area, adjacent to thoroughfare, in which the delivery point or delivery point access is located.",
+      "upu_element": 24,
+      "notes": [
+        "This element appears in the delivery point specification segment. It has two positions, each comprised of sub-elements for type, indicator and indicator suffix.",
+        "This may be in the form of a house or site number or name and will normally correspond to an area defined in the cadastral or municipal register of building plots."
+      ],
+
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string" },
+          "indicator": { "type": "string" },
+          "indicator_suffix": { "type": "string" }
+        }
+      }
+    },
+
+    "extension": {
+      "title": "extension designation",
+      "type": "string",
+      "description": "Element designating the specific delivery point where this is not uniquely identified, within country and locality, by other components of addressed object identifier.",
+      "upu_element": 28,
+      "notes": [
+        "This element appears in the delivery point specification segment."
+      ]
+    },
+
+    "building": {
+      "title": "building",
+      "type": "array",
+      "description": "Element identifying the number or name and type of the edifice or construction in or adjacent to which a delivery point is located.",
+      "upu_element": 26,
+      "notes": [
+        "This element appears in the delivery point specification and mail recipient despatching information segment. It comprises the sub-elements preceding building type, succeeding building type, and building indicator.",
+        "Building should be understood widely as identifying various constructions and groups of buildings.",
+        "This element comprises two levels of building in order to account for situations in which an individual building is designated along with a building complex. The building element at each level comprises the sub-elements preceding building type, succeeding building type, and building indicator."
+      ],
+      "examples": [
+        "Batiment A, Block 7, Houseboat, London Tower."
+      ],
+
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "properties": {
+          "level": { "type": "integer" },
+          "indicator": { "type": "string" },
+          "type": {
+            "type": "object",
+            "properties": {
+              "preceding": { "type": "string" },
+              "succeeding": { "type": "integer" }
+            }
+          }
+        }
+      }
+    },
+
+    "wing": {
+      "title": "wing",
+      "type": "object",
+      "description": "Element identifying, for a delivery point, the building section in which it is housed and/or the main entry door through which it is accessed.",
+      "upu_element": 29,
+      "notes": [
+        "This element appears in the delivery point specification segment and in the mail recipient despatching information segment. In each segment, it comprises the sub-elements wing type and wing indicator."
+      ],
+      "properties": {
+        "type": { "type": "string" },
+        "indicator": { "type": "string" }
+      }
+    },
+
+    "stairwell": {
+      "name": "stairwell",
+      "type": "object",
+      "description": "Element indicating access to floor or door within a building.",
+      "upu_element": 30,
+      "notes": [
+        "This element appears in the delivery point specification segment and in the mail recipient despatching information segment. In each segment, it comprises the sub-elements stairwell type and stairwell indicator."
+      ],
+      "examples": [
+        "Escalier."
+      ],
+      "properties": {
+        "type": { "type": "string" },
+        "indicator": { "type": "string" }
+      }
+    },
+
+    "floor": {
+      "title": "floor",
+      "type": "object",
+      "description": "Element indicating the floor or level on which a delivery point is located in a multistorey building.",
+      "upu_element": 31,
+      "notes": [
+        "This element appears in the delivery point specification segment and in the mail recipient despatching information segment. In each segment, it comprises the sub-elements floor type and floor indicator."
+      ],
+      "properties": {
+        "type": { "type": "string" },
+        "indicator": { "type": "string" }
+      }
+    },
+
+    "door": {
+      "title": "door",
+      "type": "object",
+      "description": "Element indicating the apartment, room or office in, at or adjacent to which a delivery point, situated within a building, is located.",
+      "upu_element": 32,
+      "notes": [
+        "This element appears in the delivery point specification segment and in the mail recipient despatching information segment. In each segment, it comprises the sub-elements door type and door indicator."
+      ],
+      "properties": {
+        "type": { "type": "string" },
+        "indicator": { "type": "string" }
+      }
+    }
+
+  },
+
+
+
+  "properties": {
+
+    "thoroughfare": { "$ref": "#/definitions/thoroughfare" },
+    "postcode": { "$ref": "#/definitions/postcode" },
+    "delivery_identifier": { "$ref": "#/definitions/delivery_identifier" },
+
+    "locality": {
+      "title": "locality",
+      "description": "Construct identifying the geographical area in or adjacent to which a delivery point is located.",
+      "type": "object",
+      "notes": [
+        "Locality is a component of delivery point specification. It could be a region, town, district, delivery service qualifier or a combination thereof.",
+        "Region, town and district provide for multiple levels of geographically localising information. Use need only be made of the number of levels which are actually required to unambiguously identify the geographic area in which the delivery point is situated. Thus region should be used, in accordance with the specifications of the postal operator, if there are multiple towns having the same name within the country."
+      ],
+
+      "properties": {
+        "region": { "$ref": "#/definitions/region" },
+        "district": { "$ref": "#/definitions/district" },
+        "town": { "$ref": "#/definitions/town" },
+        "service_qualifier": { "$ref": "#/definitions/service_qualifier" }
+      }
+    },
+
+
+    "country": {
+      "title": "country level information",
+      "type": "object",
+      "description": "Construct encompassing the postal address elements applying to countries or groupings of countries.",
+      "notes": [
+        "Country level information is a component of delivery point specification. It could be country name, country code, multi-country region, international routing information or a combination thereof.",
+        "As a rule, these elements are only included in address presentation for cross border mail, but in that situation, they are necessary to avoid risk of ambiguity."
+      ],
+      "properties": {
+        "country_name": { "$ref": "#/definitions/country_name" },
+        "country_code": { "$ref": "#/definitions/country_code" },
+        "mcr": { "$ref": "#/definitions/mcr" },
+        "routing": { "$ref": "#/definitions/routing" }
+      }
+    },
+
+
+    "address_identifier": {
+      "title": "addressed object identifier",
+      "type": "object",
+      "description": "Construct identifying a delivery point or a group of delivery points.",
+      "notes": [
+        "addressed object identifier is a component of delivery point specification. It could be premises identifier, extension designation, building, wing, stairwell, floor, door or a combination thereof.",
+        "If multiple delivery points are identified by the addressed object identifier, the postal operator chooses the appropriate one.  "
+      ],
+      "examples": [
+        "addressed object identifier “14” on “Spruenglistrasse” in “3006 Bern” identifies a multifamily building with a group of delivery points that are distinguished by the names of residents on the mailboxes."
+      ],
+      "contains": [
+        "premises": { "$ref": "#/definitions/premises" },
+        "extension": { "$ref": "#/definitions/extension" },
+        "building": { "$ref": "#/definitions/building" },
+        "wing": { "$ref": "#/definitions/wing" },
+        "stairwell": { "$ref": "#/definitions/stairwell" },
+        "floor": { "$ref": "#/definitions/floor" },
+        "door": { "$ref": "#/definitions/door" }
+      ]
+    },
+
+    "supplementary": {
+      "title": "supplementary delivery point data",
+      "type": "string",
+      "description": "Element providing additional data or instructions intended to facilitate access to, or designation of, a delivery point.",
+      "upu_element": 34,
+      "examples": [
+        "“Opposite number 23”, “50 metres to the left of the main door”, “Cruce Con Calle Obregon”."
+      ],
+      "notes": [
+        "This element appears in the delivery point specification segment. It comprises subelements for two occurrences specified as positions."
+      ]
+    },
+
+    "defining_authority": {
+      "title": "defining authority",
+      "type": "string",
+      "description": "Element designating the postal operator or other authority responsible for the definition and maintenance of the delivery point specification concerned.",
+      "upu_element": 12,
+      "notes": [
+        "This element appears in the delivery point specification segment.",
+        "Depending on the country, delivery point specifications may be defined and maintained by a central government agency, by regional or municipal authorities or by a postal operator.",
+        "In a competitive postal service environment, a delivery point might be owned or served exclusively by a particular postal operator. In such a case, the defining authority for the delivery point specification will normally be the identity of the postal operator which owns or serves the delivery point concerned. Even where this is not the case, different operators might have different ways of specifying a particular delivery point. For example, in the U.K., Hays has its own system of “DX codes” which differ from the postcodes in use by The Post Office."
+      ]
+    },
+
+
+    "script": {
+      "title": "script of the address",
+      "description": "ISO 15924 code, the writing system in which address is written",
+      "type": "string",
+      "minLength": 4,
+      "maxLength": 4
+    },
+
+    "language": {
+      "title": "language of the address",
+      "description": "ISO 639-1 code, Language in which address is provided",
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 2
+    }
+
+  }
+
+}
+
+
+

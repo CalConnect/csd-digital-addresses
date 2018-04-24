@@ -1,0 +1,207 @@
+
+== Terms and Definitions
+
+For the purposes of this document, the following terms and definitions
+apply.
+
+ISO and IEC maintain terminological databases for use in
+standardization at the following addresses:
+
+* ISO Online browsing platform: available at http://www.iso.org/obp
+* IEC Electropedia: available at http://www.electropedia.org
+
+:sectnums!:
+[[address]]
+=== address
+
+structured information that allows the unambiguous determination of an
+object for purposes of identification and location
+
+[.source]
+<<ISO191601>>
+
+[[addressable_object]]
+=== addressable object
+
+object that may be assigned an _address_ (<<address>>)
+
+[.source]
+<<ISO191601>>
+
+[[address_class]]
+=== address class
+
+description of a set of addresses that share the same address
+components, operations, methods, relationships, and semantics
+
+[.source]
+<<ISO191601>>
+
+=== address component
+
+constituent part of an _address_ (<<address>>)
+
+[.source]
+<<ISO191601>>
+
+=== address reference system
+
+defined set of address components and the rules for their combination
+into _addresses_ (<<address>>)
+
+=== lineage
+
+_provenance_ <<provenance>>, source(s) and production process(es) used
+in producing a resource
+
+[.source]
+<<ISO19115-1>>, 4.9
+
+=== locale
+
+definition of the subset of a user's environment that depends on
+language and cultural conventions
+
+[.source]
+<<ISO9945>>, 4.211, The notes given in ISO/IEC/IEEE 9945:2009 for this
+entry have been omitted. The note to entry has been added.
+
+=== parent address
+_address_ (<<address>>) of a _parent addressable object_
+(<<parent_addressable_object>>)
+
+[[parent_addressable_object]]
+=== parent addressable object
+
+_addressable object_ (<<addressable_object>>) that fully encloses one
+or more other addressable objects
+
+=== profile
+
+set of one or more base standards or subsets of base standards, and,
+where applicable, the identification of chosen clauses, classes,
+options and parameters of those base standards, that are necessary for
+accomplishing a particular function
+
+[.source]
+<<ISO19106>>, 4.5
+
+[[address_instance]]
+=== address instance
+
+an _address_ (<<address>>) that is set within the context of an
+_address class_ (<<address_class>>)
+
+[[provenance]]
+=== provenance
+
+organization or individual that created, accumulated, maintained
+and used records
+
+[[data_type]]
+=== data type
+
+specification of a value domain (<<ISO19103>> 4.37) with operations
+(<<ISO19103>> 4.26) allowed on values in this domain
+
+[.source]
+<<ISO19103>>, 4.14
+
+=== primitive data type
+
+a data type (<<data_type>>) that is defined in <<ISO19103>> as
+"Primitive Type" (Section 7.2)
+
+[[user_defined_data_type]]
+=== user defined data type
+
+a _data type_ (<<data_type>>) that is defined by the user in an
+_address profile_ (<<address>>) through the composure of other
+_data types_ (<<data_type>>) and constraints.
+
+=== user defined data type definition
+
+the definition of a _user defined data type_
+(<<user_defined_data_type>>)
+
+=== address capability
+
+marking on an _address instance_ (<<address_instance>>) to indicate its
+status
+
+=== address component instance
+TODO
+
+=== address component data type
+TODO
+
+=== address profile validity
+TODO
+
+=== address display template
+TODO
+
+=== address input template
+TODO
+
+=== signature
+the string of bits resulting from the signature process
+
+[.source]
+<<ISO14888>>, 4.15
+
+[[signature_key]]
+=== signature key
+
+a secret data item specific to an entity and usable only by this entity in the signature process
+
+[.source]
+<<ISO14888>>, 4.18
+
+=== verification key
+
+a data item which is mathematically related to an entity's _signature key_ <<signature_key>> and which is used by the verifier in the verification process
+
+[.source]
+<<ISO14888>>, 4.15
+
+=== object identifier
+[alt]#oid#
+
+the string of bits resulting from the signature process
+
+Some concrete representation for the identity of an object (instance). The object identifier (oid) is used to show examples of instances with identity, to formalize the notion of identity, and to support the notion in programming languages or database systems.
+
+[.source]
+<<ISO31320>>, 3.1.128
+
+=== language identifier
+[alt]#language symbol#
+
+symbol that uniquely identifies a particular language
+
+[.source]
+<<ISO639-3>>, 3.3
+
+[[script]]
+=== script
+
+set of graphic characters used for the written form of one or more languages
+
+[.source]
+<<ISO15924>>, 3.7
+
+=== script code
+
+combination of characters used to represent the name of a _script_ (<<script>>)
+
+[.source]
+<<ISO15924>>, 3.8
+
+=== URI
+
+uniform resource identifier
+
+[.source]
+<<ISO19103>>, 5.3
+

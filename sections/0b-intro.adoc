@@ -1,0 +1,63 @@
+[[introduction]]
+
+:sectnums!:
+== Introduction
+
+Addresses are among the most commonly exchanged information on the
+Internet, and the interchange of them is crucial to a number of
+Internet applications, such as electronic commerce, contact exchange,
+non-postal deliveries, as well as location scheduling.
+
+Yet, addresses mean much more than just geolocation information:
+
+*  As an identity, such as an office address
+
+*  As reference points (waypoints) in routing information
+
+*  As a delivery point
+
+The lifecycle of an address entry exchanged on the Internet typically
+starts with manual input of a human actor. This data, structured or
+unstructured, is then submitted to an Internet-connected application,
+and the application may in turn transmit this information to other
+applications or external parties on behalf of the user who provided the
+address. This transmission is usually performed to fulfil service
+delivery to the user. Within the process, there may be machine-human
+interactions that require display of the address in human-readable
+form, as well as machine-to-machine interactions on the address, such
+as for data validation.
+
+
+DEMO
+
+[stem]
+++++
+Ate : G_1 xx G_2 -> F_(q^k) / (F_(q^k))^r
+++++
+
+[stem]
+++++
+(P,Q) |-> f_(P,T)(Q)^((q^k - 1) / r)
+++++
+
+Additional caution must be placed on the accuracy (or lack thereof) of
+human input addresses. While an address specified by a human actor may
+unambiguously distinguish a location, there may be intention or
+unintentional omissions or additions to an "official" address (if there
+was one).
+
+This International Standard facilitates the interchange and interaction
+of addresses between humans and applications, and between applications,
+through the specification of a defined syntax for applications to
+interact and interchange international addresses, while supporting
+human input and human-machine interaction, without loss of fidelity.
+
+* ISO 19160-1:2015 _Addressing -- Conceptual model_;
+
+* ISO 19160-2 _Addressing -- Good practices for address assignment schemes_ (work in progress);
+
+* ISO 19160-3:2016 _Addressing -- Quality management for address data_;
+
+* ISO 19160-4:2017 _Addressing -- International postal address components and templates_;
+
+* ISO 19160-5 _Addressing -- Address rendering for purposes other than mail_ (work in progress).
