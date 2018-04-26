@@ -5,16 +5,14 @@
 
 === Accuracy and Verification
 
-[source=Stephane Garcia]
-****
-I think it should be important to specify how these local post office
-can verify an address. Maybe there is a link to the OGC geocoding API
-SWG ?
-****
-
 An authority, such as the local post office, could "verify" a
 structured address that it is confirmed that this address instance is a
 "deliverable address" through an AddressCapability.
+
+[source=Ronald Tse]
+****
+Link to the OGC geocoding API SWG?
+****
 
 The owner of the address, such as the tenant of an office, could
 provide its signed, structured address on an electronic business card.
@@ -34,13 +32,7 @@ more than just an address, such as with vanity value.
 This document must support this functionality for it to be useful in
 contact exchange.
 
-[NOTE]
-====
-TODO: This is a comment
-
-As an example, the following address while complete, is more difficult
-to read / remember compared with the intentionally incomplete one below.
-====
+This address represents a complete textual address instance.
 
 [source]
 ----
@@ -54,10 +46,11 @@ Hong Kong Island,
 Hong Kong
 ----
 
-[NOTE]
-====
-Preferred address, as equally understandable (and deliverable):
-====
+And this address represents the identical address as above,
+with a reduction of information that is already implied,
+which that does not reduce its correctness. This can be
+achieved by supplying a `displayTemplate` in the
+interchange address instance model.
 
 [source]
 ----
@@ -67,10 +60,6 @@ Central,
 Hong Kong
 ----
 
-[NOTE]
-====
-TODO: This ends the comment
-====
 
 === Address As Destination
 

@@ -1,7 +1,7 @@
 = CalConnect ISO TC 211 19160-6
 :docnumber: 19160
 :partnumber: 6
-:tc-docnumber: XXX
+:tc-document-number: 9999
 :edition: 1
 :ref-docnumber: ISO 19160-6:2018(E)
 :copyright-year: 2018
@@ -26,15 +26,22 @@
 :stem:
 :xrefstyle: short
 
+include::sections/0a-foreword.adoc[]
+include::sections/0b-intro.adoc[]
 include::sections/01-scope.adoc[]
 include::sections/02-norm-refs.adoc[]
 include::sections/03-termsdef.adoc[]
 include::sections/0x-conformance.adoc[]
-include::sections/05-process.adoc[]
-include::sections/06-model.adoc[]
-include::sections/07-instances.adoc[]
-include::sections/0a-foreword.adoc[]
-include::sections/0b-intro.adoc[]
+include::sections/04-process.adoc[]
+include::sections/05-data-types.adoc[]
+include::sections/06-common-models.adoc[]
+include::sections/07-profile.adoc[]
+include::sections/08-class.adoc[]
+include::sections/09-capability.adoc[]
+include::sections/10-instances.adoc[]
+include::sections/11-layout-template.adoc[]
+include::sections/12-display-template.adoc[]
+include::sections/13-form-template.adoc[]
 include::sections/a1-abstract-tests.adoc[]
 include::sections/a2-usage.adoc[]
 include::sections/a3-example-objs.adoc[]

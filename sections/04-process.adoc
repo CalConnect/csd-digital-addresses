@@ -1,52 +1,57 @@
 
-== Process of Address Profile and Address Instance Interchange
+== Process of address profile and address instance interchange
 
-TODO: Add diagrams
+=== Address profiles
 
-=== Address Profiles
+==== General
 
-==== Creating Address Profiles
+.Lifecycle of an address profile
+image::images/png/Model__AddressProfileStates__AddressProfileLifeCycle_10.png[]
+
+==== Creating interchange address profiles
 
 Address profiles are created by publishers.
 
-==== Publishing Address Profiles
+==== Publishing address profiles
 
 Publishers distribute their address profile to others through exchange
 or a registry.
 
-==== Updating Address Profiles
+==== Updating address profiles
 
 Publishers can update an address profile and re-distribute it by
 publishing using a new version number that supersedes the previously
 published one.
 
-==== Using Address Profiles
+==== Using address profiles
 
 Applications retrieve suitable profiles to:
 
 * render input forms for address input according to the
-profile-specified InputTemplate; or
+profile-specified form template; or
 
-* display addresses according to the profile-specified DisplayTemplate.
+* display addresses according to the profile-specified display template.
 
 Applications should consider the validity period of an address profile,
 and should periodically check with the publisher (or a registry that
 the publisher distributes via) the latest version of the address
 profile.
 
-==== Retiring Address Profiles
+==== Retiring address profiles
 
 Publisher can indicate the validity period of an address profile in the
-profile itself, which if the validTo date has passed, would indicate
+profile itself, which if the validity end date has passed, would indicate
 that the profile is retired.
 
 To immediately retire an address profile, the publisher could
 distribute a new version of the address profile with an expired
 validity period.
 
-=== Address Instances
 
-==== Creating an Address Instance
+
+=== Address instances
+
+==== Creating an address instance
 
 This section describes how an address instance is created. The desired
 address profile must be already retrieved for creating an address
@@ -54,7 +59,7 @@ instance that conforms to it.
 
 Typically, a user enters an address through an application interface
 that implements an input format that conforms to the address profile's
-InputTemplate, such as an application that runs on an operating system
+form template, such as an application that runs on an operating system
 or an Internet application. Such input interface may or may not provide
 a graphical form.
 
@@ -62,25 +67,25 @@ Conforming applications should not expect general users to be able to
 input an address with a fully-deduced structure. Immediately after
 input no capabilities are marked on the address instance.
 
-==== Sending an Address Instance
+==== Sending an address instance
 
 After a user inputs an address into a structured address form, the user
 submits this address to the designated recipient, which could be an
 e-retailer, an electronic business card, or a calendar event.
 
-==== Displaying an Address Instance
+==== Displaying an address instance
 
 The recipient or service that receives an address instance either
-already has the address profile definition or should obtain the address
-profile definition. With the address profile definition, it could then
+already has the interchange address profile or should obtain the address
+profile definition. With the interchange address profile, it could then
 display the address instance according to the address profile's
-DisplayTemplate.
+display template.
 
-==== Improving Quality of an Address Instance
+==== Improving quality of an address instance
 
 The recipient or service could process the address, such as to further
 clean up the address by improving the conformance level by fully
-deducing the address structure, which would add the AddressCapability
+deducing the address structure, which would add an address capability
 "https://standards.iso.org/19160/-6/capabilities/specified" to the
 address instance.
 
@@ -91,22 +96,22 @@ for shipping information. This would add the AddressCapability
 "https://standards.iso.org/19160/-6/capabilities/confirmed" to the
 address instance.
 
-==== Verifying an Address Instance
+==== Verifying an address instance
 
 The recipient or service could further validate the address, such as
 with a postal or addressing authority. This would add the
 AddressCapability "https://verifyingauthority/verified" to the address
 instance written by the verifying authority.
 
-==== Adding Associated Data to an Address Instance
+==== Adding associated data to an address instance
 
 A processor of an address instance could add extra information such as
 delivery instructions or routes as associated data.
 
 If the user already has a verified, structured address, then the
 service could save the effort for verifying the address. Custom
-AddressCapabilities could be added into the address instance.
+address capabilities could be added into the address instance.
 
-==== Discarding an Address Instance
+==== Discarding an address instance
 
 When a service no longer needs the address, it should be disposed of.

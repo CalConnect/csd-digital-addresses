@@ -1,0 +1,65 @@
+
+[[ix-address-class]]
+== Interchange address class
+
+=== General
+
+image::images/png/Model__AddressClass_9.png[]
+
+
+Interchange address class corresponds to the `addressClass` specified in
+<<ISO19160-1>>.
+
+A single profile can include and support multiple types of
+address formats, such as a numbered street address and a
+"PO Box" address simultaneously. Each of these address formats
+is represented as an interchange address class.
+
+[example]
+The US Numbered Thoroughfare Address with this syntax can be
+represented as an interchange address class:
+"`{ Complete Landmark Name or Complete Place Name }
++ { Complete Address Number * }
++ { Complete Street Name * }
++ { Complete Subaddress }
++ { Complete Place Name * }
++ { State Name * }
++ { Zip Code }
++ { Zip Plus 4 }
++ { Country Name }`"
+
+An interchange address class also provides a display template
+and a form template to allow the display and entry of an
+address instance of the address class.
+
+
+=== Attributes
+
+ID:: Unique identifier of this interchange address class. `Uri`.
+
+Description:: Textual description of this definition. `CharacterString`.
+
+
+=== Interchange address component
+
+The interchange address component corresponds to the
+`addressComponent` defined in <<ISO19160-1>>.
+
+==== Attributes
+
+Key:: an identifier of this interchange address component, must be unique within
+the interchange address class. `CharacterString`.
+
+Description:: Textual description of this component. `CharacterString`.
+
+Obligation:: Whether this component is mandatory, optional or disallowed.
+Values represented by the `ComponentObligation` object.
+
+maxCardinality:: the maximum number of components within this address class.
+
+minCardinality:: the minimum number of components within this address class.
+
+dataType:: describes the type of value accepted by this component.
+This takes an `AddressComponentDataType` value.
+
+

@@ -1,0 +1,83 @@
+
+[[ix-form-template]]
+== Form templates
+// (FormTemplate)
+
+=== General
+
+image::images/png/Model__FormTemplate_4.png[]
+
+This section shows how an input form can be rendered according to
+the interchange address class.
+
+The form template should use should also provide an example for display
+purposes in input (e.g., Help section).
+
+The form template is used for displaying an
+input form for entry of address data into an
+interchange address instance.
+Generally, one address class is represented
+by just one input template.
+
+NOTE: this part has no equivalence in PADTL.
+
+[[form-line]]
+=== Form line
+
+A form line represents a line within a form layout.
+
+It extends from the `LineElementReference` model, and
+takes a set of elements that contain
+form line element references (`FormLineElementReference`).
+
+[[form-line-element-ref]]
+=== Form line element reference
+
+[[form-line-element]]
+=== Form line element
+
+This represents an element within a form line.
+
+The three types of form line elements include:
+
+* static text element, representing static text, such as the
+phrase "PO Box" preceding the actual PO box number,
+for form layouts for PO boxes. This element is meant
+to be shown in the form but not allow modification.
+
+* data element, representing a variable data value
+that is contained in the interchange address component, such
+as the PO box number following the phrase "PO Box".
+This element indicates that a form field is required,
+and the data values accepted must adhere to the
+data value type defined in its associated interchange address component
+(through `FormLine`).
+
+* selection element, representing a selectable mapping between
+display string to code, e.g. in the case of the US States, "Rhode Island"
+the state name is mapped to the "RI" postal code. Represented
+by `SelectionElement` and within `SelectionPair`.
+
+In an empty form with fields generated from data elements,
+if the `example` values of the associated
+interchange address component are specified,
+such values should be used as "`placeholders`"
+for form input.
+
+
+=== User experience considerations
+
+It should be assumed that users may not often be able to enter
+an address thoroughly in the correct, detailed structure.
+
+Therefore, the form should be easy to understand and take
+into account that easy switching between interchange address classes
+is important.
+
+An application that adheres to this document may find that it is
+easiest for the user to first select the appropriate addressClass, then
+allowing users to (or automatically) add necessary components as they
+type.
+
+A sample input should be provided for demonstration purposes.
+

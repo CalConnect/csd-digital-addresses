@@ -3,7 +3,14 @@
 [appendix,subtype=informative]
 == Examples
 
+[source=Ronald Tse]
+****
+The following examples are in JSON but will
+provide XML before Committee Draft stage
+****
+
 === Example of address profiles defined in ISO 19160-1
+
 ==== ISO 19160-1 C2
 [source,json]
 ----

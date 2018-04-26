@@ -1,0 +1,87 @@
+
+[[ix-address-profile]]
+== Interchange address profile
+
+
+=== General
+
+The interchange address profile corresponds to a representation of
+the _address profile_ in <<ISO19160-1>> suitable for digital
+distribution.
+
+This model includes the necessary information for a machine-readable
+implementation to understand how to represent addresses, their requirements,
+as well as their input and display.
+
+image::images/png/Model__AddressProfile_0.png[]
+
+
+=== Attributes
+
+ID:: Unique identifier of this Interchange Address Profile. `Uri`.
+
+Type:: Intended usage of this profile. `Uri`.
+
+Description:: Textual description of this definition. `CharacterString`.
+
+TTL (time-to-live):: The maximum time interval between refreshing of this
+profile via an authoritative source, in seconds. `Integer`.
+
+Country:: The country of which this interchange address profile represents.
+Expressed as the 2-digit country code specified in <<ISO639-1>>.
+
+
+=== Publisher
+
+[source=Stephane Garcia]
+****
+I don’t know, I just wanted to point out that there are some metadata elements in this document and if possible, they should be aligned with ISO 19115-1. Having had a second look at it, I would also suggest that the publisher information should be of type CI_Party.
+****
+
+[source=Ronald Tse]
+****
+MD_Identifier is an overkill for just storing version information. Updated publisher to be of type "CI_PARTY".
+****
+
+Details about the publisher of this interchange address profile,
+including the name of publisher and an accessible URI that can be used
+to update this interchange address profile itself.
+
+Represented by the `CI_Party` object defined in <<ISO19115-1>>, the URI
+should be represented as a `CI_OnlineResource` object specified within
+`CI_Party.contactInfo.onlineResource`.
+
+=== Identifier
+
+Used to identify this interchange address profile and provide
+description of it.
+
+Represented by the `MD_Identifier` object defined in <<ISO19115-1>>.
+
+=== Area applicability
+
+[source=Stephane Garcia]
+****
+spatialRefSys: I think geometry already has a spatialRefSys embedded.
+
+Here maybe you would like to reference the metadata element
+MD_ReferenceSystem from 19115-1 rather than ISO 19107
+****
+
+[source=Ronald Tse]
+****
+The entire spatialPosition is replaced with MD_SpatialReference
+****
+
+The geographic representation of which this interchange address profile
+applies to. Overlapping geographic areas are allowed across different
+interchange address profiles.
+
+Represented by one or more `MD_SpatialRepresentation` objects
+defined in <<ISO19115-1>>.
+
+[example]
+Countries that have overlapping geographic claims are allowed to represent
+their purported claims in interchange address profiles.
+
+

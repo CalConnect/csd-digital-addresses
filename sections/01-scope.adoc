@@ -2,14 +2,15 @@
 :sectnums:
 == Scope
 
-This document specifies a machine-readable encoding for the digital
-storage and transmission of:
+This document specifies the "Address Interchange Object" models ("AXO"),
+suitable for machine encoding of the digital storage and transmission of
+the following components:
 
-* description of an address profile conforming to ISO 19160-1,
+* description of an address profile conforming to <<ISO19160-1>>,
 _Addressing -- Part 1: Conceptual model_;
 
-* address instances that conform to a specific profile of ISO 19160-1;
+* address instances that conform to a specific profile of <<ISO19160-1>>;
 and
 
 * a template for entering and displaying addresses conforming to a
-profile of ISO 19160-1.
+profile of <<ISO19160-1>>.

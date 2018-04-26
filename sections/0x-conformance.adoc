@@ -1,4 +1,7 @@
+
 :sectnums:
+
+////
 == Conformance
 
 === General
@@ -7,26 +10,39 @@ This part of ISO {docnumber} defines four classes of requirements and
 conformance. <<Annex-A>> specifies how conformance with these classes
 shall be tested.
 
-=== AddressProfileDescription
+=== IxAddressProfile
+
+Any machine-readable description of an address profile conforming to
+<<ISO19160-1>> which conformance is claimed shall pass all the
+requirements described in the abstract test suite in <<Annex-A-2>>.
+
+=== IxAddressClass
 
 Any machine-readable description of a profile conforming to
-<<ISO191601>> which conformance is claimed shall pass all the
+<<ISO19160-1>> which conformance is claimed shall pass all the
 requirements described in the abstract test suite in <<Annex-A-2>>.
 
-=== AddressInstance
+=== IxAddressComponent
 
-Any instance of AddressProfileDescription class for which
-AddressInstance conformance is claimed shall pass the requirements
-described in the abstract test suite in <<Annex-A-2>>.
-
-=== AddressInputTemplate
-
-Any AddressInputTemplate in address profile description model for which
-AddressInputTemplate conformance is claimed shall pass the requirements
-described in the abstract test suite in <<Annex-A-2>>.
-
-=== AddressDisplayTemplate
-
-Any AddressDisplayTemplate in address profile description model for
-which AddressDisplayTemplate conformance is claimed shall pass the
+Any machine-readable description of a profile conforming to
+<<ISO19160-1>> which conformance is claimed shall pass all the
 requirements described in the abstract test suite in <<Annex-A-2>>.
+
+=== IxAddressInstance
+
+Any instance of IxAddressProfile class for which
+IxAddressInstance conformance is claimed shall pass the requirements
+described in the abstract test suite in <<Annex-A-2>>.
+
+=== FormTemplate
+
+Any FormTemplate in Interchange Address Profile model for which
+FormTemplate conformance is claimed shall pass the requirements
+described in the abstract test suite in <<Annex-A-2>>.
+
+=== DisplayTemplate
+
+Any DisplayTemplate in Interchange Address Profile model for
+which DisplayTemplate conformance is claimed shall pass the
+requirements described in the abstract test suite in <<Annex-A-2>>.
+////

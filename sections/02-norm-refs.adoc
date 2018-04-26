@@ -2,16 +2,16 @@
 [bibliography]
 == Normative References
 
-The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.
+* [[[ISO19160-1,ISO 19160-1]]], _Addressing -- Part 1: Conceptual Model_
 
-* [[[ISO191601,ISO 19160-1]]], _Addressing -- Part 1: Conceptual Model_
+* [[[ISO19103,ISO 19103]]], _Geographic information -- Conceptual schema language_
 
-* [[[ISO19103,ISO 19103:2015]]], _Geographic information -- Conceptual schema language_
+* [[[ISO19115-1,ISO 19115-1]]], _Geographic information -- Metadata -- Part 1: Fundamentals_
 
-* [[[ISO19115-1,ISO19115-1:2014]]], _Geographic information -- Metadata -- Part 1: Fundamentals_
-
-* [[[ISO639-1,ISO 639-1]]], _Codes for the representation of names of languages  -- Part 1: Alpha-2 code_
+* [[[ISO639-1,ISO 639-1]]], _Codes for the representation of names of languages -- Part 1: Alpha-2 code_
 
 * [[[ISO3166-1,ISO 3166-1]]], _Codes for the representation of names of countries and their subdivisions -- Part 1: Country code_
 
-* [[[ISO15924,ISO 15924:2004]]], _Information and documentation -- Codes for the representation of names of scripts_
+* [[[ISO15924,ISO 15924]]], _Information and documentation -- Codes for the representation of names of scripts_
+
+* [[[ISO14888-3,ISO/IEC 14888-3]]], _Information technology -- Security techniques -- Digital signatures with appendix -- Part 3: Discrete logarithm based mechanisms_

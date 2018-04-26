@@ -6,10 +6,10 @@
 
 * [[[ISO19106,ISO 19106:2004]]], _Geographic information -- Profiles_
 
-* [[[ISO14888,ISO/IEC 14888-1:2017]]], _Information technology -- Security techniques -- Digital signatures with appendix -- Part 1: General_
-
 * [[[ISO31320,ISO/IEC/IEEE 31320-2:2012]]], _Information technology -- Modeling Languages -- Part 2: Syntax and Semantics for IDEF1X97 (IDEFobject)_
 
 * [[[ISO639-3,ISO/IEC 639-3:2007]]], _Codes for the representation of names of languages -- Part 3: Alpha-3 code for comprehensive coverage of languages_
 
-* [[[ISO19107,ISO 19107:2017]]], _Geographic information -- Spatial schema_
+* [[[ISO19139,ISO 19139:2006]]], _Geographic information -- Metadata -- XML schema implementation_
+
+* [[[ISO15961,ISO/IEC 15961:2004]]], _Information technology -- Radio frequency identification (RFID) for item management -- Data protocol: application interface_

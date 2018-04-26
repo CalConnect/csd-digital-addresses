@@ -1,0 +1,54 @@
+
+[[ix-data-types]]
+== Data types
+
+=== Primitive and core data types
+
+These are the common data types used within this document.
+
+Primitive data types (`PrimitiveTypes`) are defined in <<ISO19103,clause 7.2>>,
+including:
+
+* `CharacterString`
+* `DateTime`, `Date`, `Time`
+* `Number`, `Integer`, `Decimal`, `Real`
+* `Vector`
+* `Boolean`
+
+Core data types (`CoreTypes`) are defined in <<ISO19103,clause A.2>>.
+
+image::images/png/Model__DataTypes_2.png[]
+
+=== User-defined data types
+
+[source=Stephane Garcia]
+****
+Does MD_DatatypeCode help ?
+****
+
+User defined data types are defined within the profile that utilizes
+them. A user defined data type can be composed of multiple primitive
+data types, and constraints can be set on them.
+
+coreType:: AddressComponentDataType
+
+constraints:: DataTypeConstraints
+
+==== Data Type Constraints
+
+[source=Stephane Garcia]
+****
+Constraints: Will there be a constraint codelist or is this free text.
+And if so, why not use OCL?
+****
+
+Constraints that can be set depend on the underlying data type. For
+example, the maximum number of Post Office Box numbers.
+
+* Number types: "maxValue" and "minValue".
+* Number and characters: "maxLength" and "minLength".
+* TODO: More
+
+As a constraint, it is also possible to provide a fixed list of
+accepted values to this type, such as the number of states in a country
+or districts in a city.

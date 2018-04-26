@@ -1,12 +1,10 @@
 
 [[AnnexC]]
 [appendix,subtype=informative]
-== Examples Of Objects Specified In This Document
+== Examples of objects specified in this document
 
-=== AddressProfileDescription
-
-An AddressProfileDescription can be specified in the following object
-structure (in JSON)
+Models specified in this document can be represented in various
+object structures, including in XML <<ISO19139>> and in JSON.
 
 [source=Stephane Garcia]
 ****
@@ -14,6 +12,13 @@ Does this standard recommend JSON implementation? If not, shouldn’t
 there also be an example in XML as it is the common implementation
 language in 19139?
 ****
+
+[source=Ronald Tse]
+****
+Yes, we shall provide XML before Committee Draft stage
+****
+
+=== IxAddressProfile
 
 [source,json]
 ----
@@ -44,8 +49,7 @@ area: {
 }
 ----
 
-=== AddressClassDescription
-An AddressClassDescription can be specified in the following object structure (in JSON)
+=== IxAddressClass
 
 [source,json]
 ----
@@ -60,7 +64,7 @@ inputTemplte: {}
 }
 ----
 
-=== ValidityInformation
+=== Validity
 
 [source,json]
 ----
@@ -90,7 +94,7 @@ script: Latn
 }
 ----
 
-=== AddressSignature
+=== Signature
 
 
 [source,json]
@@ -102,7 +106,7 @@ signature: BOLVMNoGNM1TLglnlxgm0a9t
 }
 ----
 
-=== AddressClassDescription
+=== IxAddressClass
 
 
 [source,json]
@@ -137,7 +141,7 @@ constraints: [{
 }]
 ----
 
-=== AddressComponentDescription
+=== IxAddressComponent
 
 [source,json]
 ----
@@ -148,7 +152,7 @@ datatype: addressNumberValue
 }
 ----
 
-=== AddressInstance
+=== IxAddressInstance
 
 [source,json]
 ----
@@ -160,7 +164,7 @@ cap: [ ... ]
 }
 ----
 
-=== AddressComponentInstance
+=== IxAddressInstanceComponent
 
 [source,json]
 ----
@@ -180,22 +184,30 @@ signature: [ ... ]
 }
 ----
 
-=== Address Display Template (AddressDisplayTemplate)
-This section should be filled in.
+=== DisplayTemplate
+
+[source=Ronald Tse]
+****
+Fill in.
+****
 
 [source,json]
 ----
-addressDisplayTemplate: {
+DisplayTemplate: {
 ...
 }
 ----
 
-=== Address Input Template (AddressInputTemplate)
-This section should be filled in.
+=== Form template (FormTemplate)
+
+[source=Ronald Tse]
+****
+Fill in.
+****
 
 [source,json]
 ----
-addressInputTemplate: {
+FormTemplate: {
 ...
 }
 ----

@@ -1,62 +1,67 @@
 
+[[terms]]
 == Terms and Definitions
 
-For the purposes of this document, the following terms and definitions
-apply.
-
-ISO and IEC maintain terminological databases for use in
-standardization at the following addresses:
-
-* ISO Online browsing platform: available at http://www.iso.org/obp
-* IEC Electropedia: available at http://www.electropedia.org
-
-:sectnums!:
-[[address]]
+[[term-address]]
 === address
 
 structured information that allows the unambiguous determination of an
 object for purposes of identification and location
 
 [.source]
-<<ISO191601>>
+<<ISO19160-1>>
 
-[[addressable_object]]
+[[term-addressable-object]]
 === addressable object
 
-object that may be assigned an _address_ (<<address>>)
+object that may be assigned an _address_ (<<term-address>>)
 
 [.source]
-<<ISO191601>>
+<<ISO19160-1>>
 
-[[address_class]]
+
+[[term-address-class]]
 === address class
 
 description of a set of addresses that share the same address
 components, operations, methods, relationships, and semantics
 
 [.source]
-<<ISO191601>>
+<<ISO19160-1>>
 
+
+[[term-ix-address-class]]
+=== interchange address class
+
+representation of an _address class_ (<<term-address-class>>)
+suitable for interchange
+
+
+[[term-address-component]]
 === address component
 
-constituent part of an _address_ (<<address>>)
+constituent part of an _address_ (<<term-address>>)
 
 [.source]
-<<ISO191601>>
+<<ISO19160-1>>
 
-=== address reference system
+[[term-ix-address-component]]
+=== interchange address component
 
-defined set of address components and the rules for their combination
-into _addresses_ (<<address>>)
+representation of an _address component_ (<<term-address-component>>)
+suitable for interchange
 
+
+[[term-lineage]]
 === lineage
 
-_provenance_ <<provenance>>, source(s) and production process(es) used
+_provenance_ <<term-provenance>>, source(s) and production process(es) used
 in producing a resource
 
 [.source]
-<<ISO19115-1>>, 4.9
+<<ISO19115-1,clause 4.9>>
 
+[[term-locale]]
 === locale
 
 definition of the subset of a user's environment that depends on
@@ -64,18 +69,22 @@ language and cultural conventions
 
 [.source]
 <<ISO9945>>, 4.211, The notes given in ISO/IEC/IEEE 9945:2009 for this
-entry have been omitted. The note to entry has been added.
+entry have been omitted.
 
+[[term-parent-address]]
 === parent address
-_address_ (<<address>>) of a _parent addressable object_
-(<<parent_addressable_object>>)
+_address_ (<<term-address>>) of a _parent addressable object_
+(<<term-parent-addressable-object>>)
 
-[[parent_addressable_object]]
+
+[[term-parent-addressable-object]]
 === parent addressable object
 
-_addressable object_ (<<addressable_object>>) that fully encloses one
+_addressable object_ (<<term-addressable-object>>) that fully encloses one
 or more other addressable objects
 
+
+[[term-profile]]
 === profile
 
 set of one or more base standards or subsets of base standards, and,
@@ -84,124 +93,163 @@ options and parameters of those base standards, that are necessary for
 accomplishing a particular function
 
 [.source]
-<<ISO19106>>, 4.5
+<<ISO19106,clause 4.5>>
 
-[[address_instance]]
-=== address instance
+[[term-ix-address-profile]]
+=== interchange address profile
 
-an _address_ (<<address>>) that is set within the context of an
-_address class_ (<<address_class>>)
+_profile_ (<<term-profile>>) that contains data requirements
+and layout templates for multiple _address classes_
 
-[[provenance]]
+
+[[term-ix-address-instance]]
+=== interchange address instance
+
+an _address_ (<<term-address>>) that is set within the context of an
+_interchange address class_ (<<term-ix-address-class>>)
+
+
+[[term-provenance]]
 === provenance
 
 organization or individual that created, accumulated, maintained
 and used records
 
-[[data_type]]
+[[term-data-type]]
 === data type
 
 specification of a value domain (<<ISO19103>> 4.37) with operations
 (<<ISO19103>> 4.26) allowed on values in this domain
 
 [.source]
-<<ISO19103>>, 4.14
+<<ISO19103,clause 4.14>>
 
+[[primitive-data-type]]
 === primitive data type
 
-a data type (<<data_type>>) that is defined in <<ISO19103>> as
-"Primitive Type" (Section 7.2)
+data type (<<term-data-type>>) defined as "`Primitive Type`"
+in <<ISO19103,section 7.2>>
 
-[[user_defined_data_type]]
+
+[[term-ud-data-type]]
 === user defined data type
 
-a _data type_ (<<data_type>>) that is defined by the user in an
-_address profile_ (<<address>>) through the composure of other
-_data types_ (<<data_type>>) and constraints.
+_data type_ (<<term-data-type>>) defined by the user in an
+_interchange address profile_ (<<term-ix-address-profile>>)
+through the composure of other
+_data types_ (<<term-data-type>>) and constraints
 
+[[term-ud-data-type-def]]
 === user defined data type definition
 
-the definition of a _user defined data type_
-(<<user_defined_data_type>>)
+definition of a _user defined data type_
+(<<term-ud-data-type>>)
 
+[[term-address-capability]]
 === address capability
 
-marking on an _address instance_ (<<address_instance>>) to indicate its
+marking on an _address instance_ (<<term-ix-address-instance>>) to indicate its
 status
 
-=== address component instance
-TODO
 
-=== address component data type
-TODO
+[[term-address-layout-template]]
+=== address layout template
 
-=== address profile validity
-TODO
+specification of layout and positioning of
+_address components_ (<<term-address-component>>)
+for an _interchange address instance_(<<term-ix-address-instance>>)
+of an _address class_ (<<term-address-class>>)
 
 === address display template
-TODO
 
-=== address input template
-TODO
+address layout template (<<term-address-layout-template>>)
+for the display of _interchange address instances_(<<term-ix-address-instance>>)
+of an _address class_ (<<term-address-class>>)
 
+=== address form template
+
+address layout template (<<term-address-layout-template>>)
+of an input form for the entry of
+_interchange address instances_(<<term-ix-address-instance>>)
+of an _address class_ (<<term-address-class>>)
+
+[[term-address-processor]]
+=== address process
+
+entity that processes _interchange address instances_ (<<term-ix-address-instance>>)
+
+
+[[term-address-profile-distributor]]
+=== address profile distributor
+
+entity that distributes _interchange address profiles_ (<<term-ix-address-profile>>)
+
+
+[[term-signature]]
 === signature
+
 the string of bits resulting from the signature process
 
 [.source]
-<<ISO14888>>, 4.15
+<<ISO14888-3,clause 4.15>>
 
-[[signature_key]]
+[[term-signature-key]]
 === signature key
 
 a secret data item specific to an entity and usable only by this entity in the signature process
 
 [.source]
-<<ISO14888>>, 4.18
+<<ISO14888-3,clause 4.18>>
 
+[[term-verification-key]]
 === verification key
 
-a data item which is mathematically related to an entity's _signature key_ <<signature_key>> and which is used by the verifier in the verification process
+a data item which is mathematically related to an entity's
+_signature key_ <<term-signature-key>> and which is used by
+the verifier in the verification process
 
 [.source]
-<<ISO14888>>, 4.15
+<<ISO14888-3,clause 4.15>>
 
+[[term-oid]]
 === object identifier
 [alt]#oid#
 
-the string of bits resulting from the signature process
-
-Some concrete representation for the identity of an object (instance). The object identifier (oid) is used to show examples of instances with identity, to formalize the notion of identity, and to support the notion in programming languages or database systems.
+a value (distinguishable from all other such values) which is associated with an object
 
 [.source]
-<<ISO31320>>, 3.1.128
+<<ISO15961,clause 3.1.16>>
 
+[[term-language-id]]
 === language identifier
 [alt]#language symbol#
 
 symbol that uniquely identifies a particular language
 
 [.source]
-<<ISO639-3>>, 3.3
+<<ISO639-3,clause 3.3>>
 
-[[script]]
+[[term-script]]
 === script
 
 set of graphic characters used for the written form of one or more languages
 
 [.source]
-<<ISO15924>>, 3.7
+<<ISO15924,clause 3.7>>
 
+[[term-script-code]]
 === script code
 
-combination of characters used to represent the name of a _script_ (<<script>>)
+combination of characters used to represent the name of a _script_ (<<term-script>>)
 
 [.source]
-<<ISO15924>>, 3.8
+<<ISO15924,clause 3.8>>
 
+[[term-uri]]
 === URI
 
 uniform resource identifier
 
 [.source]
-<<ISO19103>>, 5.3
+<<ISO19103,clause 5.3>>
 

@@ -1,0 +1,103 @@
+
+[[ix-layout-template]]
+== Interchange layout template
+
+=== General
+
+
+image::images/png/Model__LayoutTemplate_7.png[]
+
+The interchange layout template serves as the basis of the
+interchange display template and
+the interchange form template.
+
+A layout template is designed to present an
+interchange address instance in the case of a display template, or
+present an input form for entry of an interchange address instance
+in the case of an interchange form template.
+
+The interchange layout template is based on the following assumptions:
+
+* the resulting layout is displayed in a bounded rectangular area
+
+* the entire template is in the same script and locale.
+
+The action of inserting components from a given interchange
+address instance into a layout template is called "render".
+
+
+[example]
+A postal mail label can be considered an interchange address instance
+rendered according to a layout template.
+
+
+=== Attributes
+
+ID:: a unique identifier for the layout template. `CharacterString`.
+
+Name:: the descriptive name of the layout template. `CharacterString`.
+
+Description:: textual description of the layout template. `CharacterString`.
+
+Localization:: locale and script information of the layout template.
+Represented by the `Localization` model.
+
+Dimensions:: physical dimensions of the rectangular bounding box
+for the rendered layout output. Represented by `LayoutDimension`.
+
+Orientation:: whether the text orientation is horizontal or vertical.
+
+[example]
+Some East Asian languages allow using a vertical flow text orientation
+on postal mail.
+
+
+This structure of a bounding box allows flexible formatting,
+such as the ability to hide or shrink certain lines when
+horizontal space is limited.
+
+
+=== Layout line
+
+==== General
+
+image::images/png/Model__LayoutLine_8.png[]
+
+A layout line represents a line in a rendered address display
+or an address input form.
+
+It forms the basis of the address display line and
+address form line.
+
+
+==== Attributes
+
+Dimensions:: physical dimensions of the rectangular bounding box
+for the rendered line. Represented by `LayoutDimension`.
+
+Elements:: collection of line elements that make up the line.
+
+
+=== Line element reference
+
+==== General
+
+A line element reference is used to link an abstract line element to
+the interchange address component. The latter is used to
+retrieve metadata for the line element,
+such as the schema to determine what data values are accepted.
+
+It is the basis of the display line element reference and the
+form line element reference.
+
+==== Attributes
+
+Target:: the interchange address component this reference
+refers to.
+
+Name:: human readable name of what this line element
+reference refers to. `CharacterString`.
+
+Description:: human readable description of what this line element
+reference refers to. Optional. `CharacterString`.
+

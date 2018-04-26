@@ -1013,7 +1013,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "AddressProfileDescription",
+											"text": "InterchangeAddressProfile",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -3036,7 +3036,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from AddressProfileDescription)",
+											"text": "(from InterchangeAddressProfile)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -3413,7 +3413,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from AddressProfileDescription)",
+											"text": "(from InterchangeAddressProfile)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -19886,7 +19886,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "AddressProfileDescription",
+					"name": "InterchangeAddressProfile",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
