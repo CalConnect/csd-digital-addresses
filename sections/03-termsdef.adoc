@@ -68,7 +68,7 @@ definition of the subset of a user's environment that depends on
 language and cultural conventions
 
 [.source]
-<<ISO9945>>, 4.211, The notes given in ISO/IEC/IEEE 9945:2009 for this
+<<ISO9945,clause 4.211>>, The notes given in ISO/IEC/IEEE 9945:2009 for this
 entry have been omitted.
 
 [[term-parent-address]]
@@ -118,8 +118,8 @@ and used records
 [[term-data-type]]
 === data type
 
-specification of a value domain (<<ISO19103>> 4.37) with operations
-(<<ISO19103>> 4.26) allowed on values in this domain
+specification of a value domain (<<ISO19103,clause 4.37>>) with operations
+(<<ISO19103,clause 4.26>>) allowed on values in this domain
 
 [.source]
 <<ISO19103,clause 4.14>>
@@ -157,20 +157,20 @@ status
 
 specification of layout and positioning of
 _address components_ (<<term-address-component>>)
-for an _interchange address instance_(<<term-ix-address-instance>>)
+for an _interchange address instance_ (<<term-ix-address-instance>>)
 of an _address class_ (<<term-address-class>>)
 
 === address display template
 
 address layout template (<<term-address-layout-template>>)
-for the display of _interchange address instances_(<<term-ix-address-instance>>)
+for the display of _interchange address instances_ (<<term-ix-address-instance>>)
 of an _address class_ (<<term-address-class>>)
 
 === address form template
 
 address layout template (<<term-address-layout-template>>)
 of an input form for the entry of
-_interchange address instances_(<<term-ix-address-instance>>)
+_interchange address instances_ (<<term-ix-address-instance>>)
 of an _address class_ (<<term-address-class>>)
 
 [[term-address-processor]]
