@@ -11,7 +11,7 @@ that conforms to an interchange address class, which in turn
 belongs to an interchange address profile.
 
 An address instance is considered to conform to an interchange
-address profile it is conforms to any of the profile's
+address profile if it conforms to any of the profile's
 address classes.
 
 

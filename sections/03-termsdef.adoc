@@ -174,7 +174,7 @@ _interchange address instances_ (<<term-ix-address-instance>>)
 of an _address class_ (<<term-address-class>>)
 
 [[term-address-processor]]
-=== address process
+=== address processor
 
 entity that processes _interchange address instances_ (<<term-ix-address-instance>>)
 
