@@ -4,7 +4,6 @@
 
 === General
 
-
 image::images/png/Model__LayoutTemplate_7.png[]
 
 The interchange layout template serves as the basis of the
@@ -25,6 +24,7 @@ The interchange layout template is based on the following assumptions:
 The action of inserting components from a given interchange
 address instance into a layout template is called "render".
 
+// TODO: define "render" in terms and definition
 
 [example]
 A postal mail label can be considered an interchange address instance
