@@ -7,9 +7,9 @@
 :copyright-year: 2018
 :language: en
 :title-intro-en: Addressing
-:title-main-en: Machine interchange syntax
+:title-main-en: Digital interchange models
 :title-intro-fr: Adressage
-:title-main-fr: Syntaxe d'échange de machines
+:title-main-fr: Modèles d'échange numérique
 :doctype: international-standard
 :docstage: 10
 :docsubstage: 92
