@@ -8,13 +8,25 @@ Internet, and the interchange of them is crucial to a number of
 Internet applications, such as electronic commerce, contact exchange,
 non-postal deliveries, as well as location scheduling.
 
-Yet, addresses mean much more than just geolocation information:
+Yet, addresses can mean much more than just geolocation information:
 
 *  As an identity, such as an office address
 
 *  As reference points (waypoints) in routing information
 
 *  As a delivery point
+
+<<ISO19160-1>> describes the Addressing Conceptual models that allows
+specification of international address profiles, and this International
+Standard further provides methods to utilize them in a way suitable for
+electronic interchange.
+
+Specifically, this International Standard adapts models from <<ISO19160-1>>
+as Address Interchange models, to facilitate interchange and interaction
+of addresses between humans and applications, and between applications,
+and for applications to interact and interchange international addresses,
+while supporting human input and human-machine interaction, without loss
+of fidelity.
 
 The lifecycle of an address entry exchanged on the Internet typically
 starts with manual input of a human actor. This data, structured or
@@ -30,18 +42,8 @@ as for data validation.
 Additional caution shall be placed on the accuracy (or lack thereof) of
 human input addresses. While an address specified by a human actor may
 unambiguously distinguish a location, there may be intention or
-unintentional omissions or additions to an "official" address (if there
+unintentional omissions or additions to an "`official`" address (if there
 was one).
-
-This International Standard facilitates the interchange and interaction
-of addresses between humans and applications, and between applications,
-through the specification of a defined syntax for applications to
-interact and interchange international addresses, while supporting
-human input and human-machine interaction, without loss of fidelity.
-
-// TODO: clean up introduction
-
-Specifically, this document describes an encoding for a profile of the Addressing Conceptual model in <<ISO19160-1>>.
 
 The models in this document depends on data models defined
 in <<ISO19115-1>> and <<ISO19157>>.
