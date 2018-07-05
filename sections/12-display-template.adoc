@@ -10,7 +10,8 @@ interchange address instance belonging to an interchange
 address class. Generally, one address class is represented
 by just one display template.
 
-image::images/png/Model__DisplayTemplate_1.png[]
+.Interchange display template data model
+image::images/png/Model!DisplayTemplate_1.png[]
 
 NOTE: this part is intentionally separate from PADTL
 for a more accurate approach to representations.

@@ -14,7 +14,8 @@ Elements used from other documents such as 19160-1 are
 all explicitly identified.
 ****
 
-image::images/png/Model__CommonModels_6.png[]
+.Common data models used in this document
+image::images/png/Model!CommonModels_6.png[]
 
 
 === Signature
@@ -42,8 +43,8 @@ a `CharacterString`, encoded in Base64 format.
 
 The language and script used within this interchange address profile.
 
-Represented by the `PT_Locale` object defined in <<ISO19115-1>> and an ISO
-15924 script code.
+Represented by the `PT_Locale` object defined in <<ISO19115-1>> and an
+<<ISO15924>> script code.
 
 locale:: the locale of the parent object,
 represented by `PT_Locale` with `characterEncoding` set to `UTF-8`.

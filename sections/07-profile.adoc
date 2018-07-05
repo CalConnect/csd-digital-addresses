@@ -2,7 +2,6 @@
 [[ix-address-profile]]
 == Interchange address profile
 
-
 === General
 
 The interchange address profile corresponds to a representation of
@@ -13,7 +12,8 @@ This model includes the necessary information for a machine-readable
 implementation to understand how to represent addresses, their requirements,
 as well as their input and display.
 
-image::images/png/Model__AddressProfile_0.png[]
+.Interchange address profile data model
+image::images/png/Model!AddressProfile_0.png[]
 
 
 === Attributes

@@ -5,7 +5,8 @@
 
 === General
 
-image::images/png/Model__AddressCapability_5.png[]
+.Interchange address capability data model
+image::images/png/Model!AddressCapability_5.png[]
 
 Address capability represents the status of a particular aspect of an
 interchange address instance, as determined by an address processor.

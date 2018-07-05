@@ -17,7 +17,8 @@ including:
 
 Core data types (`CoreTypes`) are defined in <<ISO19103,clause A.2>>.
 
-image::images/png/Model__DataTypes_2.png[]
+.Common data types used in this document
+image::images/png/Model!DataTypes_2.png[]
 
 === User-defined data types
 
@@ -47,7 +48,8 @@ example, the maximum number of Post Office Box numbers.
 
 * Number types: "maxValue" and "minValue".
 * Number and characters: "maxLength" and "minLength".
-* TODO: More
+
+NOTE: This section is to be further developed. (TODO)
 
 As a constraint, it is also possible to provide a fixed list of
 accepted values to this type, such as the number of states in a country

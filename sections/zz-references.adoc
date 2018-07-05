@@ -2,14 +2,24 @@
 [bibliography]
 == Bibliography
 
-* [[[ISO9945,ISO/IEC/IEEE 9945:2009]]], _Information technology -- Portable Operating System Interface (POSIX®) Base Specifications, Issue 7_
 
-* [[[ISO19106,ISO 19106:2004]]], _Geographic information -- Profiles_
-
-* [[[ISO31320,ISO/IEC/IEEE 31320-2:2012]]], _Information technology -- Modeling Languages -- Part 2: Syntax and Semantics for IDEF1X97 (IDEFobject)_
+* [[[ISO639-1,ISO 639-1]]], _Codes for the representation of names of languages -- Part 1: Alpha-2 code_
 
 * [[[ISO639-3,ISO/IEC 639-3:2007]]], _Codes for the representation of names of languages -- Part 3: Alpha-3 code for comprehensive coverage of languages_
 
-* [[[ISO19139,ISO 19139:2006]]], _Geographic information -- Metadata -- XML schema implementation_
+* [[[ISO3166-1,ISO 3166-1]]], _Codes for the representation of names of countries and their subdivisions -- Part 1: Country code_
+
+* [[[ISO9945,ISO/IEC/IEEE 9945:2009]]], _Information technology -- Portable Operating System Interface (POSIX®) Base Specifications, Issue 7_
+
+* [[[ISO14888-3,ISO/IEC 14888-3]]], _Information technology -- Security techniques -- Digital signatures with appendix -- Part 3: Discrete logarithm based mechanisms_
+
+* [[[ISO15924,ISO 15924]]], _Information and documentation -- Codes for the representation of names of scripts_
 
 * [[[ISO15961,ISO/IEC 15961:2004]]], _Information technology -- Radio frequency identification (RFID) for item management -- Data protocol: application interface_
+
+* [[[ISO19106,ISO 19106:2004]]], _Geographic information -- Profiles_
+
+* [[[ISO19139,ISO 19139:2006]]], _Geographic information -- Metadata -- XML schema implementation_
+
+* [[[ISO31320,ISO/IEC/IEEE 31320-2:2012]]], _Information technology -- Modeling Languages -- Part 2: Syntax and Semantics for IDEF1X97 (IDEFobject)_
+

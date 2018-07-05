@@ -4,7 +4,8 @@
 
 === General
 
-image::images/png/Model__AddressClass_9.png[]
+.Interchange address class data model
+image::images/png/Model!AddressClass_9.png[]
 
 
 Interchange address class corresponds to the `addressClass` specified in
@@ -47,7 +48,7 @@ The interchange address component corresponds to the
 
 ==== Attributes
 
-Key:: an identifier of this interchange address component, must be unique within
+Key:: an identifier of this interchange address component, shall be unique within
 the interchange address class. `CharacterString`.
 
 Description:: Textual description of this component. `CharacterString`.

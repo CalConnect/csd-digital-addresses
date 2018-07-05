@@ -4,7 +4,8 @@
 
 === General
 
-image::images/png/Model__AddressInstance_3.png[]
+.Interchange address instance data model
+image::images/png/Model!AddressInstance_3.png[]
 
 An interchange address instance is the representation of an address
 that conforms to an interchange address class, which in turn
@@ -85,7 +86,7 @@ the capability status value.
 signature:: cryptographic signature used to ensure that the
 capability is marked by an address process trusted for
 verification of this capability.
-The signature generated must incorporate the `id` attribute
+The signature generated shall incorporate the `id` attribute
 of the interchange address instance that owns it.
 Optional. Represented by `Signature`.
 

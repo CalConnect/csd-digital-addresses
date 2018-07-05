@@ -29,7 +29,7 @@ Addresses do not only specify a location, in some cases they are part
 of the identity. For example, in business cards, an address can mean
 more than just an address, such as with vanity value.
 
-This document must support this functionality for it to be useful in
+This document shall support this functionality for it to be useful in
 contact exchange.
 
 This address represents a complete textual address instance.

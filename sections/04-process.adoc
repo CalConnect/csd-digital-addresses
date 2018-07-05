@@ -5,8 +5,8 @@
 
 ==== General
 
-.Lifecycle of an address profile
-image::images/png/Model__AddressProfileStates__AddressProfileLifeCycle_10.png[]
+.Lifecycle of an interchange address profile
+image::images/png/AddressProfileStates!AddressProfileLifeCycle_10.png[]
 
 ==== Creating interchange address profiles
 
@@ -27,13 +27,13 @@ published one.
 
 Applications retrieve suitable profiles to:
 
-* render input forms for address input according to the
+* render address input forms according to the
 profile-specified form template; or
 
 * display addresses according to the profile-specified display template.
 
-Applications should consider the validity period of an address profile,
-and should periodically check with the publisher (or a registry that
+Applications shall consider the validity period of an address profile,
+and shall periodically check with the publisher (or a registry that
 the publisher distributes via) the latest version of the address
 profile.
 
@@ -43,7 +43,7 @@ Publisher can indicate the validity period of an address profile in the
 profile itself, which if the validity end date has passed, would indicate
 that the profile is retired.
 
-To immediately retire an address profile, the publisher could
+To immediately retire an address profile, the publisher shall
 distribute a new version of the address profile with an expired
 validity period.
 
@@ -51,10 +51,15 @@ validity period.
 
 === Address instances
 
+==== General
+
+.Lifecycle of an interchange address instance
+image::images/png/AddressInstanceStates!AddressInstanceLifeCycle_11.png[]
+
 ==== Creating an address instance
 
 This section describes how an address instance is created. The desired
-address profile must be already retrieved for creating an address
+address profile shall be already retrieved for creating an address
 instance that conforms to it.
 
 Typically, a user enters an address through an application interface
@@ -67,7 +72,7 @@ Conforming applications should not expect general users to be able to
 input an address with a fully-deduced structure. Immediately after
 input no capabilities are marked on the address instance.
 
-==== Sending an address instance
+==== Interchange of an address instance
 
 After a user inputs an address into a structured address form, the user
 submits this address to the designated recipient, which could be an
@@ -81,7 +86,9 @@ profile definition. With the interchange address profile, it could then
 display the address instance according to the address profile's
 display template.
 
-==== Improving quality of an address instance
+==== Adding address capabilities
+
+===== Improving quality of an address instance
 
 The recipient or service could process the address, such as to further
 clean up the address by improving the conformance level by fully
@@ -96,7 +103,7 @@ for shipping information. This would add the AddressCapability
 "https://standards.iso.org/19160/-6/capabilities/confirmed" to the
 address instance.
 
-==== Verifying an address instance
+===== Verifying an address instance
 
 The recipient or service could further validate the address, such as
 with a postal or addressing authority. This would add the
