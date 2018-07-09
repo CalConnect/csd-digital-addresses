@@ -6,5 +6,7 @@
 
 * [[[ISO19103,ISO 19103]]], _Geographic information -- Conceptual schema language_
 
+* [[[ISO19106,ISO 19106]]], _Geographic information -- Profiles_
+
 * [[[ISO19115-1,ISO 19115-1]]], _Geographic information -- Metadata -- Part 1: Fundamentals_
 

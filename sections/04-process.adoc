@@ -10,40 +10,44 @@ image::images/png/AddressProfileStates!AddressProfileLifeCycle_10.png[]
 
 ==== Creating interchange address profiles
 
-Address profiles are created by publishers.
+Address profiles that comply with <<ISO19160-1,annex B>> and
+<<ISO19106>> Conformance class 1 are converted into interchange
+address profiles in accordance with requirements specified in
+<<ix-address-profile>>.
 
-==== Publishing address profiles
 
-Publishers distribute their address profile to others through exchange
-or a registry.
+==== Publishing interchange address profiles
 
-==== Updating address profiles
+Publishers distribute their interchange address profile to others
+through direct exchange or through a registry.
 
-Publishers can update an address profile and re-distribute it by
+==== Updating interchange address profiles
+
+Publishers can update an interchange address profile and re-distribute it by
 publishing using a new version number that supersedes the previously
 published one.
 
-==== Using address profiles
+==== Using interchange address profiles
 
-Applications retrieve suitable profiles to:
+Applications retrieve suitable interchange address profiles to:
 
 * render address input forms according to the
 profile-specified form template; or
 
 * display addresses according to the profile-specified display template.
 
-Applications shall consider the validity period of an address profile,
+Applications shall consider the validity period of an interchange address profile,
 and shall periodically check with the publisher (or a registry that
 the publisher distributes via) the latest version of the address
 profile.
 
-==== Retiring address profiles
+==== Retiring interchange address profiles
 
-Publisher can indicate the validity period of an address profile in the
+Publisher can indicate the validity period of an interchange address profile in the
 profile itself, which if the validity end date has passed, would indicate
 that the profile is retired.
 
-To immediately retire an address profile, the publisher shall
+To immediately retire an interchange address profile, the publisher shall
 distribute a new version of the address profile with an expired
 validity period.
 
@@ -56,39 +60,39 @@ validity period.
 .Lifecycle of an interchange address instance
 image::images/png/AddressInstanceStates!AddressInstanceLifeCycle_11.png[]
 
-==== Creating an address instance
+==== Creating an interchange address instance
 
-This section describes how an address instance is created. The desired
-address profile shall be already retrieved for creating an address
+This section describes how an interchange address instance is created. The desired
+interchange address profile shall be already retrieved for creating an interchange address
 instance that conforms to it.
 
 Typically, a user enters an address through an application interface
-that implements an input format that conforms to the address profile's
+that implements an input format that conforms to the interchange address profile's
 form template, such as an application that runs on an operating system
 or an Internet application. Such input interface may or may not provide
 a graphical form.
 
 Conforming applications should not expect general users to be able to
 input an address with a fully-deduced structure. Immediately after
-input no capabilities are marked on the address instance.
+input no capabilities are marked on the interchange address instance.
 
-==== Interchange of an address instance
+==== Interchange of an interchange address instance
 
 After a user inputs an address into a structured address form, the user
 submits this address to the designated recipient, which could be an
 e-retailer, an electronic business card, or a calendar event.
 
-==== Displaying an address instance
+==== Displaying an interchange address instance
 
-The recipient or service that receives an address instance either
-already has the interchange address profile or should obtain the address
+The recipient or service that receives an interchange address instance either
+already has the interchange address profile or should obtain the interchange address
 profile definition. With the interchange address profile, it could then
-display the address instance according to the address profile's
+display the interchange address instance according to the address profile's
 display template.
 
 ==== Adding address capabilities
 
-===== Improving quality of an address instance
+===== Improving quality of an interchange address instance
 
 The recipient or service could process the address, such as to further
 clean up the address by improving the conformance level by fully
@@ -96,29 +100,29 @@ deducing the address structure, which would add an address capability
 "https://standards.iso.org/19160/-6/capabilities/specified" to the
 address instance.
 
-To ensure that the resulting address instance with a fully-specified
+To ensure that the resulting interchange address instance with a fully-specified
 structure is correct, the processor may wish to confirm with the user
 the resulting address, such as in the case where the address is used
-for shipping information. This would add the AddressCapability
+for shipping information. This would add the `AddressCapability`
 "https://standards.iso.org/19160/-6/capabilities/confirmed" to the
 address instance.
 
-===== Verifying an address instance
+===== Verifying an interchange address instance
 
 The recipient or service could further validate the address, such as
 with a postal or addressing authority. This would add the
-AddressCapability "https://verifyingauthority/verified" to the address
+`AddressCapability` "https://verifyingauthority/verified" to the interchange address
 instance written by the verifying authority.
 
-==== Adding associated data to an address instance
+==== Adding associated data to an interchange address instance
 
-A processor of an address instance could add extra information such as
+A processor of an interchange address instance could add extra information such as
 delivery instructions or routes as associated data.
 
 If the user already has a verified, structured address, then the
 service could save the effort for verifying the address. Custom
-address capabilities could be added into the address instance.
+address capabilities could be added into the interchange address instance.
 
-==== Discarding an address instance
+==== Discarding an interchange address instance
 
 When a service no longer needs the address, it should be disposed of.
