@@ -30,13 +30,6 @@ components, operations, methods, relationships, and semantics
 <<ISO19160-1>>
 
 
-[[term-ix-address-class]]
-=== interchange address class
-
-representation of an _address class_ (<<term-address-class>>)
-suitable for interchange
-
-
 [[term-address-component]]
 === address component
 
@@ -44,12 +37,6 @@ constituent part of an _address_ (<<term-address>>)
 
 [.source]
 <<ISO19160-1>>
-
-[[term-ix-address-component]]
-=== interchange address component
-
-representation of an _address component_ (<<term-address-component>>)
-suitable for interchange
 
 
 [[term-lineage]]
@@ -95,19 +82,6 @@ accomplishing a particular function
 [.source]
 <<ISO19106,clause 4.5>>
 
-[[term-ix-address-profile]]
-=== interchange address profile
-
-_profile_ (<<term-profile>>) that contains data requirements
-and layout templates for multiple _address classes_
-
-
-[[term-ix-address-instance]]
-=== interchange address instance
-
-an _address_ (<<term-address>>) that is set within the context of an
-_interchange address class_ (<<term-ix-address-class>>)
-
 
 [[term-provenance]]
 === provenance
@@ -134,10 +108,9 @@ in <<ISO19103,section 7.2>>
 [[term-ud-data-type]]
 === user defined data type
 
-_data type_ (<<term-data-type>>) defined by the user in an
-_interchange address profile_ (<<term-ix-address-profile>>)
-through the composure of other
-_data types_ (<<term-data-type>>) and constraints
+_data type_ (<<term-data-type>>) defined by the user in an interchange address
+profile through the composure of other _data types_ (<<term-data-type>>) and
+constraints
 
 [[term-ud-data-type-def]]
 === user defined data type definition
@@ -156,33 +129,31 @@ status
 === address layout template
 
 specification of layout and positioning of
-_address components_ (<<term-address-component>>)
-for an _interchange address instance_ (<<term-ix-address-instance>>)
-of an _address class_ (<<term-address-class>>)
+_address components_ (<<term-address-component>>) for an interchange address
+instance of an _address class_ (<<term-address-class>>)
 
 === address display template
 
 address layout template (<<term-address-layout-template>>)
-for the display of _interchange address instances_ (<<term-ix-address-instance>>)
-of an _address class_ (<<term-address-class>>)
+for the display of interchange address instances of an
+_address class_ (<<term-address-class>>)
 
 === address form template
 
 address layout template (<<term-address-layout-template>>)
-of an input form for the entry of
-_interchange address instances_ (<<term-ix-address-instance>>)
+of an input form for the entry of address instances
 of an _address class_ (<<term-address-class>>)
 
 [[term-address-processor]]
 === address processor
 
-entity that processes _interchange address instances_ (<<term-ix-address-instance>>)
+entity that processes interchange address instances
 
 
 [[term-address-profile-distributor]]
 === address profile distributor
 
-entity that distributes _interchange address profiles_ (<<term-ix-address-profile>>)
+entity that distributes interchange address profiles
 
 
 [[term-signature]]

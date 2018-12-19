@@ -10,6 +10,31 @@ This part of ISO {docnumber} defines four classes of requirements and
 conformance. <<Annex-A>> specifies how conformance with these classes
 shall be tested.
 
+=== Address instance
+
+Any address instance claiming conformance to this standard shall meet
+the encoding rules specified in the abstract test suite in <<Annex-A-1>>.
+
+=== Address profile register
+
+To conform to this standard, an address profile register shall satisfy
+all of the conditions specified in <<Annex-A-2>>.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////
+
 === IxAddressProfile
 
 Any machine-readable description of an address profile conforming to

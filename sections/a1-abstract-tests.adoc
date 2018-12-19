@@ -12,6 +12,24 @@ Informative text
 
 The abstract test suites for the conformance classes defined by this part of ISO {docnumber} are presented in <<first_conformance_class>> to <<last_conformance_class>>.
 
+////
+
+TODO: complete test suites corresponding to 0x-conformance...
+
+////
+
+
+
+
+
+
+
+
+
+
+
+
+////
 [[first_conformance_class]]
 === Conformance class: IxAddressProfile
 
@@ -61,4 +79,4 @@ The abstract test suites for the conformance classes defined by this part of ISO
 |Reference |<<display-template>>
 |Test type |Basic
 |===
-
+////

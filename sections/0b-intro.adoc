@@ -16,7 +16,7 @@ Yet, addresses can mean much more than just geolocation information:
 
 *  As a delivery point
 
-<<ISO19160-1>> describes the Addressing Conceptual models that allows
+<<ISO19160-1>> describes the Addressing Conceptual models that allow
 specification of international address profiles, and this International
 Standard further provides methods to utilize them in a way suitable for
 electronic interchange.
