@@ -16,42 +16,39 @@ provide XML before Committee Draft stage
 ----
 profile = {
 
-  id: "http://www.iso.org/tc211/tc211-minimal.adp",
-  type: "iso-19160-address-profile",
-  publisher: "http://www.iso.org/tc211/",
-  signature: "...",
+  "id": "http://www.iso.org/tc211/tc211-minimal.adp",
+  "type": "iso-19160-address-profile",
+  "publisher": "http://www.iso.org/tc211/",
+  "signature": "...",
 
-  name: "TC 211 Minimal Address Profile",
-  locale: {
-    language: "en",
-    script: "en",
+  "name": "TC 211 Minimal Address Profile",
+  "locale": {
+    "language": "en",
+    "script": "en",
   },
 
-  addressComponents: {
-    addressLine: {
-      dataType: CharacterString,
-      minCardinality: 1,
-      maxCardinality: n
+  "addressComponents": {
+    "addressLine": {
+      "dataType": "CharacterString",
+      "minCardinality": 1
     },
   },
 
-  addressClasses: {
-    minimalAddress: {
-      availableFields: [
+  "addressClasses": {
+    "minimalAddress": {
+      "availableFields": [
         {
-          componentType: addressLine,
-          min: 1,
-          max: n,
-          description: "One line of this address",
-          require: true,
+          "componentType": "addressLine",
+          "min": 1,
+          "description": "One line of this address",
+          "require": true
         }
       ],
-      displayTemplates: [
+      "displayTemplates": [
         {
           /* TODO */
-          orientation: horizontal,
-          text: "({{ addressLine }}\n)*"
-          }
+          "orientation": "horizontal",
+          "text": "({{ addressLine }}\n)*"
         }
       ]
     }
@@ -64,41 +61,41 @@ Address Instance
 [source,json]
 ----
 addressInstance1 = {
-  profile: "http://www.iso.org/tc211/tc211-minimal.adp",
-  components: [
+  "profile": "http://www.iso.org/tc211/tc211-minimal.adp",
+  "components": [
     {
-      type: addressLine,
-      value: 14 Church Street,
+      "type": "addressLine",
+      "value": "14 Church Street"
     },
     {
-      type: addressLine,
-      value: Hatfield
+      "type": "addressLine",
+      "value": "Hatfield"
     },
     {
-      type: addressLine,
-      value: South Africa
+      "type": "addressLine",
+      "value": "South Africa"
     }
   ]
 }
 
 addressInstance2 = {
-  profile: "http://www.iso.org/tc211/tc211-minimal.adp",
-  components: [
+  "profile": "http://www.iso.org/tc211/tc211-minimal.adp",
+  "components": [
     {
-      type: addressLine,
-      value: Statue of Liberty
+      "type": "addressLine",
+      "value": "Statue of Liberty"
     },
     {
-      type: addressLine,
-      value: Liberty Island
+      "type": "addressLine",
+      "value": "Liberty Island"
     },
     {
-      type: addressLine,
-      value: New York
+      "type": "addressLine",
+      "value": "New York"
     },
     {
-      type: addressLine,
-      value: NY
+      "type": "addressLine",
+      "value": "NY"
     }
   ]
 }
@@ -109,130 +106,130 @@ addressInstance2 = {
 ----
 profile = {
 
-  id: "http://www.iso.org/tc211/tc211-sample.adp",
-  type: "iso-19160-address-profile",
-  publisher: "http://www.iso.org/tc211/",
-  signature: "...",
+  "id": "http://www.iso.org/tc211/tc211-sample.adp",
+  "type": "iso-19160-address-profile",
+  "publisher": "http://www.iso.org/tc211/",
+  "signature": "...",
 
-  name: "TC 211 Minimal Address Profile",
-  locale: {
-    language: "en",
-    script: "en",
+  "name": "TC 211 Minimal Address Profile",
+  "locale": {
+    "language": "en",
+    "script": "en",
   },
 
-  dataTypes: {
-    addressNumberValue: {
-      primitiveType: Integer,
-      maxValue: 10000,
-      minValue: 1,
+  "dataTypes": {
+    "addressNumberValue": {
+      "primitiveType": "Integer",
+      "maxValue": 10000,
+      "minValue": 1
     },
-    boxNumberValue: {
-      primitiveType: Integer,
-      maxValue: 100000,
-      minValue: 1,
+    "boxNumberValue": {
+      "primitiveType": "Integer",
+      "maxValue": 100000,
+      "minValue": 1
     }
   }
 
-  addressComponents: {
-    addressNumber: {
-      dataType: addressNumberValue,
+  "addressComponents": {
+    "addressNumber": {
+      "dataType": "addressNumberValue"
     },
-    boxNumber: {
-      dataType: boxNumberValue,
+    "boxNumber": {
+      "dataType": "boxNumberValue"
     },
 
     /* Table C.4. Address component type */
-    thoroughfareName: {
-      dataType: thoroughfareNameValue,
+    "thoroughfareName": {
+      "dataType": "thoroughfareNameValue"
     },
-    localityName: {
-      dataType: CharacterString,
+    "localityName": {
+      "dataType": "CharacterString"
     },
-    postOfficeName: {
-      dataType: CharacterString
+    "postOfficeName": {
+      "dataType": "CharacterString"
     },
-    postCode: {
-      dataType: CharacterString
+    "postCode": {
+      "dataType": "CharacterString"
     },
-    countryName: {
-      dataType: thoroughfareName,
+    "countryName": {
+      "dataType": "thoroughfareName"
     }
-    addressNumber: {
-      dataType: addressedObjectIdentifier,
-    },
+    "addressNumber": {
+      "dataType": "addressedObjectIdentifier"
+    }
   },
 
-  addressClasses: {
-    streetAddress: {
-      description: Street Address,
-      availableFields: [
+  "addressClasses": {
+    "streetAddress": {
+      "description": "Street Address",
+      "availableFields": [
         {
-          componentType: addressNumber,
-          minCardinality: 1,
-          maxCardinality: 1,
-          required: true,
+          "componentType": "addressNumber",
+          "minCardinality": 1,
+          "maxCardinality": 1,
+          "required": true
         },
         {
-          componentType: thoroughfareName,
-          minCardinality: 1,
-          maxCardinality: 1,
-          required: true,
+          "componentType": "thoroughfareName",
+          "minCardinality": 1,
+          "maxCardinality": 1,
+          "required": true
         },
         {
-          componentType: placeName
-          dataType: CharacterString,
-          minCardinality: 1,
-          maxCardinality: 1,
-          required: true,
+          "componentType": "placeName",
+          "dataType": CharacterString,
+          "minCardinality": 1,
+          "maxCardinality": 1,
+          "required": true
         },
         {
-          componentType: postCode
-          minCardinality: 1,
-          maxCardinality: 1,
-          required: true,
+          "componentType": "postCode",
+          "minCardinality": 1,
+          "maxCardinality": 1,
+          "required": true
         },
         {
-          componentType: countryName
-          minCardinality: 1,
-          maxCardinality: 1,
-          required: false,
+          "componentType": "countryName",
+          "minCardinality": 1,
+          "maxCardinality": 1,
+          "required": false,
         },
       ],
-      displayTemplates: [
+      "displayTemplates": [
         {
           /* TODO */
         }
       ]
     },
-    boxAddress: {
-      availableFields: [
+    "boxAddress": {
+      "availableFields": [
         {
-          componentType: boxNumber,
-          minCardinality: 1,
-          maxCardinality: 1,
-          required: true,
+          "componentType": "boxNumber",
+          "minCardinality": 1,
+          "maxCardinality": 1,
+          "required": true
         },
         {
-          componentType: postOfficeName,
-          dataType: CharacterString,
-          minCardinality: 1,
-          maxCardinality: 1,
-          required: true,
+          "componentType": "postOfficeName",
+          "dataType": "CharacterString",
+          "minCardinality": 1,
+          "maxCardinality": 1,
+          "required": true
         },
         {
-          componentType: postCode
-          minCardinality: 1,
-          maxCardinality: 1,
-          required: true,
+          "componentType": "postCode",
+          "minCardinality": 1,
+          "maxCardinality": 1,
+          "required": true
         },
         {
-          componentType: countryName
-          minCardinality: 1,
-          maxCardinality: 1,
-          required: false,
+          "componentType": "countryName",
+          "minCardinality": 1,
+          "maxCardinality": 1,
+          "required": false
         },
       ],
-      displayTemplates: [
+      "displayTemplates": [
         {
           /* TODO */
         }
@@ -247,55 +244,53 @@ Address Instance
 [source,json]
 ----
 addressInstance1 = {
-  profile: "http://www.iso.org/tc211/tc211-sample.adp#streetAddress",
-  components: [
+  "profile": "http://www.iso.org/tc211/tc211-sample.adp#streetAddress",
+  "components": [
     {
-      type: addressNumber,
-      value: 99
+      "type": "addressNumber",
+      "value": "99"
     },
     {
-      type: thoroughfareName,
-      value: {
-        name: Lombardy,
-        type: Street
+      "type": "thoroughfareName",
+      "value": {
+        "name": "Lombardy",
+        "type": "Street"
       }
     },
     {
-      type: placeName,
-      value: The Hills,
+      "type": "placeName",
+      "value": "The Hills"
     },
     {
-      type: postCode,
-      value: 0039,
+      "type": "postCode",
+      "value": "0039"
     },
     {
-      type: countryName,
-      value: South Africa
+      "type": "countryName",
+      "value": "South Africa"
     }
   ]
 }
 
 boxInstance1 = {
-  profile: "http://www.iso.org/tc211/tc211-sample.adp#boxAddress",
-  components: [
+  "profile": "http://www.iso.org/tc211/tc211-sample.adp#boxAddress",
+  "components": [
     {
-      type: boxNumber,
-      value: 345
+      "type": "boxNumber",
+      "value": "345"
     },
     {
-      type: postOfficeName,
-      value: Orlando,
+      "type": "postOfficeName",
+      "value": "Orlando"
     },
     {
-      type: postCode,
-      value: 2020
+      "type": "postCode",
+      "value": "2020"
     },
     {
-      type: countryName,
-      value: South Africa
+      "type": "countryName",
+      "value": "South Africa"
     }
   ]
 }
 ----
-
-

@@ -18,7 +18,7 @@ conforming to <<ISO19160-1>>, _Addressing -- Part 1: Conceptual model_.
 
 
 ////
-This document specifies the "Address Interchange Object" models ("AXO"),
+This document specifies the "Address Interchange Object" model,
 suitable for machine encoding of the digital storage and transmission of
 the following components:
 

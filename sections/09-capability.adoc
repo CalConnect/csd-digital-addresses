@@ -16,13 +16,14 @@ This is an abstract class.
 To represent specific capabilities, this class should be extended upon.
 
 === Attributes
+|===
+|Attribute |Type         |Description
 
-ID:: unique identifier of the address capability. `CharacterString`.
-
-name:: human readable name of the address capability. `CharacterString`.
-
-description:: human readable description of the address capability. `CharacterString`.
-
+|ID          |`CharacterString` |Unique identifier of the address capability.
+|name        |`CharacterString` |Human readable name of the address capability.
+|description |`CharacterString` |Human readable description of the address
+capability.
+|===
 
 === Capabilities
 

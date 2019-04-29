@@ -13,7 +13,7 @@ by just one display template.
 .Interchange display template data model
 image::images/png/Model!DisplayTemplate_1.png[]
 
-NOTE: this part is intentionally separate from PADTL
+NOTE: this part is intentionally separate from PATDL
 for a more accurate approach to representations.
 
 [[display-line]]
@@ -42,4 +42,3 @@ for display layouts for PO boxes.
 * display line data element, representing a variable data value
 that is contained in the interchange address component, such
 as the PO box number following the phrase "PO Box".
-

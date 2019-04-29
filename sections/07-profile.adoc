@@ -18,18 +18,19 @@ image::images/png/Model!AddressProfile_0.png[]
 
 === Attributes
 
-ID:: Unique identifier of this Interchange Address Profile. `Uri`.
-
-Type:: Intended usage of this profile. `Uri`.
-
-Description:: Textual description of this definition. `CharacterString`.
-
-TTL (time-to-live):: The maximum time interval between refreshing of this
-profile via an authoritative source, in seconds. `Integer`.
-
-Country:: The country of which this interchange address profile represents.
-Expressed as the 2-digit country code specified in <<ISO639-1>>.
-
+|===
+|Attribute   |Type                              |Description
+|ID          |`Uri`                             |Unique identifier of this
+Interchange Address Profile.
+|Type        |`Uri`                             |Intended usage of this
+profile.
+|Description |`CharacterString`                 |Textual description of this
+definition.
+|TTL         |`Integer`                         |The maximum time interval
+between refreshing of this profile via an authoritative source, in seconds.
+|Country     |<<ISO639-1>> 2-digit Country Code |The country of which this
+interchange address profile represents.
+|===
 
 === Publisher
 

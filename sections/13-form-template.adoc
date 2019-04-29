@@ -20,7 +20,7 @@ interchange address instance.
 Generally, one address class is represented
 by just one input template.
 
-NOTE: this part has no equivalence in PADTL.
+NOTE: this part has no equivalence in PATDL.
 
 [[form-line]]
 === Form line

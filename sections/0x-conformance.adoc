@@ -1,7 +1,6 @@
 
 :sectnums:
 
-////
 == Conformance
 
 === General
@@ -19,21 +18,6 @@ the encoding rules specified in the abstract test suite in <<Annex-A-1>>.
 
 To conform to this standard, an address profile register shall satisfy
 all of the conditions specified in <<Annex-A-2>>.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-////
 
 === IxAddressProfile
 
@@ -70,4 +54,3 @@ described in the abstract test suite in <<Annex-A-2>>.
 Any DisplayTemplate in Interchange Address Profile model for
 which DisplayTemplate conformance is claimed shall pass the
 requirements described in the abstract test suite in <<Annex-A-2>>.
-////

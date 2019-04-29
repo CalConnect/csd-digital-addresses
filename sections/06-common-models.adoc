@@ -23,21 +23,19 @@ image::images/png/Model!CommonModels_6.png[]
 A cryptographic signature used to determine data integrity and
 validity of the object it belongs to.
 
-algorithm:: the public key cryptographic algorithm used for this
-digital signature, represented by the algorithm's object identifier (OID)
-defined in <<ISO14888-3>>.
-
-publicKey:: a reference to the actual public key used to verify
-the digital signature, a URI where the public key of the signer
-used for this signature is found. Represented as a `Uri`.
+|===
+|Attribute |Type              |Description
+|algorithm |`PT_Locale`       |The public key cryptographic algorithm used for
+this digital signature.
+|publicKey |`Uri`             |A reference to the actual public key used to
+verify the digital signature, a URI where the public key of the signer used for
+this signature is found.
+|signature |`CharacterString` |The actual digital signature value encoded in Base64 format.
+|===
 
 NOTE: Public key information should be verified on a separate
 communication channel from the signed object itself to ensure the
 integrity and validity of the public key.
-
-signature:: the actual digital signature value represented as
-a `CharacterString`, encoded in Base64 format.
-
 
 === Localization
 
@@ -46,11 +44,13 @@ The language and script used within this interchange address profile.
 Represented by the `PT_Locale` object defined in <<ISO19115-1>> and an
 <<ISO15924>> script code.
 
-locale:: the locale of the parent object,
-represented by `PT_Locale` with `characterEncoding` set to `UTF-8`.
-
-script:: the type of written script used in the parent object,
-represented by the script code from <<ISO15924>>.
+|===
+|Attribute |Type                                |Description
+|locale    |<<ISO19115-1>> `PT_Locale`          |The locale of the parent
+object.
+|script    |<<ISO15924>> Script Identifier Code |The type of written
+script used in the parent object.
+|===
 
 [source=Stephane Garcia]
 ****
@@ -84,11 +84,6 @@ I suggest leaving localization (or locale) with an attribute of type PT_Locale f
 And also we should ask for a change in ISO 19115-1 to add “script” into PT_Locale if we think it is needed.
 ****
 
-Localization information includes:
-
-* locale: <<ISO19115-1>> `PT_Locale`
-* script: <<ISO15924>> Script Identifier Code
-
 === Validity
 
 [source=Stephane Garcia]
@@ -105,13 +100,9 @@ It was meant to be a simplistic “version” that allows differentiation of dif
 The time interval where this interchange address profile
 is determined valid, and the revision number (represented as a date).
 
-Each of such is represented as a `CI_Date` object defined in <<ISO19115-1>>.
-
-validityBegins:: the date and time when this object becomes valid.
-The type of `CI_Date` should be `validityBegins`.
-
-validityEnds:: the date and time when this object becomes invalid.
-The type of `CI_Date` should be `validityEnds`.
-
-revision:: issuance date/time of this object.
-The type of `CI_Date` should be `revision`.
+|===
+|Attribute      |Type                     |Description
+|validityBegins |<<ISO19115-1>> `CI_Date` |The date and time when this object becomes valid.
+|validityEnds   |<<ISO19115-1>> `CI_Date` |The date and time when this object becomes invalid.
+|revision       |<<ISO19115-1>> `CI_Date` |Issuance date/time of this object.
+|===

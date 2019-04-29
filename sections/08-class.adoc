@@ -36,10 +36,11 @@ address instance of the address class.
 
 === Attributes
 
-ID:: Unique identifier of this interchange address class. `Uri`.
-
-Description:: Textual description of this definition. `CharacterString`.
-
+|===
+|Attribute   |Type              |Description
+|ID          |`Uri`             |Unique identifier of this interchange address class.
+|Description |`CharacterString` |Textual description of this definition.
+|===
 
 === Interchange address component
 
@@ -48,19 +49,15 @@ The interchange address component corresponds to the
 
 ==== Attributes
 
-Key:: an identifier of this interchange address component, shall be unique within
-the interchange address class. `CharacterString`.
-
-Description:: Textual description of this component. `CharacterString`.
-
-Obligation:: Whether this component is mandatory, optional or disallowed.
+|===
+|Attribute      |Type              |Description
+|Key            |`CharacterString` |An identifier of this interchange address component, shall be unique within
+the interchange address class.
+|Description    |`CharacterString` |Textual description of this definition.
+|Obligation     |`CharacterString` |Whether this component is mandatory, optional or disallowed.
 Values represented by the `ComponentObligation` object.
-
-maxCardinality:: the maximum number of components within this address class.
-
-minCardinality:: the minimum number of components within this address class.
-
-dataType:: describes the type of value accepted by this component.
+|maxCardinality |`Integer`         |The maximum number of components within this address class.
+|minCardinality |`Integer`         |The minimum number of components within this address class.
+|dataType       |`CharacterString` |Describes the type of value accepted by this component.
 This takes an `AddressComponentDataType` value.
-
-
+|===

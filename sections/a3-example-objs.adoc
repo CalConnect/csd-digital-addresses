@@ -24,28 +24,28 @@ Yes, we shall provide XML before Committee Draft stage
 ----
 {
 
-  id: "http://www.iso.org/tc211/tc211-sample.adp",
-  type: "iso-19160-address-profile",
-  publisher: "http://www.iso.org/tc211/",
-  signature: "...",
+  "id": "http://www.iso.org/tc211/tc211-sample.adp",
+  "type": "iso-19160-address-profile",
+  "publisher": "http://www.iso.org/tc211/",
+  "signature": "...",
 
-  name: "TC 211 Minimal Address Profile",
-  localization: {
-    language: "en",
-    script: "en",
+  "name": "TC 211 Minimal Address Profile",
+  "localization": {
+    "language": "en",
+    "script": "en"
   },
 
-area: {
-  countries: ["uk"],
-},
+  "area": {
+    "countries": ["uk"]
+  },
 
-  dataTypes: {
-    addressedObjectIdentifier: {
-      primitiveType: Integer,
+  "dataTypes": {
+    "addressedObjectIdentifier": {
+      "primitiveType": "Integer"
     }
-  }
-  addressComponents: { ... }
-  addressClasses: { ... }
+  },
+  "addressComponents": { ... },
+  "addressClasses": { ... }
 }
 ----
 
@@ -68,9 +68,9 @@ inputTemplte: {}
 
 [source,json]
 ----
-validity: {
-validFrom: 20171129Z000000,
-validTo: 20191129Z000000
+"validity": {
+  "validFrom": "20171129Z000000",
+  "validTo": "20191129Z000000"
 }
 ----
 
@@ -78,9 +78,9 @@ validTo: 20191129Z000000
 
 [source,json]
 ----
-publisher: {
-publisherName: UK Post Office,
-publisherUri: https://www.post.co.uk
+"publisher": {
+  "publisherName": "UK Post Office",
+  "publisherUri": "https://www.post.co.uk"
 }
 ----
 
@@ -88,9 +88,9 @@ publisherUri: https://www.post.co.uk
 
 [source,json]
 ----
-publisher: {
-language: en,
-script: Latn
+"publisher": {
+  "language": "en",
+  "script": "Latn"
 }
 ----
 
@@ -99,10 +99,10 @@ script: Latn
 
 [source,json]
 ----
-signature: {
-algorithm: 1.2.3.4.5.6.7.8.9,
-publicKey: https://www.post.co.uk/profile-signature.key,
-signature: BOLVMNoGNM1TLglnlxgm0a9t
+"signature": {
+  "algorithm": "1.2.3.4.5.6.7.8.9",
+  "publicKey": "https://www.post.co.uk/profile-signature.key",
+  "signature": "BOLVMNoGNM1TLglnlxgm0a9t"
 }
 ----
 
@@ -111,12 +111,12 @@ signature: BOLVMNoGNM1TLglnlxgm0a9t
 
 [source,json]
 ----
-addressClassDescription: {
-id: streetAddress,
-description: A typical street address,
-addressComponents: [ ... ],
-displayTemplate: { ... },
-inputTemplate: { ... },
+"addressClassDescription": {
+  "id": "streetAddress",
+  "description": "A typical street address",
+  "addressComponents": [ ... ],
+  "displayTemplate": { ... },
+  "inputTemplate": { ... },
 }
 ----
 
@@ -124,20 +124,20 @@ inputTemplate: { ... },
 
 [source,json]
 ----
-dataTypes: {[
-  name: addressNumberValue,
-coreType: Integer,
-constraints: [ ... ],
-])
+"dataTypes": [{
+  "name": "addressNumberValue",
+  "coreType": "Integer",
+  "constraints": [ ... ],
+}]
 ----
 
 === Data Type Constraints
 
 [source,json]
 ----
-constraints: [{
-  maxValue: 10000,
-  minValue: 1,
+"constraints": [{
+  "maxValue": 10000,
+  "minValue": 1
 }]
 ----
 
@@ -145,10 +145,10 @@ constraints: [{
 
 [source,json]
 ----
-addressComponentDescription: {
-key: addressNumber,
-description: Street number,
-datatype: addressNumberValue
+"addressComponentDescription": {
+  "key": "addressNumber",
+  "description": "Street number",
+  "datatype": "addressNumberValue"
 }
 ----
 
@@ -156,11 +156,11 @@ datatype: addressNumberValue
 
 [source,json]
 ----
-addressInstance: {
-profileId: https://standards.iso.org/19160/-6/profiles/uk.adp,
-components: [ ... ],
-signature: { ... },
-cap: [ ... ]
+"addressInstance": {
+  "profileId": "https://standards.iso.org/19160/-6/profiles/uk.adp",
+  "components": [ ... ],
+  "signature": { ... },
+  "cap": [ ... ]
 }
 ----
 
@@ -178,9 +178,9 @@ values: [ 1001 ]
 
 [source,json]
 ----
-addressCapability: {
-capability: https://standards.iso.org/19160/-6/capabilities/specified,
-signature: [ ... ]
+"addressCapability": {
+  "capability": "https://standards.iso.org/19160/-6/capabilities/specified",
+  "signature": [ ... ]
 }
 ----
 

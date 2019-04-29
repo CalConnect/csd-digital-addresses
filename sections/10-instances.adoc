@@ -18,31 +18,24 @@ address classes.
 
 === Attributes
 
-ID:: unique identifier for this interchange address instance.
+|===
+|Attribute       |Type                       |Description
 
-name:: a human-readable name for this interchange address instance.
-
-profile:: the interchange address profile which contains
-the interchange address class it conforms to.
-
-addressClass:: the interchange address class it conforms to.
-
-signature:: a cryptographic signature of the interchange
-address instance itself together with its content.
-Optional. Represented as a `Signature`.
-
-validity:: time interval representing validity of the
+|ID              |`CharacterString`          |Unique identifier for this interchange address instance.
+|name            |`CharacterString`          |Human-readable name for the interchange address instance.
+|profile         |`CharacterString`          |The interchange address profile which contains the interchange address class it conforms to.
+|addressClass    |`Integer`                  |The interchange address class it conforms to.
+|signature       |`LayoutDimension`          |Cryptographic signature of the interchage address instance
+itself togerther with its content.
+|validity        |`CharacterString`          |Time interval representing validity of the
 interchange address instance.
-
-applicability:: spatial representation of the geographic
+|applicability   |`MD_SpatialRepresentation` |Spatial representation of the geographic
 area that this interchange address instance covers.
-Optional, multiple allowed. `MD_SpatialRepresentation`.
-
-displayTemplate:: display template that this interchange
+|displayTemplate |                           |Display template that this interchange
 address instance should be shown with. This allows an
 address originator to provide a desired display view
 of the address.
-
+|===
 
 [[ix-address-instance-component]]
 === Interchange address instance component
@@ -56,21 +49,25 @@ address component which belongs to an interchange address class.
 
 ==== Attributes
 
-type:: the interchange address component the value is for.
+|===
+|Attribute |Type                        |Description
 
-values:: one or more values for the interchange address component
-specified in `type`. The cardinality of this field depends on the
-type of value. Represented as an `AddressComponentDataValue`.
-
+|type      |`CharacterString`           |The interchange address component the
+value is for.
+|values    |`AddressComponentDataValue` |Values for the interchange address
+component specified in `type`.
+|===
 
 ==== Address component data value
 
 A single value for the interchange address instance component.
 
-type:: the data type of its value. A value from `AddressComponentDataType`.
+|===
+|Attribute |Type                       |Description
 
-value:: the value of the specified component. `CharacterString`.
-
+|type      |`AddressComponentDateType` |The data type of its value.
+|value     |`CharacterString`          |The value of the specified component.
+|===
 
 [[ix-address-capability-instance]]
 === Address capability instance
@@ -79,14 +76,14 @@ The address capability instance is incorporated into an interchange
 address instance to mark its capabilities as determined by an address
 processor:
 
-capability:: the particular address capability that has been fulfilled. Represented
-by a `Uri` value that incorporates the address capability identifier with
-the capability status value.
+|===
+|Attribute |Type         |Description
 
-signature:: cryptographic signature used to ensure that the
+|capability |`Uri`       |The particular address capability that has been
+fulfilled.
+|signature  |`Signature` |Cryptographic signature used to ensure that the
 capability is marked by an address process trusted for
 verification of this capability.
 The signature generated shall incorporate the `id` attribute
-of the interchange address instance that owns it.
-Optional. Represented by `Signature`.
-
+of the interchange address instance that owns it..
+|===

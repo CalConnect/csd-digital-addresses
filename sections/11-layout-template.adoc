@@ -34,19 +34,16 @@ rendered according to a layout template.
 
 === Attributes
 
-ID:: a unique identifier for the layout template. `CharacterString`.
-
-Name:: the descriptive name of the layout template. `CharacterString`.
-
-Description:: textual description of the layout template. `CharacterString`.
-
-Localization:: locale and script information of the layout template.
-Represented by the `Localization` model.
-
-Dimensions:: physical dimensions of the rectangular bounding box
-for the rendered layout output. Represented by `LayoutDimension`.
-
-Orientation:: whether the text orientation is horizontal or vertical.
+|===
+|Attribute    |Type              |Description
+|ID           |`CharacterString` |Unique identifier for the layout template.
+|Name         |`CharacterString` |Descriptive name of the layout template.
+|Description  |`CharacterString` |Textual description of the layout template.
+|Localization |`Integer`         |Locale and script information of the layout template.
+|Dimensions   |`LayoutDimension` |Physical dimensions of the rectangular
+bounding box for the rendered layout output.
+|Orientation  |`CharacterString` |Horizontal or vertical of the text orientation.
+|===
 
 [example]
 Some East Asian languages allow using a vertical flow text orientation
@@ -74,10 +71,13 @@ address form line.
 
 ==== Attributes
 
-Dimensions:: physical dimensions of the rectangular bounding box
-for the rendered line. Represented by `LayoutDimension`.
+|===
+|Attribute    |Type              |Description
+|Dimensions   |`LayoutDimension` |Physical dimensions of the rectangular bounding box
+for the rendered Line.
+|Elements         |`CharacterString` |Collecion of line elements that make up the line.
+|===
 
-Elements:: collection of line elements that make up the line.
 
 
 === Line element reference
@@ -94,12 +94,12 @@ form line element reference.
 
 ==== Attributes
 
-Target:: the interchange address component this reference
-refers to.
-
-Name:: human readable name of what this line element
-reference refers to. `CharacterString`.
-
-Description:: human readable description of what this line element
-reference refers to. Optional. `CharacterString`.
-
+|===
+|Attribute   |Type              |Description
+|Target      |`CharacterString` |The interchange address component this
+reference refers to.
+|Name        |`CharacterString` |Human readable name of what this line element
+reference refers to.
+|Description |`CharacterString` |Human readable description of what this line
+element reference refers to.
+|===
