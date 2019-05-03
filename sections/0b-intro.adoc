@@ -16,8 +16,20 @@ Yet, addresses can mean much more than just geolocation information:
 
 *  As a delivery point
 
-This standard differentiates from and complements to other parts in the
-family of ISO 19160.
+The interchange of addresses require a common structure of address data. For
+instance of a software application in need of user input of address
+information, users need assistance from the application to enter the correct
+format and structure of the address for it to be machine readable and
+interoperable among different machines or systems which process the address
+data.
+
+To facilitate user assistance in software applications for address input and
+the interchange among machines and systems, this standard defines templates
+and interchangeable address profile models in UML, and their registry to ensure
+they are publicly available. This standard differentiates from and complements
+to other parts in the family of ISO 19160. Being focused on the user address
+input and the interchange of address profiles, geocodings of locations are out
+of scope in this standard.
 
 <<ISO19160-1>> describes the Addressing Conceptual models that allow
 specification of international address profiles, and this International
