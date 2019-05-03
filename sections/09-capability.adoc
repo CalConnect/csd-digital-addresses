@@ -17,7 +17,7 @@ To represent specific capabilities, this class should be extended upon.
 
 === Attributes
 |===
-|Attribute |Type         |Description
+|Attribute   |Type              |Description
 
 |ID          |`CharacterString` |Unique identifier of the address capability.
 |name        |`CharacterString` |Human readable name of the address capability.

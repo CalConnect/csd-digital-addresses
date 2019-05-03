@@ -19,6 +19,8 @@
 
 * [[[ISO19106,ISO 19106:2004]]], _Geographic information -- Profiles_
 
+* [[[ISO19135-1, ISO 19135-1:2015]]], _Geographic information — Geographic information - Procedures for item registration - Part 1: Fundamentals_
+
 * [[[ISO19139,ISO 19139:2006]]], _Geographic information -- Metadata -- XML schema implementation_
 
 * [[[ISO31320,ISO/IEC/IEEE 31320-2:2012]]], _Information technology -- Modeling Languages -- Part 2: Syntax and Semantics for IDEF1X97 (IDEFobject)_

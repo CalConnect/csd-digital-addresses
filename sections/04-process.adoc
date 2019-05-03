@@ -1,6 +1,47 @@
 
 == Process of address profile and address instance interchange
 
+=== Address profile registry
+
+==== General
+
+This address profile registry follows the requirements specified in
+<<ISO19135-1>>, and additional requirements specified in this standard.
+
+==== Roles and responsibilities in the management of an address profile registry
+
+The roles and responsibilities of the register owner, register manager, submitting organizations,
+control body, registry manager and register user are set out in <<ISO19135-1>>.
+
+===== Additional requirements to <<ISO19135-1>>
+
+* Historical records of address profiles shall be retained and publicly
+available in the registry.
+
+==== Management rules and procedures of an address profile registry
+
+===== Introduction
+
+The address profile registry will be managed with a version control software
+such as Git, and publicly available with an API and/or a graphical user
+interface such as a web-based interface to satisfy use cases of programatic
+use of a software application and human review for the general public.
+
+Rules for managing a register of address profiles, including the submission
+of information, are found in <<ISO19160-1>>, Clause 6.
+
+==== Address profile register content requirements
+
+===== Address profile register content from <<ISO19135-1>>
+
+The address profile register shall conform to the register schema in
+<<ISO19135-1>>, Clause 7.
+
+===== Address profile register content from this standard
+
+The address profile register shall container address profile data that conform
+to the address profile schema as specified in UML in this standard.
+
 === Address profiles
 
 ==== General
@@ -50,8 +91,6 @@ that the profile is retired.
 To immediately retire an interchange address profile, the publisher shall
 distribute a new version of the address profile with an expired
 validity period.
-
-
 
 === Address instances
 
