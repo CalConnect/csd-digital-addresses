@@ -1,5 +1,5 @@
 
-[[AnnexA]]
+[[Annex-A]]
 [appendix,subtype=informative]
 == Abstract test suites
 

@@ -10,3 +10,4 @@
 
 * [[[ISO19115-1,ISO 19115-1]]], _Geographic information -- Metadata -- Part 1: Fundamentals_
 
+* [[[ISO19157,ISO 19157]]], _AUTOFILL_
