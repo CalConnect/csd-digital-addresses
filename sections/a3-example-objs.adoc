@@ -57,9 +57,8 @@ addressClasses: {
   streetAddress: {
     description: Street Address,
     availableFields: [ (addressComponent) 1..* ... ]
-displayTemplate: { ... ],
-inputTemplte: {}
-
+    displayTemplate: { ... },
+    inputTemplate: { ... }
   }
 }
 ----
@@ -80,7 +79,7 @@ inputTemplte: {}
 ----
 "publisher": {
   "publisherName": "UK Post Office",
-  "publisherUri": "https://www.post.co.uk"
+  "publisherUri": "https://www.postoffice.co.uk"
 }
 ----
 
@@ -101,7 +100,7 @@ inputTemplte: {}
 ----
 "signature": {
   "algorithm": "1.2.3.4.5.6.7.8.9",
-  "publicKey": "https://www.post.co.uk/profile-signature.key",
+  "publicKey": "https://www.postoffice.co.uk/profile-signature.key",
   "signature": "BOLVMNoGNM1TLglnlxgm0a9t"
 }
 ----
