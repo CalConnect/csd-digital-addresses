@@ -24,9 +24,13 @@
 :draft:
 :toc:
 :stem:
-:xrefstyle: short
+:docfile: document.adoc
+:imagesdir: images
+:mn-document-class: iso
+:mn-output-extensions: xml,doc,html,pdf
 :local-cache-only:
 :data-uri-image:
+
 
 include::sections/0a-foreword.adoc[]
 include::sections/0b-intro.adoc[]
