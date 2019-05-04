@@ -5,7 +5,7 @@
 === General
 
 .Interchange address instance data model
-image::images/png/Model!AddressInstance_3.png[]
+image::AddressInstance.png[]
 
 An interchange address instance is the representation of an address
 that conforms to an interchange address class, which in turn

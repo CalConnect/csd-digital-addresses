@@ -1,0 +1,121 @@
+@startuml FormTemplate
+/'
+Diagram:        FormTemplate
+DateCreate:     03/05/2019
+Description:
+
+Hystory of changes:
+> DD/MM/YYYY
+    -
+    -
+'/
+
+'******* CONFIGURATION ************************************************
+skinparam classAttributeIconSize 0
+skinparam Dpi 150
+skinparam Monochrome true
+skinparam LineType ortho
+skinparam nodesep 60
+skinparam ranksep 30
+hide circle
+/' skinparam CircledCharacterRadius 0 '/
+/' skinparam CircledCharacterFontSize 0 '/
+skinparam Default {
+TextAlignment center
+FontName Helvetica
+}
+skinparam Class {
+AttributeIconSize 0
+BackgroundColor White
+FontStyle bold
+StereotypeFontSize 10
+}
+skinparam Rectangle {
+BackgroundColor White
+FontStyle bold
+FontSize 11
+StereotypeFontSize 10
+}
+skinparam Object {
+BackgroundColor White
+FontStyle bold
+FontSize 11
+StereotypeFontSize 10
+}
+
+skinparam Entity {
+StereotypeFontSize 10
+}
+
+'******* CLASS DEFINITION *********************************************
+class FormTemplate {
+    +lines: FormLine[0..*]
+}
+
+class LayoutTemplate{
+    +id: CharacterString
+    +name: CharacterString
+    +addressClass: InterchangeAddressClass
+    +description: CharacterString
+    +localization: Localization
+    +dimensions: LayoutDimension[0..*]
+    +orientation: LayoutOrientation[0..1]
+    +lines: LayoutLine[0..*]
+}
+
+class FormLine{
+    +elements: FormLineElementReference[0..*]
+}
+
+class LineElementReference{
+    +target: InterchangeAddressComponent
+    +name: CharacterString
+    +description: CharacterString[0..1]
+}
+
+class FormLineElementReference{
+    +values: FormLineElement[0..*]
+}
+
+class FormLineElement{
+
+}
+
+class SelectionPair{
+    +displayAs: CharacterString
+    +key: CharacterString
+}
+
+class SelectionElement{
+    +map: SelectionPair[1..*]
+}
+
+class DataElement{
+    +value: CharacterString
+}
+
+class StaticTextElement{
+    +value: CharacterString
+}
+
+class DataElementWithConditions{
+    +conditions
+}
+
+
+'******* NOTES ********************************************************
+note right of DataElementWithConditions: "ValueElementWithConditions\n are the conditions\n such as `zip code must be 5 digits long`, etc.\n Potentially use Object\n Constraint Language"
+
+'******* CLASS RELATIONS **********************************************
+LayoutTemplate <|-left- FormTemplate
+FormLine -up-> FormTemplate
+FormLineElementReference -up-> FormLine
+FormLineElement -up-> FormLineElementReference
+StaticTextElement -up-|> FormLineElement
+SelectionPair -right-> SelectionElement
+SelectionElement -up-|> FormLineElement
+DataElement -up-|> FormLineElement
+DataElement <|-- DataElementWithConditions
+FormLine -right-|> LineElementReference
+
+@enduml

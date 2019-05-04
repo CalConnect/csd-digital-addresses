@@ -18,7 +18,7 @@ including:
 Core data types (`CoreTypes`) are defined in <<ISO19103,clause A.2>>.
 
 .Common data types used in this document
-image::images/png/Model!DataTypes_2.png[]
+image::DataTypes.png[]
 
 === User-defined data types
 

@@ -13,7 +13,7 @@ implementation to understand how to represent addresses, their requirements,
 as well as their input and display.
 
 .Interchange address profile data model
-image::images/png/Model!AddressProfile_0.png[]
+image::AddressProfile.png[]
 
 
 === Attributes

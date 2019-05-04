@@ -1,0 +1,88 @@
+@startuml AddressCapability
+/'
+Diagram:        AddressCapability
+DateCreate:     03/05/2019
+Description:
+
+Hystory of changes:
+> DD/MM/YYYY
+    -
+    -
+'/
+
+'******* CONFIGURATION ************************************************
+skinparam classAttributeIconSize 0
+skinparam Dpi 150
+skinparam Monochrome true
+skinparam LineType ortho
+skinparam nodesep 30
+skinparam ranksep 60
+hide circle
+/' skinparam CircledCharacterRadius 0 '/
+/' skinparam CircledCharacterFontSize 0 '/
+skinparam Default {
+TextAlignment center
+FontName Helvetica
+}
+skinparam Class {
+AttributeIconSize 0
+BackgroundColor White
+FontStyle bold
+StereotypeFontSize 10
+}
+skinparam Rectangle {
+BackgroundColor White
+FontStyle bold
+FontSize 11
+StereotypeFontSize 10
+}
+skinparam Object {
+BackgroundColor White
+FontStyle bold
+FontSize 11
+StereotypeFontSize 10
+}
+
+skinparam Entity {
+StereotypeFontSize 10
+}
+
+'******* CLASS DEFINITION *********************************************
+class AddressCapability {
+    +id: CharacterString
+    +name: CharacterString
+    +description: CharacterString
+}
+
+class SpecificationLevel{
+    +value: SpecificationLevelValue
+}
+
+enum CapabilitySpecificationLevelValue <<enumeration>> {
+    unstructured
+    partial
+    full
+}
+
+class QualityStatus{
+    +QualityCodes
+}
+
+enum QualityCodes <<enumeration>>{
+    confirmed_correct
+    possibly_correct
+    structurally_correct
+    unknown
+}
+
+
+'******* NOTES ********************************************************
+
+
+'******* CLASS RELATIONS **********************************************
+SpecificationLevel -up-|> AddressCapability
+QualityStatus -up-|> AddressCapability
+CapabilitySpecificationLevelValue -up-> SpecificationLevel
+QualityCodes -up-> QualityStatus
+
+@enduml

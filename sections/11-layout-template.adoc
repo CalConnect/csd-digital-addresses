@@ -5,7 +5,7 @@
 === General
 
 .Interchange layout template data model
-image::images/png/Model!LayoutTemplate_7.png[]
+image::LayoutTemplate.png[]
 
 The interchange layout template serves as the basis of the
 interchange display template and
@@ -60,7 +60,7 @@ horizontal space is limited.
 ==== General
 
 .Interchange layout line data model
-image::images/png/Model!LayoutLine_8.png[]
+image::LayoutLine.png[]
 
 A layout line represents a line in a rendered address display
 or an address input form.

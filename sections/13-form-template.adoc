@@ -6,7 +6,7 @@
 === General
 
 .Interchange form template data model
-image::images/png/Model!FormTemplate_4.png[]
+image::FormTemplate.png[]
 
 This section shows how an input form can be rendered according to
 the interchange address class.

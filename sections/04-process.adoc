@@ -47,7 +47,7 @@ to the address profile schema as specified in UML in this standard.
 ==== General
 
 .Lifecycle of an interchange address profile
-image::images/png/AddressProfileStates!AddressProfileLifeCycle_10.png[]
+image::AddressProfileLifeCycle.png[]
 
 ==== Creating interchange address profiles
 
@@ -97,7 +97,7 @@ validity period.
 ==== General
 
 .Lifecycle of an interchange address instance
-image::images/png/AddressInstanceStates!AddressInstanceLifeCycle_11.png[]
+image::AddressInstanceLifeCycle.png[]
 
 ==== Creating an interchange address instance
 

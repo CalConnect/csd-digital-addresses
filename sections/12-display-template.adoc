@@ -11,7 +11,7 @@ address class. Generally, one address class is represented
 by just one display template.
 
 .Interchange display template data model
-image::images/png/Model!DisplayTemplate_1.png[]
+image::DisplayTemplate.png[]
 
 NOTE: this part is intentionally separate from PATDL
 for a more accurate approach to representations.

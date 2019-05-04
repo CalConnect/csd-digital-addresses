@@ -1,0 +1,87 @@
+@startuml AddressInstance
+/'
+Diagram:        AddressInstance
+DateCreate:     03/05/2019
+Description:
+
+Hystory of changes:
+> DD/MM/YYYY
+    -
+    -
+'/
+
+'******* CONFIGURATION ************************************************
+skinparam classAttributeIconSize 0
+skinparam Dpi 150
+skinparam Monochrome true
+skinparam LineType ortho
+skinparam nodesep 60
+skinparam ranksep 30
+hide circle
+/' skinparam CircledCharacterRadius 0 '/
+/' skinparam CircledCharacterFontSize 0 '/
+skinparam Default {
+TextAlignment center
+FontName Helvetica
+}
+skinparam Class {
+AttributeIconSize 0
+BackgroundColor White
+FontStyle bold
+StereotypeFontSize 10
+}
+skinparam Rectangle {
+BackgroundColor White
+FontStyle bold
+FontSize 11
+StereotypeFontSize 10
+}
+skinparam Object {
+BackgroundColor White
+FontStyle bold
+FontSize 11
+StereotypeFontSize 10
+}
+
+skinparam Entity {
+StereotypeFontSize 10
+}
+
+'******* CLASS DEFINITION *********************************************
+class InterchangeAddressInstance {
+    +id: CharacterString
+    +name: CharacterString[0..1]
+    +profile: InterchangeAddressProfile
+    +addressClass: InterchangeAddressClass
+    +components: InterchangeAddressInstanceComponent[0..*]
+    +signature: Signature[0..1]
+    +capabilities: AddressCapabilityInstance[0..*]
+    +applicability: MD_SpatialRepresentation[0..*]
+    +validity: Validity[0..1]
+    +displayTemplate: DisplayTemplate[0..1]
+}
+
+class InterchangeAddressInstanceComponent{
+    +type: InterchangeAddressComponent
+    +values: AddressComponentDataValue[1..*]
+}
+
+class AddressCapabilityInstance{
+    +capability: AddressCapability
+    +signature: Signature[0..1]
+}
+
+class AddressComponentDataValue{
+    +type: AddressComponentDataType
+    +value: CharacterString
+}
+
+'******* NOTES ********************************************************
+
+
+'******* CLASS RELATIONS **********************************************
+InterchangeAddressInstance <-- InterchangeAddressInstanceComponent
+InterchangeAddressInstance <-- AddressCapabilityInstance
+AddressComponentDataValue -up-> InterchangeAddressInstanceComponent
+
+@enduml

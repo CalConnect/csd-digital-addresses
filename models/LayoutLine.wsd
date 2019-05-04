@@ -1,0 +1,134 @@
+@startuml LayoutLine
+/'
+Diagram:        LayoutLine
+DateCreate:     03/05/2019
+Description:
+
+Hystory of changes:
+> DD/MM/YYYY
+    -
+    -
+'/
+
+'******* CONFIGURATION ************************************************
+skinparam classAttributeIconSize 0
+skinparam Dpi 150
+skinparam Monochrome true
+skinparam LineType ortho
+skinparam nodesep 30
+skinparam ranksep 40
+hide circle
+/' skinparam CircledCharacterRadius 0 '/
+/' skinparam CircledCharacterFontSize 0 '/
+skinparam Default {
+TextAlignment center
+FontName Helvetica
+}
+skinparam Class {
+AttributeIconSize 0
+BackgroundColor White
+FontStyle bold
+StereotypeFontSize 10
+}
+skinparam Rectangle {
+BackgroundColor White
+FontStyle bold
+FontSize 11
+StereotypeFontSize 10
+}
+skinparam Object {
+BackgroundColor White
+FontStyle bold
+FontSize 11
+StereotypeFontSize 10
+}
+
+skinparam Entity {
+StereotypeFontSize 10
+}
+
+'******* CLASS DEFINITION *********************************************
+class LayoutLine{
+    +dimensions: LayoutDimensions
+    +elements
+}
+
+class DisplayLine{
+    +elements: DisplayLineElementReference[0..*]
+}
+
+class FormLine{
+    +elements: FormLineElementReference[0..*]
+}
+
+class LineElementReference{
+    +target: InterchangeAddressComponent
+    +name: CharacterString
+    +description: CharacterString[0..1]
+}
+
+class DisplayLineElementReference{
+    +values: DisplayLineElement[0..*]
+}
+
+class FormLineElementReference{
+    +values: FormLineElement[0..*]
+}
+
+class DisplayLineElement{
+
+}
+
+class FormLineElement{
+
+}
+
+class TextElement{
+    +text: CharacterString
+}
+
+class DataElement{
+    +value: CharacterString
+}
+
+class StaticTextElement{
+    +value: CharacterString
+}
+
+class SelectionElement{
+    +map: SelectionPair[1..*]
+}
+
+class SelectionPair{
+    +displayAs: CharacterString
+    +key: CharacterString
+}
+
+class DataElementWithConditions {
+    +conditions
+}
+
+
+
+'******* NOTES ********************************************************
+note bottom of DataElementWithConditions: "ValueElementWithConditions\n are the conditions such as\n `zip code must be 5 digits long`, etc.\n Potentially use Object\n Constraint Language."
+
+'******* CLASS RELATIONS **********************************************
+LayoutLine <|-- DisplayLine
+LayoutLine <|-- FormLine
+DisplayLine <-- DisplayLineElementReference
+FormLine <-- FormLineElementReference
+LineElementReference <|-- DisplayLineElementReference
+LineElementReference <|-- FormLineElementReference
+DisplayLineElementReference <-- DisplayLineElement
+FormLineElementReference <-- FormLineElement
+DisplayLineElement <|-- TextElement
+DisplayLineElement <|-- DataElement
+FormLineElement <|-- StaticTextElement
+FormLineElement <|-- SelectionElement
+SelectionElement <-- SelectionPair
+FormLineElement <|-- DataElement
+DataElement <|-- DataElementWithConditions
+
+
+@enduml

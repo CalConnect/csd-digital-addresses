@@ -1,0 +1,85 @@
+@startuml AddressClass
+/'
+Diagram:        AddressClass
+DateCreate:     03/05/2019
+Description:
+
+Hystory of changes:
+> DD/MM/YYYY
+    -
+    -
+'/
+
+'******* CONFIGURATION ************************************************
+skinparam classAttributeIconSize 0
+skinparam Dpi 150
+skinparam Monochrome true
+skinparam LineType ortho
+skinparam nodesep 30
+skinparam ranksep 40
+hide circle
+/' skinparam CircledCharacterRadius 0 '/
+/' skinparam CircledCharacterFontSize 0 '/
+skinparam Default {
+TextAlignment center
+FontName Helvetica
+}
+skinparam Class {
+AttributeIconSize 0
+BackgroundColor White
+FontStyle bold
+StereotypeFontSize 10
+}
+skinparam Rectangle {
+BackgroundColor White
+FontStyle bold
+FontSize 11
+StereotypeFontSize 10
+}
+skinparam Object {
+BackgroundColor White
+FontStyle bold
+FontSize 11
+StereotypeFontSize 10
+}
+
+skinparam Entity {
+StereotypeFontSize 10
+}
+
+'******* CLASS DEFINITION *********************************************
+class InterchangeAddressClass{
+    +id: CharacterString
+    +description: CharacterString
+    +components: InterchangeAddressComponent[1..*]
+    +displayTemplate
+    +inputTemplate
+}
+
+class InterchangeAddressComponent{
+    +key: CharacterString
+    +description: CharacterString
+    +dataType: AddressComponentDataType
+    +obligation: ComponentObligation
+    +maxCardinality: Integer
+    +minCardinality: Integer
+    +example: CharacterString[0..1]
+}
+
+enum ComponentObligation <<enumeration>>{
+    mandatory
+    optional
+    disallowed
+}
+
+
+'******* NOTES ********************************************************
+note right of InterchangeAddressClass: An InterchangeAddressClass is like this. Each line is a Component.\n US Numbered Thoroughfare Address:{ Complete Landmark Name or Complete Place Name }\n + { Complete Address Number * }\n + { Complete Street Name * }\n + { Complete Subaddress }\n + { Complete Place Name * }\n + { State Name * }\n + { Zip Code }\n + { Zip Plus 4 }\n + { Country Name }
+
+
+'******* CLASS RELATIONS **********************************************
+InterchangeAddressClass <-- InterchangeAddressComponent
+InterchangeAddressComponent <-- ComponentObligation
+
+
+@enduml

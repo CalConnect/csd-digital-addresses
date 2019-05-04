@@ -5,7 +5,7 @@
 === General
 
 .Interchange address class data model
-image::images/png/Model!AddressClass_9.png[]
+image::AddressClass.png[]
 
 
 Interchange address class corresponds to the `addressClass` specified in
