@@ -99,7 +99,7 @@ DisplayLine -up-> DisplayTemplate
 DisplayLine -right-|> LineElementReference
 DisplayLineElementReference -up-> DisplayLine
 DisplayLineElement -up-> DisplayLineElementReference
-TextElement -up-> DisplayLineElement
-DataElement -up-> DisplayLineElement
+TextElement -up-|> DisplayLineElement
+DataElement -up-|> DisplayLineElement
 
 @enduml
