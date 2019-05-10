@@ -94,11 +94,8 @@ class TextElement{
 
 '******* CLASS RELATIONS **********************************************
 
-DisplayTemplate -right-|> LayoutTemplate
-DisplayLine -up-> DisplayTemplate
-DisplayLine -right-|> LineElementReference
-DisplayLineElementReference -up-> DisplayLine
-DisplayLineElement -up-> DisplayLineElementReference
+DisplayTemplate -up-|> LayoutTemplate
+DisplayLine -up-|> LineElementReference
 TextElement -up-|> DisplayLineElement
 DataElement -up-|> DisplayLineElement
 

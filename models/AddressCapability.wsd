@@ -82,7 +82,5 @@ enum QualityCodes <<enumeration>>{
 '******* CLASS RELATIONS **********************************************
 SpecificationLevel -up-|> AddressCapability
 QualityStatus -up-|> AddressCapability
-CapabilitySpecificationLevelValue -up-> SpecificationLevel
-QualityCodes -up-> QualityStatus
 
 @enduml

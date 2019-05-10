@@ -108,11 +108,7 @@ note right of DataElementWithConditions: "ValueElementWithConditions\n are the c
 
 '******* CLASS RELATIONS **********************************************
 LayoutTemplate <|-left- FormTemplate
-FormLine -up-> FormTemplate
-FormLineElementReference -up-> FormLine
-FormLineElement -up-> FormLineElementReference
 StaticTextElement -up-|> FormLineElement
-SelectionPair -right-> SelectionElement
 SelectionElement -up-|> FormLineElement
 DataElement -up-|> FormLineElement
 DataElement <|-- DataElementWithConditions

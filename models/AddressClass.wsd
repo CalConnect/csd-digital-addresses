@@ -73,13 +73,7 @@ enum ComponentObligation <<enumeration>>{
 }
 
 
-'******* NOTES ********************************************************
-note right of InterchangeAddressClass: An InterchangeAddressClass is like this. Each line is a Component.\n US Numbered Thoroughfare Address:{ Complete Landmark Name or Complete Place Name }\n + { Complete Address Number * }\n + { Complete Street Name * }\n + { Complete Subaddress }\n + { Complete Place Name * }\n + { State Name * }\n + { Zip Code }\n + { Zip Plus 4 }\n + { Country Name }
-
-
 '******* CLASS RELATIONS **********************************************
-InterchangeAddressClass <-- InterchangeAddressComponent
-InterchangeAddressComponent <-- ComponentObligation
 
 
 @enduml

@@ -116,12 +116,9 @@ note bottom of DataElementWithConditions: "ValueElementWithConditions\n are the 
 '******* CLASS RELATIONS **********************************************
 LayoutLine <|-- DisplayLine
 LayoutLine <|-- FormLine
-DisplayLine <-- DisplayLineElementReference
-FormLine <-- FormLineElementReference
 LineElementReference <|-- DisplayLineElementReference
 LineElementReference <|-- FormLineElementReference
 DisplayLineElementReference <-- DisplayLineElement
-FormLineElementReference <-- FormLineElement
 DisplayLineElement <|-- TextElement
 DisplayLineElement <|-- DataElement
 FormLineElement <|-- StaticTextElement

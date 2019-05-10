@@ -80,8 +80,6 @@ class AddressComponentDataValue{
 
 
 '******* CLASS RELATIONS **********************************************
-InterchangeAddressInstance <-- InterchangeAddressInstanceComponent
-InterchangeAddressInstance <-- AddressCapabilityInstance
-AddressComponentDataValue -up-> InterchangeAddressInstanceComponent
+
 
 @enduml
