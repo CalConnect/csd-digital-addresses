@@ -36,5 +36,8 @@ class AddressComponentDataValue{
 
 '******* CLASS RELATIONS **********************************************
 
-
+InterchangeAddressInstanceComponent -up-> InterchangeAddressInstance
+AddressFeature -up-> AddressFeatureInstance
+AddressComponentDataValue -up-> InterchangeAddressInstanceComponent
+AddressFeatureInstance -up-> InterchangeAddressInstance
 @enduml

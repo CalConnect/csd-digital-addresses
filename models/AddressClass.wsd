@@ -29,5 +29,7 @@ enum ComponentObligation <<enumeration>>{
 
 '******* CLASS RELATIONS **********************************************
 
+InterchangeAddressComponent -up-> InterchangeAddressClass
+ComponentObligation -up-> InterchangeAddressComponent
 
 @enduml

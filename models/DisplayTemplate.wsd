@@ -53,5 +53,7 @@ DisplayTemplate -up-|> LayoutTemplate
 DisplayLine -up-|> LineElementReference
 TextElement -up-|> DisplayLineElement
 DataElement -up-|> DisplayLineElement
-
+DisplayLine -up-> DisplayTemplate
+DisplayLineElementReference -up-> DisplayLine
+DisplayLineElement -up-> DisplayLineElementReference
 @enduml

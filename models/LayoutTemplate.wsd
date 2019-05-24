@@ -38,5 +38,7 @@ enum LayoutOrientation <<enumeration>>{
 '******* CLASS RELATIONS **********************************************
 LayoutTemplate <|-- DisplayTemplate
 LayoutTemplate <|-- FormTemplate
+LayoutDimension -up-> LayoutTemplate
+LayoutOrientation -up-> LayoutTemplate
 
 @enduml

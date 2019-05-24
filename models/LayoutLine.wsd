@@ -76,6 +76,9 @@ LineElementReference <|-- FormLineElementReference
 DisplayLineElementReference <-- DisplayLineElement
 DisplayLineElement <|-- TextElement
 DisplayLineElement <|-- DataElement
+DisplayLineElementReference -up-> DisplayLine
+FormLineElementReference -up-> FormLine
+FormLineElement -up-> FormLineElementReference
 FormLineElement <|-- StaticTextElement
 FormLineElement <|-- SelectionElement
 SelectionElement <-- SelectionPair

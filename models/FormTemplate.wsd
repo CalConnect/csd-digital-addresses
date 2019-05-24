@@ -62,11 +62,14 @@ class DataElementWithConditions{
 note right of DataElementWithConditions: "ValueElementWithConditions\n are the conditions\n such as `zip code must be 5 digits long`, etc.\n Potentially use Object\n Constraint Language"
 
 '******* CLASS RELATIONS **********************************************
-LayoutTemplate <|-left- FormTemplate
+FormTemplate -up-|> LayoutTemplate
+FormLine -up--> FormTemplate
 StaticTextElement -up-|> FormLineElement
 SelectionElement -up-|> FormLineElement
 DataElement -up-|> FormLineElement
 DataElement <|-- DataElementWithConditions
-FormLine -right-|> LineElementReference
-
+FormLine -up-|> LineElementReference
+FormLineElement -up-> FormLineElementReference
+FormLineElementReference -up-> FormLine
+SelectionPair -up-> SelectionElement
 @enduml
