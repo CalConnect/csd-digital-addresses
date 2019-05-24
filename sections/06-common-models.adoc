@@ -2,18 +2,6 @@
 [[ix-common]]
 == Common models
 
-[source=Stephane Garcia]
-****
-I think here it could be very useful to distinguish elements from
-19160-1 from elements added by 19160-6
-****
-
-[source=Ronald Tse]
-****
-Elements used from other documents such as 19160-1 are
-all explicitly identified.
-****
-
 .Common data models used in this document
 image::CommonModels.png[]
 
@@ -51,11 +39,6 @@ object.
 |script    |<<ISO15924>> Script Identifier Code |The type of written
 script used in the parent object.
 |===
-
-[source=Stephane Garcia]
-****
-Does it use PT_Locale ?
-****
 
 [source=Ronald Tse]
 ****

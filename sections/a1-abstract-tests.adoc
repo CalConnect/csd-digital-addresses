@@ -1,16 +1,11 @@
 
 [[Annex-A]]
-[appendix,subtype=informative]
+[appendix,obligation=informative]
 == Abstract test suites
-
-[source=Serena Coetzee]
-****
-Informative text
-****
 
 === Introduction
 
-The abstract test suites for the conformance classes defined by this part of ISO {docnumber} are presented in <<first_conformance_class>> to <<last_conformance_class>>.
+The abstract test suites for the conformance classes defined by this part of ISO {docnumber} are presented in <<test-ix-address-instance>> to <<test-display-template>>.
 
 ////
 
@@ -19,18 +14,55 @@ TODO: complete test suites corresponding to 0x-conformance...
 ////
 
 
+[[test-ix-address-instance]]
+=== Conformance class: IxAddressInstance
+
+.IxAddressInstance test 1: Associations
+|===
+|Test purpose |Check that the model contains the associations as specified.
+|Test method |Inspect the model
+|Reference |<<ix-address-instance>>
+|Test type |Basic
+|===
+
+.IxAddressInstance test 2: Attributes
+|===
+|Test purpose |For each instance in the class, check that the instance appropriately includes the mandatory, optional and conditional attributes.
+|Test method |Inspect the model
+|Reference |<<ix-address-instance>>
+|Test type |Basic
+|===
+
+[[test-profile-register]]
+=== Conformance class: Address profile register
+
+Refer to <<ISO19135-1>> for requirements.
 
 
+[[test-ix-address-class]]
+=== Conformance class: IxAddressClass
+
+.IxAddressClass test 1: Associations
+|===
+|Test purpose |Check that the model contains the associations as specified.
+|Test method |Inspect the model
+|Reference |<<ix-address-class>>
+|Test type |Basic
+|===
+
+[[test-ix-address-component]]
+=== Conformance class: IxAddressComponent
+
+.IxAddressComponent test 1: Associations
+|===
+|Test purpose |Check that the model contains the associations as specified.
+|Test method |Inspect the model
+|Reference |<<ix-address-component>>
+|Test type |Basic
+|===
 
 
-
-
-
-
-
-
-////
-[[first_conformance_class]]
+[[test-ix-address-profile]]
 === Conformance class: IxAddressProfile
 
 .IxAddressProfile test 1: Associations
@@ -49,16 +81,8 @@ TODO: complete test suites corresponding to 0x-conformance...
 |Test type |Basic
 |===
 
-=== Conformance class: IxAddressInstance
 
-.IxAddressInstance test 1: Attributes
-|===
-|Test purpose |For each instance in the class, check that the instance appropriately includes the mandatory, optional and conditional attributes.
-|Test method |Inspect the model
-|Reference |<<ix-address-instance>>
-|Test type |Basic
-|===
-
+[[test-form-template]]
 === Conformance class: FormTemplate
 
 .FormTemplate  test 1: Attributes
@@ -69,7 +93,7 @@ TODO: complete test suites corresponding to 0x-conformance...
 |Test type |Basic
 |===
 
-[[last_conformance_class]]
+[[test-display-template]]
 === Conformance class: DisplayTemplate
 
 .DisplayTemplate  test 1: Attributes
@@ -79,4 +103,4 @@ TODO: complete test suites corresponding to 0x-conformance...
 |Reference |<<display-template>>
 |Test type |Basic
 |===
-////
+

@@ -69,21 +69,21 @@ A single value for the interchange address instance component.
 |value     |`CharacterString`          |The value of the specified component.
 |===
 
-[[ix-address-capability-instance]]
-=== Address capability instance
+[[ix-address-feature-instance]]
+=== Address feature instance
 
-The address capability instance is incorporated into an interchange
-address instance to mark its capabilities as determined by an address
+The address feature instance is incorporated into an interchange
+address instance to mark its features as determined by an address
 processor:
 
 |===
 |Attribute |Type         |Description
 
-|capability |`Uri`       |The particular address capability that has been
+|feature |`Uri`       |The particular address feature that has been
 fulfilled.
-|signature  |`Signature` |Cryptographic signature used to ensure that the
-capability is marked by an address process trusted for
-verification of this capability.
+|signature  |`Signature` | (Optional) Cryptographic signature used to ensure that the
+feature is marked by an address process trusted for
+verification of this feature.
 The signature generated shall incorporate the `id` attribute
 of the interchange address instance that owns it..
 |===

@@ -1,31 +1,31 @@
 
-[[address-capability]]
-== Address capability
-// (AddressCapability)
+[[address-feature]]
+== Address feature
+// (AddressFeature)
 
 === General
 
-.Interchange address capability data model
-image::AddressCapability.png[]
+.Interchange address feature data model
+image::AddressFeature.png[]
 
-Address capability represents the status of a particular aspect of an
+Address feature represents the status of a particular aspect of an
 interchange address instance, as determined by an address processor.
 Each of the aspects may be differentiated by multiple statuses.
 
 This is an abstract class.
-To represent specific capabilities, this class should be extended upon.
+To represent specific features, this class should be extended upon.
 
 === Attributes
 |===
 |Attribute   |Type              |Description
 
-|ID          |`CharacterString` |Unique identifier of the address capability.
-|name        |`CharacterString` |Human readable name of the address capability.
+|ID          |`CharacterString` |Unique identifier of the address feature.
+|name        |`CharacterString` |Human readable name of the address feature.
 |description |`CharacterString` |Human readable description of the address
-capability.
+feature.
 |===
 
-=== Capabilities
+=== Features
 
 ==== Quality
 
@@ -78,3 +78,12 @@ Digital addresses for utility installations
 
 Therefore, an organization who accepts these addresses may wish to
 re-structure them or fill in any missing address components.
+
+
+==== Geocoding
+
+An address is commonly linked to one or more geolocations.
+The value of a location is given by `EX_Extent` defined
+in <<ISO19115-1,clause=6.6.1>>, which supports
+geographic, temporal and vertical specification.
+

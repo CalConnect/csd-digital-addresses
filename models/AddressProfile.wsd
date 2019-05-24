@@ -1,67 +1,22 @@
-@startuml AddressProfile
-/'
-Diagram:        AddressProfile
-DateCreate:     03/05/2019
-Description:
+@startuml
 
-Hystory of changes:
-> DD/MM/YYYY
-    -
-    -
-'/
-
-'******* CONFIGURATION ************************************************
-skinparam classAttributeIconSize 0
-skinparam Dpi 150
-skinparam Monochrome true
-skinparam LineType ortho
-skinparam nodesep 30
-skinparam ranksep 30
-hide circle
-/' skinparam CircledCharacterRadius 0 '/
-/' skinparam CircledCharacterFontSize 0 '/
-skinparam Default {
-TextAlignment center
-FontName Helvetica
-}
-skinparam Class {
-AttributeIconSize 0
-BackgroundColor White
-FontStyle bold
-StereotypeFontSize 10
-}
-skinparam Rectangle {
-BackgroundColor White
-FontStyle bold
-FontSize 11
-StereotypeFontSize 10
-}
-skinparam Object {
-BackgroundColor White
-FontStyle bold
-FontSize 11
-StereotypeFontSize 10
-}
-
-skinparam Entity {
-StereotypeFontSize 10
-}
+!include style.uml.inc
 
 '******* CLASS DEFINITION *********************************************
 class InterchangeAddressProfile {
-    +id
-    +type
-    +description: CharacterString
-    +classes: InterchangeAddressClass[0..*]
-    +dataTypes: UserDefinedDataType[0..*]
-    +signature: Signature[0..1]
-    +publisher: CI_Party
-    +validity: Validity
-    +localization: Localization
-    +areaApplicability: MD_SpatialRepresentation[0..*]
-    +ttl: Integer
-    +identifier: MD_Identifier
-    +country: iso3166Code[0..*]
+  +id
+  +type
+  +description: CharacterString
+  +classes: InterchangeAddressClass[0..*]
+  +dataTypes: UserDefinedDataType[0..*]
+  +signature: Signature[0..1]
+  +publisher: CI_Party
+  +validity: Validity
+  +localization: Localization
+  +areaApplicability: MD_SpatialRepresentation[0..*]
+  +timeToLive: Integer
+  +identifier: MD_Identifier
+  +country: iso3166Code[0..*]
 }
 
 

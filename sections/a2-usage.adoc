@@ -1,13 +1,13 @@
 
 [[AnnexB]]
-[appendix,subtype=informative]
+[appendix,obligation=informative]
 == Usage
 
 === Accuracy and Verification
 
 An authority, such as the local post office, could "verify" a
 structured address that it is confirmed that this address instance is a
-"deliverable address" through an AddressCapability.
+"deliverable address" through an AddressFeature.
 
 [source=Ronald Tse]
 ****

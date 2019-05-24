@@ -1,6 +1,6 @@
 
 [[AnnexD]]
-[appendix,subtype=informative]
+[appendix,obligation=informative]
 == Examples
 
 [source=Ronald Tse]

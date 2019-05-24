@@ -1,68 +1,30 @@
-@startuml CommonModels
-/'
-Diagram:        CommonModels
-DateCreate:     03/05/2019
-Description:
+@startuml
 
-Hystory of changes:
-> DD/MM/YYYY
-    -
-    -
-'/
-
-'******* CONFIGURATION ************************************************
-skinparam classAttributeIconSize 0
-skinparam Dpi 150
-skinparam Monochrome true
-skinparam LineType ortho
-skinparam nodesep 30
-skinparam ranksep 30
-hide circle
-/' skinparam CircledCharacterRadius 0 '/
-/' skinparam CircledCharacterFontSize 0 '/
-skinparam Default {
-TextAlignment center
-FontName Helvetica
-}
-skinparam Class {
-AttributeIconSize 0
-BackgroundColor White
-FontStyle bold
-StereotypeFontSize 10
-}
-skinparam Rectangle {
-BackgroundColor White
-FontStyle bold
-FontSize 11
-StereotypeFontSize 10
-}
-skinparam Object {
-BackgroundColor White
-FontStyle bold
-FontSize 11
-StereotypeFontSize 10
-}
-
-skinparam Entity {
-StereotypeFontSize 10
-}
+!include style.uml.inc
 
 '******* CLASS DEFINITION *********************************************
-class Signature{
-    +algorithm: iso14888Oid
-    +publicKey
-    +signature: CharacterString
+class Localization{
+  +locale: PT_Locale { characterEncoding = UTF8 }
+  +script: iso15924Code
+  +textDirection: TextDirectionCode
 }
 
-class Localization{
-    +locale: PT_Locale { characterEncoding = UTF8 }
-    +script: iso15924Code
+enum TextDirectionCode <<enumeration>> {
+  leftToRight
+  rightToLeft
+  topToBottom
 }
 
 class Validity{
-    +validityBegins: CI_Date { dateType = validityBegins }
-    +validityEnds: CI_Date { dateType = validityEnds }
-    +revision: CI_Date { dateType = revision }
+  +validityBegins: CI_Date { dateType = validityBegins }
+  +validityEnds: CI_Date { dateType = validityEnds }
+  +revision: CI_Date { dateType = revision }
+}
+
+class Signature{
+  +algorithm: iso14888Oid
+  +publicKey
+  +signature: CharacterString
 }
 
 '******* NOTES ********************************************************

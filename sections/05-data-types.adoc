@@ -6,7 +6,7 @@
 
 These are the common data types used within this document.
 
-Primitive data types (`PrimitiveTypes`) are defined in <<ISO19103,clause 7.2>>,
+Primitive data types (`PrimitiveTypes`) are defined in <<ISO19103,clause="7.2">>,
 including:
 
 * `CharacterString`
@@ -15,7 +15,7 @@ including:
 * `Vector`
 * `Boolean`
 
-Core data types (`CoreTypes`) are defined in <<ISO19103,clause A.2>>.
+Core data types (`CoreTypes`) are defined in <<ISO19103,clause=A.2>>.
 
 .Common data types used in this document
 image::DataTypes.png[]

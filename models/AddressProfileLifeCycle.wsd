@@ -1,52 +1,6 @@
-@startuml AddressProfileLifeCycle
-/'
-Diagram:        AddressProfileLifeCycle
-DateCreate:     03/05/2019
-Description:    
+@startuml
 
-Hystory of changes:
-> DD/MM/YYYY
-    - 
-    - 
-'/
-
-'******* CONFIGURATION ************************************************
-left to right direction
-skinparam classAttributeIconSize 0
-skinparam Dpi 150
-skinparam Monochrome true
-skinparam LineType polyline
-skinparam nodesep 30
-skinparam ranksep 40
-hide circle
-/' skinparam CircledCharacterRadius 0 '/
-/' skinparam CircledCharacterFontSize 0 '/
-skinparam Default {
-TextAlignment center
-FontName Helvetica
-}
-skinparam Class {
-AttributeIconSize 0
-BackgroundColor White
-FontStyle bold
-StereotypeFontSize 10
-}
-skinparam Rectangle {
-BackgroundColor White
-FontStyle bold
-FontSize 11
-StereotypeFontSize 10
-}
-skinparam Object {
-BackgroundColor White
-FontStyle bold
-FontSize 11
-StereotypeFontSize 10
-}
-
-skinparam Entity {
-StereotypeFontSize 10
-}
+!include style.uml.inc
 
 '******* STATES RELATIONS *********************************************
 note top: Creation of an\n interchange\n address profile

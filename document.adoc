@@ -4,14 +4,14 @@
 :tc-document-number: 9999
 :edition: 1
 :ref-docnumber: ISO 19160-6:2018(E)
-:copyright-year: 2018
+:copyright-year: 2019
 :language: en
 :title-intro-en: Addressing
 :title-main-en: Digital interchange models
 :title-intro-fr: Adressage
 :title-main-fr: Modèles d'échange numérique
 :doctype: international-standard
-:docstage: 10
+:docstage: 20
 :docsubstage: 92
 :technical-committee-type: TC
 :technical-committee-number: 211
@@ -37,13 +37,14 @@ include::sections/0b-intro.adoc[]
 include::sections/01-scope.adoc[]
 include::sections/02-norm-refs.adoc[]
 include::sections/03-termsdef.adoc[]
-include::sections/0x-conformance.adoc[]
+include::sections/04-conformance.adoc[]
+include::sections/04-registry.adoc[]
 include::sections/04-process.adoc[]
 include::sections/05-data-types.adoc[]
 include::sections/06-common-models.adoc[]
 include::sections/07-profile.adoc[]
 include::sections/08-class.adoc[]
-include::sections/09-capability.adoc[]
+include::sections/09-feature.adoc[]
 include::sections/10-instances.adoc[]
 include::sections/11-layout-template.adoc[]
 include::sections/12-display-template.adoc[]

@@ -1,46 +1,14 @@
 
 == Process of address profile and address instance interchange
 
-=== Address profile registry
+Practical usage of AXO models rely on establishment of an
+address profile registry.
 
-==== General
+This clause sets out specific requirements in relation with <<ISO19135-1>>.
 
-This address profile registry follows the requirements specified in
-<<ISO19135-1>>, and additional requirements specified in this standard.
+NOTE: Reference to the <<ISO19135-1>> requirement is denoted by ɳ (i.e. [ɳ2] = Requirement 2).
 
-==== Roles and responsibilities in the management of an address profile registry
-
-The roles and responsibilities of the register owner, register manager, submitting organizations,
-control body, registry manager and register user are set out in <<ISO19135-1>>.
-
-===== Additional requirements to <<ISO19135-1>>
-
-* Historical records of address profiles shall be retained and publicly
-available in the registry.
-
-==== Management rules and procedures of an address profile registry
-
-===== Introduction
-
-The address profile registry will be managed with a version control software
-such as Git, and publicly available with an API and/or a graphical user
-interface such as a web-based interface to satisfy use cases of programatic
-use of a software application and human review for the general public.
-
-Rules for managing a register of address profiles, including the submission
-of information, are found in <<ISO19160-1>>, Clause 6.
-
-==== Address profile register content requirements
-
-===== Address profile register content from <<ISO19135-1>>
-
-The address profile register shall conform to the register schema in
-<<ISO19135-1>>, Clause 7.
-
-===== Address profile register content from this standard
-
-The address profile register shall container address profile data that conform
-to the address profile schema as specified in UML in this standard.
+The roles and responsibilities of the register owner, register manager, submitting organizations, control body, registry manager and register user are set out in <<ISO19135-1,clause=5>>.
 
 === Address profiles
 
@@ -113,7 +81,7 @@ a graphical form.
 
 Conforming applications should not expect general users to be able to
 input an address with a fully-deduced structure. Immediately after
-input no capabilities are marked on the interchange address instance.
+input no features are marked on the interchange address instance.
 
 ==== Interchange of an interchange address instance
 
@@ -129,28 +97,28 @@ profile definition. With the interchange address profile, it could then
 display the interchange address instance according to the address profile's
 display template.
 
-==== Adding address capabilities
+==== Adding address features
 
 ===== Improving quality of an interchange address instance
 
 The recipient or service could process the address, such as to further
 clean up the address by improving the conformance level by fully
-deducing the address structure, which would add an address capability
-"https://standards.iso.org/19160/-6/capabilities/specified" to the
+deducing the address structure, which would add an address feature
+"https://standards.iso.org/19160/-6/features/specified" to the
 address instance.
 
 To ensure that the resulting interchange address instance with a fully-specified
 structure is correct, the processor may wish to confirm with the user
 the resulting address, such as in the case where the address is used
-for shipping information. This would add the `AddressCapability`
-"https://standards.iso.org/19160/-6/capabilities/confirmed" to the
+for shipping information. This would add the `AddressFeature`
+"https://standards.iso.org/19160/-6/features/confirmed" to the
 address instance.
 
 ===== Verifying an interchange address instance
 
 The recipient or service could further validate the address, such as
 with a postal or addressing authority. This would add the
-`AddressCapability` "https://verifyingauthority/verified" to the interchange address
+`AddressFeature` "https://verifyingauthority/verified" to the interchange address
 instance written by the verifying authority.
 
 ==== Adding associated data to an interchange address instance
@@ -160,8 +128,12 @@ delivery instructions or routes as associated data.
 
 If the user already has a verified, structured address, then the
 service could save the effort for verifying the address. Custom
-address capabilities could be added into the interchange address instance.
+address features could be added into the interchange address instance.
 
 ==== Discarding an interchange address instance
 
 When a service no longer needs the address, it should be disposed of.
+
+
+
+

@@ -42,6 +42,7 @@ address instance of the address class.
 |Description |`CharacterString` |Textual description of this definition.
 |===
 
+[[ix-address-component]]
 === Interchange address component
 
 The interchange address component corresponds to the

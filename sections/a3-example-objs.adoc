@@ -1,6 +1,6 @@
 
 [[AnnexC]]
-[appendix,subtype=informative]
+[appendix,obligation=informative]
 == Examples of objects specified in this document
 
 Models specified in this document can be represented in various
@@ -173,12 +173,12 @@ values: [ 1001 ]
 }
 ----
 
-=== AddressCapability
+=== AddressFeature
 
 [source,json]
 ----
-"addressCapability": {
-  "capability": "https://standards.iso.org/19160/-6/capabilities/specified",
+"addressFeature": {
+  "feature": "https://standards.iso.org/19160/-6/features/specified",
   "signature": [ ... ]
 }
 ----

@@ -23,34 +23,38 @@ format and structure of the address for it to be machine readable and
 interoperable among different machines or systems which process the address
 data.
 
-To facilitate user assistance in software applications for address input and
-the interchange among machines and systems, this standard defines templates
-and interchangeable address profile models in UML, and their registry to ensure
-they are publicly available. This standard differentiates from and complements
-to other parts in the family of ISO 19160. Being focused on the user address
-input and the interchange of address profiles, geocodings of locations are out
-of scope in this standard.
+This document focuses on enabling software applications
+the digital interchange of address profiles,
+address instances and instructions for their input and display, together
+with model definitions and a registry mechanism to ensure
+they are publicly available.
 
-<<ISO19160-1>> describes the Addressing Conceptual models that allow
-specification of international address profiles, and this International
-Standard further provides methods to utilize them in a way suitable for
-electronic interchange.
+//geocodings of locations are out of scope in this standard.
 
-<<ISO19160-4>> defines key terms for postal addressing, postal address
-components and constraints on their use. It focuses use cases of postal
-applications specifying the methods to write or detect addresses on mail items.
-This standard, ISO 19160-6, however, adapts models from <<ISO19160-1>>
-as Address Interchange models, to facilitate interchange and interaction
+This standard complements the other parts in the family of ISO 19160 standards:
+
+* <<ISO19160-1>> describes conceptual models for addressing that allow
+specification of international address profiles. This International
+Standard further provides methods to utilize these models in a way
+suitable for electronic interchange.
+
+* <<ISO19160-4>> defines key terms for postal addressing, postal address
+components and constraints on their use. It focuses on use cases for postal
+applications, specifying the methods to write or detect addresses on mail items.
+This International Standard adapts models from <<ISO19160-1>>
+as address interchange models, to facilitate interchange and interaction
 of addresses between humans and applications, and between applications,
 and for applications to interact and interchange international addresses,
 while supporting human input and human-machine interaction, without loss
 of fidelity.
 
-<<ISO19160-5>> describes how to represent addresses on different devices. It
+////
+* <<ISO19160-5>> describes how to represent addresses on different devices. It
 targeted on all addresses but was concluded to be too complex. This standard,
 ISO 19160-6, therefore, focuses on a subset by providing templates for the
 serialization of address objects and address input, and representation by
 creating address exchange objects.
+////
 
 The lifecycle of an address entry exchanged on the Internet typically
 starts with manual input of a human actor. This data, structured or
@@ -69,8 +73,10 @@ unambiguously distinguish a location, there may be intention or
 unintentional omissions or additions to an "`official`" address (if there
 was one).
 
-The models in this document depends on data models defined
-in <<ISO19115-1>> and <<ISO19157>>.
-
-
-
+Addressability, and features provided within the object which the address
+points to, is not described in this document. Specifically, the
+`AddressableObject` from <<ISO19160-1>> is considered out of scope.
+The `AddressableObject` model is considered orthogonal to models
+in this document, but can easily be used together, for example, in
+a navigation map where an address points to an addressable object,
+which in turn provides a list of its extant facilities.

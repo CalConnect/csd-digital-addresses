@@ -1,78 +1,33 @@
-@startuml LayoutLine
-/'
-Diagram:        LayoutLine
-DateCreate:     03/05/2019
-Description:
+@startuml
 
-Hystory of changes:
-> DD/MM/YYYY
-    -
-    -
-'/
-
-'******* CONFIGURATION ************************************************
-skinparam classAttributeIconSize 0
-skinparam Dpi 150
-skinparam Monochrome true
-skinparam LineType ortho
-skinparam nodesep 30
-skinparam ranksep 40
-hide circle
-/' skinparam CircledCharacterRadius 0 '/
-/' skinparam CircledCharacterFontSize 0 '/
-skinparam Default {
-TextAlignment center
-FontName Helvetica
-}
-skinparam Class {
-AttributeIconSize 0
-BackgroundColor White
-FontStyle bold
-StereotypeFontSize 10
-}
-skinparam Rectangle {
-BackgroundColor White
-FontStyle bold
-FontSize 11
-StereotypeFontSize 10
-}
-skinparam Object {
-BackgroundColor White
-FontStyle bold
-FontSize 11
-StereotypeFontSize 10
-}
-
-skinparam Entity {
-StereotypeFontSize 10
-}
+!include style.uml.inc
 
 '******* CLASS DEFINITION *********************************************
 class LayoutLine{
-    +dimensions: LayoutDimensions
-    +elements
+  +dimensions: LayoutDimensions
+  +elements
 }
 
 class DisplayLine{
-    +elements: DisplayLineElementReference[0..*]
+  +elements: DisplayLineElementReference[0..*]
 }
 
 class FormLine{
-    +elements: FormLineElementReference[0..*]
+  +elements: FormLineElementReference[0..*]
 }
 
 class LineElementReference{
-    +target: InterchangeAddressComponent
-    +name: CharacterString
-    +description: CharacterString[0..1]
+  +target: InterchangeAddressComponent
+  +name: CharacterString
+  +description: CharacterString[0..1]
 }
 
 class DisplayLineElementReference{
-    +values: DisplayLineElement[0..*]
+  +values: DisplayLineElement[0..*]
 }
 
 class FormLineElementReference{
-    +values: FormLineElement[0..*]
+  +values: FormLineElement[0..*]
 }
 
 class DisplayLineElement{
@@ -84,28 +39,28 @@ class FormLineElement{
 }
 
 class TextElement{
-    +text: CharacterString
+  +text: CharacterString
 }
 
 class DataElement{
-    +value: CharacterString
+  +value: CharacterString
 }
 
 class StaticTextElement{
-    +value: CharacterString
+  +value: CharacterString
 }
 
 class SelectionElement{
-    +map: SelectionPair[1..*]
+  +map: SelectionPair[1..*]
 }
 
 class SelectionPair{
-    +displayAs: CharacterString
-    +key: CharacterString
+  +displayAs: CharacterString
+  +key: CharacterString
 }
 
 class DataElementWithConditions {
-    +conditions
+  +conditions
 }
 
 

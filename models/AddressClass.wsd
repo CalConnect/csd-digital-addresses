@@ -1,77 +1,31 @@
-@startuml AddressClass
-/'
-Diagram:        AddressClass
-DateCreate:     03/05/2019
-Description:
+@startuml
 
-Hystory of changes:
-> DD/MM/YYYY
-    -
-    -
-'/
-
-'******* CONFIGURATION ************************************************
-skinparam classAttributeIconSize 0
-skinparam Dpi 150
-skinparam Monochrome true
-skinparam LineType ortho
-skinparam nodesep 30
-skinparam ranksep 40
-hide circle
-/' skinparam CircledCharacterRadius 0 '/
-/' skinparam CircledCharacterFontSize 0 '/
-skinparam Default {
-TextAlignment center
-FontName Helvetica
-}
-skinparam Class {
-AttributeIconSize 0
-BackgroundColor White
-FontStyle bold
-StereotypeFontSize 10
-}
-skinparam Rectangle {
-BackgroundColor White
-FontStyle bold
-FontSize 11
-StereotypeFontSize 10
-}
-skinparam Object {
-BackgroundColor White
-FontStyle bold
-FontSize 11
-StereotypeFontSize 10
-}
-
-skinparam Entity {
-StereotypeFontSize 10
-}
+!include style.uml.inc
 
 '******* CLASS DEFINITION *********************************************
 class InterchangeAddressClass{
-    +id: CharacterString
-    +description: CharacterString
-    +components: InterchangeAddressComponent[1..*]
-    +displayTemplate
-    +inputTemplate
+  +id: CharacterString
+  +description: CharacterString
+  +components: InterchangeAddressComponent[1..*]
+  +displayTemplate
+  +inputTemplate
 }
 
 class InterchangeAddressComponent{
-    +key: CharacterString
-    +description: CharacterString
-    +dataType: AddressComponentDataType
-    +obligation: ComponentObligation
-    +maxCardinality: Integer
-    +minCardinality: Integer
-    +example: CharacterString[0..1]
+  +key: CharacterString
+  +description: CharacterString
+  +dataType: AddressComponentDataType
+  +obligation: ComponentObligation
+  +maxCardinality: Integer
+  +minCardinality: Integer
+  +example: CharacterString[0..1]
 }
 
 enum ComponentObligation <<enumeration>>{
-    mandatory
-    optional
-    disallowed
+  mandatory
+  optional
+  disallowed
 }
-
 
 '******* CLASS RELATIONS **********************************************
 

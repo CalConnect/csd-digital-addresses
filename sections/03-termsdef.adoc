@@ -1,52 +1,18 @@
 
 [[terms]]
-== Terms and Definitions
+[source=ISO19160-1]
+== Terms and definitions
 
-[[term-address]]
-=== address
-
-structured information that allows the unambiguous determination of an
-object for purposes of identification and location
-
-[.source]
-<<ISO19160-1>>
-
-[[term-addressable-object]]
-=== addressable object
-
-object that may be assigned an _address_ (<<term-address>>)
-
-[.source]
-<<ISO19160-1>>
-
-
-[[term-address-class]]
-=== address class
-
-description of a set of addresses that share the same address
-components, operations, methods, relationships, and semantics
-
-[.source]
-<<ISO19160-1>>
-
-
-[[term-address-component]]
-=== address component
-
-constituent part of an _address_ (<<term-address>>)
-
-[.source]
-<<ISO19160-1>>
 
 
 [[term-lineage]]
 === lineage
 
-_provenance_ <<term-provenance>>, source(s) and production process(es) used
+provenance, source(s) and production process(es) used
 in producing a resource
 
 [.source]
-<<ISO19115-1,clause 4.9>>
+<<ISO19115-1,clause="4.9">>
 
 [[term-locale]]
 === locale
@@ -55,20 +21,8 @@ definition of the subset of a user's environment that depends on
 language and cultural conventions
 
 [.source]
-<<ISO9945,clause 4.211>>, The notes given in ISO/IEC/IEEE 9945:2009 for this
+<<ISO9945,clause="4.211">>, The notes given in <<ISO9945>> for this
 entry have been omitted.
-
-[[term-parent-address]]
-=== parent address
-_address_ (<<term-address>>) of a _parent addressable object_
-(<<term-parent-addressable-object>>)
-
-
-[[term-parent-addressable-object]]
-=== parent addressable object
-
-_addressable object_ (<<term-addressable-object>>) that fully encloses one
-or more other addressable objects
 
 
 [[term-profile]]
@@ -80,7 +34,7 @@ options and parameters of those base standards, that are necessary for
 accomplishing a particular function
 
 [.source]
-<<ISO19106,clause 4.5>>
+<<ISO19106,clause="4.5">>
 
 
 [[term-provenance]]
@@ -92,17 +46,19 @@ and used records
 [[term-data-type]]
 === data type
 
-specification of a value domain (<<ISO19103,clause 4.37>>) with operations
-(<<ISO19103,clause 4.26>>) allowed on values in this domain
+specification of a value domain with operations
+allowed on values in this domain
 
 [.source]
-<<ISO19103,clause 4.14>>
+<<ISO19103,clause="4.14">>
 
 [[primitive-data-type]]
 === primitive data type
 
-data type (<<term-data-type>>) defined as "`Primitive Type`"
-in <<ISO19103,section 7.2>>
+A data type that has no super type. The primitive data type of a data type is the data type itself, if the data type has no super type, and otherwise the primitive data type of the super type of the data type.
+
+[.source]
+<<ISOIEC10179,clause="4.23">>
 
 
 [[term-ud-data-type]]
@@ -118,31 +74,30 @@ constraints
 definition of a _user defined data type_
 (<<term-ud-data-type>>)
 
-[[term-address-capability]]
-=== address capability
+[[term-address-feature]]
+=== address feature
 
-marking on an _address instance_ (<<term-ix-address-instance>>) to indicate its
-status
+marking on an address instance to indicate what it is capable of
 
 
 [[term-address-layout-template]]
 === address layout template
 
 specification of layout and positioning of
-_address components_ (<<term-address-component>>) for an interchange address
-instance of an _address class_ (<<term-address-class>>)
+address components for an interchange address
+instance of an address class
 
 === address display template
 
 address layout template (<<term-address-layout-template>>)
 for the display of interchange address instances of an
-_address class_ (<<term-address-class>>)
+address class
 
 === address form template
 
 address layout template (<<term-address-layout-template>>)
 of an input form for the entry of address instances
-of an _address class_ (<<term-address-class>>)
+of an address class
 
 [[term-address-processor]]
 === address processor
@@ -162,7 +117,7 @@ entity that distributes interchange address profiles
 the string of bits resulting from the signature process
 
 [.source]
-<<ISO14888-3,clause 4.15>>
+<<ISO14888-3,clause="4.15">>
 
 [[term-signature-key]]
 === signature key
@@ -171,7 +126,7 @@ a secret data item specific to an entity and usable only by this entity
 in the signature process
 
 [.source]
-<<ISO14888-3,clause 4.18>>
+<<ISO14888-3,clause="4.18">>
 
 [[term-verification-key]]
 === verification key
@@ -181,7 +136,7 @@ _signature key_ (<<term-signature-key>>) and which is used by
 the verifier in the verification process
 
 [.source]
-<<ISO14888-3,clause 4.15>>
+<<ISO14888-3,clause="4.15">>
 
 [[term-oid]]
 === object identifier
@@ -190,7 +145,7 @@ the verifier in the verification process
 a value (distinguishable from all other such values) which is associated with an object
 
 [.source]
-<<ISO15961,clause 3.1.16>>
+<<ISO15961,clause="3.1.16">>
 
 [[term-language-id]]
 === language identifier
@@ -199,7 +154,7 @@ a value (distinguishable from all other such values) which is associated with an
 symbol that uniquely identifies a particular language
 
 [.source]
-<<ISO639-3,clause 3.3>>
+<<ISO639-3,clause="3.3">>
 
 [[term-script]]
 === script
@@ -207,7 +162,7 @@ symbol that uniquely identifies a particular language
 set of graphic characters used for the written form of one or more languages
 
 [.source]
-<<ISO15924,clause 3.7>>
+<<ISO15924,clause="3.7">>
 
 [[term-script-code]]
 === script code
@@ -215,7 +170,7 @@ set of graphic characters used for the written form of one or more languages
 combination of characters used to represent the name of a _script_ (<<term-script>>)
 
 [.source]
-<<ISO15924,clause 3.8>>
+<<ISO15924,clause="3.8">>
 
 [[term-uri]]
 === URI
@@ -223,5 +178,5 @@ combination of characters used to represent the name of a _script_ (<<term-scrip
 uniform resource identifier
 
 [.source]
-<<ISO19103,clause 5.3>>
+<<ISO19103,clause="5.3">>
 
