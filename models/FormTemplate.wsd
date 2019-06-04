@@ -11,15 +11,11 @@ class FormLine{
   +elements: FormLineElementReference[0..*]
 }
 
-class LineElementReference{
-}
-
 class FormLineElementReference{
   +values: FormLineElement[0..*]
 }
 
 class FormLineElement{
-
 }
 
 class SelectionPair{
@@ -53,7 +49,6 @@ StaticTextElement -up-|> FormLineElement
 SelectionElement -up-|> FormLineElement
 DataElement -up-|> FormLineElement
 DataElement <|-- DataElementWithConditions
-FormLine -up-|> LineElementReference
 FormLineElement -up-> FormLineElementReference
 FormLineElementReference -up-> FormLine
 SelectionPair -up-> SelectionElement

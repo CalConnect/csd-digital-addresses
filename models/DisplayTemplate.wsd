@@ -11,9 +11,6 @@ class DisplayLine {
   +elements: DisplayLineElementReference[0..*]
 }
 
-class LineElementReference {
-}
-
 class DisplayLineElementReference {
   +values: DisplayLineElement[0..*]
 }
@@ -35,7 +32,6 @@ class TextElement{
 
 '******* CLASS RELATIONS **********************************************
 
-DisplayLine -up-|> LineElementReference
 TextElement -up-|> DisplayLineElement
 DataElement -up-|> DisplayLineElement
 DisplayLine -up-> DisplayTemplate
