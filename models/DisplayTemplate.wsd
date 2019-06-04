@@ -7,25 +7,11 @@ class DisplayTemplate {
   +lines: DisplayLine[0..*]
 }
 
-class LayoutTemplate {
-  +id: CharacterString
-  +name: CharacterString
-  +addressClass: InterchangeAddressClass
-  +description: CharacterString
-  +localization: Localization
-  +dimensions: LayoutDimension[0..*]
-  +orientation: LayoutOrientation[0..1]
-  +lines: LayoutLine[0..*]
-}
-
 class DisplayLine {
   +elements: DisplayLineElementReference[0..*]
 }
 
 class LineElementReference {
-  +target: InterchangeAddressComponent
-  +name: CharacterString
-  +description: CharacterString[0..1]
 }
 
 class DisplayLineElementReference {
@@ -49,7 +35,6 @@ class TextElement{
 
 '******* CLASS RELATIONS **********************************************
 
-DisplayTemplate -up-|> LayoutTemplate
 DisplayLine -up-|> LineElementReference
 TextElement -up-|> DisplayLineElement
 DataElement -up-|> DisplayLineElement

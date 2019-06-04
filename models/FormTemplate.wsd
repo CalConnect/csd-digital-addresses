@@ -7,25 +7,11 @@ class FormTemplate {
   +lines: FormLine[0..*]
 }
 
-class LayoutTemplate{
-  +id: CharacterString
-  +name: CharacterString
-  +addressClass: InterchangeAddressClass
-  +description: CharacterString
-  +localization: Localization
-  +dimensions: LayoutDimension[0..*]
-  +orientation: LayoutOrientation[0..1]
-  +lines: LayoutLine[0..*]
-}
-
 class FormLine{
   +elements: FormLineElementReference[0..*]
 }
 
 class LineElementReference{
-  +target: InterchangeAddressComponent
-  +name: CharacterString
-  +description: CharacterString[0..1]
 }
 
 class FormLineElementReference{
@@ -62,8 +48,7 @@ class DataElementWithConditions{
 note right of DataElementWithConditions: "ValueElementWithConditions\n are the conditions\n such as `zip code must be 5 digits long`, etc.\n Potentially use Object\n Constraint Language"
 
 '******* CLASS RELATIONS **********************************************
-FormTemplate -up-|> LayoutTemplate
-FormLine -up--> FormTemplate
+FormLine -up-> FormTemplate
 StaticTextElement -up-|> FormLineElement
 SelectionElement -up-|> FormLineElement
 DataElement -up-|> FormLineElement

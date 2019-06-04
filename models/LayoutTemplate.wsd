@@ -3,7 +3,7 @@
 !include style.uml.inc
 
 '******* CLASS DEFINITION *********************************************
-class LayoutTemplate{
+class LayoutTemplate {
   +id: CharacterString
   +name: CharacterString
   +addressClass: InterchangeAddressClass
@@ -36,9 +36,10 @@ enum LayoutOrientation <<enumeration>>{
 
 
 '******* CLASS RELATIONS **********************************************
-LayoutTemplate <|-- DisplayTemplate
-LayoutTemplate <|-- FormTemplate
-LayoutDimension -up-> LayoutTemplate
-LayoutOrientation -up-> LayoutTemplate
+
+LayoutDimension --up-> LayoutTemplate
+DisplayTemplate -up-|> LayoutTemplate
+FormTemplate -up-|> LayoutTemplate
+LayoutOrientation --up-> LayoutTemplate
 
 @enduml

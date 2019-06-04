@@ -25,8 +25,8 @@ address classes.
 |name            |`CharacterString`          |Human-readable name for the interchange address instance.
 |profile         |`CharacterString`          |The interchange address profile which contains the interchange address class it conforms to.
 |addressClass    |`Integer`                  |The interchange address class it conforms to.
-|signature       |`LayoutDimension`          |Cryptographic signature of the interchage address instance
-itself togerther with its content.
+|signature       |`LayoutDimension`          |Cryptographic signature of the interchange address instance
+itself together with its content.
 |validity        |`CharacterString`          |Time interval representing validity of the
 interchange address instance.
 |applicability   |`MD_SpatialRepresentation` |Spatial representation of the geographic

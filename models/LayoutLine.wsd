@@ -16,74 +16,11 @@ class FormLine{
   +elements: FormLineElementReference[0..*]
 }
 
-class LineElementReference{
-  +target: InterchangeAddressComponent
-  +name: CharacterString
-  +description: CharacterString[0..1]
-}
-
-class DisplayLineElementReference{
-  +values: DisplayLineElement[0..*]
-}
-
-class FormLineElementReference{
-  +values: FormLineElement[0..*]
-}
-
-class DisplayLineElement{
-
-}
-
-class FormLineElement{
-
-}
-
-class TextElement{
-  +text: CharacterString
-}
-
-class DataElement{
-  +value: CharacterString
-}
-
-class StaticTextElement{
-  +value: CharacterString
-}
-
-class SelectionElement{
-  +map: SelectionPair[1..*]
-}
-
-class SelectionPair{
-  +displayAs: CharacterString
-  +key: CharacterString
-}
-
-class DataElementWithConditions {
-  +conditions
-}
-
-
 
 '******* NOTES ********************************************************
-note bottom of DataElementWithConditions: "ValueElementWithConditions\n are the conditions such as\n `zip code must be 5 digits long`, etc.\n Potentially use Object\n Constraint Language."
 
 '******* CLASS RELATIONS **********************************************
 LayoutLine <|-- DisplayLine
 LayoutLine <|-- FormLine
-LineElementReference <|-- DisplayLineElementReference
-LineElementReference <|-- FormLineElementReference
-DisplayLineElementReference <-- DisplayLineElement
-DisplayLineElement <|-- TextElement
-DisplayLineElement <|-- DataElement
-DisplayLineElementReference -up-> DisplayLine
-FormLineElementReference -up-> FormLine
-FormLineElement -up-> FormLineElementReference
-FormLineElement <|-- StaticTextElement
-FormLineElement <|-- SelectionElement
-SelectionElement <-- SelectionPair
-FormLineElement <|-- DataElement
-DataElement <|-- DataElementWithConditions
-
 
 @enduml

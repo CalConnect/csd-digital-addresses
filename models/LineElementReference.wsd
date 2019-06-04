@@ -1,0 +1,17 @@
+@startuml
+
+!include style.uml.inc
+
+'******* CLASS DEFINITION *********************************************
+class LineElementReference {
+  +target: InterchangeAddressComponent
+  +name: CharacterString
+  +description: CharacterString[0..1]
+}
+
+'******* NOTES ********************************************************
+
+
+'******* CLASS RELATIONS **********************************************
+
+@enduml

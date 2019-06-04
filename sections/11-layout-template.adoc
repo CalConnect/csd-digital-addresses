@@ -75,7 +75,7 @@ address form line.
 |Attribute    |Type              |Description
 |Dimensions   |`LayoutDimension` |Physical dimensions of the rectangular bounding box
 for the rendered Line.
-|Elements         |`CharacterString` |Collecion of line elements that make up the line.
+|Elements         |`CharacterString` |Collection of line elements that make up the line.
 |===
 
 
@@ -83,6 +83,9 @@ for the rendered Line.
 === Line element reference
 
 ==== General
+
+.Interchange line element reference data model
+image::LineElementReference.png[]
 
 A line element reference is used to link an abstract line element to
 the interchange address component. The latter is used to
