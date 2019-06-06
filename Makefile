@@ -62,7 +62,6 @@ open: open-html
 
 clean:
 	rm -f $(OUT_FILES); \
-	rm -rf controls caiq.yaml
 
 bundle:
 	if [ "x" == "${METANORMA_DOCKER}x" ]; then bundle; fi
@@ -113,7 +112,7 @@ watch-serve: $(NODE_BIN_DIR)/run-p
 
 publish:
 	mkdir -p published  && \
-	cp -a $(basename $(SRC)).* published/ && \
+	cp -a $(wildcard $(addsuffix .*,$(basename $(SRC)))) published/ && \
 	cp $(firstword $(HTML)) published/index.html; \
 	if [ -d "images" ]; then cp -a images published; fi
 
