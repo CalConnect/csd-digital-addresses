@@ -2,3 +2,11 @@
 metanorma:
   deploy:
     email: "travis-ci@metanorma.org"
+  source:
+    files:
+      - sources/cc-19160-6.adoc
+      - sources/iso-19160-6.adoc
+relaton:
+  collection:
+    name: Addressing -- Digital interchange models
+    organization: CalConnect/ISO

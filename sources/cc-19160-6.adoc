@@ -1,38 +1,32 @@
-= CalConnect ISO TC 211 19160-6
-:docnumber: 19160
-:partnumber: 6
-:tc-document-number: 9999
-:edition: 1
-:ref-docnumber: ISO 19160-6:2018(E)
+= Addressing -- Digital interchange models
+:docnumber: 19160-6
 :copyright-year: 2019
 :language: en
-:title-intro-en: Addressing
-:title-main-en: Digital interchange models
-:title-intro-fr: Adressage
-:title-main-fr: Modèles d'échange numérique
-:doctype: international-standard
-:docstage: 20
-:docsubstage: 92
-:technical-committee-type: TC
-:technical-committee-number: 211
-:technical-committee: Geographic information / Geomantics
-:workgroup-type: WG
-:workgroup-number: 7
-:workgroup: Information communities
-:secretariat: SN
-:language: en
+:doctype: standard
+:edition: 1
+:status: working-draft
+:revdate: 2019-06-05
+:published-date: 2019-06-05
+:script: Latn
+:technical-committee: VCARD
+:fullname: Ronald Tse
+:surname: Tse
+:givenname: Ronald
+:fullname_2: Peter Tam
+:surname_2: Tam
+:givenname_2: Peter
 :draft:
 :toc:
 :stem:
-:docfile: iso-19160-6.adoc
+:xrefstyle: short
+:docfile: cc-19160-6.adoc
 :imagesdir: images
-:mn-document-class: iso
-:mn-output-extensions: xml,doc,html,pdf
+:mn-document-class: csd
+:mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
 
-
-include::sections-iso/00-foreword.adoc[]
+include::sections-cc/00-foreword.adoc[]
 include::sections/0b-intro.adoc[]
 include::sections/01-scope.adoc[]
 include::sections/02-norm-refs.adoc[]
