@@ -1,0 +1,55 @@
+<bibdata type="standard">
+  <title language="en" format="text/plain">Addressing — Digital interchange models</title>
+  <docidentifier type="csd">CC/WD 19160-6:2019</docidentifier>
+  <docnumber>19160-6</docnumber>
+  <date type="published">
+    <on>2019-06-05</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Ronald Tse</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Peter Tam</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>CalConnect</name>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <version>
+    <revision-date>2019-06-05</revision-date>
+    
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <status format="plain">working-draft</status>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>CalConnect</name>
+      </organization>
+    </owner>
+  </copyright>
+  <editorialgroup>
+    <technical-committee>VCARD</technical-committee>
+  </editorialgroup>
+</bibdata>

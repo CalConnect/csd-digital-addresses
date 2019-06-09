@@ -1,0 +1,54 @@
+<bibdata type="international-standard">
+  <title>
+    <title-intro language="en" format="text/plain">Addressing</title-intro>
+    <title-main language="en" format="text/plain">Digital interchange models</title-main>
+  </title>
+  <title>
+    <title-intro language="fr" format="text/plain">Adressage</title-intro>
+    <title-main language="fr" format="text/plain">Modèles d’échange numérique</title-main>
+  </title>
+  <docidentifier type="iso">ISO/WD 19160-6</docidentifier>
+  <docidentifier type="iso-structured">
+    <project-number part="6">ISO 19160</project-number>
+  </docidentifier>
+  <docnumber>19160</docnumber>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <version>
+    
+  </version>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage>20</stage>
+    <substage>92</substage>
+  </status>
+  <copyright>
+    <from>2019</from>
+    <owner>
+      <organization>
+        <name>International Organization for Standardization</name>
+        <abbreviation>ISO</abbreviation>
+      </organization>
+    </owner>
+  </copyright>
+  <editorialgroup>
+    <technical-committee number="211" type="TC">Geographic information / Geomantics</technical-committee>
+    <subcommittee/>
+    <workgroup number="7" type="WG">Information communities</workgroup>
+    <secretariat>SN</secretariat>
+  </editorialgroup>
+</bibdata>
