@@ -39,7 +39,7 @@ rendered according to a layout template.
 |ID           |`CharacterString` |Unique identifier for the layout template.
 |Name         |`CharacterString` |Descriptive name of the layout template.
 |Description  |`CharacterString` |Textual description of the layout template.
-|Localization |`Integer`         |Locale and script information of the layout template.
+|Localization |`Localization`         |Locale and script information of the layout template.
 |Dimensions   |`LayoutDimension` |Physical dimensions of the rectangular
 bounding box for the rendered layout output.
 |Orientation  |`CharacterString` |Horizontal or vertical of the text orientation.
