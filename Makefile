@@ -13,11 +13,11 @@ FORMATS := $(shell grep "$(FORMAT_MARKER)" $(SRC) | cut -f 2 -d ' ' | tr ',' '\n
 
 XML  := $(patsubst sources/%,documents/%,$(patsubst %.adoc,%.xml,$(SRC)))
 
-XMLRFC3  := $(patsubst %.xml,%.v3.xml,$(OUTPUT_XML))
-HTML := $(patsubst %.xml,%.html,$(OUTPUT_XML))
-DOC  := $(patsubst %.xml,%.doc,$(OUTPUT_XML))
-PDF  := $(patsubst %.xml,%.pdf,$(OUTPUT_XML))
-TXT  := $(patsubst %.xml,%.txt,$(OUTPUT_XML))
+XMLRFC3  := $(patsubst %.xml,%.v3.xml,$(XML))
+HTML := $(patsubst %.xml,%.html,$(XML))
+DOC  := $(patsubst %.xml,%.doc,$(XML))
+PDF  := $(patsubst %.xml,%.pdf,$(XML))
+TXT  := $(patsubst %.xml,%.txt,$(XML))
 NITS := $(patsubst %.adoc,%.nits,$(wildcard sources/draft-*.adoc))
 WSD  := $(wildcard sources/models/*.wsd)
 XMI	 := $(patsubst sources/models/%,sources/xmi/%,$(patsubst %.wsd,%.xmi,$(WSD)))

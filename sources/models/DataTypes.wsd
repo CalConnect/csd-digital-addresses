@@ -15,6 +15,10 @@ class PrimitiveTypes <<primitiveType>> {
 
 }
 
+class OclExpression <<dataType>> {
+
+}
+
 class iso15924Code <<dataType>> {
 
 }

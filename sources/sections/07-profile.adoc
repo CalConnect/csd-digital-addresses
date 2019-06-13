@@ -30,6 +30,11 @@ definition.
 between refreshing of this profile via an authoritative source, in seconds.
 |Country     |<<ISO639-1>> 2-digit Country Code |The country of which this
 interchange address profile represents.
+
+|OCL Expressions| `OclExpression`
+|OCL expressions that apply to address instances that conform
+to this address profile.
+
 |===
 
 === Publisher
@@ -86,3 +91,22 @@ Countries that have overlapping geographic claims are allowed to represent
 their purported claims in interchange address profiles.
 
 
+=== OCL expressions
+
+OCL expressions can be applied to an interchange address profile
+to specify constraints to data elements of the interchange
+models. The context of such OCL expressions are limited to within
+the interchange address profile, which includes address components
+and address instances that comply with the interchange address profile.
+
+[example]
+--
+Only one `throughfareName` allowed in an `InterchangeAddressInstance`
+of the current `InterchangeAddressProfile`.
+
+[source,ocl]
+----
+context InterchangeAddressInstance inv:
+self.thoroughfareName->size() == 1
+----
+--

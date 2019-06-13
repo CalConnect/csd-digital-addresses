@@ -17,6 +17,7 @@ class InterchangeAddressProfile {
   +timeToLive: Integer
   +identifier: MD_Identifier
   +country: iso3166Code[0..*]
+  +oclExpressions: OclExpression[0..*]
 }
 
 
