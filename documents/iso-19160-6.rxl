@@ -1,16 +1,11 @@
-<bibdata type="international-standard">
-  <title>
-    <title-intro language="en" format="text/plain">Addressing</title-intro>
-    <title-main language="en" format="text/plain">Digital interchange models</title-main>
-  </title>
-  <title>
-    <title-intro language="fr" format="text/plain">Adressage</title-intro>
-    <title-main language="fr" format="text/plain">Modèles d’échange numérique</title-main>
-  </title>
+<bibdata type="standard">
+  <title language="en" format="text/plain" type="main">Addressing — Digital interchange models</title>
+  <title language="en" format="text/plain" type="title-intro">Addressing</title>
+  <title language="en" format="text/plain" type="title-main">Digital interchange models</title>
+  <title language="fr" format="text/plain" type="main">Adressage — Modèles d’échange numérique</title>
+  <title language="fr" format="text/plain" type="title-intro">Adressage</title>
+  <title language="fr" format="text/plain" type="title-main">Modèles d’échange numérique</title>
   <docidentifier type="iso">ISO/WD 19160-6</docidentifier>
-  <docidentifier type="iso-structured">
-    <project-number part="6">ISO 19160</project-number>
-  </docidentifier>
   <docnumber>19160</docnumber>
   <contributor>
     <role type="author"/>
@@ -45,10 +40,16 @@
       </organization>
     </owner>
   </copyright>
-  <editorialgroup>
-    <technical-committee number="211" type="TC">Geographic information / Geomantics</technical-committee>
-    <subcommittee/>
-    <workgroup number="7" type="WG">Information communities</workgroup>
-    <secretariat>SN</secretariat>
-  </editorialgroup>
+  <ext>
+    <doctype>international-standard</doctype>
+    <editorialgroup>
+      <technical-committee number="211" type="TC">Geographic information / Geomantics</technical-committee>
+      <subcommittee/>
+      <workgroup number="7" type="WG">Information communities</workgroup>
+      <secretariat>SN</secretariat>
+    </editorialgroup>
+    <structuredidentifier>
+      <project-number part="6">ISO 19160</project-number>
+    </structuredidentifier>
+  </ext>
 </bibdata>
