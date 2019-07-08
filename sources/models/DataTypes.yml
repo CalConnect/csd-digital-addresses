@@ -1,0 +1,64 @@
+title: Data types
+classes:
+  AddressComponentDataType:
+    relations:
+      - target: CoreType
+        relationship:
+          source:
+            type: inheritance
+      - target: PrimitiveType
+        relationship:
+          source:
+            type: inheritance
+      - target: UserDefinedDataType
+        relationship:
+          source:
+            type: inheritance
+
+  CoreType:
+
+  PrimitiveType:
+
+  iso15924Code:
+    relations:
+      - target: CoreType
+        relationship:
+          target:
+            type: direct
+        direction: "[hidden]"
+
+  iso639Code:
+    relations:
+      - target: iso15924Code
+        relationship:
+          target:
+            type: direct
+        direction: "[hidden]"
+
+  iso14888Oid:
+    relations:
+      - target: iso639Code
+        relationship:
+          target:
+            type: direct
+        direction: "[hidden]"
+
+  iso3166Code:
+    relations:
+      - target: iso14888Oid
+        relationship:
+          target:
+            type: direct
+        direction: "[hidden]"
+
+  UserDefinedDataType:
+    attributes:
+      coreType:
+        definition:
+        type: AddressComponentDataType
+      constraints:
+        definition:
+        type: DataTypeConstraints
+      name:
+        definition:
+        type: CharacterString

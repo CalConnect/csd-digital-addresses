@@ -53,12 +53,12 @@ Yes, we shall provide XML before Committee Draft stage
 
 [source,json]
 ----
-addressClasses: {
-  streetAddress: {
-    description: Street Address,
-    availableFields: [ (addressComponent) 1..* ... ]
-    displayTemplate: { ... },
-    inputTemplate: { ... }
+"addressClasses": {
+  "streetAddress": {
+    "description": "Street Address",
+    "availableFields": [ (addressComponent) 1..* ... ]
+    "displayTemplate": { ... },
+    "formTemplate": { ... }
   }
 }
 ----
@@ -115,7 +115,7 @@ addressClasses: {
   "description": "A typical street address",
   "addressComponents": [ ... ],
   "displayTemplate": { ... },
-  "inputTemplate": { ... },
+  "formTemplate": { ... },
 }
 ----
 
@@ -167,9 +167,9 @@ addressClasses: {
 
 [source,json]
 ----
-addressComponentInstance: {
-type: addressNumber,
-values: [ 1001 ]
+"addressComponentInstance": {
+  "type": "addressNumber",
+  "values": [ 1001 ]
 }
 ----
 

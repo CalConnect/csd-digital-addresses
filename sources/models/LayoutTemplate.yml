@@ -1,0 +1,126 @@
+title: Layout template
+directive: ix-layout-template
+classes:
+  LayoutTemplate:
+    definition: |
+      The interchange layout template serves as the basis of the
+      interchange display template and
+      the interchange form template.
+
+      A layout template is designed to present an
+      interchange address instance in the case of a display template, or
+      present an input form for entry of an interchange address instance
+      in the case of an interchange form template.
+
+      The interchange layout template is based on the following assumptions:
+
+      * the resulting layout is displayed in a bounded rectangular area
+
+      * the entire template is in the same script and locale.
+
+      The action of inserting components from a given interchange
+      address instance into a layout template is called "render".
+
+      // TODO: define "render" in terms and definition
+
+      [example]
+      A postal mail label can be considered an interchange address instance
+      rendered according to a layout template.
+    attributes:
+      id:
+        definition: Unique identifier for the layout template.
+        type: CharacterString
+      name:
+        definition: Descriptive name of the layout template.
+        type: CharacterString
+      addressClass:
+        definition:
+        type: InterchangeAddressClass
+      description:
+        definition: Textual description of the layout template.
+        type: CharacterString
+      localization:
+        definition: Locale and script information of the layout template.
+        type: Localization
+      dimensions:
+        definition: Physical dimensions of the rectangular bounding box for the rendered layout output.
+        type: LayoutDimension
+        cardinality:
+          min: 0
+          max: "*"
+      orientation:
+        definition: Horizontal or vertical of the text orientation.
+        type: LayoutOrientation
+        cardinality:
+          min: 0
+          max: "*"
+      lines:
+        definition:
+        type: LayoutLine
+        cardinality:
+          min: 0
+          max: "*"
+
+  DisplayTemplate:
+    definition:
+    attributes:
+      lines:
+        definition:
+        type: DisplayLine
+        cardinality:
+          min: 0
+          max: "*"
+    relations:
+      - target: LayoutTemplate
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+
+  FormTemplate:
+    definition:
+    attributes:
+      lines:
+        definition:
+        type: FormLine
+        cardinality:
+          min: 0
+          max: "*"
+    relations:
+      - target: LayoutTemplate
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+
+  LayoutDimension:
+    definition:
+    attributes:
+      width:
+        definition:
+        type: Integer
+        cardinality:
+          min: 0
+          max: 1
+      height:
+        definition:
+        type: Integer
+        cardinality:
+          min: 0
+          max: 1
+    relations:
+      - target: LayoutTemplate
+        relationship:
+          target:
+            type: direct
+        direction: up
+
+enum:
+  LayoutOrientation:
+    definition:
+    type: enumeration
+    values:
+      horizontal:
+        definition:
+      vertical:
+        definition:

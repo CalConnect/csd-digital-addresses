@@ -1,0 +1,133 @@
+title: Form template
+directive: ix-form-template
+classes:
+  FormTemplate:
+    definition: |
+      This section shows how an input form can be rendered according to
+      the interchange address class.
+
+      The form template should use should also provide an example for display
+      purposes in input (e.g., Help section).
+
+      The form template is used for displaying an
+      input form for entry of address data into an
+      interchange address instance.
+      Generally, one address class is represented
+      by just one input template.
+
+      NOTE: this part has no equivalence in PATDL.
+    attributes:
+      lines:
+        definition:
+        type: FormLine
+        cardinality:
+          min: 0
+          max: "*"
+
+  FormLine:
+    definition: |
+      A form line represents a line within a form layout.
+
+      It extends from the `LineElementReference` model, and
+      takes a set of elements that contain
+      form line element references (`FormLineElementReference`).
+    directive: form-line
+    attributes:
+      elements:
+        definition:
+        type: FormLineElementReference
+        cardinality:
+          min: 0
+          max: "*"
+    relations:
+      - target: FormTemplate
+        relationship:
+          target:
+            type: direct
+        direction: up
+
+  FormLineElement:
+    definition: |
+      This represents an element within a form line.
+
+      In an empty form with fields generated from data elements,
+      if the `example` values of the associated
+      interchange address component are specified,
+      such values should be used as "`placeholders`"
+      for form input.
+    directive: form-line-element
+    relations:
+      - target: FormLineElementReference
+        relationship:
+          target:
+            type: direct
+        direction: up
+
+  SelectionPair:
+    definition:
+    attributes:
+      displayAs:
+        definition:
+        type: CharacterString
+      key:
+        definition:
+        type: CharacterString
+    relations:
+      - target: SelectionElement
+        relationship:
+          target:
+            type: direct
+        direction: up
+
+  SelectionElement:
+    definition: Representing a selectable mapping between display string to code, e.g. in the case of the US States, "Rhode Island" the state name is mapped to the "RI" postal code. Represented by `SelectionElement` and within `SelectionPair`.
+    attributes:
+      map:
+        definition:
+        type: SelectionPair
+        cardinality:
+          min: 1
+          max: "*"
+    relations:
+      - target: FormLineElement
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+
+  DataElement:
+    definition:
+    attributes:
+      value:
+        definition: Representing a variable data value that is contained in the interchange address component, such as the PO box number following the phrase "PO Box". This element indicates that a form field is required, and the data values accepted shall adhere to the data value type defined in its associated interchange address component (through `FormLine`).
+        type: CharacterString
+    relations:
+      - target: FormLineElement
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+      - target: DataElementWithConditions
+        relationship:
+          source:
+            type: inheritance
+
+  StaticTextElement:
+    definition:
+    attributes:
+      value:
+        definition: Representing static text, such as the phrase "PO Box" preceding the actual PO box number, for form layouts for PO boxes. This element is meant to be shown in the form but not allow modification.
+        type: CharacterString
+    relations:
+      - target: FormLineElement
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+
+  DataElementWithConditions:
+    definition:
+    attributes:
+      value:
+        definition:
+        type: MD_Constraint

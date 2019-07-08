@@ -20,10 +20,10 @@ enum SpecificationLevelValue <<enumeration>> {
 }
 
 class QualityStatus{
-  +QualityCodes
+  +qualityCode: QualityCode
 }
 
-enum QualityCodes <<enumeration>>{
+enum QualityCode <<enumeration>>{
   confirmed_correct
   possibly_correct
   structurally_correct
@@ -42,6 +42,6 @@ QualityStatus -up-|> AddressFeature
 Geolocation -up-|> EX_Extent
 Geolocation -up-|> AddressFeature
 QualityStatus -up-|> AddressFeature
-QualityCodes -up-> QualityStatus
+QualityCode -up-> QualityStatus
 SpecificationLevelValue -up-> SpecificationLevel
 @enduml

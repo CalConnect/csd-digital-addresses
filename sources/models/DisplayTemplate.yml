@@ -1,0 +1,81 @@
+title: Display template
+directive: display-template
+classes:
+  DisplayTemplate:
+    definition: |
+      The display template is used for displaying an
+      interchange address instance belonging to an interchange
+      address class. Generally, one address class is represented
+      by just one display template.
+    attributes:
+      lines:
+        definition:
+        type: DisplayLine
+
+  DisplayLine:
+    definition: |
+      A display line represents a line within a display layout.
+
+      It extends from the `LineElementReference` model, and
+      takes a set of elements that contain
+      display line element references (`DisplayLineElementReference`).
+    attributes:
+      elements:
+        definition:
+        type: DisplayLineElementReference
+        cardinality:
+          min: 0
+          max: "*"
+    relations:
+      - target: DisplayTemplate
+        relationship:
+          target:
+            type: direct
+        direction: up
+
+  DisplayLineElement:
+    definition: |
+      This represents an element within a display line.
+    directive: display-line-element
+    relations:
+      - target: DisplayLineElementReference
+        relationship:
+          target:
+            type: direct
+        direction: up
+
+  DataElement:
+    definition: |
+      Representing a variable data value that is contained in the interchange address component, such as the PO box number following the phrase "PO Box".
+    attributes:
+      value:
+        definition:
+        type: CharacterString
+    relations:
+      - target: DisplayLineElement
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+
+  TextElement:
+    definition: |
+      Representing static text, such as the phrase "PO Box" preceding the actual PO box number, for display layouts for PO boxes.
+    attributes:
+      text:
+        definition:
+        type: CharacterString
+    relations:
+      - target: DisplayLineElement
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+
+relations:
+  - source: DisplayLineElementReference
+    target: DisplayLine
+    relationship:
+      target:
+        type: direct
+    direction: up

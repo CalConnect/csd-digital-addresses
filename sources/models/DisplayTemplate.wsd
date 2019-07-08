@@ -3,16 +3,14 @@
 !include style.uml.inc
 
 '******* CLASS DEFINITION *********************************************
+!include LineElementReference.wsd
+
 class DisplayTemplate {
   +lines: DisplayLine[0..*]
 }
 
 class DisplayLine {
   +elements: DisplayLineElementReference[0..*]
-}
-
-class DisplayLineElementReference {
-  +values: DisplayLineElement[0..*]
 }
 
 class DisplayLineElement{

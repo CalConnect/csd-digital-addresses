@@ -38,6 +38,7 @@ OUT_FILES  := $(foreach F,$(_OUT_FILES),$($F))
 all: documents.html
 
 documents:
+	ruby sources/models/model_processor.rb
 	mkdir -p $@
 
 documents/%.xml: documents sources/images sources/%.xml

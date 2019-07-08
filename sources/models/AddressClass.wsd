@@ -7,8 +7,8 @@ class InterchangeAddressClass{
   +id: CharacterString
   +description: CharacterString
   +components: InterchangeAddressComponent[1..*]
-  +displayTemplate
-  +inputTemplate
+  +displayTemplate: DisplayTemplate
+  +formTemplate: FormTemplate
 }
 
 class InterchangeAddressComponent{

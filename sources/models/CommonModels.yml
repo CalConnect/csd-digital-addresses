@@ -1,0 +1,82 @@
+title: Common models
+directive: ix-common
+classes:
+  Localization:
+    definition: |
+      The language and script used within this interchange address profile.
+
+      Represented by the `PT_Locale` object defined in <<ISO19115-1>> and an
+      <<ISO15924>> script code.
+    attributes:
+      locale:
+        definition: The locale of the parent object.
+        type: PT_Locale
+        origin: ISO19115-1
+      script:
+        definition: The type of written script used in the parent object.
+        type: Script Identifier Code
+        origin: ISO15924
+      textDirection:
+        definition: Indicating in which direction the text of the parent should be read.
+        type: TextDirectionCode
+    relations:
+      - target: Validity
+        relationship:
+          target:
+            type: direct
+        direction: "[hidden]"
+
+  Validity:
+    definition: |
+      The time interval where this interchange address profile is determined valid, and the revision number (represented as a date).
+    attributes:
+      validityBegins:
+        definition: The date and time when this object becomes valid.
+        type: CI_Date
+        origin: ISO19115-1
+      validityEnds:
+        definition: The date and time when this object becomes invalid.
+        type: CI_Date
+        origin: ISO19115-1
+      revision:
+        definition: Issuance date/time of this object.
+        type: CI_Date
+        origin: ISO19115-1
+
+  Signature:
+    definition: |
+      A cryptographic signature used to determine data integrity and validity of the object it belongs to.
+    attributes:
+      algorithm:
+        definition: The public key cryptographic algorithm used for this digital signature.
+        type: Oid
+        origin: ISO14888
+      publicKey:
+        definition: A reference to the actual public key used to verify the digital signature, a URI where the public key of the signer used for this signature is found.
+        type: Uri
+      signature:
+        definition: The actual digital signature value encoded in Base64 format.
+        type: CharacterString
+    relations:
+      - target: Localization
+        relationship:
+          target:
+            type: direct
+        direction: "[hidden]"
+
+enums:
+  TextDirectionCode:
+    definition: |
+      An enumeration value of TextDirectionCode represents the reading
+      direction of textual data whether it is from left to right or right to
+      left, and from top to bottom or bottom to top.
+    type: enumeration
+    values:
+      leftToRightTopToBottom:
+        definition: Indicating that text should be read left to right, and top to bottom.
+      rightToLeftTopToBottom:
+        definition: Indicating that text should be read right to left, and top to bottom.
+      leftToRightBottomToTop:
+        definition: Indicating that text should be read left to right, and bottom to top.
+      rightToLeftBottomToTop:
+        definition: Indicating that text should be read right to left, and bottom to top.

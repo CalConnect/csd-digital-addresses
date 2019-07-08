@@ -9,26 +9,31 @@ shall be tested.
 
 === Address profile register
 
-To conform to this standard, an address profile register shall satisfy
-all of the conditions specified in <<test-profile-register>>.
+To conform to this standard, an address profile register shall satisfy all of
+the requirements specified for a register in <<ISO19135-1>>. See
+<<test-profile-register>>.
+
 
 === IxAddressProfile
 
-Any machine-readable description of an address profile conforming to
-<<ISO19160-1>> which conformance is claimed shall pass all the
-requirements described in the abstract test suite in <<test-ix-address-profile>>.
+Any machine-readable description of an <<ISO19160-1>> profile for which conformance
+is claimed shall pass all the requirements described in the abstract test suite in
+<<test-ix-address-profile>>.
+
 
 === IxAddressClass
 
-Any machine-readable description of a profile conforming to
-<<ISO19160-1>> which conformance is claimed shall pass all the
-requirements described in the abstract test suite in <<test-ix-address-class>>.
+Any machine-readable description of an <<ISO19160-1>> address class for which
+conformance is claimed shall pass all the requirements described in the
+abstract test suite in <<test-ix-address-class>>.
+
 
 === IxAddressComponent
 
-Any machine-readable description of a profile conforming to
-<<ISO19160-1>> which conformance is claimed shall pass all the
-requirements described in the abstract test suite in <<test-ix-address-component>>.
+Any machine-readable description of an <<ISO19160-1>> address component for
+which conformance is claimed shall pass all the requirements described in the
+abstract test suite in <<test-ix-address-component>>.
+
 
 === IxAddressInstance
 

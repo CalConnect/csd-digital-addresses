@@ -54,7 +54,7 @@ interchange address instance model.
 
 [source]
 ----
-Suite 1111,
+Suite 1109,
 1 Pedder Street,
 Central,
 Hong Kong

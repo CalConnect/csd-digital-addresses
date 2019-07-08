@@ -3,16 +3,14 @@
 !include style.uml.inc
 
 '******* CLASS DEFINITION *********************************************
+!include LineElementReference.wsd
+
 class FormTemplate {
   +lines: FormLine[0..*]
 }
 
 class FormLine{
   +elements: FormLineElementReference[0..*]
-}
-
-class FormLineElementReference{
-  +values: FormLineElement[0..*]
 }
 
 class FormLineElement{
@@ -36,7 +34,7 @@ class StaticTextElement{
 }
 
 class DataElementWithConditions{
-  +conditions
+  +conditions: MD_Constraint
 }
 
 

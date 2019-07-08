@@ -10,5 +10,15 @@ iso-*_files
 ~*.doc
 ~*.docx
 
+# compiled documents
+documents/*
+
+# compiled adoc files of models
+sources/models/adoc/**/*.adoc
+
+# compiled files of plantuml models
+sources/models/plantuml/**/*.wsd
+sources/plantuml/*
+
 # relaton cache
 relaton/cache/*

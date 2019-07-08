@@ -1,0 +1,122 @@
+title: Address feature
+directive: address-feature
+classes:
+  AddressFeature:
+    definition: |
+      Address feature represents the status of a particular aspect of an
+      interchange address instance, as determined by an address processor.
+      Each of the aspects may be differentiated by multiple statuses.
+
+      This is an abstract class.
+      To represent specific features, this class should be extended upon.
+    attributes:
+      id:
+        definition: Unique identifier of the address feature.
+        type: CharacterString
+      name:
+        definition: Human readable name of the address feature.
+        type: CharacterString
+      description:
+        definition: Human readable description of the address feature.
+        type: CharacterString
+
+  SpecificationLevel:
+    definition: |
+      When an address is first manually entered by a common person, it is
+      unrealistic to expect this person to fully adhere to the defined
+      structure.
+
+      The allowed values of specification levels are:
+
+      * Fully structured, all components are accurately separated and cannot
+      be further split.
+
+      * Partially structured, some components may be structurally
+      correct, but some other components are still unstructured.
+
+      * Unstructured, the user has entered free-form text with no regard of
+      structuring them.
+
+      [example]
+      Digital addresses entered on e-commerce sites and address books
+      are often partially structured, with defined country, region
+      and city, but with street addresses often unstructured.
+
+      [example]
+      Digital addresses for utility installations
+      (e.g. electricity, water supplies) are often fully structured.
+
+      Therefore, an organization who accepts these addresses may wish to
+      re-structure them or fill in any missing address components.
+    attributes:
+      value:
+        definition:
+        type: SpecificationLevelValue
+    relations:
+      - target: AddressFeature
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+
+  QualityStatus:
+    definition: |
+      An address entered may not have been validated for correctness.
+      An address processor, such as a postal handling entity,
+      may decide to validate the address to a certain degree
+      in order to determine the correctness of the address.
+    attributes:
+      qualityCode:
+        definition:
+        type: QualityCode
+    relations:
+      - target: AddressFeature
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+
+  Geolocation:
+    definition: |
+      An address is commonly linked to one or more geolocations.
+      The value of a location is given by `EX_Extent` defined
+      in <<ISO19115-1,clause=6.6.1>>, which supports
+      geographic, temporal and vertical specification.
+    relations:
+      - target: EX_Extent
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+      - target: AddressFeature
+        relationship:
+          target:
+            type: inheritance
+        direction: up
+
+enums:
+  SpecificationLevalValue:
+    definition:
+    type: enumeration
+    values:
+      unstructured:
+        definition: The user has entered free-form text with no regard of structuring them.
+      partial:
+        definition: Some components may be structurally correct, but some other components are still unstructured.
+      full:
+        definition: All components are accurately separated and cannot be further split.
+
+  QualityCode:
+    definition:
+    type: enumeration
+    values:
+      confirmedCorrect:
+        definition: Indicating that the address is confirmed to be correct to the best of knowledge of the address processor.
+      mostlyCorrect:
+        definition: Indicating with high confidence that the address is correct.
+      possiblyCorrect:
+        definition: Indicating with confidence that the address is correct.
+      structurallyCorrect:
+        definition: Indicating that the address components have the correct value types.
+      unknown:
+        definition: Indicating that this address has not been validated in any way, and it cannot be assigned a quality.
