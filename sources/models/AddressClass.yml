@@ -14,15 +14,24 @@ classes:
       [example]
       The US Numbered Thoroughfare Address with this syntax can be
       represented as an interchange address class:
-      * { Complete Landmark Name or Complete Place Name }
-      * { Complete Address Number * }
-      * { Complete Street Name * }
-      * { Complete Subaddress }
-      * { Complete Place Name * }
-      * { State Name * }
-      * { Zip Code }
-      * { Zip Plus 4 }
-      * { Country Name }
+
+      \* { Complete Landmark Name or Complete Place Name }
+
+      \* { Complete Address Number * }
+
+      \* { Complete Street Name * }
+
+      \* { Complete Subaddress }
+
+      \* { Complete Place Name * }
+
+      \* { State Name * }
+
+      \* { Zip Code }
+
+      \* { Zip Plus 4 }
+
+      \* { Country Name }
 
       An interchange address class also provides a display template
       and a form template to allow the display and entry of an

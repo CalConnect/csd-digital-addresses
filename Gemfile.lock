@@ -1,3 +1,35 @@
+GIT
+  remote: https://github.com/metanorma/isodoc.git
+  revision: f1e3ae02917a6455ee23696fb7adccbf11ff094c
+  specs:
+    isodoc (0.10.1)
+      asciimath
+      html2doc (~> 0.8.11)
+      htmlentities (~> 4.3.4)
+      liquid
+      metanorma (~> 0.3.0)
+      nokogiri (>= 1)
+      rake (~> 12.0)
+      roman-numerals
+      sassc (~> 2)
+      thread_safe
+      uuidtools
+
+GIT
+  remote: https://github.com/metanorma/metanorma-standoc.git
+  revision: 279a8bab6fc7b27010c4eda993b15fe9c0b96b05
+  specs:
+    metanorma-standoc (1.2.1)
+      asciidoctor (~> 1.5.7)
+      concurrent-ruby
+      html2doc (~> 0.8.11)
+      iev (~> 0.2.1)
+      isodoc (~> 0.10.0)
+      relaton (~> 0.4.0)
+      ruby-jing
+      sterile (~> 1.0.14)
+      unicode2latex (~> 0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -29,18 +61,6 @@ GEM
       nokogiri
     image_size (2.0.1)
     iso-639 (0.2.8)
-    isodoc (0.10.1)
-      asciimath
-      html2doc (~> 0.8.11)
-      htmlentities (~> 4.3.4)
-      liquid
-      metanorma (~> 0.3.0)
-      nokogiri (>= 1)
-      rake (~> 12.0)
-      roman-numerals
-      sassc (~> 2)
-      thread_safe
-      uuidtools
     isoics (0.1.7)
     json (2.2.0)
     liquid (4.0.3)
@@ -127,17 +147,6 @@ GEM
       isodoc (~> 0.10.0)
       metanorma-standoc (~> 1.2.0)
       ruby-jing
-    metanorma-standoc (1.2.1)
-      asciidoctor (~> 1.5.7)
-      concurrent-ruby
-      html2doc (~> 0.8.11)
-      iev (~> 0.2.1)
-      isodoc (~> 0.10.0)
-      relaton (~> 0.4.0)
-      relaton-cli (~> 0.2.0)
-      ruby-jing
-      sterile (~> 1.0.14)
-      unicode2latex (~> 0.0.1)
     metanorma-unece (0.1.1)
       asciidoctor (~> 1.5.7)
       htmlentities (~> 4.3.4)
@@ -156,7 +165,7 @@ GEM
     optout (0.0.2)
     public_suffix (3.1.1)
     rake (12.3.2)
-    relaton (0.4.1)
+    relaton (0.4.2)
       algoliasearch
       relaton-gb (~> 0.5.0)
       relaton-iec (~> 0.3.0)
@@ -181,7 +190,7 @@ GEM
       relaton-iso-bib (~> 0.2.0)
     relaton-ietf (0.5.3)
       relaton-iso-bib (~> 0.2.0)
-    relaton-iso (0.5.1)
+    relaton-iso (0.5.2)
       algoliasearch
       relaton-iec (~> 0.3.0)
       relaton-iso-bib (~> 0.2.0)
@@ -222,9 +231,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  isodoc!
   metanorma
   metanorma-cli
+  metanorma-standoc!
   relaton-cli
 
 BUNDLED WITH
-   2.0.1
+   2.0.2
