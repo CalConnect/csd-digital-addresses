@@ -1,0 +1,53 @@
+@startuml
+
+!include style.uml.inc
+
+'******* CLASS DEFINITION *********************************************
+!include LineElementReference.wsd
+
+class FormTemplate {
+  +lines: FormLine[0..*]
+}
+
+class FormLine{
+  +elements: FormLineElementReference[0..*]
+}
+
+class FormLineElement{
+}
+
+class SelectionPair{
+  +displayAs: CharacterString
+  +key: CharacterString
+}
+
+class SelectionElement{
+  +map: SelectionPair[1..*]
+}
+
+class DataElement{
+  +value: CharacterString
+}
+
+class StaticTextElement{
+  +value: CharacterString
+}
+
+class DataElementWithConditions{
+  +conditions: MD_Constraint
+}
+
+
+'******* NOTES ********************************************************
+note right of DataElementWithConditions: "ValueElementWithConditions\n are the conditions\n such as `zip code must be 5 digits long`, etc.\n Potentially use Object\n Constraint Language"
+
+'******* CLASS RELATIONS **********************************************
+FormLine -up-> FormTemplate
+StaticTextElement -up-|> FormLineElement
+SelectionElement -up-|> FormLineElement
+DataElement -up-|> FormLineElement
+DataElement <|-- DataElementWithConditions
+FormLineElement -up-> FormLineElementReference
+FormLineElementReference -up-> FormLine
+SelectionPair -up-> SelectionElement
+@enduml

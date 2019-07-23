@@ -1,0 +1,35 @@
+@startuml
+
+!include style.uml.inc
+
+'******* CLASS DEFINITION *********************************************
+class InterchangeAddressClass{
+  +id: CharacterString
+  +description: CharacterString
+  +components: InterchangeAddressComponent[1..*]
+  +displayTemplate: DisplayTemplate
+  +formTemplate: FormTemplate
+}
+
+class InterchangeAddressComponent{
+  +key: CharacterString
+  +description: CharacterString
+  +dataType: AddressComponentDataType
+  +obligation: ComponentObligation
+  +maxCardinality: Integer
+  +minCardinality: Integer
+  +example: CharacterString[0..1]
+}
+
+enum ComponentObligation <<enumeration>>{
+  mandatory
+  optional
+  disallowed
+}
+
+'******* CLASS RELATIONS **********************************************
+
+InterchangeAddressComponent -up-> InterchangeAddressClass
+ComponentObligation -up-> InterchangeAddressComponent
+
+@enduml

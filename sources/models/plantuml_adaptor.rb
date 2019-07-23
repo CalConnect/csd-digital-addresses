@@ -47,7 +47,7 @@ class #{class_name} {
     "  +#{attr_name}: #{attr_hash["type"]}#{attribute_cardinality_plantuml(attr_hash["cardinality"])}"
   end
 
-  def self.attribute_cardinality_plantuml(cardinality)
+  def self.attribute_cardinality_plantuml(cardinality, withBracket = true)
     return "" unless cardinality
 
     min_card = cardinality["min"] || 1
@@ -55,7 +55,11 @@ class #{class_name} {
 
     return "" if min_card == 1 && max_card == 1
 
-    "[#{min_card}..#{max_card}]"
+    card = "#{min_card}..#{max_card}"
+
+    return card unless withBracket
+
+    "[#{card}]"
   end
 
   def self.classes_to_relations_plantuml(classes)
@@ -75,6 +79,7 @@ class #{class_name} {
   end
 
   def self.relation_to_plantuml(source, relation)
+    target = relation["target"]
     relationship = relation["relationship"] || {}
 
     source_relationship = relationship["source"] || {}
@@ -85,6 +90,10 @@ class #{class_name} {
       "<"
     when "inheritance"
       "<|"
+    when "composition"
+      "*"
+    when "aggregation"
+      "o"
     else
       ""
     end
@@ -94,13 +103,65 @@ class #{class_name} {
       ">"
     when "inheritance"
       "|>"
+    when "composition"
+      "*"
+    when "aggregation"
+      "o"
     else
       ""
     end
 
     direction = relation["direction"] || ""
 
-    "#{source} #{source_arrow}-#{direction}-#{target_arrow} #{relation["target"]}"
+    arrow = "#{source_arrow}-#{direction}-#{target_arrow}"
+
+    action = relation["action"]
+    label = ""
+
+    if action
+      label = case action["direction"]
+      when "source"
+        " : < #{action["verb"]}"
+      when "target"
+        " : #{action["verb"]} >"
+      else
+        ""
+      end
+    end
+
+    source_attribute = relationship_cardinality_to_plantuml(
+      source_relationship["attribute"]
+    )
+    source_attribute = " #{source_attribute}"
+
+    target_attribute = relationship_cardinality_to_plantuml(
+      target_relationship["attribute"]
+    )
+    target_attribute = "#{target_attribute} "
+
+    "#{source}#{source_attribute} #{arrow} #{target_attribute}#{target}#{label}"
+  end
+
+  def self.relationship_cardinality_to_plantuml(attribute)
+
+    attribute_name = (attribute || {}).keys.first
+
+    return "" unless attribute_name
+
+    attribute_hash = attribute[attribute_name]
+    attribute_cardinality = attribute_hash["cardinality"]
+    cardinality = ""
+
+    if attribute_cardinality
+      cardinality = attribute_cardinality_plantuml(
+        attribute_cardinality,
+        false
+      )
+
+      cardinality = " #{cardinality}"
+    end
+
+    "\"+#{attribute_name}#{cardinality}\""
   end
 
   def self.enums_to_enums_plantuml(enums)

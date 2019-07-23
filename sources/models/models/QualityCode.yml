@@ -1,0 +1,14 @@
+name: QualityCode
+modelType: enum
+type: enumeration
+values:
+  confirmedCorrect:
+    definition: Indicating that the address is confirmed to be correct to the best of knowledge of the address processor.
+  mostlyCorrect:
+    definition: Indicating with high confidence that the address is correct.
+  possiblyCorrect:
+    definition: Indicating with confidence that the address is correct.
+  structurallyCorrect:
+    definition: Indicating that the address components have the correct value types.
+  unknown:
+    definition: Indicating that this address has not been validated in any way, and it cannot be assigned a quality.

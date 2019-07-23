@@ -1,0 +1,26 @@
+@startuml
+
+!include style.uml.inc
+
+'******* CLASS DEFINITION *********************************************
+class LayoutLine{
+  +dimensions: LayoutDimensions
+  +elements
+}
+
+class DisplayLine{
+  +elements: DisplayLineElementReference[0..*]
+}
+
+class FormLine{
+  +elements: FormLineElementReference[0..*]
+}
+
+
+'******* NOTES ********************************************************
+
+'******* CLASS RELATIONS **********************************************
+LayoutLine <|-- DisplayLine
+LayoutLine <|-- FormLine
+
+@enduml

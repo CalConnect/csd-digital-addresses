@@ -1,0 +1,17 @@
+name: AddressComponentDataValue
+modelType: class
+definition: |
+  A single value for the interchange address instance component.
+attributes:
+  type:
+    definition: The data type of its value.
+    type: AddressComponentDataType
+  value:
+    definition: The value of the specified component.
+    type: CharacterString
+relations:
+  - target: InterchangeAddressInstanceComponent
+    relationship:
+      target:
+        type: direct
+    direction: up

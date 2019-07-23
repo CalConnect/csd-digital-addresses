@@ -1,0 +1,27 @@
+title: Data types
+directive: ix-data-types
+imports:
+  AddressComponentDataType:
+    fidelity:
+      withDefinition: true
+  CoreType:
+    fidelity:
+      withDefinition: true
+  PrimitiveType:
+    fidelity:
+      withDefinition: true
+  iso15924Code:
+    fidelity:
+      withDefinition: true
+  iso639Code:
+    fidelity:
+      withDefinition: true
+  iso14880Oid:
+    fidelity:
+      withDefinition: true
+  iso3166Code:
+    fidelity:
+      withDefinition: true
+  UserDefinedDataType:
+    fidelity:
+      withDefinition: true

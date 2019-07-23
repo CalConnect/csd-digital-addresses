@@ -1,0 +1,45 @@
+@startuml
+
+!include style.uml.inc
+
+'******* CLASS DEFINITION *********************************************
+class LayoutTemplate {
+  +id: CharacterString
+  +name: CharacterString
+  +addressClass: InterchangeAddressClass
+  +description: CharacterString
+  +localization: Localization
+  +dimensions: LayoutDimension[0..*]
+  +orientation: LayoutOrientation[0..1]
+  +lines: LayoutLine[0..*]
+}
+
+class DisplayTemplate{
+  +lines: DisplayLine[0..*]
+}
+
+class FormTemplate{
+  +lines: FormLine[0..*]
+}
+
+class LayoutDimension{
+  +width: Integer[0..1]
+  +height: Integer[0..1]
+}
+
+enum LayoutOrientation <<enumeration>>{
+  horizontal
+  vertical
+}
+
+'******* NOTES ********************************************************
+
+
+'******* CLASS RELATIONS **********************************************
+
+LayoutDimension --up-> LayoutTemplate
+DisplayTemplate -up-|> LayoutTemplate
+FormTemplate -up-|> LayoutTemplate
+LayoutOrientation --up-> LayoutTemplate
+
+@enduml

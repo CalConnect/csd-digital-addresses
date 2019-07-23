@@ -1,0 +1,17 @@
+name: FormLineElement
+modelType: class
+definition: |
+  This represents an element within a form line.
+
+  In an empty form with fields generated from data elements,
+  if the `example` values of the associated
+  interchange address component are specified,
+  such values should be used as "`placeholders`"
+  for form input.
+directive: form-line-element
+relations:
+  - target: FormLineElementReference
+    relationship:
+      target:
+        type: direct
+    direction: up

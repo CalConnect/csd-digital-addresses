@@ -1,0 +1,12 @@
+title: Interchange address class
+directive: ix-address-class
+imports:
+  InterchangeAddressClass:
+    fidelity:
+      withDefinition: true
+  InterchangeAddressComponent:
+    fidelity:
+      withDefinition: true
+  ComponentObligation:
+    fidelity:
+      withDefinition: true

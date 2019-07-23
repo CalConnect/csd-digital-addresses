@@ -1,0 +1,21 @@
+title: Address feature
+directive: address-feature
+imports:
+  AddressFeature:
+    fidelity:
+      withDefinition: true
+  SpecificationLevel:
+    fidelity:
+      withDefinition: true
+  QualityStatus:
+    fidelity:
+      withDefinition: true
+  Geolocation:
+    fidelity:
+      withDefinition: true
+  SpecificationLevelValue:
+    fidelity:
+      withDefinition: true
+  QualityCode:
+    fidelity:
+      withDefinition: true

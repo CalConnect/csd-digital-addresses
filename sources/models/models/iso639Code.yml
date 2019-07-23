@@ -1,0 +1,8 @@
+name: iso639Code
+modelType: class
+relations:
+  - target: iso15924Code
+    relationship:
+      target:
+        type: direct
+    direction: "[hidden]"

@@ -1,0 +1,13 @@
+name: UserDefinedDataType
+modelType: class
+definition:
+attributes:
+  coreType:
+    definition:
+    type: AddressComponentDataType
+  constraints:
+    definition:
+    type: DataTypeConstraints
+  name:
+    definition:
+    type: CharacterString

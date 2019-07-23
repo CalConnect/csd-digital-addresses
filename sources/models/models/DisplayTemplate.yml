@@ -1,0 +1,18 @@
+name: DisplayTemplate
+modelType: class
+definition: |
+  The display template is used for displaying an
+  interchange address instance belonging to an interchange
+  address class. Generally, one address class is represented
+  by just one display template.
+attributes:
+  lines:
+    definition: The constituent parts of this DisplayTemplate.
+    type: DisplayLine
+    relations:
+relations:
+  - target: LayoutTemplate
+    relationship:
+      target:
+        type: inheritance
+    direction: up

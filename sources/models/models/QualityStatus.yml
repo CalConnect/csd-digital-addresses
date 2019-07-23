@@ -1,0 +1,17 @@
+name: QualityStatus
+modelType: class
+definition: |
+  An address entered may not have been validated for correctness.
+  An address processor, such as a postal handling entity,
+  may decide to validate the address to a certain degree
+  in order to determine the correctness of the address.
+attributes:
+  qualityCode:
+    definition: Indicating the quality of an address instance.
+    type: QualityCode
+relations:
+  - target: AddressFeature
+    relationship:
+      target:
+        type: inheritance
+    direction: up

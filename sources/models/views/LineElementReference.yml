@@ -1,0 +1,11 @@
+title: Line element reference
+imports:
+  LineElementReference:
+    fidelity:
+      withDefinitions: true
+  DisplayLineElementReference:
+    fidelity:
+      withDefinitions: true
+  FormLineElementReference:
+    fidelity:
+      withDefinitions: true

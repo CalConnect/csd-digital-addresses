@@ -1,0 +1,10 @@
+name: SpecificationLevelValue
+modelType: enum
+type: enumeration
+values:
+  unstructured:
+    definition: The user has entered free-form text with no regard of structuring them.
+  partial:
+    definition: Some components may be structurally correct, but some other components are still unstructured.
+  full:
+    definition: All components are accurately separated and cannot be further split.

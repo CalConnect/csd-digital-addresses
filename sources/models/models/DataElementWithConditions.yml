@@ -1,0 +1,7 @@
+name: DataElementWithConditions
+modelType: class
+definition:
+attributes:
+  value:
+    definition:
+    type: MD_Constraint

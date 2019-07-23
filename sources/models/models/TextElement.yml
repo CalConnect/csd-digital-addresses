@@ -1,0 +1,14 @@
+name: TextElement
+modelType: class
+definition: |
+  Representing static text, such as the phrase "PO Box" preceding the actual PO box number, for display layouts for PO boxes.
+attributes:
+  text:
+    definition: The actual value of the TextElement.
+    type: CharacterString
+relations:
+  - target: DisplayLineElement
+    relationship:
+      target:
+        type: inheritance
+    direction: up

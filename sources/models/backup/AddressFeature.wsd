@@ -1,0 +1,47 @@
+@startuml
+
+!include style.uml.inc
+
+'******* CLASS DEFINITION *********************************************
+class AddressFeature {
+  +id: CharacterString
+  +name: CharacterString
+  +description: CharacterString
+}
+
+class SpecificationLevel{
+  +value: SpecificationLevelValue
+}
+
+enum SpecificationLevelValue <<enumeration>> {
+  unstructured
+  partial
+  full
+}
+
+class QualityStatus{
+  +qualityCode: QualityCode
+}
+
+enum QualityCode <<enumeration>>{
+  confirmed_correct
+  possibly_correct
+  structurally_correct
+  unknown
+}
+
+class Geolocation {
+}
+
+'******* NOTES ********************************************************
+
+
+'******* CLASS RELATIONS **********************************************
+SpecificationLevel -up-|> AddressFeature
+QualityStatus -up-|> AddressFeature
+Geolocation -up-|> EX_Extent
+Geolocation -up-|> AddressFeature
+QualityStatus -up-|> AddressFeature
+QualityCode -up-> QualityStatus
+SpecificationLevelValue -up-> SpecificationLevel
+@enduml

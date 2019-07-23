@@ -1,0 +1,12 @@
+title: Layout template
+directive: ix-layout-template
+imports:
+  LayoutTemplate:
+    fidelity:
+      withDefinitions: true
+  LayoutDimension:
+    fidelity:
+      withDefinitions: true
+  LayoutOrientation:
+    fidelity:
+      withDefinitions: true

@@ -1,0 +1,16 @@
+name: SelectionPair
+modelType: class
+definition:
+attributes:
+  displayAs:
+    definition:
+    type: CharacterString
+  key:
+    definition:
+    type: CharacterString
+relations:
+  - target: SelectionElement
+    relationship:
+      target:
+        type: direct
+    direction: up

@@ -1,0 +1,15 @@
+title: Common models
+directive: ix-common
+imports:
+  Localization:
+    fidelity:
+      withDefinition: true
+  Validity:
+    fidelity:
+      withDefinition: true
+  Signature:
+    fidelity:
+      withDefinition: true
+  TextDirectionCode:
+    fidelity:
+      withDefinition: true

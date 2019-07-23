@@ -1,0 +1,21 @@
+name: LayoutLine
+modelType: class
+definition: |
+  A layout line represents a line in a rendered address display
+  or an address input form.
+
+  It forms the basis of the address display line and
+  address form line.
+attributes:
+  dimensions:
+    definition: Physical dimensions of the rectangular bounding box for the rendered Line.
+    type: LayoutDimentions
+relations:
+  - target: DisplayLine
+    relationship:
+      source:
+        type: inheritance
+  - target: FormLine
+    relationship:
+      source:
+        type: inheritance

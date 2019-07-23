@@ -1,0 +1,43 @@
+@startuml
+
+!include style.uml.inc
+
+'******* CLASS DEFINITION *********************************************
+class InterchangeAddressInstance {
+  +id: CharacterString
+  +name: CharacterString[0..1]
+  +profile: InterchangeAddressProfile
+  +addressClass: InterchangeAddressClass
+  +components: InterchangeAddressInstanceComponent[0..*]
+  +features: AddressFeatureInstance[0..*]
+  +applicability: MD_SpatialRepresentation[0..*]
+  +validity: Validity[0..1]
+  +displayTemplate: DisplayTemplate[0..1]
+  +signature: Signature[0..1]
+}
+
+class InterchangeAddressInstanceComponent{
+  +type: InterchangeAddressComponent
+  +values: AddressComponentDataValue[1..*]
+}
+
+class AddressFeatureInstance{
+  +feature: AddressFeature
+  +signature: Signature[0..1]
+}
+
+class AddressComponentDataValue{
+  +type: AddressComponentDataType
+  +value: CharacterString
+}
+
+'******* NOTES ********************************************************
+
+
+'******* CLASS RELATIONS **********************************************
+
+InterchangeAddressInstanceComponent -up-> InterchangeAddressInstance
+AddressFeature -up-> AddressFeatureInstance
+AddressComponentDataValue -up-> InterchangeAddressInstanceComponent
+AddressFeatureInstance -up-> InterchangeAddressInstance
+@enduml

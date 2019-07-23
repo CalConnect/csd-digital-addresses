@@ -1,0 +1,18 @@
+name: Geolocation
+modelType: class
+definition: |
+  An address is commonly linked to one or more geolocations.
+  The value of a location is given by `EX_Extent` defined
+  in <<ISO19115-1,clause=6.6.1>>, which supports
+  geographic, temporal and vertical specification.
+relations:
+  - target: EX_Extent
+    relationship:
+      target:
+        type: inheritance
+    direction: up
+  - target: AddressFeature
+    relationship:
+      target:
+        type: inheritance
+    direction: up

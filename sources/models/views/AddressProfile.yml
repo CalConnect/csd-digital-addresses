@@ -1,0 +1,6 @@
+title: Interchange address profile
+directive: ix-address-profile
+imports:
+  InterchangeAddressProfile:
+    fidelity:
+      withDefinition: true

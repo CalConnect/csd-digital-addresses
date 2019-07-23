@@ -38,7 +38,7 @@ OUT_FILES  := $(foreach F,$(_OUT_FILES),$($F))
 all: documents.html
 
 documents:
-	ruby sources/models/model_processor.rb
+	ruby sources/models/controller.rb
 	mkdir -p $@
 
 documents/%.xml: documents sources/images sources/%.xml
@@ -106,7 +106,7 @@ $(foreach FORMAT,$(FORMATS),$(eval $(FORMAT_TASKS)))
 open: open-html
 
 clean:
-	rm -rf documents documents.html documents.rxl published *_images $(OUT_FILES)
+	rm -rf documents documents.html documents.rxl published *_images sources/plantuml/* $(OUT_FILES)
 
 bundle:
 	if [ "x" == "${METANORMA_DOCKER}x" ]; then bundle; fi

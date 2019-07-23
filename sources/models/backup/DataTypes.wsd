@@ -1,0 +1,58 @@
+@startuml
+
+!include style.uml.inc
+
+'******* CLASS DEFINITION *********************************************
+class AddressComponentDataType <<dataType>> {
+
+}
+
+class CoreTypes <<dataType>> {
+
+}
+
+class PrimitiveTypes <<primitiveType>> {
+
+}
+
+class OclExpression <<dataType>> {
+
+}
+
+class iso15924Code <<dataType>> {
+
+}
+
+class iso639Code <<dataType>> {
+
+}
+
+class iso14888Oid <<dataType>> {
+
+}
+
+class iso3166Code <<dataType>> {
+
+}
+
+class UserDefinedDataType <<dataType>> {
+  +coreType: AddressComponentDataType
+  +constraints: DataTypeConstraints
+  +name: CharacterString
+}
+
+'******* NOTES ********************************************************
+
+
+'******* CLASS RELATIONS **********************************************
+
+AddressComponentDataType <|-- CoreTypes
+AddressComponentDataType <|-- PrimitiveTypes
+AddressComponentDataType <|-- UserDefinedDataType
+
+iso15924Code -[hidden]up-> CoreTypes
+iso639Code -[hidden]up-> iso15924Code
+iso14888Oid -[hidden]up-> iso639Code
+iso3166Code -[hidden]up-> iso14888Oid
+
+@enduml

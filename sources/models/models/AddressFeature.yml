@@ -1,0 +1,25 @@
+name: AddressFeature
+modelType: class
+definition: |
+  Address feature represents the status of a particular aspect of an
+  interchange address instance, as determined by an address processor.
+  Each of the aspects may be differentiated by multiple statuses.
+
+  This is an abstract class.
+  To represent specific features, this class should be extended upon.
+attributes:
+  id:
+    definition: Unique identifier of the address feature.
+    type: CharacterString
+  name:
+    definition: Human readable name of the address feature.
+    type: CharacterString
+  description:
+    definition: Human readable description of the address feature.
+    type: CharacterString
+relations:
+  - target: AddressFeatureInstance
+    relationship:
+      target:
+        type: direct
+    direction: up

@@ -1,0 +1,27 @@
+@startuml
+
+!include style.uml.inc
+
+'******* CLASS DEFINITION *********************************************
+class LineElementReference {
+  +target: InterchangeAddressComponent
+  +name: CharacterString
+  +description: CharacterString[0..1]
+}
+
+class DisplayLineElementReference {
+  +values: DisplayLineElement[0..*]
+}
+
+class FormLineElementReference{
+  +values: FormLineElement[0..*]
+}
+
+'******* NOTES ********************************************************
+
+
+'******* CLASS RELATIONS **********************************************
+LineElementReference <|-- DisplayLineElementReference
+LineElementReference <|-- FormLineElementReference
+
+@enduml

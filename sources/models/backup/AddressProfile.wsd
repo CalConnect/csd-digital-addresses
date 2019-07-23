@@ -1,0 +1,29 @@
+@startuml
+
+!include style.uml.inc
+
+'******* CLASS DEFINITION *********************************************
+class InterchangeAddressProfile {
+  +id
+  +type
+  +description: CharacterString
+  +classes: InterchangeAddressClass[0..*]
+  +dataTypes: UserDefinedDataType[0..*]
+  +signature: Signature[0..1]
+  +publisher: CI_Party
+  +validity: Validity
+  +localization: Localization
+  +areaApplicability: MD_SpatialRepresentation[0..*]
+  +timeToLive: Integer
+  +identifier: MD_Identifier
+  +country: iso3166Code[0..*]
+  +oclExpressions: OclExpression[0..*]
+}
+
+
+'******* NOTES ********************************************************
+
+
+'******* CLASS RELATIONS **********************************************
+
+@enduml

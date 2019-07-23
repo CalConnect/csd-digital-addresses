@@ -19,6 +19,7 @@ sources/models/adoc/**/*.adoc
 # compiled files of plantuml models
 sources/models/plantuml/**/*.wsd
 sources/plantuml/*
+sources/images/*
 
 # relaton cache
 relaton/cache/*

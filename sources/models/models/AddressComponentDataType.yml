@@ -1,0 +1,15 @@
+name: AddressComponentDataType
+modelType: class
+relations:
+  - target: CoreType
+    relationship:
+      source:
+        type: inheritance
+  - target: PrimitiveType
+    relationship:
+      source:
+        type: inheritance
+  - target: UserDefinedDataType
+    relationship:
+      source:
+        type: inheritance

@@ -1,0 +1,29 @@
+name: FormTemplate
+modelType: class
+definition: |
+  This section shows how an input form can be rendered according to
+  the interchange address class.
+
+  The form template should use should also provide an example for display
+  purposes in input (e.g., Help section).
+
+  The form template is used for displaying an
+  input form for entry of address data into an
+  interchange address instance.
+  Generally, one address class is represented
+  by just one input template.
+
+  NOTE: this part has no equivalence in PATDL.
+attributes:
+  lines:
+    definition: The constituent parts of this FormTemplate.
+    type: FormLine
+    cardinality:
+      min: 0
+      max: "*"
+relations:
+  - target: LayoutTemplate
+    relationship:
+      target:
+        type: inheritance
+    direction: up
