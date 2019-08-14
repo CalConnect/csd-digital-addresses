@@ -1,5 +1,5 @@
 module PlantumlAdaptor
-  def self.yml_to_plantuml(yml)
+  def self.yml_to_plantuml(yml, plantuml_path)
     startuml = <<-plantuml
 @startuml
     plantuml
@@ -10,7 +10,7 @@ module PlantumlAdaptor
 
     [
       startuml,
-      imports_yml_to_plantuml(yml),
+      imports_yml_to_plantuml(yml, plantuml_path),
       class_defs_yml_to_plantuml(yml),
       class_groups_yml_to_plantuml(yml),
       class_relations_yml_to_plantuml(yml),
@@ -19,12 +19,12 @@ module PlantumlAdaptor
     ].compact.join("\n")
   end
 
-  def self.imports_yml_to_plantuml(yml)
+  def self.imports_yml_to_plantuml(yml, plantuml_path)
     return if empty?(yml, "imports")
 
     <<-plantuml
 '******* IMPORTS ******************************************************
-#{import_models_to_plantuml(yml["imports"])}
+#{import_models_to_plantuml(yml["imports"], plantuml_path)}
     plantuml
   end
 
@@ -66,17 +66,17 @@ module PlantumlAdaptor
     plantuml
   end
 
-  def self.import_models_to_plantuml(imported_models)
+  def self.import_models_to_plantuml(imported_models, plantuml_path)
     imported_models ||= []
 
     output = ""
 
     unless imported_models.empty?
-      output += "!include ../models/plantuml/style.uml.inc\n"
+      output += "!include #{plantuml_path}/style.uml.inc\n"
     end
 
     output += imported_models.map do |(imported_model_path, imported_model_hash)|
-      "!include ../models/plantuml/models/#{imported_model_path}.wsd"
+      "!include #{plantuml_path}/models/#{imported_model_path}.wsd"
     end.join("\n")
   end
 

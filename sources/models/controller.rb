@@ -6,6 +6,7 @@ require File.expand_path("../plantuml_adaptor.rb", __FILE__)
 require File.expand_path("../asciidoc_adaptor.rb", __FILE__)
 
 ADOC_LEVEL = 2
+PLANTUML_PATH = "../models/plantuml"
 
 TYPE_MAP = {
   "class" => "classes",
@@ -81,7 +82,10 @@ def model_to_plantuml(model_path, yml)
   FileUtils.mkdir_p(dir_name)
 
   File.open("#{dir_name}/#{model_name}.wsd", "w") do |file|
-    file.write(PlantumlAdaptor.yml_to_plantuml(yml))
+    file.write(PlantumlAdaptor.yml_to_plantuml(
+      yml,
+      PLANTUML_PATH
+    ))
   end
 end
 
@@ -102,7 +106,10 @@ def view_to_plantuml(view_name, yml)
   FileUtils.mkdir_p(dir_name)
 
   File.open("#{dir_name}/#{view_name}.wsd", "w") do |file|
-    file.write(PlantumlAdaptor.yml_to_plantuml(view_hash))
+    file.write(PlantumlAdaptor.yml_to_plantuml(
+      view_hash,
+      PLANTUML_PATH
+    ))
   end
 end
 
