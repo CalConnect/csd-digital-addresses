@@ -20,23 +20,3 @@ classes:
         relationship:
           source:
             type: inheritance
-
-  DisplayLine:
-    definition:
-    attributes:
-      elements:
-        definition:
-        type: DisplayLineElement
-        cardinality:
-          min: 0
-          max: "*"
-
-  FormLine:
-    definition:
-    attributes:
-      elements:
-        definition:
-        type: FormLineElement
-        cardinality:
-          min: 0
-          max: "*"

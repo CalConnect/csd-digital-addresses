@@ -18,11 +18,17 @@ classes:
       NOTE: this part has no equivalence in PATDL.
     attributes:
       lines:
-        definition:
+        definition: The constituent parts of this FormTemplate.
         type: FormLine
         cardinality:
           min: 0
           max: "*"
+    relations:
+      - target: LayoutTemplate
+        relationship:
+          target:
+            type: inheritance
+        direction: up
 
   FormLine:
     definition: |
@@ -34,7 +40,7 @@ classes:
     directive: form-line
     attributes:
       elements:
-        definition:
+        definition: The constituent parts of this FormLine.
         type: FormLineElementReference
         cardinality:
           min: 0
@@ -83,7 +89,7 @@ classes:
     definition: Representing a selectable mapping between display string to code, e.g. in the case of the US States, "Rhode Island" the state name is mapped to the "RI" postal code. Represented by `SelectionElement` and within `SelectionPair`.
     attributes:
       map:
-        definition:
+        definition: Mapping between a display string to code for each instance of SelectionPair.
         type: SelectionPair
         cardinality:
           min: 1
@@ -113,7 +119,7 @@ classes:
             type: inheritance
 
   StaticTextElement:
-    definition:
+    definition: Static text that can be a constituent part of an InterchangeAddressInstance.
     attributes:
       value:
         definition: Representing static text, such as the phrase "PO Box" preceding the actual PO box number, for form layouts for PO boxes. This element is meant to be shown in the form but not allow modification.

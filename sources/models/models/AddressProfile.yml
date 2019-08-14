@@ -1,0 +1,36 @@
+name: AddressProfile
+modelType: class
+definition:
+attributes:
+  country:
+    definition: The country of which this interchange address profile represents.
+    type: iso3166Code
+    cardinality:
+      min: 0
+      max: "*"
+relations:
+  - target: AddressComponentProfile
+    relationship:
+      source:
+        type: aggregation
+        attributes:
+          componentProfile:
+            cardinality:
+              min: 0
+              max: "*"
+    action:
+      verb: defines
+      direction: target
+
+  - target: AddressClassProfile
+    relationship:
+      source:
+        type: aggregation
+        attributes:
+          addressProfile:
+            cardinality:
+              min: 0
+              max: "*"
+    action:
+      verb: defines
+      direction: target

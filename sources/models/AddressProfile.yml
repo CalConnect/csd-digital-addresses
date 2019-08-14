@@ -21,13 +21,13 @@ classes:
         definition: Textual description of this profile.
         type: CharacterString
       classes:
-        definition:
+        definition: Specifying all InterchangeAddressClasses representing different address formats to be supported in this AddressProfile.
         type: InterchangeAddressClass
         cardinality:
           min: 0
           max: "*"
       dataTypes:
-        definition:
+        definition: The data types defined by the author to be used in this AddressProfile.
         type: UserDefinedDataType
         cardinality:
           min: 0
@@ -46,7 +46,7 @@ classes:
         definition: The period of date and time that this profile should be considered as valid.
         type: Validity
       localization:
-        definition:
+        definition: The language and script used within this interchange address profile.
         type: Localization
       areaApplicability:
         definition: The geographic representation of which this interchange address profile applies to. Overlapping geographic areas are allowed across different interchange address profiles.

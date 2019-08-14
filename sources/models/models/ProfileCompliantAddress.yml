@@ -1,0 +1,28 @@
+name: ProfileCompliantAddress
+modelType: class
+relations:
+  - target: Address
+    relationship:
+      target:
+        type: inheritance
+
+  - target: ProfileCompliantAddressComponent
+    relationship:
+      source:
+        type: aggregation
+        attributes:
+          address:
+            cardinality:
+              min: 1
+              max: "*"
+      target:
+        type: direct
+        attributes:
+          addressComponent:
+            cardinality:
+              min: 1
+              max: "*"
+      association: AddressComponentSpecification
+    action:
+      verb: comprises
+      direction: target

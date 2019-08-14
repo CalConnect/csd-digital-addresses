@@ -50,7 +50,7 @@ classes:
       re-structure them or fill in any missing address components.
     attributes:
       value:
-        definition:
+        definition: Indicating the extent of specification of an address instance on its structure.
         type: SpecificationLevelValue
     relations:
       - target: AddressFeature
@@ -67,7 +67,7 @@ classes:
       in order to determine the correctness of the address.
     attributes:
       qualityCode:
-        definition:
+        definition: Indicating the quality of an address instance.
         type: QualityCode
     relations:
       - target: AddressFeature
@@ -96,7 +96,7 @@ classes:
 
 enums:
   SpecificationLevalValue:
-    definition:
+    definition: A enumeration value to indicate the extent of specification of an address instance on its structure.
     type: enumeration
     values:
       unstructured:
@@ -107,7 +107,7 @@ enums:
         definition: All components are accurately separated and cannot be further split.
 
   QualityCode:
-    definition:
+    definition: A enumeration value to indicate the quality of an address instance.
     type: enumeration
     values:
       confirmedCorrect:

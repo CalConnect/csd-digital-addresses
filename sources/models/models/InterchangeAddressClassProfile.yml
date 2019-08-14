@@ -1,0 +1,35 @@
+name: InterchangeAddressClassProfile
+modelType: class
+definition:
+attributes:
+relations:
+  - target: AddressClassProfile
+    relationship:
+      target:
+        type: inheritance
+
+  - target: FormTemplate
+    relationship:
+      source:
+        type: aggregation
+        attributes:
+          formTemplate:
+            cardinality:
+              min: 0
+              max: "*"
+    action:
+      verb: defines
+      direction: target
+
+  - target: DisplayTemplate
+    relationship:
+      source:
+        type: aggregation
+        attributes:
+          displayTemplate:
+            cardinality:
+              min: 0
+              max: "*"
+    action:
+      verb: defines
+      direction: target

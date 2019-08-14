@@ -27,13 +27,13 @@ classes:
         definition: The interchange address class it conforms to.
         type: InterchangeAddressClass
       components:
-        definition:
+        definition: Data values representing for a corresponding interchange address component.
         type: InterchangeAddressInstanceComponent
         cardinality:
           min: 0
           max: "*"
       features:
-        definition:
+        definition: Representing features of this interchange address instance.
         type: AddressFeatureInstance
         cardinality:
           min: 0
@@ -45,7 +45,7 @@ classes:
           min: 0
           max: "*"
       validity:
-        definition:
+        definition: The time interval with revision number where this interchange address profile is determined valid.
         type: Validity
         cardinality:
           min: 0

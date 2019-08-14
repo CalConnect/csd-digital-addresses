@@ -15,23 +15,15 @@ classes:
       The US Numbered Thoroughfare Address with this syntax can be
       represented as an interchange address class:
 
-      \* { Complete Landmark Name or Complete Place Name }
-
-      \* { Complete Address Number * }
-
-      \* { Complete Street Name * }
-
-      \* { Complete Subaddress }
-
-      \* { Complete Place Name * }
-
-      \* { State Name * }
-
-      \* { Zip Code }
-
-      \* { Zip Plus 4 }
-
-      \* { Country Name }
+      *{sp}{ Complete Landmark Name or Complete Place Name } +
+      *{sp}{ Complete Address Number * } +
+      *{sp}{ Complete Street Name * } +
+      *{sp}{ Complete Subaddress } +
+      *{sp}{ Complete Place Name * } +
+      *{sp}{ State Name * } +
+      *{sp}{ Zip Code } +
+      *{sp}{ Zip Plus 4 } +
+      *{sp}{ Country Name }
 
       An interchange address class also provides a display template
       and a form template to allow the display and entry of an
@@ -44,17 +36,37 @@ classes:
         definition: Textual description of this interchange address class.
         type: CharacterString
       components:
-        definition:
+        definition: Constituent parts of this interchange address class.
         type: InterchangeAddressComponent
         cardinality:
           min: 1
           max: "*"
       displayTemplate:
-        definition:
+        definition: The template to instruct how to display an interchange address instance belonging to this interchange address class.
         type: DisplayTemplate
       formTemplate:
-        definition:
+        definition: The template to instruct how to create an input form for applications requiring user input to create an interchange address instance belonging to this interchange address class.
         type: FormTemplate
+    relations:
+      target: InterchangeAddressComponent
+      relationship:
+        source:
+          type: aggregation
+          attributes:
+            address:
+              cardinality:
+                min: 1
+                max: "*"
+        target:
+          type: direct
+          attributes:
+            component:
+              cardinality:
+                min: 1
+                max: "*"
+      action:
+        verb: comprises
+        direction: target
 
   InterchangeAddressComponent:
     definition: |
@@ -94,7 +106,7 @@ classes:
 
 enums:
   ComponentObligation:
-    definition:
+    definition: A enumeration value to indicate a component to be mandatory, optional or disallowed.
     type: enumeration
     values:
       mandatory:

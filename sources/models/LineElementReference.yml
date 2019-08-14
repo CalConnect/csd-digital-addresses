@@ -34,7 +34,7 @@ classes:
     directive: form-line-element-ref
     attributes:
       values:
-        definition:
+        definition: The constituent parts of this DisplayLineElementReference.
         type: DisplayLineElement
         cardinality:
           min: 0
@@ -44,7 +44,7 @@ classes:
     definition: Specialization of LineElementReference.
     attributes:
       values:
-        definition:
+        definition: The constituent parts of this FormLineElementReference.
         type: FormLineElement
         cardinality:
           min: 0

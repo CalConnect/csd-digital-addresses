@@ -1,6 +1,4 @@
-
-[[ix-data-types]]
-== Data types
+include::../models/adoc/DataTypes.adoc[]
 
 === Primitive and core data types
 
@@ -16,9 +14,6 @@ including:
 * `Boolean`
 
 Core data types (`CoreTypes`) are defined in <<ISO19103,clause=A.2>>.
-
-.Common data types used in this document
-image::DataTypes.png[]
 
 === User-defined data types
 

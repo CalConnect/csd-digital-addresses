@@ -24,12 +24,14 @@ module AsciidocAdaptor
 include::#{plantuml_path}/#{model_name}.wsd[]
 ....
 
-#{classes_to_asciidoc(yml["classes"], class_level)}
-#{enums_to_asciidoc(yml["enums"], class_level)}
+#{classes_to_asciidoc(yml["classes"], class_level, yml["fidelity"])}
+#{enums_to_asciidoc(yml["enums"], class_level, yml["fidelity"])}
     asciidoc
   end
 
   def self.yml_to_asciidocs(yml, level=3)
+    fidelity ||= {}
+
     AsciidocAdaptor.for_each("classes", yml, level) do |class_name, class_hash, level|
       yield(
         class_name,
@@ -53,7 +55,10 @@ include::#{plantuml_path}/#{model_name}.wsd[]
     end
   end
 
-  def self.classes_to_asciidoc(classes, level)
+  def self.classes_to_asciidoc(classes, level, fidelity)
+    fidelity ||= {}
+    return "" if fidelity["hideMembers"]
+
     classes.map do |(class_name, class_hash)|
       class_to_asciidoc(class_name, class_hash, level)
     end.join("\n")
@@ -181,7 +186,10 @@ include::#{plantuml_path}/#{model_name}.wsd[]
     "#{origin}`#{attr_hash["type"]}`"
   end
 
-  def self.enums_to_asciidoc(enums, level)
+  def self.enums_to_asciidoc(enums, level, fidelity)
+    fidelity ||= {}
+    return "" if fidelity["hideMembers"]
+
     enums ||= {}
 
     return "" if enums.empty?

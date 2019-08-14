@@ -34,7 +34,7 @@ classes:
         definition: Descriptive name of the layout template.
         type: CharacterString
       addressClass:
-        definition:
+        definition: Specifying the InterchangeAddressClass that this LayoutTemplate will be used for rendering of an InterchangeAddressInstance.
         type: InterchangeAddressClass
       description:
         definition: Textual description of the layout template.
@@ -55,55 +55,24 @@ classes:
           min: 0
           max: "*"
       lines:
-        definition:
+        definition: The constituent parts of this LayoutTemplate.
         type: LayoutLine
         cardinality:
           min: 0
           max: "*"
 
-  DisplayTemplate:
-    definition:
-    attributes:
-      lines:
-        definition:
-        type: DisplayLine
-        cardinality:
-          min: 0
-          max: "*"
-    relations:
-      - target: LayoutTemplate
-        relationship:
-          target:
-            type: inheritance
-        direction: up
-
-  FormTemplate:
-    definition:
-    attributes:
-      lines:
-        definition:
-        type: FormLine
-        cardinality:
-          min: 0
-          max: "*"
-    relations:
-      - target: LayoutTemplate
-        relationship:
-          target:
-            type: inheritance
-        direction: up
-
   LayoutDimension:
-    definition:
+    definition: |
+      Physical dimensions of the rectangular bounding box for the rendered layout output.
     attributes:
       width:
-        definition:
+        definition: The horizontal length of the rectangular bounding box for the rendered layout output.
         type: Integer
         cardinality:
           min: 0
           max: 1
       height:
-        definition:
+        definition: The vertical length of the rectangular bounding box for the rendered layout output.
         type: Integer
         cardinality:
           min: 0
@@ -117,10 +86,10 @@ classes:
 
 enum:
   LayoutOrientation:
-    definition:
+    definition: The enumeration value to indicate the orientation of the address rendered by the LayoutTemplate.
     type: enumeration
     values:
       horizontal:
-        definition:
+        definition: Indicating that the address will be rendered from left to right or right to left.
       vertical:
-        definition:
+        definition: Indicating that the address will be rendered from top to bottom or bottom to top.

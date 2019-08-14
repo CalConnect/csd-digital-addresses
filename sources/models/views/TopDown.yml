@@ -1,0 +1,54 @@
+title: Top-down
+imports:
+  iso19160-1/Address:
+  iso19160-1/AddressComponent:
+  ProfileCompliantAddress:
+  ProfileCompliantAddressComponent:
+  AddressProfile:
+  AddressClassProfile:
+  InterchangeAddressClassProfile:
+  AddressComponentProfile:
+  AddressComponentSpecification:
+  FormTemplate:
+  DisplayTemplate:
+groups:
+  # - - AddressProfile
+  # - - AddressClassProfile
+  # - - AddressComponentSpecification
+  # - - FormTemplate
+  #   - DisplayTemplate
+  #   - AddressComponentProfile
+  # - - Address
+  #   - AddressComponent
+relations:
+  # - source: AddressProfile
+  #   target: AddressClassProfile
+  #   direction: '[hidden]down'
+  # - source: AddressClassProfile
+  #   target: AddressComponentSpecification
+  #   direction: '[hidden]down'
+  # - source: AddressComponentSpecification
+  #   target: AddressComponentProfile
+  #   direction: '[hidden]down'
+  # - source: AddressComponentSpecification
+  #   target: FormTemplate
+  #   direction: '[hidden]down'
+  # - source: AddressComponentSpecification
+  #   target: DisplayTemplate
+  #   direction: '[hidden]down'
+  # - source: AddressComponentProfile
+  #   target: AddressComponent
+  #   direction: '[hidden]down'
+
+  # - source: FormTemplate
+  #   target: DisplayTemplate
+  #   direction: '[hidden]right'
+  # - source: DisplayTemplate
+  #   target: AddressComponentProfile
+  #   direction: '[hidden]right'
+  # - source: AddressComponentProfile
+  #   target: AddressComponentSpecification
+  #   direction: '[hidden]right'
+fidelity:
+  hideMembers: true
+  hideOtherClasses: true

@@ -1,0 +1,7 @@
+name: ProfileCompliantAddressComponent
+modelType: class
+relations:
+  - target: AddressComponent
+    relationship:
+      target:
+        type: inheritance

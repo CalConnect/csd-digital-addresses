@@ -1,4 +1,5 @@
 title: Data types
+directive: ix-data-types
 classes:
   AddressComponentDataType:
     relations:
@@ -52,6 +53,7 @@ classes:
         direction: "[hidden]"
 
   UserDefinedDataType:
+    definition:
     attributes:
       coreType:
         definition:

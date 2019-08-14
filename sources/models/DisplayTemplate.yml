@@ -9,8 +9,15 @@ classes:
       by just one display template.
     attributes:
       lines:
-        definition:
+        definition: The constituent parts of this DisplayTemplate.
         type: DisplayLine
+        relations:
+    relations:
+      - target: LayoutTemplate
+        relationship:
+          target:
+            type: inheritance
+        direction: up
 
   DisplayLine:
     definition: |
@@ -21,7 +28,7 @@ classes:
       display line element references (`DisplayLineElementReference`).
     attributes:
       elements:
-        definition:
+        definition: The constituent parts of this DisplayLine.
         type: DisplayLineElementReference
         cardinality:
           min: 0
@@ -49,7 +56,7 @@ classes:
       Representing a variable data value that is contained in the interchange address component, such as the PO box number following the phrase "PO Box".
     attributes:
       value:
-        definition:
+        definition: The actual value of the DataElement.
         type: CharacterString
     relations:
       - target: DisplayLineElement
@@ -63,7 +70,7 @@ classes:
       Representing static text, such as the phrase "PO Box" preceding the actual PO box number, for display layouts for PO boxes.
     attributes:
       text:
-        definition:
+        definition: The actual value of the TextElement.
         type: CharacterString
     relations:
       - target: DisplayLineElement

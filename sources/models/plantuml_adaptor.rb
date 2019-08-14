@@ -1,20 +1,83 @@
 module PlantumlAdaptor
   def self.yml_to_plantuml(yml)
-    <<-plantuml
+    startuml = <<-plantuml
 @startuml
+    plantuml
 
-!include ../models/style.uml.inc
+    enduml = <<-plantuml
+@enduml
+    plantuml
 
-'******* CLASS DEFINITION *********************************************
+    [
+      startuml,
+      imports_yml_to_plantuml(yml),
+      class_defs_yml_to_plantuml(yml),
+      class_groups_yml_to_plantuml(yml),
+      class_relations_yml_to_plantuml(yml),
+      fidelity_yml_to_plantuml(yml),
+      enduml,
+    ].compact.join("\n")
+  end
+
+  def self.imports_yml_to_plantuml(yml)
+    return if empty?(yml, "imports")
+
+    <<-plantuml
+'******* IMPORTS ******************************************************
+#{import_models_to_plantuml(yml["imports"])}
+    plantuml
+  end
+
+  def self.class_defs_yml_to_plantuml(yml)
+    return if empty?(yml, "classes") && empty?(yml, "enums")
+
+    <<-plantuml
+'******* CLASS DEFINITIONS ********************************************
 #{classes_to_classes_plantuml(yml["classes"])}
 #{enums_to_enums_plantuml(yml["enums"])}
+    plantuml
+  end
 
+  def self.class_groups_yml_to_plantuml(yml)
+    return if empty?(yml, "groups")
+
+    <<-plantuml
+'******* CLASS GROUPS *************************************************
+#{groups_to_plantuml(yml["groups"])}
+    plantuml
+  end
+
+  def self.class_relations_yml_to_plantuml(yml)
+    return if empty?(yml, "classes") && empty?(yml, "relations")
+
+    <<-plantuml
 '******* CLASS RELATIONS **********************************************
 #{classes_to_relations_plantuml(yml["classes"])}
 #{relations_to_plantuml(nil, yml["relations"])}
-
-@enduml
     plantuml
+  end
+
+  def self.fidelity_yml_to_plantuml(yml)
+    return if empty?(yml, "fidelity")
+
+    <<-plantuml
+'******* FIDELITY *****************************************************
+#{fidelity_to_plantuml(yml["fidelity"])}
+    plantuml
+  end
+
+  def self.import_models_to_plantuml(imported_models)
+    imported_models ||= []
+
+    output = ""
+
+    unless imported_models.empty?
+      output += "!include ../models/plantuml/style.uml.inc\n"
+    end
+
+    output += imported_models.map do |(imported_model_path, imported_model_hash)|
+      "!include ../models/plantuml/models/#{imported_model_path}.wsd"
+    end.join("\n")
   end
 
   def self.classes_to_classes_plantuml(classes)
@@ -40,11 +103,13 @@ class #{class_name} {
 
     attributes.map do |(attr_name, attr_hash)|
       attribute_to_plantuml(attr_name, attr_hash)
-    end.join("\n")
+    end.join("").sub(/\n\Z/, "")
   end
 
   def self.attribute_to_plantuml(attr_name, attr_hash)
-    "  +#{attr_name}: #{attr_hash["type"]}#{attribute_cardinality_plantuml(attr_hash["cardinality"])}"
+    <<-plantuml
+  +#{attr_name}: #{attr_hash["type"]}#{attribute_cardinality_plantuml(attr_hash["cardinality"])}
+    plantuml
   end
 
   def self.attribute_cardinality_plantuml(cardinality, withBracket = true)
@@ -65,7 +130,8 @@ class #{class_name} {
   def self.classes_to_relations_plantuml(classes)
     classes.map do |(class_name, class_hash)|
       class_hash ||= {}
-      relations_to_plantuml(class_name, class_hash["relations"])
+      relations = class_hash["relations"]
+      relations_to_plantuml(class_name, relations)
     end.join("\n").strip
   end
 
@@ -75,51 +141,25 @@ class #{class_name} {
     relations.map do |relation|
       source = class_name || relation["source"]
       relation_to_plantuml(source, relation)
-    end.join("\n").strip
+    end.compact.join("\n").strip
   end
 
   def self.relation_to_plantuml(source, relation)
     target = relation["target"]
-    relationship = relation["relationship"] || {}
+    relationship = {}.merge(relation["relationship"] || {})
 
-    source_relationship = relationship["source"] || {}
-    target_relationship = relationship["target"] || {}
+    relationship["source"] ||= {}
+    relationship["target"] ||= {}
 
-    source_arrow = case source_relationship["type"]
-    when "direct"
-      "<"
-    when "inheritance"
-      "<|"
-    when "composition"
-      "*"
-    when "aggregation"
-      "o"
-    else
-      ""
-    end
+    arrow = [
+      relationship_type_to_plantuml("source", relationship["source"]["type"]),
+      relation["direction"],
+      relationship_type_to_plantuml("target", relationship["target"]["type"]),
+    ].compact.join("-")
 
-    target_arrow = case target_relationship["type"]
-    when "direct"
-      ">"
-    when "inheritance"
-      "|>"
-    when "composition"
-      "*"
-    when "aggregation"
-      "o"
-    else
-      ""
-    end
+    action = relation["action"] || {}
 
-    direction = relation["direction"] || ""
-
-    arrow = "#{source_arrow}-#{direction}-#{target_arrow}"
-
-    action = relation["action"]
-    label = ""
-
-    if action
-      label = case action["direction"]
+    label = case action["direction"]
       when "source"
         " : < #{action["verb"]}"
       when "target"
@@ -127,26 +167,47 @@ class #{class_name} {
       else
         ""
       end
-    end
 
     source_attribute = relationship_cardinality_to_plantuml(
-      source_relationship["attribute"]
+      relationship["source"]["attribute"]
     )
-    source_attribute = " #{source_attribute}"
+    source_arrow_end = [source, source_attribute].join(" ")
 
     target_attribute = relationship_cardinality_to_plantuml(
-      target_relationship["attribute"]
+      relationship["target"]["attribute"]
     )
-    target_attribute = "#{target_attribute} "
+    target_arrow_end = [target_attribute, target].join(" ")
 
-    "#{source}#{source_attribute} #{arrow} #{target_attribute}#{target}#{label}"
+    output_lines = ["#{source_arrow_end} #{arrow} #{target_arrow_end}#{label}"]
+
+    if relationship["association"]
+      output_lines.push("(#{source}, #{target}) .. #{relationship["association"]}")
+    end
+
+    output_lines.join("\n")
+  end
+
+  def self.relationship_type_to_plantuml(relation_end, relationship_type)
+    is_source = relation_end == "source"
+
+    case relationship_type
+    when "direct"
+      is_source ? "<" : ">"
+    when "inheritance"
+      is_source ? "<|" : "|>"
+    when "composition"
+      "*"
+    when "aggregation"
+      "o"
+    else
+      ""
+    end
   end
 
   def self.relationship_cardinality_to_plantuml(attribute)
-
     attribute_name = (attribute || {}).keys.first
 
-    return "" unless attribute_name
+    return unless attribute_name
 
     attribute_hash = attribute[attribute_name]
     attribute_cardinality = attribute_hash["cardinality"]
@@ -192,5 +253,71 @@ enum #{enum_name}#{enum_type_to_plantuml(enum_hash["type"])} {
     enum_values.map do |(enum_value, enum_value_hash)|
       "  #{enum_value}"
     end.join("\n")
+  end
+
+  def self.groups_to_plantuml(groups)
+    output = ""
+    groups ||= []
+
+    groups.each do |group|
+      output += <<-plantuml
+together {
+      plantuml
+
+      group.each do |class_name|
+        output += <<-plantuml
+  class #{class_name}
+        plantuml
+      end
+
+      output += <<-plantuml
+}
+      plantuml
+    end
+
+    output
+  end
+
+  def self.fidelity_to_plantuml(fidelity)
+    output = "";
+    fidelity ||= {}
+
+    if fidelity["hideOtherClasses"]
+      fidelity_classes = fidelity["classes"] || {}
+
+      hidden_classes = fidelity_classes.reduce({}) do |acc, (class_name, class_hash)|
+        relations = class_hash["relations"] || []
+
+        relations.each do |relation|
+          ["source", "target"].each do |type|
+            if relation[type] && !fidelity_classes.has_key?(relation[type])
+              acc = acc.merge({
+                relation[type] => true
+              })
+            end
+          end
+        end
+
+        acc
+      end
+
+      hidden_classes.keys.each do |hidden_class_name|
+        output += <<-plantuml
+hide #{hidden_class_name}
+        plantuml
+      end
+    end
+
+    if fidelity["hideMembers"]
+      output += <<-plantuml
+hide members
+      plantuml
+    end
+
+    output
+  end
+
+  def self.empty?(yml, prop)
+    !yml[prop] || yml[prop].empty?
   end
 end

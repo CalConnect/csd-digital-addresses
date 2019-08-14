@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/metanorma/isodoc.git
-  revision: fb67d59e3c360b63fa755f57048376723158aa9a
+  revision: c579fd09578452e735b35ee4be5fc0b253d84c31
   specs:
     isodoc (0.10.4)
       asciimath
@@ -17,7 +17,7 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-standoc.git
-  revision: c6dd7a384410b2a0dbe5e7ddd72174b5f019bcb3
+  revision: ec4c5665be991d31d5b24e1f72d79db790fa0873
   specs:
     metanorma-standoc (1.2.4)
       asciidoctor (~> 1.5.7)
@@ -33,9 +33,9 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/relaton.git
-  revision: a0536e65bb4d5c82203b61b6402b3df8dd252a27
+  revision: bcb2c19d402b405ebcc190cdf7bbbdc86c4a1c35
   specs:
-    relaton (0.5.1)
+    relaton (0.5.2)
       algoliasearch
       relaton-gb (~> 0.6.0)
       relaton-iec (~> 0.4.0)
@@ -186,10 +186,10 @@ GEM
     optout (0.0.2)
     public_suffix (3.1.1)
     rake (12.3.3)
-    relaton-bib (0.3.3)
+    relaton-bib (0.3.4)
       addressable
       nokogiri (~> 1.10)
-    relaton-cli (0.3.2)
+    relaton-cli (0.3.3)
       liquid
       relaton (~> 0.5)
       thor
@@ -200,20 +200,20 @@ GEM
     relaton-iec (0.4.2)
       addressable
       relaton-iso-bib (~> 0.3.0)
-    relaton-ietf (0.6.1)
+    relaton-ietf (0.6.2)
       relaton-bib (~> 0.3.0)
     relaton-iev (0.1.1)
       relaton (~> 0.5.0)
-    relaton-iso (0.6.2)
+    relaton-iso (0.6.3)
       relaton-iec (~> 0.4.0)
       relaton-iso-bib (~> 0.3.0)
-    relaton-iso-bib (0.3.2)
+    relaton-iso-bib (0.3.3)
       isoics (~> 0.1.6)
       relaton-bib (~> 0.3.0)
       ruby_deep_clone (~> 0.8.0)
     relaton-itu (0.3.1)
       relaton-iso-bib (~> 0.3.0)
-    relaton-nist (0.3.1)
+    relaton-nist (0.3.2)
       relaton-bib (~> 0.3.0)
       rubyzip
     roman-numerals (0.3.0)
