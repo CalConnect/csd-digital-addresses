@@ -1,15 +1,9 @@
+name: CommonModels
 title: Common models
+caption: Common models to be used in this standard
 directive: ix-common
 imports:
   Localization:
-    fidelity:
-      withDefinition: true
   Validity:
-    fidelity:
-      withDefinition: true
   Signature:
-    fidelity:
-      withDefinition: true
   TextDirectionCode:
-    fidelity:
-      withDefinition: true

@@ -1,6 +1,6 @@
+name: AddressProfile
 title: Interchange address profile
+caption: Interchange address profile data model
 directive: ix-address-profile
 imports:
   InterchangeAddressProfile:
-    fidelity:
-      withDefinition: true

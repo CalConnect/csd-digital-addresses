@@ -1,5 +1,5 @@
+name: LayoutLine
 title: Layout line
+caption: Layout line data model
 imports:
   LayoutLine:
-    fidelity:
-      withDefinitions: true

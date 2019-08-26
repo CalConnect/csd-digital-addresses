@@ -1,18 +1,10 @@
+name: DisplayTemplate
 title: Display template
+caption: Display template data model
 directive: display-template
 imports:
   DisplayTemplate:
-    fidelity:
-      withDefinition: true
   DisplayLine:
-    fidelity:
-      withDefinition: true
   DisplayLineElement:
-    fidelity:
-      withDefinition: true
   DataElement:
-    fidelity:
-      withDefinition: true
   TextElement:
-    fidelity:
-      withDefinition: true

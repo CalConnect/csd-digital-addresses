@@ -1,15 +1,9 @@
+name: AddressInstance
 title: Interchange address instance
+caption: Interchange address instance data model
 directive: ix-address-instance
 imports:
   InterchangeAddressInstance:
-    fidelity:
-      withDefinition: true
   InterchangeAddressInstanceComponent:
-    fidelity:
-      withDefinition: true
   AddressFeatureInstance:
-    fidelity:
-      withDefinition: true
   AddressComponentDataValue:
-    fidelity:
-      withDefinition: true

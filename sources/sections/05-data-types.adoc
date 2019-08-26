@@ -1,4 +1,17 @@
-include::../models/adoc/DataTypes.adoc[]
+== Address profile model overview
+
+[datamodel]
+....
+include::../models/views/TopDown.yml[]
+....
+
+[[ix-data-types]]
+== Data types
+
+[datamodel]
+....
+include::../models/views/DataTypes.yml[]
+....
 
 === Primitive and core data types
 

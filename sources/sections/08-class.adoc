@@ -1,1 +1,7 @@
-include::../models/adoc/AddressClass.adoc[]
+[[ix-address-class]]
+== Address class
+
+[datamodel]
+....
+include::../models/views/AddressClass.yml[]
+....

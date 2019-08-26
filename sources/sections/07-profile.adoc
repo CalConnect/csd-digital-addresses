@@ -1,1 +1,7 @@
-include::../models/adoc/AddressProfile.adoc[]
+[[ix-address-profile]]
+== Address profile
+
+[datamodel]
+....
+include::../models/views/AddressProfile.yml[]
+....

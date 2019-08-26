@@ -1,1 +1,7 @@
-include::../models/adoc/DisplayTemplate.adoc[]
+[[display-template]]
+== Display template
+
+[datamodel]
+....
+include::../models/views/DisplayTemplate.yml[]
+....

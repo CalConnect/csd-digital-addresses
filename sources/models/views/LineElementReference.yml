@@ -1,11 +1,7 @@
+name: LineElementReference
 title: Line element reference
+caption: Line element reference data model
 imports:
   LineElementReference:
-    fidelity:
-      withDefinitions: true
   DisplayLineElementReference:
-    fidelity:
-      withDefinitions: true
   FormLineElementReference:
-    fidelity:
-      withDefinitions: true

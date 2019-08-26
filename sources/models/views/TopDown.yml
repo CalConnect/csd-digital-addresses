@@ -1,4 +1,6 @@
-title: Top-down
+name: TopDown
+title: Address profile model overview
+caption: Address profile model overview in UML
 imports:
   iso19160-1/Address:
   iso19160-1/AddressComponent:

@@ -1,1 +1,8 @@
-include::../models/adoc/FormTemplate.adoc[]
+[[ix-form-template]]
+== Form template
+
+[datamodel]
+....
+include::../models/views/FormTemplate.yml[]
+....
+

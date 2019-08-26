@@ -1,3 +1,14 @@
-include::../models/adoc/LayoutTemplate.adoc[]
+[[ix-layout-template]]
+== Layout template
 
-include::../models/adoc/LayoutLine.adoc[]
+[datamodel]
+....
+include::../models/views/LayoutTemplate.yml[]
+....
+
+== LayoutLine
+
+[datamodel]
+....
+include::../models/views/LayoutLine.yml[]
+....

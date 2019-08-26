@@ -1,27 +1,13 @@
+name: FormTemplate
 title: Form template
+caption: Form template data model
 directive: ix-form-template
 imports:
   FormTemplate:
-    fidelity:
-      withDefinition: true
   FormLine:
-    fidelity:
-      withDefinition: true
   FormLineElement:
-    fidelity:
-      withDefinition: true
   SelectionPair:
-    fidelity:
-      withDefinition: true
   SelectionElement:
-    fidelity:
-      withDefinition: true
   DataElement:
-    fidelity:
-      withDefinition: true
   StaticTextElement:
-    fidelity:
-      withDefinition: true
   DataElementWithConditions:
-    fidelity:
-      withDefinition: true

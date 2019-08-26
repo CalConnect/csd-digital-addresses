@@ -31,7 +31,6 @@
 :local-cache-only:
 :data-uri-image:
 
-
 include::sections-iso/00-foreword.adoc[]
 include::sections/0b-intro.adoc[]
 include::sections/01-scope.adoc[]
