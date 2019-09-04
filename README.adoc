@@ -6,16 +6,7 @@ image:https://travis-ci.com/CalConnect/csd-digital-addresses.svg?branch=master["
 
 This document is available in its rendered forms here:
 
-* https://calconnect.github.io/csd-digital-addresses/cc-19160-6.html[CC: CalConnect Standard: Addressing -- Digital interchange models (HTML)]
-* https://calconnect.github.io/csd-digital-addresses/cc-19160-6.pdf[CC: PDF]
-* https://calconnect.github.io/csd-digital-addresses/cc-19160-6.xml[CC: Metanorma XML]
-* https://calconnect.github.io/csd-digital-addresses/cc-19160-6.rxl[CC: Relaton XML (Bibliographic item)]
-
-
-* https://calconnect.github.io/csd-digital-addresses/iso-19160-6.html[ISO: Addressing -- Digital interchange models (HTML)]
-* https://calconnect.github.io/csd-digital-addresses/iso-19160-6.doc[ISO: Word]
-* https://calconnect.github.io/csd-digital-addresses/iso-19160-6.xml[ISO: XML]
-* https://calconnect.github.io/csd-digital-addresses/iso-19160-6.alt.html[ISO: HTML Alt]
+* https://calconnect.github.io/csd-digital-addresses/[CC/ISO: Addressing -- Digital interchange models]
 
 
 == Fetching the document
