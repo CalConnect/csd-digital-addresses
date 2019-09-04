@@ -50,7 +50,7 @@ classes:
       algorithm:
         definition: The public key cryptographic algorithm used for this digital signature.
         type: Oid
-        origin: ISO14888
+        origin: ISO14888-3
       publicKey:
         definition: A reference to the actual public key used to verify the digital signature, a URI where the public key of the signer used for this signature is found.
         type: Uri
