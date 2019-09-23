@@ -1,6 +1,12 @@
 name: AddressClassProfile
 modelType: class
-definition:
+definition: |
+  An `AddressClassProfile` represents a profile of a `ProfileCompliantAddress`,
+  which is extended from the `Address` model defined in <<ISO19160-1>>.
+
+  It represents additional attributes and restrictions to the `Address` model
+  of a `ProfileCompliantAddress`. It also represents metadata for the use of
+  the profile.
 attributes:
   id:
     definition: Unique identifier of this AddressClassProfile.
@@ -11,6 +17,9 @@ attributes:
   description:
     definition: Textual description of this profile.
     type: CharacterString
+  localization:
+    definition: The language and script used within this profile.
+    type: Localization
   signature:
     definition: The digital signature to verify the integrity of this profile, and the identity of the publishing authority.
     type: Signature
@@ -18,8 +27,8 @@ attributes:
       min: 0
       max: 1
   areaApplicability:
-    definition: The geographic representation of which this interchange address profile applies to. Overlapping geographic areas are allowed across different interchange address profiles.
-    type: MD_SpatialRepresentation
+    definition: The geographic representation of which this AddressClassProfile applies to. Overlapping geographic areas are allowed across different profiles.
+    type: iso19115MD_SpatialRepresentation
     cardinality:
       min: 0
       max: "*"
@@ -29,62 +38,31 @@ attributes:
   validity:
     definition: The period of date and time that this profile should be considered as valid.
     type: Validity
-  country:
-    definition: The country of which this interchange address profile represents.
-    type: iso3166Code
-    cardinality:
-      min: 0
-      max: "*"
 relations:
-  - target: AddressComponentProfile
+  - target: AttributeProfile
     relationship:
       source:
         type: aggregation
-        attributes:
-          componentProfile:
-            cardinality:
-              min: 0
-              max: "*"
-      association: AddressComponentSpecification
-    action:
-      verb:
-      direction: target
-
-  - target: FormTemplate
-    relationship:
-      source:
-        type: aggregation
-        attributes:
-          formTemplate:
-            cardinality:
-              min: 0
-              max: "*"
-    action:
-      verb: defines
-      direction: target
-
-  - target: DisplayTemplate
-    relationship:
-      source:
-        type: aggregation
-        attributes:
-          displayTemplate:
-            cardinality:
-              min: 0
-              max: "*"
-    action:
-      verb: defines
-      direction: target
-
-  - target: Address
-    relationship:
+        attribute:
+          addressClassProfile:
       target:
         type: direct
-        attributes:
+        attribute:
+          attributeProfile:
+            cardinality:
+              min: 0
+              max: '*'
+
+  - target: ProfileCompliantAddress
+    relationship:
+      source:
+        attribute:
           profile:
             cardinality:
               min: 1
               max: 1
+      target:
+        type: direct
     action:
       verb: compliesWith
       direction: source

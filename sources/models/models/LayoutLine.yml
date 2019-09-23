@@ -9,7 +9,7 @@ definition: |
 attributes:
   dimensions:
     definition: Physical dimensions of the rectangular bounding box for the rendered Line.
-    type: LayoutDimentions
+    type: LayoutDimension
 relations:
   - target: DisplayLine
     relationship:

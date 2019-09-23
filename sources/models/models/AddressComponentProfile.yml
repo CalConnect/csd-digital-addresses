@@ -1,9 +1,15 @@
 name: AddressComponentProfile
 modelType: class
-definition:
+definition: |
+  An `AddressComponentProfile` represents a profile of a `ProfileCompliantAddressComponent`,
+  which is extended from the `AddressComponent` model defined in <<ISO19160-1>>.
+
+  It represents additional attributes and restrictions to the `Address` model
+  of a `ProfileCompliantAddress`. It also represents metadata for the use of
+  the profile.
 attributes:
   key:
-    definition: An identifier of this interchange address component, shall be unique within the address profile register.
+    definition: An identifier of this `AddressComponentProfile`, shall be unique within the `AddressProfile`.
     type: CharacterString
   description:
     definition: Textual description of this component.
@@ -15,11 +21,39 @@ attributes:
       min: 0
       max: 1
 relations:
-  - target: AddressComponent
+  - target: AddressClassProfile
+    relationship:
+      target:
+        type: aggregation
+        attribute:
+          componentProfile:
+            cardinality:
+              min: 0
+              max: "*"
+      association: AddressComponentSpecification
+    action:
+      verb: uses
+      direction: source
+
+  - target: AttributeProfile
+    relationship:
+      source:
+        type: aggregation
+        attribute:
+          addressClassProfile:
+      target:
+        type: direct
+        attribute:
+          attributeProfile:
+            cardinality:
+              min: 0
+              max: '*'
+
+  - target: ProfileCompliantAddressComponent
     relationship:
       target:
         type: direct
-        attributes:
+        attribute:
           profile:
             cardinality:
               min: 1

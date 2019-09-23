@@ -5,14 +5,23 @@ definition: |
   interchange address instance belonging to an interchange
   address class. Generally, one address class is represented
   by just one display template.
-attributes:
-  lines:
-    definition: The constituent parts of this DisplayTemplate.
-    type: DisplayLine
-    relations:
 relations:
   - target: LayoutTemplate
     relationship:
       target:
         type: inheritance
     direction: up
+  - target: DisplayLine
+    relationship:
+      source:
+        type: composition
+      target:
+        attribute:
+          formLine:
+            cardinality:
+              min: 1
+              max: '*'
+    action:
+      verb: comprises
+      direction: target
+    direction: down

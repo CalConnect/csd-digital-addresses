@@ -3,7 +3,7 @@ modelType: class
 definition:
 attributes:
   country:
-    definition: The country of which this interchange address profile represents.
+    definition: The country of which this AddressProfile represents.
     type: iso3166Code
     cardinality:
       min: 0
@@ -13,7 +13,7 @@ relations:
     relationship:
       source:
         type: aggregation
-        attributes:
+        attribute:
           componentProfile:
             cardinality:
               min: 0
@@ -26,7 +26,7 @@ relations:
     relationship:
       source:
         type: aggregation
-        attributes:
+        attribute:
           addressProfile:
             cardinality:
               min: 0

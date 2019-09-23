@@ -3,9 +3,3 @@ modelType: class
 definition: |
   This represents an element within a display line.
 directive: display-line-element
-relations:
-  - target: DisplayLineElementReference
-    relationship:
-      target:
-        type: direct
-    direction: up

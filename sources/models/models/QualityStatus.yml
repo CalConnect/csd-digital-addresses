@@ -6,7 +6,7 @@ definition: |
   may decide to validate the address to a certain degree
   in order to determine the correctness of the address.
 attributes:
-  qualityCode:
+  value:
     definition: Indicating the quality of an address instance.
     type: QualityCode
 relations:

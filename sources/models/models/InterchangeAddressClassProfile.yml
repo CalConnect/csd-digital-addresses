@@ -1,6 +1,13 @@
 name: InterchangeAddressClassProfile
 modelType: class
-definition:
+definition: |
+  This InterchangeAddressClassProfile extends from AddressClassProfile to
+  enforce the existence of several subclasses of AttributeProfile for
+  interchange.
+
+  It also introduces FormTemplate and DisplayTemplate which
+  help input and render of interchange ProfileCompliantAddress (address
+  instance complying with an InterchangeAddressClassProfile).
 attributes:
 relations:
   - target: AddressClassProfile
@@ -8,11 +15,45 @@ relations:
       target:
         type: inheritance
 
+  - target: AttributeProfileSignature
+    relationship:
+      source:
+        type: aggregation
+        attribute:
+          attributeProfile:
+      target:
+        type: direct
+        attribute:
+          addressClassProfile:
+
+  - target: AttributeProfileAddressFeature
+    relationship:
+      source:
+        type: aggregation
+        attribute:
+          attributeProfile:
+      target:
+        type: direct
+        attribute:
+          addressClassProfile:
+
+  - target: AttributeProfileValidity
+    relationship:
+      source:
+        type: aggregation
+        attribute:
+          attributeProfile:
+      target:
+        type: direct
+        attribute:
+          addressClassProfile:
+
   - target: FormTemplate
     relationship:
       source:
         type: aggregation
-        attributes:
+      target:
+        attribute:
           formTemplate:
             cardinality:
               min: 0
@@ -25,7 +66,8 @@ relations:
     relationship:
       source:
         type: aggregation
-        attributes:
+      target:
+        attribute:
           displayTemplate:
             cardinality:
               min: 0

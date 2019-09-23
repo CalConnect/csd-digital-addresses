@@ -1,16 +1,13 @@
 name: SelectionPair
 modelType: class
-definition:
+definition: |
+  Representing a key value pair of a selection, e.g. in the case of the US
+  States, "Rhode Island" is represented as the displayAs attribute and the
+  postal code "RI" is represented as the key attribute.
 attributes:
-  displayAs:
-    definition:
-    type: CharacterString
   key:
-    definition:
+    definition: The mapping key as a unique identifier of the key value pair of this SelectionPair.
     type: CharacterString
-relations:
-  - target: SelectionElement
-    relationship:
-      target:
-        type: direct
-    direction: up
+  displayAs:
+    definition: The display value of the key value pair of this SelectionPair.
+    type: CharacterString

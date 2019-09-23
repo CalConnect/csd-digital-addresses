@@ -3,24 +3,25 @@ modelType: class
 definition: |
   A display line represents a line within a display layout.
 
-  It extends from the `LineElementReference` model, and
-  takes a set of elements that contain
-  display line element references (`DisplayLineElementReference`).
-attributes:
-  elements:
-    definition: The constituent parts of this DisplayLine.
-    type: DisplayLineElementReference
-    cardinality:
-      min: 0
-      max: "*"
+# It extends from the `LineElementReference` model, and
+# takes a set of elements that contain
+# display line element references (`DisplayLineElementReference`).
+# attributes:
+#   elements:
+#     definition: The constituent parts of this DisplayLine.
+#     type: DisplayLineElementReference
+#     cardinality:
+#       min: 0
+#       max: "*"
 relations:
-  - target: DisplayTemplate
-    relationship:
-      target:
-        type: direct
-    direction: up
-  - target: DisplayLineElementReference
+  - target: DisplayLineElement
     relationship:
       source:
-        type: direct
+        type: composition
+      target:
+        attribute:
+          element:
+            cardinality:
+              min: 1
+              max: '*'
     direction: up

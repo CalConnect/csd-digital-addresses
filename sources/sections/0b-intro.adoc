@@ -48,13 +48,14 @@ and for applications to interact and interchange international addresses,
 while supporting human input and human-machine interaction, without loss
 of fidelity.
 
-////
-* <<ISO19160-5>> describes how to represent addresses on different devices. It
+* ISO 19160-5 describes how to represent addresses on different devices. It
 targeted on all addresses but was concluded to be too complex. This standard,
-ISO 19160-6, therefore, focuses on a subset by providing templates for the
-serialization of address objects and address input, and representation by
-creating address exchange objects.
-////
+ISO 19160-6, therefore, focuses on providing a standard way of interchanging
+profiles of addresses, resulting in compliant addresses to be interoperable
+among humans, devices and systems. This standard further defines an
+interchange profile for addresses suitable for interchange, so that compliant
+addresses can be input and display in a standard way among different applications
+which use the address data.
 
 The lifecycle of an address entry exchanged on the Internet typically
 starts with manual input of a human actor. This data, structured or

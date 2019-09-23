@@ -1,5 +1,13 @@
 name: ProfileCompliantAddress
 modelType: class
+definition: |
+  ProfileCompliantAddress extends from the Address model defined in
+  <<ISO19160-1>> to represent an Address complying with an
+  AddressClassProfile.
+
+  A ProfileCompliantAddress MUST conform to the constraints and
+  requirements specified in AddressClassProfile, and its associated
+  profiles and specifications.
 relations:
   - target: Address
     relationship:

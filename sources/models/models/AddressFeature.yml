@@ -8,18 +8,14 @@ definition: |
   This is an abstract class.
   To represent specific features, this class should be extended upon.
 attributes:
-  id:
-    definition: Unique identifier of the address feature.
-    type: CharacterString
-  name:
-    definition: Human readable name of the address feature.
-    type: CharacterString
-  description:
-    definition: Human readable description of the address feature.
-    type: CharacterString
-relations:
-  - target: AddressFeatureInstance
-    relationship:
-      target:
-        type: direct
-    direction: up
+  signature:
+    definition: |
+      Cryptographic signature used to ensure that the
+      feature is marked by an address process trusted for
+      verification of this feature.
+      The signature generated shall incorporate the `id` attribute
+      of the interchange address instance that owns it.
+    type: Signature
+    cardinality:
+      min: 0
+      max: 1

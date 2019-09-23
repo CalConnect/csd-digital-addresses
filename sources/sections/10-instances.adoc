@@ -1,7 +1,0 @@
-[[ix-address-instance]]
-== Address instance
-
-[datamodel]
-....
-include::../models/views/AddressInstance.yml[]
-....

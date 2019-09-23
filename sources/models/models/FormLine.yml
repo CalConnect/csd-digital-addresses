@@ -7,16 +7,22 @@ definition: |
   takes a set of elements that contain
   form line element references (`FormLineElementReference`).
 directive: form-line
-attributes:
-  elements:
-    definition: The constituent parts of this FormLine.
-    type: FormLineElementReference
-    cardinality:
-      min: 0
-      max: "*"
+# attributes:
+  # elements:
+  #   definition: The constituent parts of this FormLine.
+  #   type: FormLineElementReference
+  #   cardinality:
+  #     min: 0
+  #     max: "*"
 relations:
-  - target: FormTemplate
+  - target: FormLineElement
     relationship:
+      source:
+        type: composition
       target:
-        type: direct
+        attribute:
+          element:
+            cardinality:
+              min: 1
+              max: '*'
     direction: up

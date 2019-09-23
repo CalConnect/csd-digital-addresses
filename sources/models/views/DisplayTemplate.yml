@@ -8,3 +8,5 @@ imports:
   DisplayLineElement:
   DataElement:
   TextElement:
+fidelity:
+  hideOtherClasses: true

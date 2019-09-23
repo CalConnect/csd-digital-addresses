@@ -40,7 +40,7 @@ attributes:
   localization:
     definition: Locale and script information of the layout template.
     type: Localization
-  dimensions:
+  dimension:
     definition: Physical dimensions of the rectangular bounding box for the rendered layout output.
     type: LayoutDimension
     cardinality:

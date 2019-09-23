@@ -1,8 +1,14 @@
 name: LayoutTemplate
 title: Layout template
 caption: Layout template data model
-directive: ix-layout-template
+directive: layout-template
 imports:
   LayoutTemplate:
   LayoutDimension:
   LayoutOrientation:
+  DisplayTemplate:
+    skipSection: true
+  FormTemplate:
+    skipSection: true
+fidelity:
+  hideOtherClasses: true

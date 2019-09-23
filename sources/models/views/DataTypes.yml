@@ -1,13 +1,15 @@
 name: DataTypes
 title: Data types
 caption: Data types to be used in this standard
-directive: ix-data-types
+directive: data-types
 imports:
-  AddressComponentDataType:
-  CoreType:
-  PrimitiveType:
   iso15924Code:
   iso639Code:
-  iso14880Oid:
   iso3166Code:
-  UserDefinedDataType:
+  iso19115CI_Date:
+  iso19115PT_Locale:
+  iso19115EX_Extent:
+  iso19115MD_Constraints:
+  iso14888Oid:
+fidelity:
+  hideOtherClasses: true

@@ -1,7 +1,9 @@
 name: DataElementWithConditions
 modelType: class
 definition:
+  DataElementWithConditions extends from DataElement to represent DataElement
+  with additional constraints.
 attributes:
   value:
-    definition:
-    type: MD_Constraint
+    definition: The constraint information of `MD_Constraint` as defined in <<ISO19115-1>>.
+    type: iso19115MD_Constraints

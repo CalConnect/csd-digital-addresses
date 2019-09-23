@@ -14,32 +14,44 @@ the requirements specified for a register in <<ISO19135-1>>. See
 <<test-profile-register>>.
 
 
-=== IxAddressProfile
+=== AddressProfile
 
-Any machine-readable description of an <<ISO19160-1>> profile for which conformance
+Any machine-readable description of an ISO 19160-6 AddressProfile for which conformance
 is claimed shall pass all the requirements described in the abstract test suite in
-<<test-ix-address-profile>>.
+<<test-address-profile>>.
 
 
-=== IxAddressClass
+=== AddressClassProfile
 
-Any machine-readable description of an <<ISO19160-1>> address class for which
+Any machine-readable description of an ISO 19160-6 AddressClassProfile for which
 conformance is claimed shall pass all the requirements described in the
-abstract test suite in <<test-ix-address-class>>.
+abstract test suite in <<test-address-class-profile>>.
 
+=== AddressComponentProfile
 
-=== IxAddressComponent
-
-Any machine-readable description of an <<ISO19160-1>> address component for
+Any machine-readable description of an ISO 19160-6 AddressComponentProfile for
 which conformance is claimed shall pass all the requirements described in the
-abstract test suite in <<test-ix-address-component>>.
+abstract test suite in <<test-address-component-profile>>.
+
+=== ProfileCompliantAddress
+
+Any machine-readable description of an ISO 19160-6 ProfileCompliantAddress for
+which conformance is claimed shall pass all the requirements described in the
+abstract test suite in <<test-profile-compliant-address>>.
+
+=== ProfileCompliantAddressComponent
+
+Any machine-readable description of an ISO 19160-6
+ProfileCompliantAddressComponent for which conformance is claimed shall pass
+all the requirements described in the abstract test suite in
+<<test-profile-compliant-address-component>>.
 
 
-=== IxAddressInstance
+=== InterchangeAddressClassProfile
 
-Any instance of IxAddressProfile class for which
-IxAddressInstance conformance is claimed shall pass the requirements
-described in the abstract test suite in <<test-ix-address-instance>>.
+Any machine-readable description of an ISO 19160-6 InterchangeAddressClassProfile for
+which conformance is claimed shall pass all the requirements described in the
+abstract test suite in <<test-ix-address-class-profile>>.
 
 === FormTemplate
 

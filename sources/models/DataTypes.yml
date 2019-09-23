@@ -1,21 +1,6 @@
 title: Data types
 directive: ix-data-types
 classes:
-  AddressComponentDataType:
-    relations:
-      - target: CoreType
-        relationship:
-          source:
-            type: inheritance
-      - target: PrimitiveType
-        relationship:
-          source:
-            type: inheritance
-      - target: UserDefinedDataType
-        relationship:
-          source:
-            type: inheritance
-
   CoreType:
 
   PrimitiveType:
@@ -51,16 +36,3 @@ classes:
           target:
             type: direct
         direction: "[hidden]"
-
-  UserDefinedDataType:
-    definition:
-    attributes:
-      coreType:
-        definition:
-        type: AddressComponentDataType
-      constraints:
-        definition:
-        type: DataTypeConstraints
-      name:
-        definition:
-        type: CharacterString

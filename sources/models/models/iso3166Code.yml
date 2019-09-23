@@ -1,5 +1,6 @@
 name: iso3166Code
 modelType: class
+definition: This is the value of country code as specified in <<ISO3166-1>>.
 relations:
   - target: iso14888Oid
     relationship:

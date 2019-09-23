@@ -1,7 +1,7 @@
 name: FormTemplate
 title: Form template
 caption: Form template data model
-directive: ix-form-template
+directive: form-template
 imports:
   FormTemplate:
   FormLine:
@@ -11,3 +11,5 @@ imports:
   DataElement:
   StaticTextElement:
   DataElementWithConditions:
+fidelity:
+  hideOtherClasses: true

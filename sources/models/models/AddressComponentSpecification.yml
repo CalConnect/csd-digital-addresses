@@ -1,23 +1,15 @@
 name: AddressComponentSpecification
 modelType: class
-definition:
+definition: |
+  An `AddressComponentSpecification` specifies the cardinalities between a
+  `ProfileCompliantAddress` and `ProfileCompliantAddressComponents`.
+
+  A `ProfileComplinatAddress` MUST conform to this
+  `AddressComponentSpecification` to specifies its components.
 attributes:
-  minCardinality:
-    definition:
-    type: Integer
   maxCardinality:
-    definition:
+    definition: The maximum number of instances of the specific `ProfileCompliantAddressComponent` of a `ProfileCompliantAddress`.
     type: Integer
-# relations:
-#   - target: AddressComponent
-#     relationship:
-#       target:
-#         type: direct
-#         attributes:
-#           profile:
-#             cardinality:
-#               min: 1
-#               max: 1
-#     action:
-#       verb: compliesWith
-#       direction: source
+  minCardinality:
+    definition: The minimum number of instances of the specific `ProfileCompliantAddressComponent` of a `ProfileCompliantAddress`.
+    type: Integer

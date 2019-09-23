@@ -5,12 +5,11 @@ definition: |
   The value of a location is given by `EX_Extent` defined
   in <<ISO19115-1,clause=6.6.1>>, which supports
   geographic, temporal and vertical specification.
+attributes:
+  value:
+    definition: The geographic, temporal and vertical information of the location defined in <<ISO19115-1,clause=6.6.1>>.
+    type: iso19115EX_Extent
 relations:
-  - target: EX_Extent
-    relationship:
-      target:
-        type: inheritance
-    direction: up
   - target: AddressFeature
     relationship:
       target:

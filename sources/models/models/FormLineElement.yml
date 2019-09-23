@@ -9,9 +9,3 @@ definition: |
   such values should be used as "`placeholders`"
   for form input.
 directive: form-line-element
-relations:
-  - target: FormLineElementReference
-    relationship:
-      target:
-        type: direct
-    direction: up

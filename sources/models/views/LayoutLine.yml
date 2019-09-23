@@ -1,5 +1,6 @@
 name: LayoutLine
 title: Layout line
 caption: Layout line data model
+directive: layout-line
 imports:
   LayoutLine:

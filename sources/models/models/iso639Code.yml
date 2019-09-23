@@ -1,5 +1,6 @@
 name: iso639Code
 modelType: class
+definition: This is the value of language code as specified in <<ISO639-3>>.
 relations:
   - target: iso15924Code
     relationship:

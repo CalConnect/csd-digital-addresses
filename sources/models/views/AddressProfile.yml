@@ -1,6 +1,40 @@
 name: AddressProfile
-title: Interchange address profile
-caption: Interchange address profile data model
-directive: ix-address-profile
+title: Address profile
+caption: Address profile data model
+directive: address-profile
 imports:
-  InterchangeAddressProfile:
+  AddressProfile:
+  AddressClassProfile:
+  AddressComponentProfile:
+  AddressComponentSpecification:
+  AttributeProfile:
+groups:
+  - - AddressProfile
+  - - AddressClassProfile
+    - AddressComponentProfile
+  - - AttributeProfile
+    - AddressComponentSpecification
+relations:
+  - source: AddressClassProfile
+    target: AddressComponentProfile
+    direction: '[hidden]right'
+
+  - source: AttributeProfile
+    target: AddressComponentSpecification
+    direction: '[hidden]right'
+
+  - source: AddressProfile
+    target: AddressClassProfile
+    direction: '[hidden]down'
+
+  - source: AddressClassProfile
+    target: AttributeProfile
+    direction: '[hidden]down'
+
+  - source: AddressComponentProfile
+    target: AddressComponentSpecification
+    direction: '[hidden]down'
+
+fidelity:
+  # hideMembers: true
+  hideOtherClasses: true

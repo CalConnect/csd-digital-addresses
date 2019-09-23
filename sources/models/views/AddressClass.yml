@@ -1,7 +1,7 @@
 name: AddressClass
 title: Interchange address class
 caption: Interchange address class data model
-directive: ix-address-class
+directive: address-class
 imports:
   InterchangeAddressClass:
   InterchangeAddressComponent:

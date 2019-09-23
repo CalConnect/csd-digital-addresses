@@ -1,19 +1,17 @@
 name: Localization
 modelType: class
 definition: |
-  The language and script used within this interchange address profile.
+  The language and script used within the parent object.
 
   Represented by the `PT_Locale` object defined in <<ISO19115-1>> and an
   <<ISO15924>> script code.
 attributes:
   locale:
     definition: The locale of the parent object.
-    type: PT_Locale
-    origin: ISO19115-1
+    type: iso19115PT_Locale
   script:
     definition: The type of written script used in the parent object.
-    type: Script Identifier Code
-    origin: ISO15924
+    type: iso15924Code
   textDirection:
     definition: Indicating in which direction the text of the parent should be read.
     type: TextDirectionCode

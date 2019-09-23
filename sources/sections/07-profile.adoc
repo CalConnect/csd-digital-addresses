@@ -1,7 +1,0 @@
-[[ix-address-profile]]
-== Address profile
-
-[datamodel]
-....
-include::../models/views/AddressProfile.yml[]
-....
