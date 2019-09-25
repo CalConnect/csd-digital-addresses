@@ -1,0 +1,7 @@
+[[display-template]]
+== Display template
+
+[datamodel]
+....
+include::../models/views/DisplayTemplate.yml[]
+....

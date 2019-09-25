@@ -1,0 +1,35 @@
+== Address profile model overview
+
+The address profile model defined in this standard consists of three major
+layers: the AddressProfile model as a container of profiles of addresses and
+address components, the profiles of addresses and address components, and
+the addresses and address components conforming to the profiles of addresses
+and address components.
+
+The AddressProfile model acts as a container of AddressClassProfiles and
+AddressComponentProfiles. In general, an AddressProfile contains the
+AddressClassProfiles and AddressComponentProfiles of a single country or
+region, which can be represented as country code in <<ISO3166-1>>.
+
+For addresses to conform to this standard, they and their associated address
+components MUST conform to their corresponding AddressClassProfiles and
+AddressComponentProfiles. The association between an address and an address
+components MUST also conform to the AddressComponentSpecification defined in
+between the AddressClassProfile and AddressComponentProfile. Those conforming
+addresses and address components are ProfileCompliantAddresses and
+ProfileCompliantAddressComponents.
+
+As ProfileCompliantAddress and ProfileCompliantAddressComponent extend from
+Address and AddressComponent respectively, their instances will be compliant
+to <<ISO19160-1>> without any compatibility issues.
+
+This standard further defines InterchangeAddressClassProfile for defining
+AddressClassProfiles which can be claimed as interchangeable. Addresses
+compliant to InterchangeAddressClassProfile will be interchangeable among
+humans, devices and systems with interoperability.
+
+
+[datamodel]
+....
+include::../models/views/TopDown.yml[]
+....

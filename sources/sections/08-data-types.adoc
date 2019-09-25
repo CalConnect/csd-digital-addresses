@@ -1,0 +1,22 @@
+[[ix-data-types]]
+== Data types
+
+[datamodel]
+....
+include::../models/views/DataTypes.yml[]
+....
+
+=== Primitive and core data types
+
+These are the common data types used within this document.
+
+Primitive data types (`PrimitiveTypes`) are defined in <<ISO19103,clause="7.2">>,
+including:
+
+* `CharacterString`
+* `DateTime`, `Date`, `Time`
+* `Number`, `Integer`, `Decimal`, `Real`
+* `Vector`
+* `Boolean`
+
+Core data types (`CoreTypes`) are defined in <<ISO19103,clause=A.2>>.

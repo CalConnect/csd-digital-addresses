@@ -1,0 +1,7 @@
+[[ix-common]]
+== Common models
+
+[datamodel]
+....
+include::../models/views/CommonModels.yml[]
+....
