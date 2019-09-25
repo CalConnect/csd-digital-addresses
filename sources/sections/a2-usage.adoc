@@ -50,7 +50,7 @@ And this address represents the identical address as above,
 with a reduction of information that is already implied,
 which that does not reduce its correctness. This can be
 achieved by supplying a `displayTemplate` in the
-interchange address instance model.
+interchange address.
 
 [source]
 ----

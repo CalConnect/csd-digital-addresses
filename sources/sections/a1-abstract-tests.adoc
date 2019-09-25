@@ -5,7 +5,7 @@
 
 === Introduction
 
-The abstract test suites for the conformance classes defined by this part of ISO {docnumber} are presented in <<test-ix-address-instance>> to <<test-display-template>>.
+The abstract test suites for the conformance classes defined by this part of ISO {docnumber} are presented in <<test-address-profile>> to <<test-display-template>>.
 
 ////
 

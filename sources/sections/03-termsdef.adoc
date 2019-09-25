@@ -60,19 +60,9 @@ A data type that has no super type. The primitive data type of a data type is th
 [.source]
 <<ISOIEC10179,clause="4.23">>
 
+=== interchange address
 
-[[term-ud-data-type]]
-=== user defined data type
-
-_data type_ (<<term-data-type>>) defined by the user in an interchange address
-profile through the composure of other _data types_ (<<term-data-type>>) and
-constraints
-
-[[term-ud-data-type-def]]
-=== user defined data type definition
-
-definition of a _user defined data type_
-(<<term-ud-data-type>>)
+an address compliant to an interchange address class profile
 
 [[term-address-feature]]
 === address feature
@@ -84,17 +74,17 @@ marking on a profile-compliant address to indicate what it is capable of
 === address layout template
 
 specification of layout and positioning of
-address components for profile-compliant addresses
+address components for interchange addresses
 
 === address display template
 
 address layout template (<<term-address-layout-template>>)
-for the display of profile-compliant addresses
+for the display of interchange addresses
 
 === address form template
 
 address layout template (<<term-address-layout-template>>)
-of an input form for the entry of profile-compliant addresses
+of an input form for the entry of interchange addresses
 
 [[term-address-processor]]
 === address processor
@@ -105,7 +95,7 @@ entity that processes profile-compliant addresses
 [[term-address-profile-distributor]]
 === address profile distributor
 
-entity that distributes interchange address profiles
+entity that distributes address profiles
 
 
 [[term-signature]]
