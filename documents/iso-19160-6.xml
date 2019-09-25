@@ -55,51 +55,51 @@
     </structuredidentifier>
   </ext>
 </bibdata>
-<termdocsource bibitemid="ISO19160-1"/><preface><foreword obligation="informative"><title>Foreword</title><p id="_417f534c-0aae-4f86-96b9-fd1bae91a535">ISO (the International Organization for Standardization)
+<termdocsource bibitemid="ISO19160-1"/><preface><foreword obligation="informative"><title>Foreword</title><p id="_990265ec-f48d-4158-94d2-3fa0649f75c7">ISO (the International Organization for Standardization)
 is a worldwide federation of national standards bodies (ISO member bodies). The work of preparing International Standards is normally carried out through ISO technical committees. Each member body interested in a subject for which a technical committee has been established has the right to be represented on that committee. International organizations, governmental and non-governmental, in liaison with ISO, also take part in the work. ISO collaborates closely with the International Electrotechnical Commission (IEC) on all matters of electrotechnical standardization.</p>
-<p id="_830a999b-31ab-47b7-bef1-3f016b54874f">The procedures used to develop this document and those intended for its further maintenance are described in the ISO/IEC Directives, Part 1. In particular the different approval criteria needed for the different types of ISO documents should be noted. This document was drafted in accordance with the editorial rules of the ISO/IEC Directives, Part 2 (see www.iso.org/directives).</p>
-<p id="_684c8f20-e6cc-4deb-900a-093ebff0dfe5">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. ISO shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the ISO list of patent declarations received (see www.iso.org/patents).</p>
-<p id="_d25f85cd-0c4b-4906-8725-3c71a8a104c0">Any trade name used in this document is information given for the convenience of users and does not constitute an endorsement.</p>
-<p id="_e33ba370-d365-49da-b59a-a3635b94c9f2">For an explanation on the voluntary nature of standards, the meaning of ISO specific terms and expressions related to conformity assessment, as well as information about ISO’s adherence to the World Trade Organization (WTO) principles in the Technical Barriers to Trade (TBT) see the following URL: www.iso.org/iso/foreword.html.</p>
-<p id="_8ee732a5-3e07-432d-811a-bb27f3a966f7">This document was prepared by Technical Committee ISO/TC 211, <em>Geographic information / Geomantics</em>.</p>
-<p id="_548fb43e-29cc-4525-b7d6-b1ea3df5ed20">A list of all parts in the ISO 19160 series can be found on the ISO website.</p>
-<p id="_7c10a8d3-5365-4fa0-b5c8-662323b6f7fd">This is the first edition of this document.</p></foreword><introduction id="introduction" obligation="informative"><title>Introduction</title><p id="_8fe9bb32-d6f4-4444-9329-8b0a9d2033f7">Addresses are among the most commonly exchanged information on the
+<p id="_e44423bb-b806-4367-8954-524ae5f28d0c">The procedures used to develop this document and those intended for its further maintenance are described in the ISO/IEC Directives, Part 1. In particular the different approval criteria needed for the different types of ISO documents should be noted. This document was drafted in accordance with the editorial rules of the ISO/IEC Directives, Part 2 (see www.iso.org/directives).</p>
+<p id="_dec57069-4f94-4354-bfe4-46e2b0422e2d">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. ISO shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the ISO list of patent declarations received (see www.iso.org/patents).</p>
+<p id="_acb29140-3def-4af8-83ac-a7f1bede9b93">Any trade name used in this document is information given for the convenience of users and does not constitute an endorsement.</p>
+<p id="_55b04896-048e-43bf-8708-f2a1d707c4cc">For an explanation on the voluntary nature of standards, the meaning of ISO specific terms and expressions related to conformity assessment, as well as information about ISO’s adherence to the World Trade Organization (WTO) principles in the Technical Barriers to Trade (TBT) see the following URL: www.iso.org/iso/foreword.html.</p>
+<p id="_159a8adb-b989-46b8-851a-701a43f52085">This document was prepared by Technical Committee ISO/TC 211, <em>Geographic information / Geomantics</em>.</p>
+<p id="_c0f84882-fa25-4d43-84d8-ac65f551468c">A list of all parts in the ISO 19160 series can be found on the ISO website.</p>
+<p id="_e7fd3d28-2db0-49cc-80b1-49d41c41ba5a">This is the first edition of this document.</p></foreword><introduction id="introduction" obligation="informative"><title>Introduction</title><p id="_6760d765-6665-4223-a5ba-cb563fbcefac">Addresses are among the most commonly exchanged information on the
 Internet, and the interchange of them is crucial to a number of
 Internet applications, such as electronic commerce, contact exchange,
 non-postal deliveries, as well as location scheduling.</p>
-<p id="_d1abaef9-8e12-4b35-82ae-69151fe0bfe0">Yet, addresses can mean much more than just geolocation information:</p>
-<ul id="_ee835dc8-b7e2-4291-b9a0-095b23bd2d56">
+<p id="_0d12240a-12ef-4fe0-94a4-72e3398c29df">Yet, addresses can mean much more than just geolocation information:</p>
+<ul id="_d9873930-fcd7-47fd-a2bc-b2dbf1fc87a2">
   <li>
-    <p id="_467f31b8-5dc9-4f22-9a08-dab85f261cef">As an identity, such as an office address</p>
+    <p id="_0373c40e-4853-40b5-999b-44f1deb8dc3c">As an identity, such as an office address</p>
   </li>
   <li>
-    <p id="_83213db9-543c-476b-b444-b43b7749cadf">As reference points (waypoints) in routing information</p>
+    <p id="_c0eafea9-28d5-4d74-9f5b-97779fbab8fb">As reference points (waypoints) in routing information</p>
   </li>
   <li>
-    <p id="_d9dc09ef-137c-4fe5-b228-4cf5406eb00c">As a delivery point</p>
+    <p id="_8c47b3eb-49c4-4aad-9645-491690d11c6c">As a delivery point</p>
   </li>
 </ul>
-<p id="_e908c486-c735-4c32-82fa-76cf64ff7ba0">The interchange of addresses require a common structure of address data. For
+<p id="_783ed20d-939e-41d2-9812-a6866893b03f">The interchange of addresses require a common structure of address data. For
 instance of a software application in need of user input of address
 information, users need assistance from the application to enter the correct
 format and structure of the address for it to be machine readable and
 interoperable among different machines or systems which process the address
 data.</p>
-<p id="_3f42b59c-9110-4857-959c-b751da061750">This document focuses on enabling software applications
+<p id="_b3f0b3be-6a18-4aee-a937-47eec0cf9527">This document focuses on enabling software applications
 the digital interchange of address profiles,
 address instances and instructions for their input and display, together
 with model definitions and a registry mechanism to ensure
 they are publicly available.</p>
-<p id="_321c16d9-dc65-4da7-940a-53296e3514ae">This standard complements the other parts in the family of ISO 19160 standards:</p>
-<ul id="_b6a8f03f-383e-4faf-88a6-065aeb2c72a6">
+<p id="_0b1776c7-888e-4c98-8e85-679c088d09b3">This standard complements the other parts in the family of ISO 19160 standards:</p>
+<ul id="_b8294037-bde2-45b8-93e4-7eccfddc45b2">
   <li>
-    <p id="_80159e6e-28be-4310-abf9-5f36126f3e16"><eref type="inline" bibitemid="ISO19160-1" citeas="ISO 19160-1"/> describes conceptual models for addressing that allow
+    <p id="_90ff4973-a9f7-4f40-813c-8be92f880c5f"><eref type="inline" bibitemid="ISO19160-1" citeas="ISO 19160-1"/> describes conceptual models for addressing that allow
 specification of international address profiles. This International
 Standard further provides methods to utilize these models in a way
 suitable for electronic interchange.</p>
   </li>
   <li>
-    <p id="_bec263c0-6725-4ba4-a966-20ec2ee8dde7"><eref type="inline" bibitemid="ISO19160-4" citeas="ISO 19160-4"/> defines key terms for postal addressing, postal address
+    <p id="_acb4c195-f2c2-469d-ac75-ca492c4f8ea7"><eref type="inline" bibitemid="ISO19160-4" citeas="ISO 19160-4"/> defines key terms for postal addressing, postal address
 components and constraints on their use. It focuses on use cases for postal
 applications, specifying the methods to write or detect addresses on mail items.
 This International Standard adapts models from <eref type="inline" bibitemid="ISO19160-1" citeas="ISO 19160-1"/>
@@ -110,7 +110,7 @@ while supporting human input and human-machine interaction, without loss
 of fidelity.</p>
   </li>
   <li>
-    <p id="_51c37578-fb63-48dd-95b3-3cd9c5db6650">ISO 19160-5 describes how to represent addresses on different devices. It
+    <p id="_1a001506-7201-487c-bbee-b219a312d5bb">ISO 19160-5 describes how to represent addresses on different devices. It
 targeted on all addresses but was concluded to be too complex. This standard,
 ISO 19160-6, therefore, focuses on providing a standard way of interchanging
 profiles of addresses, resulting in compliant addresses to be interoperable
@@ -120,7 +120,7 @@ addresses can be input and display in a standard way among different application
 which use the address data.</p>
   </li>
 </ul>
-<p id="_66c9abfa-b0c6-4d4f-a80b-069b2efa0d43">The lifecycle of an address entry exchanged on the Internet typically
+<p id="_cc589508-cfae-49ea-9ccd-3918c4478196">The lifecycle of an address entry exchanged on the Internet typically
 starts with manual input of a human actor. This data, structured or
 unstructured, is then submitted to an Internet-connected application,
 and the application may in turn transmit this information to other
@@ -130,12 +130,12 @@ delivery to the user. Within the process, there may be machine-human
 interactions that require display of the address in human-readable
 form, as well as machine-to-machine interactions on the address, such
 as for data validation.</p>
-<p id="_96f3a73c-dea5-4c00-94c3-8aaedb177e11">Additional caution shall be placed on the accuracy (or lack thereof) of
+<p id="_91c479a6-f250-4c63-9453-cc8ace6da782">Additional caution shall be placed on the accuracy (or lack thereof) of
 human input addresses. While an address specified by a human actor may
 unambiguously distinguish a location, there may be intention or
 unintentional omissions or additions to an “official” address (if there
 was one).</p>
-<p id="_c624d892-7970-4c21-ab5a-da60ed356852">Addressability, and features provided within the object which the address
+<p id="_5a8e5bdf-c633-4f62-bd0b-55af2b6049c7">Addressability, and features provided within the object which the address
 points to, is not described in this document. Specifically, the
 <tt>AddressableObject</tt> from <eref type="inline" bibitemid="ISO19160-1" citeas="ISO 19160-1"/> is considered out of scope.
 The <tt>AddressableObject</tt> model is considered orthogonal to models
@@ -143,28 +143,28 @@ in this document, but can easily be used together, for example, in
 a navigation map where an address points to an addressable object,
 which in turn provides a list of its extant facilities.</p></introduction></preface><sections>
 
-<clause id="_scope" obligation="normative"><title>Scope</title><p id="_a1e1ca7a-3edf-44c2-84b1-64d35f9e9a72">This document specifies a set of data models suitable for machine encoding of the digital storage and transmission of address information, called the
+<clause id="_scope" obligation="normative"><title>Scope</title><p id="_553bfdb5-172d-4e3d-9efa-d4ed53e6af57">This document specifies a set of data models suitable for machine encoding of the digital storage and transmission of address information, called the
 “Address Interchange Object” (“AXO”) models, and
 describes the usage of them.</p>
-<p id="_05d9a3a8-2684-46dd-a068-b77b754f5018">Specifically, this document provides:</p>
-<ul id="_4665665a-8c4e-444d-9075-1fb309c239c2">
+<p id="_4e2a29ca-2834-4c85-85ef-d1a0e11c800d">Specifically, this document provides:</p>
+<ul id="_2804ecd4-a1f2-4a9b-b000-ca1e51ea6c33">
   <li>
-    <p id="_f28235bd-aafc-4459-96cc-89e6467d462d">data models for the interchange of address profiles
+    <p id="_c403c7bd-78de-4387-bfe3-c63998ecaa6a">data models for the interchange of address profiles
 conforming to <eref type="inline" bibitemid="ISO19160-1" citeas="ISO 19160-1"/>
 (<em>Addressing — Part 1: Conceptual model</em>)</p>
   </li>
   <li>
-    <p id="_64730416-c68b-4c3c-aa55-5d580dfe37b3">data models for the interchange of address instances
+    <p id="_438a59e3-98f4-4872-bb86-76436e266037">data models for the interchange of address instances
 conforming to a specific profile of <eref type="inline" bibitemid="ISO19160-1" citeas="ISO 19160-1"/>,
 <em>Addressing — Part 1: Conceptual model</em></p>
   </li>
   <li>
-    <p id="_cd2ce45b-e70b-4dd1-9503-3c07a44e8247">data models for entry and display templates for entering and
+    <p id="_9c0a847a-47de-4db9-ad4d-0ec0f7a7ce1a">data models for entry and display templates for entering and
 displaying address instances conforming
 to the profile and encoding rules above; and</p>
   </li>
   <li>
-    <p id="_64b3318a-b1ca-4073-9f3e-a1bdfea8f70d">the management and operations of a register of address profiles
+    <p id="_4ee1ee1a-6ef0-4e49-84ee-51e77feb04ce">the management and operations of a register of address profiles
 conforming to <eref type="inline" bibitemid="ISO19160-1" citeas="ISO 19160-1"/>, <em>Addressing — Part 1: Conceptual model</em>.</p>
   </li>
 </ul></clause>
@@ -180,21 +180,21 @@ standardization at the following addresses:</p>
 <li> <p>IEC Electropedia: available at
 <link target="http://www.electropedia.org"/>
 </p> </li> </ul>
-<term id="term-lineage"><preferred>lineage</preferred><definition><p id="_39f2a8e8-0738-4204-aa05-1f32ae779ba8">provenance, source(s) and production process(es) used
+<term id="term-lineage"><preferred>lineage</preferred><definition><p id="_a9738942-5def-4954-b223-2a55a15f7ff2">provenance, source(s) and production process(es) used
 in producing a resource</p></definition>
 <termsource status="identical">
   <origin bibitemid="ISO19115-1" type="inline" citeas="ISO 19115-1"><locality type="clause"><referenceFrom>4.9</referenceFrom></locality></origin>
 </termsource></term>
-<term id="term-locale"><preferred>locale</preferred><definition><p id="_2334799f-3351-4c43-9c22-34906aa3a02e">definition of the subset of a user’s environment that depends on
+<term id="term-locale"><preferred>locale</preferred><definition><p id="_aed4aa76-e8d6-4ec4-b77a-f5b60f8855ed">definition of the subset of a user’s environment that depends on
 language and cultural conventions</p></definition>
 <termsource status="modified">
   <origin bibitemid="ISO9945" type="inline" citeas="ISO/IEC/IEEE 9945"><locality type="clause"><referenceFrom>4.211</referenceFrom></locality></origin>
   <modification>
-    <p id="_a962e0ef-7293-4e98-a29a-3414bb40f4ec">The notes given in <eref type="inline" bibitemid="ISO9945" citeas="ISO/IEC/IEEE 9945"/> for this
+    <p id="_3c3d9a26-fc78-4aa8-a330-2ecec684e07b">The notes given in <eref type="inline" bibitemid="ISO9945" citeas="ISO/IEC/IEEE 9945"/> for this
 entry have been omitted.</p>
   </modification>
 </termsource></term>
-<term id="term-profile"><preferred>profile</preferred><definition><p id="_88345b50-dc5e-4334-88e3-f193c19e8519">set of one or more base standards or subsets of base standards, and,
+<term id="term-profile"><preferred>profile</preferred><definition><p id="_a5c76d8b-1213-41df-ad7e-5ef91c49c404">set of one or more base standards or subsets of base standards, and,
 where applicable, the identification of chosen clauses, classes,
 options and parameters of those base standards, that are necessary for
 accomplishing a particular function</p></definition>
@@ -203,69 +203,69 @@ accomplishing a particular function</p></definition>
 </termsource></term>
 <term id="term-provenance">
   <preferred>provenance</preferred>
-  <definition><p id="_e991bd6a-f071-411b-908d-a4414626646d">organization or individual that created, accumulated, maintained
+  <definition><p id="_dcbd2ac8-f457-49ef-8a25-b282e9d09fec">organization or individual that created, accumulated, maintained
 and used records</p></definition>
 </term>
-<term id="term-data-type"><preferred>data type</preferred><definition><p id="_ea34c819-b717-4b23-8f03-8afc02f130ad">specification of a value domain with operations
+<term id="term-data-type"><preferred>data type</preferred><definition><p id="_c77b6ab1-2f71-45dd-aae2-fee012574d9d">specification of a value domain with operations
 allowed on values in this domain</p></definition>
 <termsource status="identical">
   <origin bibitemid="ISO19103" type="inline" citeas="ISO 19103"><locality type="clause"><referenceFrom>4.14</referenceFrom></locality></origin>
 </termsource></term>
-<term id="primitive-data-type"><preferred>primitive data type</preferred><definition><p id="_a00df293-348f-404f-8170-db7cabee98c6">A data type that has no super type. The primitive data type of a data type is the data type itself, if the data type has no super type, and otherwise the primitive data type of the super type of the data type.</p></definition>
+<term id="primitive-data-type"><preferred>primitive data type</preferred><definition><p id="_c286a10f-b2a7-4b3e-b695-89c35bb394ef">A data type that has no super type. The primitive data type of a data type is the data type itself, if the data type has no super type, and otherwise the primitive data type of the super type of the data type.</p></definition>
 <termsource status="identical">
   <origin bibitemid="ISOIEC10179" type="inline" citeas="ISO/IEC 10179"><locality type="clause"><referenceFrom>4.23</referenceFrom></locality></origin>
 </termsource></term>
 <term id="term-ud-data-type">
   <preferred>user defined data type</preferred>
-  <definition><p id="_d84b9b20-0a3b-4771-945a-7ff088165637"><em>data type</em> (<xref target="term-data-type"/>) defined by the user in an interchange address
+  <definition><p id="_ac8aa88a-94e0-45b9-a536-c9435d8695b2"><em>data type</em> (<xref target="term-data-type"/>) defined by the user in an interchange address
 profile through the composure of other <em>data types</em> (<xref target="term-data-type"/>) and
 constraints</p></definition>
 </term>
 <term id="term-ud-data-type-def">
   <preferred>user defined data type definition</preferred>
-  <definition><p id="_966aa643-d155-41c6-8358-a3652795c7b8">definition of a <em>user defined data type</em>
+  <definition><p id="_dea8abb0-c7ca-4382-aff1-328b35ec9066">definition of a <em>user defined data type</em>
 (<xref target="term-ud-data-type"/>)</p></definition>
 </term>
 <term id="term-address-feature">
   <preferred>address feature</preferred>
-  <definition><p id="_a490f078-a528-4ce2-bf5e-486e311f05c8">marking on an address instance to indicate what it is capable of</p></definition>
+  <definition><p id="_1f270362-f461-4182-9717-e0f4ef2c6f14">marking on an address instance to indicate what it is capable of</p></definition>
 </term>
 <term id="term-address-layout-template">
   <preferred>address layout template</preferred>
-  <definition><p id="_1f9be551-b7c3-491e-93f4-5cb4f48afa9d">specification of layout and positioning of
+  <definition><p id="_7b55410d-499a-4bb6-90dc-1938c3c6a6e8">specification of layout and positioning of
 address components for an interchange address
 instance of an address class</p></definition>
 </term>
 <term id="_address_display_template">
   <preferred>address display template</preferred>
-  <definition><p id="_9a07e0af-9116-48ba-a009-db2958586d6f">address layout template (<xref target="term-address-layout-template"/>)
+  <definition><p id="_3477590b-6e0d-4ce8-9513-0237f3ac684b">address layout template (<xref target="term-address-layout-template"/>)
 for the display of interchange address instances of an
 address class</p></definition>
 </term>
 <term id="_address_form_template">
   <preferred>address form template</preferred>
-  <definition><p id="_e372060c-95af-477a-b69b-bfb233fdaf18">address layout template (<xref target="term-address-layout-template"/>)
+  <definition><p id="_f2a12787-4724-49ca-9612-229be048d79c">address layout template (<xref target="term-address-layout-template"/>)
 of an input form for the entry of address instances
 of an address class</p></definition>
 </term>
 <term id="term-address-processor">
   <preferred>address processor</preferred>
-  <definition><p id="_de5b5e8e-41ae-4768-8e5b-6086fa81337c">entity that processes interchange address instances</p></definition>
+  <definition><p id="_2f5ab65c-cbb7-4aa6-99aa-d97148103ecd">entity that processes interchange address instances</p></definition>
 </term>
 <term id="term-address-profile-distributor">
   <preferred>address profile distributor</preferred>
-  <definition><p id="_c7b42c59-0708-455b-987c-969365c186ee">entity that distributes interchange address profiles</p></definition>
+  <definition><p id="_5ee37731-b05c-4ed5-844b-cea924d2d61c">entity that distributes interchange address profiles</p></definition>
 </term>
-<term id="term-signature"><preferred>signature</preferred><definition><p id="_5635a39c-5d59-40fb-b810-3408de69b90d">the string of bits resulting from the signature process</p></definition>
+<term id="term-signature"><preferred>signature</preferred><definition><p id="_93bf41a0-1108-4934-8a68-c55c434cb2d5">the string of bits resulting from the signature process</p></definition>
 <termsource status="identical">
   <origin bibitemid="ISO14888-3" type="inline" citeas="ISO/IEC 14888-3"><locality type="clause"><referenceFrom>4.15</referenceFrom></locality></origin>
 </termsource></term>
-<term id="term-signature-key"><preferred>signature key</preferred><definition><p id="_da867c3e-932c-418f-814b-f8f2cf279d05">a secret data item specific to an entity and usable only by this entity
+<term id="term-signature-key"><preferred>signature key</preferred><definition><p id="_472770ce-6c99-4f67-ab1f-3a757e873375">a secret data item specific to an entity and usable only by this entity
 in the signature process</p></definition>
 <termsource status="identical">
   <origin bibitemid="ISO14888-3" type="inline" citeas="ISO/IEC 14888-3"><locality type="clause"><referenceFrom>4.18</referenceFrom></locality></origin>
 </termsource></term>
-<term id="term-verification-key"><preferred>verification key</preferred><definition><p id="_ff3fc2d3-87af-419c-8a66-12ddbf387eb1">a data item which is mathematically related to an entity’s
+<term id="term-verification-key"><preferred>verification key</preferred><definition><p id="_fdbef4bd-2602-4e38-87a1-6270e52842d6">a data item which is mathematically related to an entity’s
 <em>signature key</em> (<xref target="term-signature-key"/>) and which is used by
 the verifier in the verification process</p></definition>
 <termsource status="identical">
@@ -274,85 +274,85 @@ the verifier in the verification process</p></definition>
 <term id="term-oid"><preferred>object identifier</preferred>
   <admitted>oid</admitted>
 
-<definition><p id="_8431d29d-1bd0-4c7f-aa1b-3dab4fa35729">a value (distinguishable from all other such values) which is associated with an object</p></definition>
+<definition><p id="_6d0f7c01-8b1a-453d-85ea-037b1813d24a">a value (distinguishable from all other such values) which is associated with an object</p></definition>
 <termsource status="identical">
   <origin bibitemid="ISO15961" type="inline" citeas="ISO/IEC 15961"><locality type="clause"><referenceFrom>3.1.16</referenceFrom></locality></origin>
 </termsource></term>
 <term id="term-language-id"><preferred>language identifier</preferred>
   <admitted>language symbol</admitted>
 
-<definition><p id="_4cb6c999-c26e-4575-98f7-f047827dd632">symbol that uniquely identifies a particular language</p></definition>
+<definition><p id="_7819ab3b-dbd3-4ded-b94d-84da635308f6">symbol that uniquely identifies a particular language</p></definition>
 <termsource status="identical">
   <origin bibitemid="ISO639-3" type="inline" citeas="ISO 639-3"><locality type="clause"><referenceFrom>3.3</referenceFrom></locality></origin>
 </termsource></term>
-<term id="term-script"><preferred>script</preferred><definition><p id="_b7014dc0-5c6d-4bfb-90d6-997784147ce1">set of graphic characters used for the written form of one or more languages</p></definition>
+<term id="term-script"><preferred>script</preferred><definition><p id="_9d067709-530b-4e62-a6a2-9cd047fe1e41">set of graphic characters used for the written form of one or more languages</p></definition>
 <termsource status="identical">
   <origin bibitemid="ISO15924" type="inline" citeas="ISO 15924"><locality type="clause"><referenceFrom>3.7</referenceFrom></locality></origin>
 </termsource></term>
-<term id="term-script-code"><preferred>script code</preferred><definition><p id="_ed551fd6-56e4-4b76-b7a3-a06e50b23731">combination of characters used to represent the name of a <em>script</em> (<xref target="term-script"/>)</p></definition>
+<term id="term-script-code"><preferred>script code</preferred><definition><p id="_7a1c1f56-dea1-4444-b23f-46b157fcdf65">combination of characters used to represent the name of a <em>script</em> (<xref target="term-script"/>)</p></definition>
 <termsource status="identical">
   <origin bibitemid="ISO15924" type="inline" citeas="ISO 15924"><locality type="clause"><referenceFrom>3.8</referenceFrom></locality></origin>
 </termsource></term>
-<term id="term-uri"><preferred>URI</preferred><definition><p id="_4cf9aae8-6eac-4646-8b2a-6e0a608f9cef">uniform resource identifier</p></definition>
+<term id="term-uri"><preferred>URI</preferred><definition><p id="_a99064f6-288b-42d5-bb14-f8256675bca5">uniform resource identifier</p></definition>
 <termsource status="identical">
   <origin bibitemid="ISO19103" type="inline" citeas="ISO 19103"><locality type="clause"><referenceFrom>5.3</referenceFrom></locality></origin>
 </termsource></term></terms>
 <clause id="_conformance" inline-header="false" obligation="normative"><title>Conformance</title><clause id="_general" inline-header="false" obligation="normative">
   <title>General</title>
-  <p id="_51e436b2-2ec3-40dc-b7ac-9897077592c5">This part of ISO 19160 defines four classes of requirements and
+  <p id="_02e003de-15b5-449d-adaf-f00c85e56186">This part of ISO 19160 defines four classes of requirements and
 conformance. <xref target="Annex-A"/> specifies how conformance with these classes
 shall be tested.</p>
 </clause>
 <clause id="_address_profile_register" inline-header="false" obligation="normative">
   <title>Address profile register</title>
-  <p id="_c6cbaa41-35c1-45cd-8291-dea9e5df022b">To conform to this standard, an address profile register shall satisfy all of
+  <p id="_b45ddb59-5f62-4b97-addd-4c27acbdef03">To conform to this standard, an address profile register shall satisfy all of
 the requirements specified for a register in <eref type="inline" bibitemid="ISO19135-1" citeas="ISO 19135-1"/>. See
 <xref target="test-profile-register"/>.</p>
 </clause>
 <clause id="_addressprofile" inline-header="false" obligation="normative">
   <title>AddressProfile</title>
-  <p id="_75d35fe5-46b5-4b9d-9e4d-3da41235f2cb">Any machine-readable description of an ISO 19160-6 AddressProfile for which conformance
+  <p id="_13bd4e17-b950-4de7-8d71-d0a07680d072">Any machine-readable description of an ISO 19160-6 AddressProfile for which conformance
 is claimed shall pass all the requirements described in the abstract test suite in
 <xref target="test-address-profile"/>.</p>
 </clause>
 <clause id="_addressclassprofile" inline-header="false" obligation="normative">
   <title>AddressClassProfile</title>
-  <p id="_143b994d-f200-4af7-b2a3-92db4a44f88a">Any machine-readable description of an ISO 19160-6 AddressClassProfile for which
+  <p id="_d52f6b2f-4e7c-4267-8fc7-2661ace9f0f2">Any machine-readable description of an ISO 19160-6 AddressClassProfile for which
 conformance is claimed shall pass all the requirements described in the
 abstract test suite in <xref target="test-address-class-profile"/>.</p>
 </clause>
 <clause id="_addresscomponentprofile" inline-header="false" obligation="normative">
   <title>AddressComponentProfile</title>
-  <p id="_2b447e41-963e-48d6-9c36-f8567b1bdc1c">Any machine-readable description of an ISO 19160-6 AddressComponentProfile for
+  <p id="_c2a2a60d-9b44-4582-9c05-dd81132da1fd">Any machine-readable description of an ISO 19160-6 AddressComponentProfile for
 which conformance is claimed shall pass all the requirements described in the
 abstract test suite in <xref target="test-address-component-profile"/>.</p>
 </clause>
 <clause id="_profilecompliantaddress" inline-header="false" obligation="normative">
   <title>ProfileCompliantAddress</title>
-  <p id="_ea8ff2a6-1672-4d06-9fc8-23f82058349f">Any machine-readable description of an ISO 19160-6 ProfileCompliantAddress for
+  <p id="_122b5562-8dd8-4c04-a430-b21fff9ebeac">Any machine-readable description of an ISO 19160-6 ProfileCompliantAddress for
 which conformance is claimed shall pass all the requirements described in the
 abstract test suite in <xref target="test-profile-compliant-address"/>.</p>
 </clause>
 <clause id="_profilecompliantaddresscomponent" inline-header="false" obligation="normative">
   <title>ProfileCompliantAddressComponent</title>
-  <p id="_4bad100b-3c51-46ed-a8c9-517a74df309f">Any machine-readable description of an ISO 19160-6
+  <p id="_8c9c207b-3c5f-44b5-b4ce-1c76fe0e1565">Any machine-readable description of an ISO 19160-6
 ProfileCompliantAddressComponent for which conformance is claimed shall pass
 all the requirements described in the abstract test suite in
 <xref target="test-profile-compliant-address-component"/>.</p>
 </clause>
 <clause id="_interchangeaddressclassprofile" inline-header="false" obligation="normative">
   <title>InterchangeAddressClassProfile</title>
-  <p id="_f7fb1ccd-18a6-4061-9098-4c91bdf1f69b">Any machine-readable description of an ISO 19160-6 InterchangeAddressClassProfile for
+  <p id="_33d902ee-b62b-4f01-b1d9-5399f87111f7">Any machine-readable description of an ISO 19160-6 InterchangeAddressClassProfile for
 which conformance is claimed shall pass all the requirements described in the
 abstract test suite in <xref target="test-ix-address-class-profile"/>.</p>
 </clause>
 <clause id="_formtemplate" inline-header="false" obligation="normative">
   <title>FormTemplate</title>
-  <p id="_7e5bffb6-9b22-4957-9109-4214259a9084">Any FormTemplate in Interchange Address Profile model for which
+  <p id="_cb71cc15-282c-4068-b249-1988aef9c99b">Any FormTemplate in Interchange Address Profile model for which
 FormTemplate conformance is claimed shall pass the requirements
 described in the abstract test suite in <xref target="test-form-template"/>.</p>
 </clause>
-<clause id="_displaytemplate" inline-header="false" obligation="normative"><title>DisplayTemplate</title><p id="_a3feb05d-05be-4d25-a3df-84e9c415ed12">Any DisplayTemplate in Interchange Address Profile model for
+<clause id="_displaytemplate" inline-header="false" obligation="normative"><title>DisplayTemplate</title><p id="_fc87fe78-82d7-494f-9ad2-e3be806c38f2">Any DisplayTemplate in Interchange Address Profile model for
 which DisplayTemplate conformance is claimed shall pass the
 requirements described in the abstract test suite in <xref target="test-display-template"/>.
 Unresolved directive in iso-19160-6.adoc - include::sources/sections/05-registry.adoc[]
@@ -362,7 +362,7 @@ Unresolved directive in iso-19160-6.adoc - include::sources/sections/08-data-typ
 Unresolved directive in iso-19160-6.adoc - include::sources/sections/09-common-models.adoc[]
 Unresolved directive in iso-19160-6.adoc - include::sources/sections/10-profile.adoc[]
 Unresolved directive in iso-19160-6.adoc - include::sources/sections/11-profile-compliant-address.adoc[]</p>
-<p id="_60ee89f8-3b68-4993-b5d4-a083d794bbf7">Unresolved directive in iso-19160-6.adoc - include::sources/sections/12-interchange-address-class-profile.adoc[]
+<p id="_fe353bb5-813e-4a67-8b9d-223855e6b502">Unresolved directive in iso-19160-6.adoc - include::sources/sections/12-interchange-address-class-profile.adoc[]
 Unresolved directive in iso-19160-6.adoc - include::sources/sections/13-feature.adoc[]
 Unresolved directive in iso-19160-6.adoc - include::sources/sections/14-layout-template.adoc[]
 Unresolved directive in iso-19160-6.adoc - include::sources/sections/15-display-template.adoc[]
@@ -373,13 +373,13 @@ Unresolved directive in iso-19160-6.adoc - include::sources/sections/16-form-tem
 
 </sections><annex id="Annex-A" inline-header="false" obligation="informative"><title>Abstract test suites</title><clause id="_introduction" inline-header="false" obligation="informative">
   <title>Introduction</title>
-  <p id="_a10c2995-7d85-42f3-bfbd-213fba52ca44">The abstract test suites for the conformance classes defined by this part of ISO 19160 are presented in <xref target="test-ix-address-instance"/> to <xref target="test-display-template"/>.</p>
+  <p id="_7652bcae-cb29-40ab-ae18-a5616927c243">The abstract test suites for the conformance classes defined by this part of ISO 19160 are presented in <xref target="test-ix-address-instance"/> to <xref target="test-display-template"/>.</p>
 </clause>
 <clause id="test-profile-register" inline-header="false" obligation="informative">
   <title>Conformance class: Address profile register</title>
-  <p id="_3b36137f-03df-4738-84cc-b85258f96d31">Refer to <eref type="inline" bibitemid="ISO19135-1" citeas="ISO 19135-1"/> for requirements.</p>
+  <p id="_4d8721d1-405b-48e6-ac31-f6c7e9acac73">Refer to <eref type="inline" bibitemid="ISO19135-1" citeas="ISO 19135-1"/> for requirements.</p>
 </clause>
-<clause id="test-address-profile" inline-header="false" obligation="informative"><title>Conformance class: AddressProfile</title><table id="_2b7c641d-ff6c-40d8-86f5-d2cb5c747764">
+<clause id="test-address-profile" inline-header="false" obligation="informative"><title>Conformance class: AddressProfile</title><table id="_0f128b55-8ca6-4fe9-805e-259a28781714">
   <name>AddressProfile test 1: Associations</name>
   <tbody>
     <tr>
@@ -402,7 +402,7 @@ Unresolved directive in iso-19160-6.adoc - include::sources/sections/16-form-tem
     </tr>
   </tbody>
 </table>
-<table id="_47e78c40-dda5-4206-a3bd-9aa2b24b7438">
+<table id="_16bc4067-88b2-4752-b92a-b17e8423c442">
   <name>AddressProfile test 2: Attributes</name>
   <tbody>
     <tr>
@@ -425,7 +425,7 @@ Unresolved directive in iso-19160-6.adoc - include::sources/sections/16-form-tem
     </tr>
   </tbody>
 </table></clause>
-<clause id="test-address-class-profile" inline-header="false" obligation="informative"><title>Conformance class: AddressClassProfile</title><table id="_7a49df11-9b27-4b31-8074-ad16ecdbf5c6">
+<clause id="test-address-class-profile" inline-header="false" obligation="informative"><title>Conformance class: AddressClassProfile</title><table id="_17ac3d66-3761-4f1a-bc8c-d6cbde58e079">
   <name>AddressClassProfile test 1: Associations</name>
   <tbody>
     <tr>
@@ -448,7 +448,7 @@ Unresolved directive in iso-19160-6.adoc - include::sources/sections/16-form-tem
     </tr>
   </tbody>
 </table>
-<table id="_88c5401b-5989-4f28-b048-3d963cde9787">
+<table id="_29e73cb1-9eed-4c67-b7d0-74ec37748fd7">
   <name>AddressClassProfile test 2: Attributes</name>
   <tbody>
     <tr>
@@ -471,7 +471,7 @@ Unresolved directive in iso-19160-6.adoc - include::sources/sections/16-form-tem
     </tr>
   </tbody>
 </table></clause>
-<clause id="test-address-component-profile" inline-header="false" obligation="informative"><title>Conformance class: AddressComponentProfile</title><table id="_5338b26b-d05d-4227-be97-9c90c95bdeb6">
+<clause id="test-address-component-profile" inline-header="false" obligation="informative"><title>Conformance class: AddressComponentProfile</title><table id="_99044404-3470-4708-8d47-299a096d607e">
   <name>AddressComponentProfile test 1: Associations</name>
   <tbody>
     <tr>
@@ -494,7 +494,7 @@ Unresolved directive in iso-19160-6.adoc - include::sources/sections/16-form-tem
     </tr>
   </tbody>
 </table>
-<table id="_292319a5-ebc6-4828-9a95-c64026121087">
+<table id="_3b543592-5a74-49b1-bbd9-2087102fbd18">
   <name>AddressComponentProfile test 2: Attributes</name>
   <tbody>
     <tr>
@@ -517,7 +517,7 @@ Unresolved directive in iso-19160-6.adoc - include::sources/sections/16-form-tem
     </tr>
   </tbody>
 </table></clause>
-<clause id="test-profile-compliant-address" inline-header="false" obligation="informative"><title>Conformance class: ProfileCompliantAddress</title><table id="_93b4f035-1ad1-48fe-bdd8-af8a0fa5d1d8">
+<clause id="test-profile-compliant-address" inline-header="false" obligation="informative"><title>Conformance class: ProfileCompliantAddress</title><table id="_5448c9bf-33f4-4b3e-aa5a-e9fc7da3f2f2">
   <name>ProfileCompliantAddress test 1: Associations</name>
   <tbody>
     <tr>
@@ -540,7 +540,7 @@ Unresolved directive in iso-19160-6.adoc - include::sources/sections/16-form-tem
     </tr>
   </tbody>
 </table>
-<table id="_2daa94e0-41cd-451f-8a2e-25d2c0969ab3">
+<table id="_487deedb-5073-4340-b9ea-0419aa37db82">
   <name>ProfileCompliantAddress test 2: Attributes</name>
   <tbody>
     <tr>
@@ -563,7 +563,7 @@ Unresolved directive in iso-19160-6.adoc - include::sources/sections/16-form-tem
     </tr>
   </tbody>
 </table></clause>
-<clause id="test-profile-compliant-address-component" inline-header="false" obligation="informative"><title>Conformance class: ProfileCompliantAddressComponent</title><table id="_ecebe334-9c3f-4753-a04e-568afce01f07">
+<clause id="test-profile-compliant-address-component" inline-header="false" obligation="informative"><title>Conformance class: ProfileCompliantAddressComponent</title><table id="_0c289242-b42f-4b81-a83a-639429b575f3">
   <name>ProfileCompliantAddressComponent test 1: Associations</name>
   <tbody>
     <tr>
@@ -586,7 +586,7 @@ Unresolved directive in iso-19160-6.adoc - include::sources/sections/16-form-tem
     </tr>
   </tbody>
 </table>
-<table id="_dfc18379-a795-4b4e-98f2-22bf45d0f0cf">
+<table id="_2cf5342b-9257-460b-93f4-5a13fa62b089">
   <name>ProfileCompliantAddressComponent test 2: Attributes</name>
   <tbody>
     <tr>
@@ -609,7 +609,7 @@ Unresolved directive in iso-19160-6.adoc - include::sources/sections/16-form-tem
     </tr>
   </tbody>
 </table></clause>
-<clause id="test-ix-address-class-profile" inline-header="false" obligation="informative"><title>Conformance class: InterchangeAddressClassProfile</title><table id="_ad6977b5-b811-4769-b4f5-2621f3ba8493">
+<clause id="test-ix-address-class-profile" inline-header="false" obligation="informative"><title>Conformance class: InterchangeAddressClassProfile</title><table id="_f8a4d98c-8001-47ba-892d-4520b393ea6d">
   <name>InterchangeAddressClassProfile test 1: Associations</name>
   <tbody>
     <tr>
@@ -632,7 +632,7 @@ Unresolved directive in iso-19160-6.adoc - include::sources/sections/16-form-tem
     </tr>
   </tbody>
 </table>
-<table id="_15302174-5834-4dd9-a205-6ed6ca41baa7">
+<table id="_c093394a-5e50-488e-aaf2-06c8229b0b71">
   <name>InterchangeAddressClassProfile test 2: Attributes</name>
   <tbody>
     <tr>
@@ -657,7 +657,7 @@ Unresolved directive in iso-19160-6.adoc - include::sources/sections/16-form-tem
 </table></clause>
 <clause id="test-form-template" inline-header="false" obligation="informative">
   <title>Conformance class: FormTemplate</title>
-  <table id="_251e4b62-2565-4f21-8377-1d7be2698bd0">
+  <table id="_0d7709e9-bd0c-451b-bb52-75ed3341a9d3">
   <name>FormTemplate test 1: Attributes</name>
   <tbody>
     <tr>
@@ -683,7 +683,7 @@ Unresolved directive in iso-19160-6.adoc - include::sources/sections/16-form-tem
 </clause>
 <clause id="test-display-template" inline-header="false" obligation="informative">
   <title>Conformance class: DisplayTemplate</title>
-  <table id="_297a40f8-3482-4640-a3cc-4b6f7626b9e9">
+  <table id="_f7c9051a-90c8-4082-9a61-8e82ab82ef8b">
   <name>DisplayTemplate test 1: Attributes</name>
   <tbody>
     <tr>
@@ -706,26 +706,26 @@ Unresolved directive in iso-19160-6.adoc - include::sources/sections/16-form-tem
     </tr>
   </tbody>
 </table>
-</clause></annex><annex id="AnnexB" inline-header="false" obligation="informative"><title>Usage</title><clause id="_accuracy_and_verification" inline-header="false" obligation="informative"><title>Accuracy and Verification</title><p id="_f0851afb-0faf-4415-a67b-cb0b09c15ce2">An authority, such as the local post office, could “verify” a
+</clause></annex><annex id="AnnexB" inline-header="false" obligation="informative"><title>Usage</title><clause id="_accuracy_and_verification" inline-header="false" obligation="informative"><title>Accuracy and Verification</title><p id="_9f33dcca-1329-4a92-a6f1-10e1f8f4e753">An authority, such as the local post office, could “verify” a
 structured address that it is confirmed that this address instance is a
 “deliverable address” through an AddressFeature.</p>
-<review reviewer="Ronald Tse" id="_d857cabc-40a7-49f6-ae46-a6e3b57de545" date="2019-09-23T00:00:00Z">
-  <p id="_7d72f3ce-1528-4eb5-af22-b3383eaf4cef">Link to the OGC geocoding API SWG?</p>
+<review reviewer="Ronald Tse" id="_b9e10e2b-167d-45df-9964-1241d238932b" date="2019-09-25T00:00:00Z">
+  <p id="_167436e2-ee6e-4120-b31e-1f4d6c4190a2">Link to the OGC geocoding API SWG?</p>
 </review>
-<p id="_a2ac7641-91aa-491a-ad93-219feca1e45c">The owner of the address, such as the tenant of an office, could
+<p id="_c5f45c36-73bc-4cc8-a2ca-91d5f8ebba89">The owner of the address, such as the tenant of an office, could
 provide its signed, structured address on an electronic business card.
 This allows the recipient of the business card to know whether the
 senders address is authentic. If this address is verified to be a
 “deliverable address”, the recipient will know that items sent to this
 address will very likely be deliverable.</p>
-<p id="_19bff0e9-a4b6-4939-b876-66c7df99d7ed">Extra steps need to be taken here to allow this.</p></clause>
-<clause id="_address_as_identity" inline-header="false" obligation="informative"><title>Address As Identity</title><p id="_ae9213ed-8b32-48c8-9dd7-f9a1521205a9">Addresses do not only specify a location, in some cases they are part
+<p id="_009eab3f-fed1-44bf-af1c-6271c9631725">Extra steps need to be taken here to allow this.</p></clause>
+<clause id="_address_as_identity" inline-header="false" obligation="informative"><title>Address As Identity</title><p id="_608cf47b-a9b8-41b3-bed2-3fa667f57b79">Addresses do not only specify a location, in some cases they are part
 of the identity. For example, in business cards, an address can mean
 more than just an address, such as with vanity value.</p>
-<p id="_9013a819-ff47-4da8-931e-c59ffa5d73cb">This document shall support this functionality for it to be useful in
+<p id="_ccca2db2-c929-4aa4-83d3-9dfb39ccc285">This document shall support this functionality for it to be useful in
 contact exchange.</p>
-<p id="_8b2c31e9-bd6f-4027-8893-21c46cdd2ebb">This address represents a complete textual address instance.</p>
-<sourcecode lang="en" id="_df0c8648-715f-4017-9a5e-c423a71c5ed0">Suites 1107-1111,
+<p id="_950dba50-c795-4558-8c21-3398459e07c6">This address represents a complete textual address instance.</p>
+<sourcecode lang="en" id="_c42d718d-fd48-4d18-a970-b2f0011e077d">Suites 1107-1111,
 Floor 11,
 Central Building,
 1-3 Pedder Street,
@@ -734,37 +734,37 @@ Central &amp; Western District,
 Hong Kong Island,
 Hong Kong</sourcecode>
 
-<p id="_731be8d7-bc5b-4a96-9902-4898b3f38193">And this address represents the identical address as above,
+<p id="_c401122c-facd-4f9c-a7fe-0db9ed591a18">And this address represents the identical address as above,
 with a reduction of information that is already implied,
 which that does not reduce its correctness. This can be
 achieved by supplying a <tt>displayTemplate</tt> in the
 interchange address instance model.</p>
-<sourcecode lang="en" id="_9ead115e-741d-4fea-bb73-18708f24ef38">Suite 1109,
+<sourcecode lang="en" id="_1606795c-9a5c-4fec-b61d-da17425b8586">Suite 1109,
 1 Pedder Street,
 Central,
 Hong Kong</sourcecode>
 </clause>
-<clause id="_address_as_destination" inline-header="false" obligation="informative"><title>Address As Destination</title><p id="_301cbefe-5d50-46b3-98bb-743f703d554d">In certain cases, an address is expected to be reachable either by
+<clause id="_address_as_destination" inline-header="false" obligation="informative"><title>Address As Destination</title><p id="_60dd526e-1179-4fbc-a10f-77e0c3d3617b">In certain cases, an address is expected to be reachable either by
 person and/or post.</p>
-<p id="_348912e2-b846-48ad-9257-e9d7db21a1c3">An address instance should support being used in conjunction with
+<p id="_e947a483-ef1c-4d56-a5bc-299c915ddf26">An address instance should support being used in conjunction with
 routing information, acting as a waypoint, and/or supporting a
 source-defined route.</p>
-<p id="_7009e94d-7a85-411c-ba51-b8ddbefe14a0">For example, written instructions on how to deliver to a place that is
+<p id="_e9e12452-96e7-4d38-bb87-e3f1d08fe4cc">For example, written instructions on how to deliver to a place that is
 unambiguous but terribly difficult to locate.</p>
-<note id="_94301e81-ff0e-4e3b-bb7c-d91e56e50e4b">
-  <p id="_4e9999f0-d55c-4726-b130-450b75702030">E.g., some buildings have split floors — rooms may have the same floor
+<note id="_65dd19cc-5581-42fb-817a-08653854b14b">
+  <p id="_7c66e432-b5fd-4715-8f38-537bc971f10e">E.g., some buildings have split floors — rooms may have the same floor
 identifier, but is actually inaccessible from the same floor.</p>
-</note></clause></annex><annex id="AnnexC" inline-header="false" obligation="informative"><title>Examples of objects specified in this document</title><p id="_400940c5-09a9-4b25-8e74-246b06cf265d">Models specified in this document can be represented in various
+</note></clause></annex><annex id="AnnexC" inline-header="false" obligation="informative"><title>Examples of objects specified in this document</title><p id="_4e755aef-8707-4f89-91f2-b984e59164c1">Models specified in this document can be represented in various
 object structures, including in XML <eref type="inline" bibitemid="ISO19139" citeas="ISO/TS 19139:2007"/> and in JSON.</p>
-<review reviewer="Stephane Garcia" id="_53130831-f874-4cea-b240-db4d94b9d672" date="2019-09-23T00:00:00Z">
-  <p id="_484ed87d-ece0-4d67-aa4f-16724ee44279">Does this standard recommend JSON implementation? If not, shouldn’t
+<review reviewer="Stephane Garcia" id="_46ce99fe-15a7-4b40-956e-822bcbd1c1ae" date="2019-09-25T00:00:00Z">
+  <p id="_0abcad00-ead8-45ae-812b-0efcb6be56f3">Does this standard recommend JSON implementation? If not, shouldn’t
 there also be an example in XML as it is the common implementation
 language in 19139?</p>
 </review>
-<review reviewer="Ronald Tse" id="_9b8da3f4-a43b-491f-b758-cd6cdfd15fb4" date="2019-09-23T00:00:00Z">
-  <p id="_8f920522-e73b-40d1-82ea-a7e2a18d6263">Yes, we shall provide XML before Committee Draft stage</p>
+<review reviewer="Ronald Tse" id="_490e7be5-688d-4e8c-a238-065155726600" date="2019-09-25T00:00:00Z">
+  <p id="_d2656517-eb06-4620-a7d1-be7abfe9135d">Yes, we shall provide XML before Committee Draft stage</p>
 </review>
-<clause id="_ixaddressprofile" inline-header="false" obligation="informative"><title>IxAddressProfile</title><sourcecode lang="json" id="_d4ac9961-eed4-4843-8cac-0adfc8fc5e3b">{
+<clause id="_ixaddressprofile" inline-header="false" obligation="informative"><title>IxAddressProfile</title><sourcecode lang="json" id="_92cbd2a4-7573-4be4-bc5c-87dcd3bb4c61">{
 
   "id": "http://www.iso.org/tc211/tc211-sample.adp",
   "type": "iso-19160-address-profile",
@@ -790,7 +790,7 @@ language in 19139?</p>
   "addressClasses": { ... }
 }</sourcecode>
 </clause>
-<clause id="_ixaddressclass" inline-header="false" obligation="informative"><title>IxAddressClass</title><sourcecode lang="json" id="_f9621216-bff5-407e-b0be-61bf43391108">"addressClasses": {
+<clause id="_ixaddressclass" inline-header="false" obligation="informative"><title>IxAddressClass</title><sourcecode lang="json" id="_6f832b9f-2beb-40f6-b661-433d8166f380">"addressClasses": {
   "streetAddress": {
     "description": "Street Address",
     "availableFields": [ (addressComponent) 1..* ... ]
@@ -799,28 +799,28 @@ language in 19139?</p>
   }
 }</sourcecode>
 </clause>
-<clause id="_validity" inline-header="false" obligation="informative"><title>Validity</title><sourcecode lang="json" id="_ec35579a-97f1-40b6-b330-ccbf6f0915e7">"validity": {
+<clause id="_validity" inline-header="false" obligation="informative"><title>Validity</title><sourcecode lang="json" id="_85efeaa1-479d-4714-9880-16353350ed2f">"validity": {
   "validFrom": "20171129Z000000",
   "validTo": "20191129Z000000"
 }</sourcecode>
 </clause>
-<clause id="_publisherinformation" inline-header="false" obligation="informative"><title>PublisherInformation</title><sourcecode lang="json" id="_58553a7f-ffff-4b47-8f4c-f68cdc50e434">"publisher": {
+<clause id="_publisherinformation" inline-header="false" obligation="informative"><title>PublisherInformation</title><sourcecode lang="json" id="_9656c489-42a8-43a8-9629-5501c75468b1">"publisher": {
   "publisherName": "UK Post Office",
   "publisherUri": "https://www.postoffice.co.uk"
 }</sourcecode>
 </clause>
-<clause id="_localizationinformation" inline-header="false" obligation="informative"><title>LocalizationInformation</title><sourcecode lang="json" id="_5d297ad2-c8c9-4553-8027-deffe227be35">"publisher": {
+<clause id="_localizationinformation" inline-header="false" obligation="informative"><title>LocalizationInformation</title><sourcecode lang="json" id="_644a163f-4ec6-4899-a4ee-191e7d3dea78">"publisher": {
   "language": "en",
   "script": "Latn"
 }</sourcecode>
 </clause>
-<clause id="_signature" inline-header="false" obligation="informative"><title>Signature</title><sourcecode lang="json" id="_8c2a9056-a171-4e10-b325-144226172dc6">"signature": {
+<clause id="_signature" inline-header="false" obligation="informative"><title>Signature</title><sourcecode lang="json" id="_3ee79a6c-c2f4-475b-89eb-a3769bef488d">"signature": {
   "algorithm": "1.2.3.4.5.6.7.8.9",
   "publicKey": "https://www.postoffice.co.uk/profile-signature.key",
   "signature": "BOLVMNoGNM1TLglnlxgm0a9t"
 }</sourcecode>
 </clause>
-<clause id="_ixaddressclass_2" inline-header="false" obligation="informative"><title>IxAddressClass</title><sourcecode lang="json" id="_d5b83252-233d-4fdf-b954-fa414c5eaf94">"addressClassDescription": {
+<clause id="_ixaddressclass_2" inline-header="false" obligation="informative"><title>IxAddressClass</title><sourcecode lang="json" id="_cd6f5b8b-d6b8-4833-86fa-49698311a03b">"addressClassDescription": {
   "id": "streetAddress",
   "description": "A typical street address",
   "addressComponents": [ ... ],
@@ -828,58 +828,58 @@ language in 19139?</p>
   "formTemplate": { ... },
 }</sourcecode>
 </clause>
-<clause id="_user_defined_data_types" inline-header="false" obligation="informative"><title>User Defined Data Types</title><sourcecode lang="json" id="_44de4202-6fd0-4807-b6d6-4b101da82eb1">"dataTypes": [{
+<clause id="_user_defined_data_types" inline-header="false" obligation="informative"><title>User Defined Data Types</title><sourcecode lang="json" id="_e5545cb0-9056-4700-b889-fba11eb609b7">"dataTypes": [{
   "name": "addressNumberValue",
   "coreType": "Integer",
   "constraints": [ ... ],
 }]</sourcecode>
 </clause>
-<clause id="_data_type_constraints" inline-header="false" obligation="informative"><title>Data Type Constraints</title><sourcecode lang="json" id="_8ba1369b-b5fe-4db0-bc39-ce7951b9b698">"constraints": [{
+<clause id="_data_type_constraints" inline-header="false" obligation="informative"><title>Data Type Constraints</title><sourcecode lang="json" id="_916dd2b1-e11e-4917-8ac8-5ee8e8ca8ba7">"constraints": [{
   "maxValue": 10000,
   "minValue": 1
 }]</sourcecode>
 </clause>
-<clause id="_ixaddresscomponent" inline-header="false" obligation="informative"><title>IxAddressComponent</title><sourcecode lang="json" id="_aefaf776-0d88-4c5c-8671-c0d0d84655c2">"addressComponentDescription": {
+<clause id="_ixaddresscomponent" inline-header="false" obligation="informative"><title>IxAddressComponent</title><sourcecode lang="json" id="_3dbd3450-2440-449c-a9c5-cdec2f79c4e3">"addressComponentDescription": {
   "key": "addressNumber",
   "description": "Street number",
   "datatype": "addressNumberValue"
 }</sourcecode>
 </clause>
-<clause id="_ixaddressinstance" inline-header="false" obligation="informative"><title>IxAddressInstance</title><sourcecode lang="json" id="_e5b39d66-fe5d-4015-bac4-5c87760bd553">"addressInstance": {
+<clause id="_ixaddressinstance" inline-header="false" obligation="informative"><title>IxAddressInstance</title><sourcecode lang="json" id="_526c6fa5-1361-426f-bfd0-243497fedee5">"addressInstance": {
   "profileId": "https://standards.iso.org/19160/-6/profiles/uk.adp",
   "components": [ ... ],
   "signature": { ... },
   "cap": [ ... ]
 }</sourcecode>
 </clause>
-<clause id="_ixaddressinstancecomponent" inline-header="false" obligation="informative"><title>IxAddressInstanceComponent</title><sourcecode lang="json" id="_342f19e4-94f7-4f76-96bf-281ff51be170">"addressComponentInstance": {
+<clause id="_ixaddressinstancecomponent" inline-header="false" obligation="informative"><title>IxAddressInstanceComponent</title><sourcecode lang="json" id="_6fb81a03-f690-4916-8820-b16b49be7ab3">"addressComponentInstance": {
   "type": "addressNumber",
   "values": [ 1001 ]
 }</sourcecode>
 </clause>
-<clause id="_addressfeature" inline-header="false" obligation="informative"><title>AddressFeature</title><sourcecode lang="json" id="_f2210f1f-4751-4aeb-9a35-44d2e0fe6406">"addressFeature": {
+<clause id="_addressfeature" inline-header="false" obligation="informative"><title>AddressFeature</title><sourcecode lang="json" id="_0278dd29-ed7e-41d3-9f25-1552bb0cfeda">"addressFeature": {
   "feature": "https://standards.iso.org/19160/-6/features/specified",
   "signature": [ ... ]
 }</sourcecode>
 </clause>
-<clause id="_displaytemplate_2" inline-header="false" obligation="informative"><title>DisplayTemplate</title><review reviewer="Ronald Tse" id="_12f9bd92-43af-49c9-8877-38d5df877e83" date="2019-09-23T00:00:00Z">
-  <p id="_cf861399-a7f1-4cd1-806d-b9994286df05">Fill in.</p>
+<clause id="_displaytemplate_2" inline-header="false" obligation="informative"><title>DisplayTemplate</title><review reviewer="Ronald Tse" id="_5ca59023-19cc-498a-8a7f-d7ae867b83eb" date="2019-09-25T00:00:00Z">
+  <p id="_44e60164-1899-4817-b34f-ca0ca083292b">Fill in.</p>
 </review>
-<sourcecode lang="json" id="_28912d4b-e04b-4761-a131-e2734944bd27">DisplayTemplate: {
+<sourcecode lang="json" id="_952badd9-ef86-429e-b536-3f5720c23b5b">DisplayTemplate: {
 ...
 }</sourcecode>
 </clause>
-<clause id="_form_template_formtemplate" inline-header="false" obligation="informative"><title>Form template (FormTemplate)</title><review reviewer="Ronald Tse" id="_fcf5cb46-5fa6-4253-bd42-07d45b6d85d7" date="2019-09-23T00:00:00Z">
-  <p id="_3cd36a3b-07fe-4f96-927f-cb4634af8c9c">Fill in.</p>
+<clause id="_form_template_formtemplate" inline-header="false" obligation="informative"><title>Form template (FormTemplate)</title><review reviewer="Ronald Tse" id="_d3f70017-b0bd-403f-849e-8e079e135760" date="2019-09-25T00:00:00Z">
+  <p id="_0c65120f-5cc0-4f2a-ae3d-8dd27ebdb3c0">Fill in.</p>
 </review>
-<sourcecode lang="json" id="_f1a94e40-fcea-4190-8327-6699136c876e">FormTemplate: {
+<sourcecode lang="json" id="_73c05837-5605-4363-b547-03c26b7e4d23">FormTemplate: {
 ...
 }</sourcecode>
-</clause></annex><annex id="AnnexD" inline-header="false" obligation="informative"><title>Examples</title><review reviewer="Ronald Tse" id="_51ce41de-9949-4008-8f22-0257d0dace25" date="2019-09-23T00:00:00Z">
-  <p id="_f6cae3d7-2731-4fa7-abb6-db4cc39f7bf2">The following examples are in JSON but will
+</clause></annex><annex id="AnnexD" inline-header="false" obligation="informative"><title>Examples</title><review reviewer="Ronald Tse" id="_e307819e-46c7-41a5-8acd-c8c23671d5a1" date="2019-09-25T00:00:00Z">
+  <p id="_a7a1780d-e83c-424d-9a5d-bb017a5e2bc0">The following examples are in JSON but will
 provide XML before Committee Draft stage</p>
 </review>
-<clause id="_example_of_address_profiles_defined_in_iso_19160_1" inline-header="false" obligation="informative"><title>Example of address profiles defined in ISO 19160-1</title><clause id="_iso_19160_1_c2" inline-header="false" obligation="informative"><title>ISO 19160-1 C2</title><sourcecode lang="json" id="_48ceeb32-5da1-4f2e-a0e1-6b8068304791">profile = {
+<clause id="_example_of_address_profiles_defined_in_iso_19160_1" inline-header="false" obligation="informative"><title>Example of address profiles defined in ISO 19160-1</title><clause id="_iso_19160_1_c2" inline-header="false" obligation="informative"><title>ISO 19160-1 C2</title><sourcecode lang="json" id="_8708f015-24f3-485a-bfcc-39dffee89870">profile = {
 
   "id": "http://www.iso.org/tc211/tc211-minimal.adp",
   "type": "iso-19160-address-profile",
@@ -920,8 +920,8 @@ provide XML before Committee Draft stage</p>
   }
 }</sourcecode>
 
-<p id="_905c87ce-a74a-458b-a573-a156a024d356">Address Instance</p>
-<sourcecode lang="json" id="_5db45651-73dd-4864-b4c9-a4ec16c65b92">addressInstance1 = {
+<p id="_b7791eb0-d05b-41f5-85cd-0a815e8948b9">Address Instance</p>
+<sourcecode lang="json" id="_63e65879-491d-4c57-9eb4-c4578d63f4d1">addressInstance1 = {
   "profile": "http://www.iso.org/tc211/tc211-minimal.adp",
   "components": [
     {
@@ -961,7 +961,7 @@ addressInstance2 = {
   ]
 }</sourcecode>
 </clause>
-<clause id="_iso_19160_1_c3" inline-header="false" obligation="informative"><title>ISO 19160-1 C3</title><sourcecode lang="json" id="_eaaff228-d316-40c5-8322-b180bc79730e">profile = {
+<clause id="_iso_19160_1_c3" inline-header="false" obligation="informative"><title>ISO 19160-1 C3</title><sourcecode lang="json" id="_9a11b0a0-8679-46ba-979d-6bee03b823a2">profile = {
 
   "id": "http://www.iso.org/tc211/tc211-sample.adp",
   "type": "iso-19160-address-profile",
@@ -1095,8 +1095,8 @@ addressInstance2 = {
   }
 }</sourcecode>
 
-<p id="_3345fbb2-4e4f-4a09-a948-c237004baa2a">Address Instance</p>
-<sourcecode lang="json" id="_54544e7f-3a94-4391-a99e-80f7cbd8ab2f">addressInstance1 = {
+<p id="_3562cd3a-4a71-4353-aaf6-0bf77f7849c6">Address Instance</p>
+<sourcecode lang="json" id="_6d9f2fe9-521c-4b91-b0a1-b483b347cf1e">addressInstance1 = {
   "profile": "http://www.iso.org/tc211/tc211-sample.adp#streetAddress",
   "components": [
     {
@@ -1148,7 +1148,7 @@ boxInstance1 = {
 }</sourcecode>
 </clause></clause></annex><bibliography><references id="_normative_references" obligation="informative"><title>Normative References</title><p>The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
 <bibitem id="ISO19160-1" type="standard">
-  <fetched>2019-09-23</fetched>
+  <fetched>2019-09-25</fetched>
   <title type="title-main" format="text/plain" language="en" script="Latn">Addressing — Part 1: Conceptual model</title>
   <title type="main" format="text/plain" language="en" script="Latn">Addressing — Part 1: Conceptual model</title>
   <title type="title-main" format="text/plain" language="fr" script="Latn">Adressage — Partie 1: Modèle conceptuel</title>
@@ -1184,7 +1184,7 @@ boxInstance1 = {
   </copyright>
   <relation type="instance">
     <bibitem type="standard">
-      <fetched>2019-09-23</fetched>
+      <fetched>2019-09-25</fetched>
       <title type="title-main" format="text/plain" language="en" script="Latn">Addressing — Part 1: Conceptual model</title>
       <title type="main" format="text/plain" language="en" script="Latn">Addressing — Part 1: Conceptual model</title>
       <title type="title-main" format="text/plain" language="fr" script="Latn">Adressage — Partie 1: Modèle conceptuel</title>
@@ -1228,7 +1228,7 @@ boxInstance1 = {
 </bibitem>
 
 <bibitem id="ISO19103" type="standard">
-  <fetched>2019-09-23</fetched>
+  <fetched>2019-09-25</fetched>
   <title type="title-main" format="text/plain" language="en" script="Latn">Geographic information — Conceptual schema language</title>
   <title type="main" format="text/plain" language="en" script="Latn">Geographic information — Conceptual schema language</title>
   <uri type="src">https://www.iso.org/standard/56734.html</uri>
@@ -1267,7 +1267,7 @@ boxInstance1 = {
   </relation>
   <relation type="instance">
     <bibitem type="standard">
-      <fetched>2019-09-23</fetched>
+      <fetched>2019-09-25</fetched>
       <title type="title-main" format="text/plain" language="en" script="Latn">Geographic information — Conceptual schema language</title>
       <title type="main" format="text/plain" language="en" script="Latn">Geographic information — Conceptual schema language</title>
       <uri type="src">https://www.iso.org/standard/56734.html</uri>
@@ -1313,7 +1313,7 @@ boxInstance1 = {
 </bibitem>
 
 <bibitem id="ISO19106" type="standard">
-  <fetched>2019-09-23</fetched>
+  <fetched>2019-09-25</fetched>
   <title type="title-main" format="text/plain" language="en" script="Latn">Geographic information — Profiles</title>
   <title type="main" format="text/plain" language="en" script="Latn">Geographic information — Profiles</title>
   <uri type="src">https://www.iso.org/standard/26011.html</uri>
@@ -1347,7 +1347,7 @@ boxInstance1 = {
   </copyright>
   <relation type="instance">
     <bibitem type="standard">
-      <fetched>2019-09-23</fetched>
+      <fetched>2019-09-25</fetched>
       <title type="title-main" format="text/plain" language="en" script="Latn">Geographic information — Profiles</title>
       <title type="main" format="text/plain" language="en" script="Latn">Geographic information — Profiles</title>
       <uri type="src">https://www.iso.org/standard/26011.html</uri>
@@ -1388,7 +1388,7 @@ boxInstance1 = {
 </bibitem>
 
 <bibitem id="ISO19115-1" type="standard">
-  <fetched>2019-09-23</fetched>
+  <fetched>2019-09-25</fetched>
   <title type="title-main" format="text/plain" language="en" script="Latn">Geographic information — Metadata — Part 1: Fundamentals</title>
   <title type="main" format="text/plain" language="en" script="Latn">Geographic information — Metadata — Part 1: Fundamentals</title>
   <title type="title-main" format="text/plain" language="fr" script="Latn">Information géographique — Métadonnées — Partie 1: Principes de base</title>
@@ -1439,7 +1439,7 @@ boxInstance1 = {
   </relation>
   <relation type="instance">
     <bibitem type="standard">
-      <fetched>2019-09-23</fetched>
+      <fetched>2019-09-25</fetched>
       <title type="title-main" format="text/plain" language="en" script="Latn">Geographic information — Metadata — Part 1: Fundamentals</title>
       <title type="main" format="text/plain" language="en" script="Latn">Geographic information — Metadata — Part 1: Fundamentals</title>
       <title type="title-main" format="text/plain" language="fr" script="Latn">Information géographique — Métadonnées — Partie 1: Principes de base</title>
@@ -1498,7 +1498,7 @@ boxInstance1 = {
 </bibitem>
 
 <bibitem id="ISO19157" type="standard">
-  <fetched>2019-09-23</fetched>
+  <fetched>2019-09-25</fetched>
   <title type="title-main" format="text/plain" language="en" script="Latn">Geographic information  — Data quality</title>
   <title type="main" format="text/plain" language="en" script="Latn">Geographic information  — Data quality</title>
   <title type="title-main" format="text/plain" language="fr" script="Latn">Information géographique — Qualité des données</title>
@@ -1559,7 +1559,7 @@ boxInstance1 = {
   </relation>
   <relation type="instance">
     <bibitem type="standard">
-      <fetched>2019-09-23</fetched>
+      <fetched>2019-09-25</fetched>
       <title type="title-main" format="text/plain" language="en" script="Latn">Geographic information  — Data quality</title>
       <title type="main" format="text/plain" language="en" script="Latn">Geographic information  — Data quality</title>
       <title type="title-main" format="text/plain" language="fr" script="Latn">Information géographique — Qualité des données</title>
@@ -1628,7 +1628,7 @@ boxInstance1 = {
 </bibitem>
 
 <bibitem id="ISO19135-1" type="standard">
-  <fetched>2019-09-23</fetched>
+  <fetched>2019-09-25</fetched>
   <title type="title-main" format="text/plain" language="en" script="Latn">Geographic information — Procedures for item registration — Part 1: Fundamentals</title>
   <title type="main" format="text/plain" language="en" script="Latn">Geographic information — Procedures for item registration — Part 1: Fundamentals</title>
   <title type="title-main" format="text/plain" language="fr" script="Latn">Information géographique — Procédures pour l’enregistrement d’éléments — Partie 1: Principes de base</title>
@@ -1674,7 +1674,7 @@ boxInstance1 = {
   </relation>
   <relation type="instance">
     <bibitem type="standard">
-      <fetched>2019-09-23</fetched>
+      <fetched>2019-09-25</fetched>
       <title type="title-main" format="text/plain" language="en" script="Latn">Geographic information — Procedures for item registration — Part 1: Fundamentals</title>
       <title type="main" format="text/plain" language="en" script="Latn">Geographic information — Procedures for item registration — Part 1: Fundamentals</title>
       <title type="title-main" format="text/plain" language="fr" script="Latn">Information géographique — Procédures pour l’enregistrement d’éléments — Partie 1: Principes de base</title>
@@ -1743,7 +1743,7 @@ boxInstance1 = {
     </organization>
   </contributor>
 </bibitem><bibitem id="ISOIEC10179" type="standard">
-  <fetched>2019-09-23</fetched>
+  <fetched>2019-09-25</fetched>
   <uri type="src">https://www.iso.org/standard/18196.html</uri>
   <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:18196:en</uri>
   <uri type="rss">https://www.iso.org/contents/data/standard/01/81/18196.detail.rss</uri>
@@ -1798,7 +1798,7 @@ boxInstance1 = {
   </relation>
   <relation type="instance">
     <bibitem type="standard">
-      <fetched>2019-09-23</fetched>
+      <fetched>2019-09-25</fetched>
       <uri type="src">https://www.iso.org/standard/18196.html</uri>
       <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:18196:en</uri>
       <uri type="rss">https://www.iso.org/contents/data/standard/01/81/18196.detail.rss</uri>
@@ -1857,7 +1857,7 @@ boxInstance1 = {
     </bibitem>
   </relation>
 <title><em>AUTOFILL</em></title></bibitem><bibitem id="ISO14888-3" type="standard">
-  <fetched>2019-09-23</fetched>
+  <fetched>2019-09-25</fetched>
   <title type="title-main" format="text/plain" language="en" script="Latn">IT Security techniques — Digital signatures with appendix — Part 3: Discrete logarithm based mechanisms</title>
   <title type="main" format="text/plain" language="en" script="Latn">IT Security techniques — Digital signatures with appendix — Part 3: Discrete logarithm based mechanisms</title>
   <uri type="src">https://www.iso.org/standard/76382.html</uri>
@@ -1909,7 +1909,7 @@ boxInstance1 = {
   </relation>
   <relation type="instance">
     <bibitem type="standard">
-      <fetched>2019-09-23</fetched>
+      <fetched>2019-09-25</fetched>
       <title type="title-main" format="text/plain" language="en" script="Latn">IT Security techniques — Digital signatures with appendix — Part 3: Discrete logarithm based mechanisms</title>
       <title type="main" format="text/plain" language="en" script="Latn">IT Security techniques — Digital signatures with appendix — Part 3: Discrete logarithm based mechanisms</title>
       <uri type="src">https://www.iso.org/standard/76382.html</uri>
@@ -1966,7 +1966,7 @@ boxInstance1 = {
     </bibitem>
   </relation>
 </bibitem><bibitem id="ISO15924" type="standard">
-  <fetched>2019-09-23</fetched>
+  <fetched>2019-09-25</fetched>
   <title type="title-main" format="text/plain" language="en" script="Latn">Information and documentation — Codes for the representation of names of scripts</title>
   <title type="main" format="text/plain" language="en" script="Latn">Information and documentation — Codes for the representation of names of scripts</title>
   <title type="title-main" format="text/plain" language="fr" script="Latn">Information et documentation — Codes pour la représentation des noms d’écritures</title>
@@ -2002,7 +2002,7 @@ boxInstance1 = {
   </copyright>
   <relation type="instance">
     <bibitem type="standard">
-      <fetched>2019-09-23</fetched>
+      <fetched>2019-09-25</fetched>
       <title type="title-main" format="text/plain" language="en" script="Latn">Information and documentation — Codes for the representation of names of scripts</title>
       <title type="main" format="text/plain" language="en" script="Latn">Information and documentation — Codes for the representation of names of scripts</title>
       <title type="title-main" format="text/plain" language="fr" script="Latn">Information et documentation — Codes pour la représentation des noms d’écritures</title>
@@ -2044,7 +2044,7 @@ boxInstance1 = {
     </bibitem>
   </relation>
 </bibitem><bibitem id="ISO19139" type="standard">
-  <fetched>2019-09-23</fetched>
+  <fetched>2019-09-25</fetched>
   <title type="title-main" format="text/plain" language="en" script="Latn">Geographic information — Metadata — XML schema implementation</title>
   <title type="main" format="text/plain" language="en" script="Latn">Geographic information — Metadata — XML schema implementation</title>
   <title type="title-main" format="text/plain" language="fr" script="Latn">Information géographique — Métadonnées — Implémentation de schémas XML</title>
@@ -2095,7 +2095,7 @@ boxInstance1 = {
     </bibitem>
   </relation>
 </bibitem><bibitem id="ISO19160-4" type="standard">
-  <fetched>2019-09-23</fetched>
+  <fetched>2019-09-25</fetched>
   <title type="title-main" format="text/plain" language="en" script="Latn">Addressing — Part 4: International postal address components and template language</title>
   <title type="main" format="text/plain" language="en" script="Latn">Addressing — Part 4: International postal address components and template language</title>
   <title type="title-main" format="text/plain" language="fr" script="Latn">Adressage — Partie 4: Composants et langages des modèles d’adresses postales internationales</title>
@@ -2131,7 +2131,7 @@ boxInstance1 = {
   </copyright>
   <relation type="instance">
     <bibitem type="standard">
-      <fetched>2019-09-23</fetched>
+      <fetched>2019-09-25</fetched>
       <title type="title-main" format="text/plain" language="en" script="Latn">Addressing — Part 4: International postal address components and template language</title>
       <title type="main" format="text/plain" language="en" script="Latn">Addressing — Part 4: International postal address components and template language</title>
       <title type="title-main" format="text/plain" language="fr" script="Latn">Adressage — Partie 4: Composants et langages des modèles d’adresses postales internationales</title>
@@ -2173,7 +2173,7 @@ boxInstance1 = {
     </bibitem>
   </relation>
 </bibitem><bibitem id="ISO31320" type="standard">
-  <fetched>2019-09-23</fetched>
+  <fetched>2019-09-25</fetched>
   <title type="title-main" format="text/plain" language="en" script="Latn">Information technology — Modeling Languages — Part 2: Syntax and Semantics for IDEF1X97 (IDEFobject)</title>
   <title type="main" format="text/plain" language="en" script="Latn">Information technology — Modeling Languages — Part 2: Syntax and Semantics for IDEF1X97 (IDEFobject)</title>
   <uri type="src">https://www.iso.org/standard/60614.html</uri>
@@ -2223,7 +2223,7 @@ boxInstance1 = {
   </copyright>
   <relation type="instance">
     <bibitem type="standard">
-      <fetched>2019-09-23</fetched>
+      <fetched>2019-09-25</fetched>
       <title type="title-main" format="text/plain" language="en" script="Latn">Information technology — Modeling Languages — Part 2: Syntax and Semantics for IDEF1X97 (IDEFobject)</title>
       <title type="main" format="text/plain" language="en" script="Latn">Information technology — Modeling Languages — Part 2: Syntax and Semantics for IDEF1X97 (IDEFobject)</title>
       <uri type="src">https://www.iso.org/standard/60614.html</uri>
@@ -2278,7 +2278,7 @@ boxInstance1 = {
     </bibitem>
   </relation>
 </bibitem><bibitem id="ISO3166-1" type="standard">
-  <fetched>2019-09-23</fetched>
+  <fetched>2019-09-25</fetched>
   <title type="title-main" format="text/plain" language="en" script="Latn">Codes for the representation of names of countries and their subdivisions — Part 1: Country codes</title>
   <title type="main" format="text/plain" language="en" script="Latn">Codes for the representation of names of countries and their subdivisions — Part 1: Country codes</title>
   <title type="title-main" format="text/plain" language="fr" script="Latn">Codes pour la représentation des noms de pays et de leurs subdivisions — Partie 1: Codes de pays</title>
@@ -2329,7 +2329,7 @@ boxInstance1 = {
   </relation>
   <relation type="instance">
     <bibitem type="standard">
-      <fetched>2019-09-23</fetched>
+      <fetched>2019-09-25</fetched>
       <title type="title-main" format="text/plain" language="en" script="Latn">Codes for the representation of names of countries and their subdivisions — Part 1: Country codes</title>
       <title type="main" format="text/plain" language="en" script="Latn">Codes for the representation of names of countries and their subdivisions — Part 1: Country codes</title>
       <title type="title-main" format="text/plain" language="fr" script="Latn">Codes pour la représentation des noms de pays et de leurs subdivisions — Partie 1: Codes de pays</title>
@@ -2386,7 +2386,7 @@ boxInstance1 = {
     </bibitem>
   </relation>
 </bibitem><bibitem id="ISO639-3" type="standard">
-  <fetched>2019-09-23</fetched>
+  <fetched>2019-09-25</fetched>
   <title type="title-main" format="text/plain" language="en" script="Latn">Codes for the representation of names of languages — Part 3: Alpha-3 code for comprehensive coverage of languages</title>
   <title type="main" format="text/plain" language="en" script="Latn">Codes for the representation of names of languages — Part 3: Alpha-3 code for comprehensive coverage of languages</title>
   <title type="title-main" format="text/plain" language="fr" script="Latn">Codes pour la représentation des noms de langues — Partie 3: Code alpha-3 pour un traitement exhaustif des langues</title>
@@ -2422,7 +2422,7 @@ boxInstance1 = {
   </copyright>
   <relation type="instance">
     <bibitem type="standard">
-      <fetched>2019-09-23</fetched>
+      <fetched>2019-09-25</fetched>
       <title type="title-main" format="text/plain" language="en" script="Latn">Codes for the representation of names of languages — Part 3: Alpha-3 code for comprehensive coverage of languages</title>
       <title type="main" format="text/plain" language="en" script="Latn">Codes for the representation of names of languages — Part 3: Alpha-3 code for comprehensive coverage of languages</title>
       <title type="title-main" format="text/plain" language="fr" script="Latn">Codes pour la représentation des noms de langues — Partie 3: Code alpha-3 pour un traitement exhaustif des langues</title>
@@ -2464,7 +2464,7 @@ boxInstance1 = {
     </bibitem>
   </relation>
 </bibitem><bibitem id="ISO9945" type="standard">
-  <fetched>2019-09-23</fetched>
+  <fetched>2019-09-25</fetched>
   <title type="title-main" format="text/plain" language="en" script="Latn">Information technology — Portable Operating System Interface (POSIX®) Base Specifications, Issue 7</title>
   <title type="main" format="text/plain" language="en" script="Latn">Information technology — Portable Operating System Interface (POSIX®) Base Specifications, Issue 7</title>
   <uri type="src">https://www.iso.org/standard/50516.html</uri>
@@ -2564,7 +2564,7 @@ boxInstance1 = {
   </relation>
   <relation type="instance">
     <bibitem type="standard">
-      <fetched>2019-09-23</fetched>
+      <fetched>2019-09-25</fetched>
       <title type="title-main" format="text/plain" language="en" script="Latn">Information technology — Portable Operating System Interface (POSIX®) Base Specifications, Issue 7</title>
       <title type="main" format="text/plain" language="en" script="Latn">Information technology — Portable Operating System Interface (POSIX®) Base Specifications, Issue 7</title>
       <uri type="src">https://www.iso.org/standard/50516.html</uri>
