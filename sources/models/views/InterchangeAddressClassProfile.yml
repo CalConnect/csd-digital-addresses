@@ -1,0 +1,52 @@
+name: InterchangeAddressClassProfile
+title: InterchangeAddressClassProfile overview
+caption: InterchangeAddressClassProfile model
+directive: ix-address-class-profile
+imports:
+  AddressClassProfile:
+    skipSection: true
+  InterchangeAddressClassProfile:
+  DisplayTemplate:
+  FormTemplate:
+  AttributeProfile/Signature:
+  AttributeProfile/AddressFeature:
+  AttributeProfile/Validity:
+  AttributeProfile:
+    skipSection: true
+groups:
+  - - AddressClassProfile
+    - InterchangeAddressClassProfile
+  - - DisplayTemplate
+    - FormTemplate
+    - AttributeProfileSignature
+    - AttributeProfileAddressFeature
+    - AttributeProfileValidity
+  - - AttributeProfile
+relations:
+  - source: InterchangeAddressClassProfile
+    target: AddressClassProfile
+    direction: '[hidden]right'
+
+  - source: FormTemplate
+    target: DisplayTemplate
+    direction: '[hidden]right'
+  - source: DisplayTemplate
+    target: AttributeProfileSignature
+    direction: '[hidden]right'
+  - source: AttributeProfileSignature
+    target: AttributeProfileAddressFeature
+    direction: '[hidden]right'
+  - source: AttributeProfileAddressFeature
+    target: AttributeProfileValidity
+    direction: '[hidden]right'
+
+  - source: InterchangeAddressClassProfile
+    target: AttributeProfileSignature
+    direction: '[hidden]down'
+  - source: AttributeProfileAddressFeature
+    target: AttributeProfile
+    direction: '[hidden]down'
+
+fidelity:
+  # hideMembers: true
+  hideOtherClasses: true

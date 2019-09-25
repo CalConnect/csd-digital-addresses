@@ -1,4 +1,3 @@
-name: AddressClassProfile
 modelType: class
 definition: |
   An `AddressClassProfile` represents a profile of a `ProfileCompliantAddress`,

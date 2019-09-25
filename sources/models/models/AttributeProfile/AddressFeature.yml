@@ -1,0 +1,14 @@
+modelType: class
+definition: |
+  AttributeProfileAddressFeature extends from AttributeProfile to represent the
+  feature attribute of the object it belongs to.
+constraints:
+  - name=feature
+  - minCardinality=0
+  - maxCardinality=Infinity
+  - valueType=AddressFeature
+relations:
+  - target: AttributeProfile
+    relationship:
+      target:
+        type: inheritance

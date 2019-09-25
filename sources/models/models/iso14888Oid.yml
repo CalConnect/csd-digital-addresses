@@ -1,0 +1,9 @@
+name: iso14888Oid
+modelType: class
+definition: The public key cryptographic algorithm used for digital signature as defined in <<ISO14888-3>>.
+relations:
+  - target: iso639Code
+    relationship:
+      target:
+        type: direct
+    direction: "[hidden]"

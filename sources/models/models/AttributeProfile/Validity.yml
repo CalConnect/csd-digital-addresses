@@ -1,0 +1,14 @@
+modelType: class
+definition: |
+  AttributeProfileValidity extends from AttributeProfile to represent the validity
+  attribute of the object it belongs to.
+constraints:
+  - name=validity
+  - minCardinality=0
+  - maxCardinality=1
+  - valueType=Validity
+relations:
+  - target: AttributeProfile
+    relationship:
+      target:
+        type: inheritance
