@@ -14,7 +14,7 @@ The roles and responsibilities of the register owner, register manager, submitti
 
 ==== General
 
-.Lifecycle of an interchange address profile
+.Lifecycle of an address profile
 image::AddressProfileLifeCycle.png[]
 
 ==== Creating interchange address profiles

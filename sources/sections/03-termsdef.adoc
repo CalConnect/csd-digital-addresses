@@ -77,32 +77,29 @@ definition of a _user defined data type_
 [[term-address-feature]]
 === address feature
 
-marking on an address instance to indicate what it is capable of
+marking on a profile-compliant address to indicate what it is capable of
 
 
 [[term-address-layout-template]]
 === address layout template
 
 specification of layout and positioning of
-address components for an interchange address
-instance of an address class
+address components for profile-compliant addresses
 
 === address display template
 
 address layout template (<<term-address-layout-template>>)
-for the display of interchange address instances of an
-address class
+for the display of profile-compliant addresses
 
 === address form template
 
 address layout template (<<term-address-layout-template>>)
-of an input form for the entry of address instances
-of an address class
+of an input form for the entry of profile-compliant addresses
 
 [[term-address-processor]]
 === address processor
 
-entity that processes interchange address instances
+entity that processes profile-compliant addresses
 
 
 [[term-address-profile-distributor]]
