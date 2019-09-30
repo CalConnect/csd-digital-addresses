@@ -2,7 +2,7 @@
 
 This work item belongs to TC VCARD.
 
-image:https://travis-ci.com/CalConnect/csd-digital-addresses.svg?branch=master["Build Status", link="https://travis-ci.com/calconnect/csd-digital-addresses"]
+image:https://github.com/CalConnect/csd-digital-addresses/workflows/publish/badge.svg["Build Status", link="https://github.com/CalConnect/csd-digital-addresses/actions?workflow=publish"]
 
 This document is available in its rendered forms here:
 
