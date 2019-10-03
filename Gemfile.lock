@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/metanorma/metanorma-iso
-  revision: b63b700544d16014fafdc0c8d8eda34c94b84958
+  revision: 9e0e19f8fbd1802c605769e76531b7bd377a8fa8
   specs:
     metanorma-iso (1.3.3)
       asciidoctor (~> 1.5.7)
@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-standoc
-  revision: 6a251259a4e78dd90f05a9ed9ef9c7d8463b6c67
+  revision: c11f0efd3b6944cc5d28d070487698e4d0f72eca
   branch: feature/datamodel
   specs:
     metanorma-standoc (1.3.3)
