@@ -104,7 +104,6 @@ of information.
 
 The ISO address profile register shall conform to the core register schema in <<ISO19135-1,clause=7>>. This clause sets out specific requirements as follows:
 
-NOTE: Reference to the <<ISO19135-1>> requirement is denoted by ɳ (i.e. [ɳ2] = Requirement 2).
 
 Requirement 26 [ɳ24]: The core register shall conform to the register schema as specified in UML in <<ISO19135-1,clause=7>>.
 
