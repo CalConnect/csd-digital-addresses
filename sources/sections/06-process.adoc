@@ -15,7 +15,10 @@ The roles and responsibilities of the register owner, register manager, submitti
 ==== General
 
 .Lifecycle of an address profile
-image::AddressProfileLifeCycle.png[]
+[plantuml]
+....
+include::../models/AddressProfileLifeCycle.wsd[]
+....
 
 ==== Creating address profiles and address class profiles
 
@@ -68,7 +71,11 @@ validity period.
 ==== General
 
 .Lifecycle of an interchange address
-image::AddressInstanceLifeCycle.png[]
+[plantuml]
+....
+include::../models/AddressInstanceLifeCycle.wsd[]
+....
+
 
 ==== Creating a profile-complaint address
 

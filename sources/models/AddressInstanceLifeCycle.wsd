@@ -1,0 +1,14 @@
+@startuml
+
+!include style.uml.inc
+
+'******* STATES RELATIONS *********************************************
+note top: Creation of an\n interchange\n address instance
+(*) --> "Input"
+--> "Display"
+"Input" --> "Interchange"
+"Interchange" --> "Discard"
+"Display" --> "Discard"
+"Input" -->[Add feature,\n associated data] "Input"
+
+@enduml
