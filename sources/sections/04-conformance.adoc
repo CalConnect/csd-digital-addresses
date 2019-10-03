@@ -16,51 +16,51 @@ the requirements specified for a register in <<ISO19135-1>>. See
 
 === AddressProfile
 
-Any machine-readable description of an ISO 19160-6 AddressProfile for which conformance
+Any machine-readable description of an ISO 19160-6 `AddressProfile` for which conformance
 is claimed shall pass all the requirements described in the abstract test suite in
 <<test-address-profile>>.
 
 
 === AddressClassProfile
 
-Any machine-readable description of an ISO 19160-6 AddressClassProfile for which
+Any machine-readable description of an ISO 19160-6 `AddressClassProfile` for which
 conformance is claimed shall pass all the requirements described in the
 abstract test suite in <<test-address-class-profile>>.
 
 === AddressComponentProfile
 
-Any machine-readable description of an ISO 19160-6 AddressComponentProfile for
+Any machine-readable description of an ISO 19160-6 `AddressComponentProfile` for
 which conformance is claimed shall pass all the requirements described in the
 abstract test suite in <<test-address-component-profile>>.
 
 === ProfileCompliantAddress
 
-Any machine-readable description of an ISO 19160-6 ProfileCompliantAddress for
+Any machine-readable description of an ISO 19160-6 `ProfileCompliantAddress` for
 which conformance is claimed shall pass all the requirements described in the
 abstract test suite in <<test-profile-compliant-address>>.
 
 === ProfileCompliantAddressComponent
 
 Any machine-readable description of an ISO 19160-6
-ProfileCompliantAddressComponent for which conformance is claimed shall pass
+`ProfileCompliantAddressComponent` for which conformance is claimed shall pass
 all the requirements described in the abstract test suite in
 <<test-profile-compliant-address-component>>.
 
 
 === InterchangeAddressClassProfile
 
-Any machine-readable description of an ISO 19160-6 InterchangeAddressClassProfile for
+Any machine-readable description of an ISO 19160-6 `InterchangeAddressClassProfile` for
 which conformance is claimed shall pass all the requirements described in the
 abstract test suite in <<test-ix-address-class-profile>>.
 
 === FormTemplate
 
-Any FormTemplate in Interchange Address Profile model for which
+Any `FormTemplate` in `InterchangeAddressClassProfile` model for which
 FormTemplate conformance is claimed shall pass the requirements
 described in the abstract test suite in <<test-form-template>>.
 
 === DisplayTemplate
 
-Any DisplayTemplate in Interchange Address Profile model for
-which DisplayTemplate conformance is claimed shall pass the
+Any `DisplayTemplate` in `InterchangeAddressClassProfile` model for
+which `DisplayTemplate` conformance is claimed shall pass the
 requirements described in the abstract test suite in <<test-display-template>>.

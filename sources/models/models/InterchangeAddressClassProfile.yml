@@ -1,13 +1,15 @@
 name: InterchangeAddressClassProfile
 modelType: class
 definition: |
-  This InterchangeAddressClassProfile extends from AddressClassProfile to
-  enforce the existence of several subclasses of AttributeProfile for
+  This `InterchangeAddressClassProfile` extends from `AddressClassProfile` to
+  enforce the existence of several subclasses of `AttributeProfile` for
   interchange.
 
-  It also introduces FormTemplate and DisplayTemplate which
-  help input and render of interchange ProfileCompliantAddress (address
-  instance complying with an InterchangeAddressClassProfile).
+  It also introduces `FormTemplate` and `DisplayTemplate` to
+  to allow the display, entry of, and the interchange of an
+  `ProfileCompliantAddress` (address
+  instance complying with an `InterchangeAddressClassProfile`).
+  --
 attributes:
 relations:
   - target: AddressClassProfile

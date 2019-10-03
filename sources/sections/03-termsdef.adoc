@@ -78,12 +78,12 @@ address components for interchange addresses
 
 === address display template
 
-address layout template (<<term-address-layout-template>>)
+_address layout template_ (<<term-address-layout-template>>)
 for the display of interchange addresses
 
 === address form template
 
-address layout template (<<term-address-layout-template>>)
+_address layout template_ (<<term-address-layout-template>>)
 of an input form for the entry of interchange addresses
 
 [[term-address-processor]]

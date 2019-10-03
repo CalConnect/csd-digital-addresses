@@ -11,7 +11,7 @@ definition: |
 attributes:
   target:
     definition: The interchange address component this reference refers to.
-    type: InterchangeAddressComponent
+    type: ProfileCompliantAddressComponent
   name:
     definition: Human readable name of what this line element reference refers to.
     type: CharacterString

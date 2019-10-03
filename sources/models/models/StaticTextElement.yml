@@ -1,9 +1,9 @@
 name: StaticTextElement
 modelType: class
-definition: Static text that can be a constituent part of an ProfileCompliantAddress that complies with an InterchangeAddressClassProfile.
+definition: Static text that can be a constituent part of an `ProfileCompliantAddress` that complies with an `InterchangeAddressClassProfile`.
 attributes:
   value:
-    definition: Representing static text, such as the phrase "PO Box" preceding the actual PO box number, for form layouts for PO boxes. This element is meant to be shown in the form but not allow modification.
+    definition: Representing static text, such as the phrase "`PO Box`" preceding the actual PO box number, for form layouts for PO boxes. This element is meant to be shown in the form but not allow modification.
     type: CharacterString
 relations:
   - target: FormLineElement

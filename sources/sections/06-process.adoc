@@ -66,6 +66,7 @@ To immediately retire an address class profile, the publisher shall
 distribute a new version of the address profile with an expired
 validity period.
 
+
 === Interchange address
 
 ==== General

@@ -1,9 +1,0 @@
-name: AddressInstance
-title: Interchange address instance
-caption: Interchange address instance data model
-directive: ix-address-instance
-imports:
-  InterchangeAddressInstance:
-  InterchangeAddressInstanceComponent:
-  AddressFeatureInstance:
-  AddressComponentDataValue:
