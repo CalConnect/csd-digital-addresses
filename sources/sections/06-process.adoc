@@ -6,8 +6,6 @@ address profile registry.
 
 This clause sets out specific requirements in relation with <<ISO19135-1>>.
 
-NOTE: Reference to the <<ISO19135-1>> requirement is denoted by ɳ (i.e. [ɳ2] = Requirement 2).
-
 The roles and responsibilities of the register owner, register manager, submitting organizations, control body, registry manager and register user are set out in <<ISO19135-1,clause=5>>.
 
 === Address profiles
