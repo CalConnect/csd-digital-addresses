@@ -72,7 +72,7 @@ documents.html: documents.rxl
 
 nits: $(NITS)
 
-sources/images: $(PNG)
+# sources/images: $(PNG)
 
 # sources/images/%.png: sources/models/%.wsd
 # 	plantuml -tpng -o ../images/ $<
