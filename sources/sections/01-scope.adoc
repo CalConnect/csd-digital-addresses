@@ -2,24 +2,23 @@
 :sectnums:
 == Scope
 
-This document specifies a set of data models suitable for machine encoding of the digital storage and transmission of address information, called the
-"Address Interchange Object" ("AXO") models, and
-describes the usage of them.
+This document specifies a set of data models suitable for machine encoding of address information, called the
+"`Address Interchange Object`" ("`AXO`") models, and the usage of them.
 
 Specifically, this document provides:
 
-* data models for the interchange of address profiles
-  conforming to <<ISO19160-1>>
-  (_Addressing -- Part 1: Conceptual model_)
+* data models for digital storage and interchange of address profiles
+  conforming to <<ISO19160-1>>;
 
-* data models for the interchange of address instances
-  conforming to a specific profile of <<ISO19160-1>>,
-  _Addressing -- Part 1: Conceptual model_
+* data models for digital storage and interchange of addresses
+  conforming to a specific address profile;
 
 * data models for entry and display templates for entering and
-  displaying address instances conforming
-  to the profile and encoding rules above; and
+  displaying addresses conforming to the profile and encoding rules above; and
 
 * the management and operations of a register of address profiles
-conforming to <<ISO19160-1>>, _Addressing -- Part 1: Conceptual model_.
+  conforming to this document.
 
+Addressability, and features provided within the object which the address
+points to, is not described in this document. Specifically, the
+`AddressableObject` from <<ISO19160-1>> is considered out of scope.

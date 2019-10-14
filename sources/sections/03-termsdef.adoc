@@ -3,8 +3,6 @@
 [source=ISO19160-1]
 == Terms and definitions
 
-
-
 [[term-lineage]]
 === lineage
 

@@ -105,7 +105,7 @@ ValueTypes: ISO 19103.
 What does a profile contain?
 
 * attributes
-** AddressClasses
+** addressClassProfiles
 ** TemplateClasses, each AddressClass should provide a TemplateClass (same or inner level)
 
 * metadata
@@ -143,9 +143,9 @@ profile = {
     },
   },
 
-  addressClasses: {
+  addressClassProfiles: {
     minimalAddress: {
-      availableFields: [
+      addressComponents: [
         {
           componentType: addressLine,
           min: 1,
@@ -269,10 +269,10 @@ profile = {
     },
   },
 
-  addressClasses: {
+  addressClassProfiles: {
     streetAddress: {
       description: Street Address,
-      availableFields: [
+      addressComponents: [
         {
           componentType: addressNumber,
           minCardinality: 1,
@@ -312,7 +312,7 @@ profile = {
       ]
     },
     boxAddress: {
-      availableFields: [
+      addressComponents: [
         {
           componentType: boxNumber,
           minCardinality: 1,

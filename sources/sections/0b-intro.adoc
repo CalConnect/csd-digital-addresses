@@ -3,6 +3,8 @@
 :sectnums!:
 == Introduction
 
+=== Purpose
+
 Addresses are among the most commonly exchanged information on the
 Internet, and the interchange of them is crucial to a number of
 Internet applications, such as electronic commerce, contact exchange,
@@ -10,11 +12,11 @@ non-postal deliveries, as well as location scheduling.
 
 Yet, addresses can mean much more than just geolocation information:
 
-*  As an identity, such as an office address
+*  as an identity, such as an office address;
 
-*  As reference points (waypoints) in routing information
+*  as reference points (waypoints) in routing information; and
 
-*  As a delivery point
+*  as a delivery point.
 
 The interchange of addresses require a common structure of address data. For
 instance of a software application in need of user input of address
@@ -23,46 +25,55 @@ format and structure of the address for it to be machine readable and
 interoperable among different machines or systems which process the address
 data.
 
-This document focuses on enabling software applications
-the digital interchange of address profiles,
-address instances and instructions for their input and display, together
-with model definitions and a registry mechanism to ensure
-they are publicly available.
+This document specifies a set of data models that focuses on enabling
+software applications the digital interchange of address profiles,
+address instances and instructions for their input and display
+suitable for machine encoding of address information. These models are
+called the "`Address Interchange Object`" ("AXO") models.
+
+Furthermore, a registry mechanism is defined to ensure the address profiles
+can be made publicly available.
 
 //geocodings of locations are out of scope in this standard.
+
+=== Relationship with other parts of the ISO 19160 standards family
 
 This standard complements the other parts in the family of ISO 19160 standards:
 
 * <<ISO19160-1>> describes conceptual models for addressing that allow
-specification of international address profiles. This International
-Standard further provides methods to utilize these models in a way
-suitable for electronic interchange.
+specification of international address profiles. This document
+further provides methods to utilize these models in a way
+suitable for digital interchange and storage.
 
 * <<ISO19160-4>> defines key terms for postal addressing, postal address
 components and constraints on their use. It focuses on use cases for postal
 applications, specifying the methods to write or detect addresses on mail items.
-This International Standard adapts models from <<ISO19160-1>>
+This documents adapts models from <<ISO19160-1>>
 as address interchange models, to facilitate interchange and interaction
 of addresses between humans and applications, and between applications,
 and for applications to interact and interchange international addresses,
 while supporting human input and human-machine interaction, without loss
 of fidelity.
 
-* ISO 19160-5 describes how to represent addresses on different devices. It
-targeted on all addresses but was concluded to be too complex. This standard,
-ISO 19160-6, therefore, focuses on providing a standard way of interchanging
-profiles of addresses, resulting in compliant addresses to be interoperable
-among humans, devices and systems. This standard further defines an
-interchange profile for addresses suitable for interchange, so that compliant
-addresses can be input and display in a standard way among different applications
-which use the address data.
+* ISO 19160-5 focuses on the rendering of addresses for different devices
+with a focus on their representations on maps, virtual and augmented reality.
+This document focuses on providing an interoperable data model for the
+interchange and storage of address profiles and addresses, as well as
+the input and rendering of compliant addresses in a normalized manner.
+This approach results into a scheme that can be understood across the
+spectrum of address consumers, including humans, applications, devices and
+systems.
+
+=== Address as entered data
 
 The lifecycle of an address entry exchanged on the Internet typically
 starts with manual input of a human actor. This data, structured or
 unstructured, is then submitted to an Internet-connected application,
 and the application may in turn transmit this information to other
 applications or external parties on behalf of the user who provided the
-address. This transmission is usually performed to fulfil service
+address.
+
+This transmission is usually performed to fulfil service
 delivery to the user. Within the process, there may be machine-human
 interactions that require display of the address in human-readable
 form, as well as machine-to-machine interactions on the address, such
@@ -74,10 +85,15 @@ unambiguously distinguish a location, there may be intention or
 unintentional omissions or additions to an "`official`" address (if there
 was one).
 
-Addressability, and features provided within the object which the address
-points to, is not described in this document. Specifically, the
-`AddressableObject` from <<ISO19160-1>> is considered out of scope.
-The `AddressableObject` model is considered orthogonal to models
-in this document, but can easily be used together, for example, in
-a navigation map where an address points to an addressable object,
-which in turn provides a list of its extant facilities.
+=== Relationship to the addressable object
+
+Attributes of the object which the address points to are considered
+out of scope of this document, including the `AddressableObject` model
+specified in <<ISO19160-1>>.
+
+While considered orthogonal to the AXO models, `AddressableObject` and
+other simliar models can easily be used together with the AXO models.
+
+[example]
+In a navigation map, an AXO address can point to an addressable object,
+in which provides a list of its extant facilities.

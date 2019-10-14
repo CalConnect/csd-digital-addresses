@@ -1,0 +1,8 @@
+
+[[layout-line]]
+== LayoutLine
+
+[datamodel]
+....
+include::../models/views/LayoutLine.yml[]
+....

@@ -3,11 +3,11 @@
 [appendix,obligation=informative]
 == Usage
 
-=== Accuracy and Verification
+=== Accuracy and verification
 
-An authority, such as the local post office, could "verify" a
+An authority, such as the local post office, could "`verify`" a
 structured address that it is confirmed that this address instance is a
-"deliverable address" through an AddressFeature.
+"`deliverable address`" through an `AddressFeature`.
 
 [source=Ronald Tse]
 ****
@@ -18,12 +18,12 @@ The owner of the address, such as the tenant of an office, could
 provide its signed, structured address on an electronic business card.
 This allows the recipient of the business card to know whether the
 senders address is authentic. If this address is verified to be a
-"deliverable address", the recipient will know that items sent to this
+"`deliverable address`", the recipient will know that items sent to this
 address will very likely be deliverable.
 
 Extra steps need to be taken here to allow this.
 
-=== Address As Identity
+=== Address as identity
 
 Addresses do not only specify a location, in some cases they are part
 of the identity. For example, in business cards, an address can mean
@@ -36,7 +36,7 @@ This address represents a complete textual address instance.
 
 [source]
 ----
-Suites 1107-1111,
+Suite 1109,
 Floor 11,
 Central Building,
 1-3 Pedder Street,
@@ -61,7 +61,7 @@ Hong Kong
 ----
 
 
-=== Address As Destination
+=== Address as destination
 
 In certain cases, an address is expected to be reachable either by
 person and/or post.
@@ -70,11 +70,8 @@ An address instance should support being used in conjunction with
 routing information, acting as a waypoint, and/or supporting a
 source-defined route.
 
-For example, written instructions on how to deliver to a place that is
-unambiguous but terribly difficult to locate.
-
-[NOTE]
-====
-E.g., some buildings have split floors -- rooms may have the same floor
+[example]
+Written instructions on how to deliver to a place can be unambiguous,
+but terribly difficult to locate.
+For instance, some buildings have split floors -- rooms may have the same floor
 identifier, but is actually inaccessible from the same floor.
-====

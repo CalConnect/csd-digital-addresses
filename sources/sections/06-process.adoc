@@ -1,7 +1,7 @@
 
 == Process of address profile and address interchange
 
-Practical usage of AXO models rely on establishment of an
+Practical usage of AXO models relies on the establishment of an
 address profile registry.
 
 This clause sets out specific requirements in relation with <<ISO19135-1>>.

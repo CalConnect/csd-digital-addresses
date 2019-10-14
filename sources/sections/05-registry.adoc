@@ -80,9 +80,9 @@ Requirement 21 [ɳ23]: A registry manager shall ensure that information about va
 
 The <<ISO19135-1>> requirements modified for this document are as follows:
 
-Requirement 22 [ɳ15]: If an item is superseded by another item, the date the succession occurred shall be captured, along with references to and from the item that superseded it. At any given time, only one item in the series should be “valid”.
+Requirement 22 [ɳ15]: If an item is superseded by another item, the date the succession occurred shall be captured, along with references to and from the item that superseded it. At any given time, only one item in the series should be "`valid`".
 
-NOTE: The requirement that only one item in the series is "valid" is removed.
+NOTE: The requirement that only one item in the series is "`valid`" is removed.
 
 Requirement 23 [ɳ20]: If a register item is deemed to be no longer suitable for the use in the production of new data and has been superseded by a new register item, the original item shall remain in the register, shall have its status changed to superseded, have a reference to the item(s) that superseded it, including the date on which the register transaction was made.
 

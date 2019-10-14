@@ -6,24 +6,11 @@
 Models specified in this document can be represented in various
 object structures, including in XML <<ISO19139>> and in JSON.
 
-[source=Stephane Garcia]
-****
-Does this standard recommend JSON implementation? If not, shouldn’t
-there also be an example in XML as it is the common implementation
-language in 19139?
-****
-
-[source=Ronald Tse]
-****
-Yes, we shall provide XML before Committee Draft stage
-****
-
-=== IxAddressProfile
+=== AddressProfile
 
 [source,json]
 ----
 {
-
   "id": "http://www.iso.org/tc211/tc211-sample.adp",
   "type": "iso-19160-address-profile",
   "publisher": "http://www.iso.org/tc211/",
@@ -45,18 +32,18 @@ Yes, we shall provide XML before Committee Draft stage
     }
   },
   "addressComponents": { ... },
-  "addressClasses": { ... }
+  "addressClassProfiles": { ... }
 }
 ----
 
-=== IxAddressClass
+=== AddressClassProfiles
 
 [source,json]
 ----
-"addressClasses": {
+"addressClassProfiles": {
   "streetAddress": {
     "description": "Street Address",
-    "availableFields": [ (addressComponent) 1..* ... ]
+    "addressComponentSpecifications": [ (AddressComponentSpecification) 1..* ... ]
     "displayTemplate": { ... },
     "formTemplate": { ... }
   }
@@ -83,15 +70,17 @@ Yes, we shall provide XML before Committee Draft stage
 }
 ----
 
-=== LocalizationInformation
+
+=== Localization
 
 [source,json]
 ----
-"publisher": {
+"localization": {
   "language": "en",
   "script": "Latn"
 }
 ----
+
 
 === Signature
 
@@ -105,15 +94,16 @@ Yes, we shall provide XML before Committee Draft stage
 }
 ----
 
-=== IxAddressClass
+
+=== AddressClassProfile
 
 
 [source,json]
 ----
-"addressClassDescription": {
+"addressClassProfile": {
   "id": "streetAddress",
   "description": "A typical street address",
-  "addressComponents": [ ... ],
+  "addressComponentSpecifications": [ ... ],
   "displayTemplate": { ... },
   "formTemplate": { ... },
 }
@@ -140,34 +130,34 @@ Yes, we shall provide XML before Committee Draft stage
 }]
 ----
 
-=== IxAddressComponent
+=== AddressComponentClass
 
 [source,json]
 ----
-"addressComponentDescription": {
+"addressComponentClass": {
   "key": "addressNumber",
   "description": "Street number",
   "datatype": "addressNumberValue"
 }
 ----
 
-=== IxAddressInstance
+=== ProfileCompliantAddress
 
 [source,json]
 ----
-"addressInstance": {
+"address": {
   "profileId": "https://standards.iso.org/19160/-6/profiles/uk.adp",
   "components": [ ... ],
   "signature": { ... },
-  "cap": [ ... ]
+  "features": [ ... ]
 }
 ----
 
-=== IxAddressInstanceComponent
+=== AddressComponent
 
 [source,json]
 ----
-"addressComponentInstance": {
+"addressComponent": {
   "type": "addressNumber",
   "values": [ 1001 ]
 }
@@ -185,11 +175,6 @@ Yes, we shall provide XML before Committee Draft stage
 
 === DisplayTemplate
 
-[source=Ronald Tse]
-****
-Fill in.
-****
-
 [source,json]
 ----
 DisplayTemplate: {
@@ -197,12 +182,7 @@ DisplayTemplate: {
 }
 ----
 
-=== Form template (FormTemplate)
-
-[source=Ronald Tse]
-****
-Fill in.
-****
+=== FormTemplate
 
 [source,json]
 ----

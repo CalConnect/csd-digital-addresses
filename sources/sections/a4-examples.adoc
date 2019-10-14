@@ -3,15 +3,10 @@
 [appendix,obligation=informative]
 == Examples
 
-[source=Ronald Tse]
-****
-The following examples are in JSON but will
-provide XML before Committee Draft stage
-****
-
 === Example of address profiles defined in ISO 19160-1
 
 ==== ISO 19160-1 C2
+
 [source,json]
 ----
 profile = {
@@ -34,9 +29,9 @@ profile = {
     },
   },
 
-  "addressClasses": {
+  "addressClassProfiles": {
     "minimalAddress": {
-      "availableFields": [
+      "addressComponentSpecifications": [
         {
           "componentType": "addressLine",
           "min": 1,
@@ -56,11 +51,12 @@ profile = {
 }
 ----
 
-Address Instance
+Profile-compliant addresses
 
 [source,json]
 ----
-addressInstance1 = {
+/* South African address */
+profileCompliantAddress1 = {
   "profile": "http://www.iso.org/tc211/tc211-minimal.adp",
   "components": [
     {
@@ -78,7 +74,8 @@ addressInstance1 = {
   ]
 }
 
-addressInstance2 = {
+/* US address */
+profileCompliantAddress2 = {
   "profile": "http://www.iso.org/tc211/tc211-minimal.adp",
   "components": [
     {
@@ -102,6 +99,7 @@ addressInstance2 = {
 ----
 
 ==== ISO 19160-1 C3
+
 [source,json]
 ----
 profile = {
@@ -159,10 +157,10 @@ profile = {
     }
   },
 
-  "addressClasses": {
+  "addressClassProfiles": {
     "streetAddress": {
       "description": "Street Address",
-      "availableFields": [
+      "addressComponentSpecifications": [
         {
           "componentType": "addressNumber",
           "minCardinality": 1,
@@ -202,7 +200,7 @@ profile = {
       ]
     },
     "boxAddress": {
-      "availableFields": [
+      "addressComponentSpecifications": [
         {
           "componentType": "boxNumber",
           "minCardinality": 1,
@@ -239,11 +237,13 @@ profile = {
 }
 ----
 
-Address Instance
+Profile-compliant addresses
 
 [source,json]
 ----
-addressInstance1 = {
+/* streetAddress */
+
+profileCompliantAddress1 = {
   "profile": "http://www.iso.org/tc211/tc211-sample.adp#streetAddress",
   "components": [
     {
@@ -272,7 +272,8 @@ addressInstance1 = {
   ]
 }
 
-boxInstance1 = {
+/* boxAddress */
+profileCompliantAddress2 = {
   "profile": "http://www.iso.org/tc211/tc211-sample.adp#boxAddress",
   "components": [
     {
