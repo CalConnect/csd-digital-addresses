@@ -2,6 +2,7 @@
 
 skinparam Dpi 150
 skinparam Monochrome false
+skinparam LineType ortho
 hide circle
 /' skinparam CircledCharacterRadius 0 '/
 /' skinparam CircledCharacterFontSize 0 '/
