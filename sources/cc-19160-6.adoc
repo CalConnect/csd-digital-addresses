@@ -20,7 +20,6 @@
 :stem:
 :xrefstyle: short
 :docfile: cc-19160-6.adoc
-:imagesdir: images
 :mn-document-class: csd
 :mn-output-extensions: xml,html,rxl
 :local-cache-only:

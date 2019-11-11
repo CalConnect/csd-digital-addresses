@@ -25,7 +25,6 @@
 :toc:
 :stem:
 :docfile: iso-19160-6.adoc
-:imagesdir: images
 :mn-document-class: iso
 :mn-output-extensions: xml,doc,html,pdf,rxl
 :local-cache-only:

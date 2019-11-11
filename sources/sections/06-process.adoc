@@ -15,6 +15,7 @@ The roles and responsibilities of the register owner, register manager, submitti
 .Lifecycle of an address profile
 [plantuml]
 ....
+include::../models/style.uml.inc[]
 include::../models/AddressProfileLifeCycle.wsd[]
 ....
 
@@ -72,6 +73,7 @@ validity period.
 .Lifecycle of an interchange address
 [plantuml]
 ....
+include::../models/style.uml.inc[]
 include::../models/AddressInstanceLifeCycle.wsd[]
 ....
 

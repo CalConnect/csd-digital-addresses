@@ -1,7 +1,3 @@
-@startuml
-
-!include style.uml.inc
-
 '******* STATES RELATIONS *********************************************
 note top: Creation of an\n interchange\n address profile
 (*) --> "Published"
@@ -9,5 +5,3 @@ note top: Creation of an\n interchange\n address profile
 "Published" --> "Retired"
 "Valid for use" --> "Retired"
 "Valid for use" -->[Update] "Valid for use"
-
-@enduml

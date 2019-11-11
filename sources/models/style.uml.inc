@@ -1,5 +1,3 @@
-@startuml
-
 skinparam Dpi 150
 skinparam Monochrome false
 hide circle
@@ -37,8 +35,3 @@ skinparam Object {
 skinparam Entity {
   StereotypeFontSize 10
 }
-
-
-@enduml
-
-/' vim:set ft=plantuml: '/

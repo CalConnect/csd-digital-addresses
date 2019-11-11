@@ -1,8 +1,6 @@
 name: publish
 
-on:
-  push:
-    branches: master
+on: [push, pull_request]
 
 jobs:
   build:
@@ -15,7 +13,7 @@ jobs:
       - uses: actions/checkout@master
       - name: Build document in the Metanorma container
         env:
-          METANORMA_DOCKER: metanorma/mn:latest
+          METANORMA_DOCKER: metanorma/metanorma:latest
         run: |
           make clean all publish
       - uses: actions/upload-artifact@master
@@ -25,6 +23,7 @@ jobs:
 
   deploy-gh-pages:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
     needs: build
     steps:
     - uses: actions/checkout@master
@@ -33,7 +32,6 @@ jobs:
         name: published
     - name: deploy-to-gh
       env:
-        # GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
         GH_DEPLOY_KEY: ${{ secrets.GH_DEPLOY_KEY }}
         GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no"
       run: |
