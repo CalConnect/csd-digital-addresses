@@ -9,11 +9,6 @@ An authority, such as the local post office, could "`verify`" a
 structured address that it is confirmed that this address instance is a
 "`deliverable address`" through an `AddressFeature`.
 
-[source=Ronald Tse]
-****
-Link to the OGC geocoding API SWG?
-****
-
 The owner of the address, such as the tenant of an office, could
 provide its signed, structured address on an electronic business card.
 This allows the recipient of the business card to know whether the
