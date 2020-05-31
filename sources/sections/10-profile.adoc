@@ -1,7 +1,4 @@
 [[address-profile]]
 == Address profile
 
-[datamodel]
-....
-include::../models/views/AddressProfile.yml[]
-....
+[datamodel,./models/views/AddressProfile.yml]

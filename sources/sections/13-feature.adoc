@@ -1,7 +1,4 @@
 [[address-feature]]
 == Address feature
 
-[datamodel]
-....
-include::../models/views/AddressFeature.yml[]
-....
+[datamodel,./models/views/AddressFeature.yml]

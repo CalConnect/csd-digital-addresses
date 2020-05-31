@@ -17,7 +17,4 @@ including:
 Core data types (`CoreTypes`) are defined in <<ISO19103,clause=A.2>>.
 
 
-[datamodel]
-....
-include::../models/views/DataTypes.yml[]
-....
+[datamodel,./models/views/DataTypes.yml][datamodel,./models/views/DataTypes.yml]

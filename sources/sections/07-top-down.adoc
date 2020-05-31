@@ -33,10 +33,7 @@ This document further defines `InterchangeAddressClassProfile` for defining
 compliant to `InterchangeAddressClassProfile` will be interchangeable among
 humans, devices and systems with interoperability.
 
-[datamodel]
-....
-include::../models/views/TopDown.yml[]
-....
+[datamodel,./models/views/TopDown.yml]
 
 NOTE: This clause defines a number of composite data models,
 integrates and thereby requires coordination between complex precedent

@@ -1,8 +1,5 @@
 [[form-template]]
 == Form template
 
-[datamodel]
-....
-include::../models/views/FormTemplate.yml[]
-....
+[datamodel,./models/views/FormTemplate.yml]
 

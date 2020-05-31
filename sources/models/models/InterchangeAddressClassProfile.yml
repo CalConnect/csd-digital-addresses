@@ -9,7 +9,6 @@ definition: |
   to allow the display, entry of, and the interchange of an
   `ProfileCompliantAddress` (address
   instance complying with an `InterchangeAddressClassProfile`).
-  --
 attributes:
 relations:
   - target: AddressClassProfile

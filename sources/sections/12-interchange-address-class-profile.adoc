@@ -1,7 +1,4 @@
 [[ix-address-class-profile]]
 == InterchangeAddressClassProfile overview
 
-[datamodel]
-....
-include::../models/views/InterchangeAddressClassProfile.yml[]
-....
+[datamodel,./models/views/InterchangeAddressClassProfile.yml]

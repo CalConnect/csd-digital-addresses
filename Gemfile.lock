@@ -281,6 +281,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  byebug (~> 11.1)
   metanorma-cli
   metanorma-standoc!
 

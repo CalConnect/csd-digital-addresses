@@ -1,7 +1,4 @@
 [[layout-template]]
 == Layout template
 
-[datamodel]
-....
-include::../models/views/LayoutTemplate.yml[]
-....
+[datamodel,./models/views/LayoutTemplate.yml]
