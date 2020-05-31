@@ -118,7 +118,7 @@ clean:
 
 bundle:
 ifndef METANORMA_DOCKER
-	bundle install --jobs 4 --retry 3 && bundle update metanorma-standoc
+	bundle install --jobs 4 --retry 3
 endif
 	$(call print_vars)
 
