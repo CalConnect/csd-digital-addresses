@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/metanorma/metanorma-standoc
-  revision: 3b7c12c34fc4246461b1b11dcc0d9ca84373bef8
+  revision: 827f78bf6bac8a62c2ac9b6ea68a89f7f55db2a4
   branch: feature/datamodel
   specs:
-    metanorma-standoc (1.3.28)
+    metanorma-standoc (1.3.29)
       asciidoctor (~> 2.0.0)
       concurrent-ruby
       iev (~> 0.2.1)
