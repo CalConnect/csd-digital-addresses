@@ -13,3 +13,13 @@ imports:
   DataElementWithConditions:
 fidelity:
   hideOtherClasses: true
+relations:
+  - source: FormTemplate
+    target: FormLineElement:"                                       "
+    direction: '[hidden]right'
+  - source: FormLineElement
+    target: StaticTextElement
+    direction: '[hidden]down'
+  - source: DataElement
+    target: StaticTextElement
+    direction: '[hidden]left'

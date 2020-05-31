@@ -144,3 +144,4 @@ address features could be added into the interchange address.
 ==== Discarding an interchange address
 
 When a service no longer needs the address, it should be disposed of.
+

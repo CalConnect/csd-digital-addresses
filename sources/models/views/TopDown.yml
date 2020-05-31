@@ -3,60 +3,272 @@ title: Address profile model overview
 caption: Address profile model overview in UML
 imports:
   iso19160-1/Address:
-  iso19160-1/AddressComponent:
-  ProfileCompliantAddress:
-  ProfileCompliantAddressComponent:
-  AddressProfile:
-  AddressClassProfile:
-  InterchangeAddressClassProfile:
-  AddressComponentProfile:
-  AddressComponentSpecification:
-  AttributeProfile:
+#   iso19160-1/AddressComponent:
+#   ProfileCompliantAddress:
+#   ProfileCompliantAddressComponent:
+#   AddressProfile:
+#   AddressClassProfile:
+#   InterchangeAddressClassProfile:
+#   AddressComponentProfile:
+#   AddressComponentSpecification:
+#   AttributeProfile:
 groups:
-  - - AddressProfile
-  - - InterchangeAddressClassProfile
-    - AddressClassProfile
+  - - AddressComponent
+  - - Address
+    - ProfileCompliantAddressComponent
     - AddressComponentProfile
   - - AddressComponentSpecification
+    - AttributeProfile
+    - AddressProfile
   - - ProfileCompliantAddress
-    - ProfileCompliantAddressComponent
-  - - Address
-    - AddressComponent
+    - AddressClassProfile
+  - - InterchangeAddressClassProfile
 relations:
-  - source: InterchangeAddressClassProfile
-    target: AddressClassProfile
-    direction: '[hidden]right'
-  - source: AddressClassProfile
-    target: AddressComponentProfile
-    direction: '[hidden]right'
 
-  - source: ProfileCompliantAddress
+  - source: AddressComponent
+    target: Address
+    relationship:
+      target:
+        type: aggregation
+      source:
+        type: direct
+    action:
+      verb: comprises
+      direction: source
+
+  - source: AddressComponent
     target: ProfileCompliantAddressComponent
-    direction: '[hidden]right'
+    relationship:
+      source:
+        type: inheritance
 
-  - source: Address
-    target: AddressComponent
-    direction: '[hidden]right'
+  - source: ProfileCompliantAddressComponent
+    target: AddressComponentProfile
+    relationship:
+      source:
+        type: direct
+      target:
+        attribute:
+          profile:
+    # direction: right
+    action:
+      verb: compliesWith
+      direction: target
+
+  - source: AddressComponentProfile
+    target: AttributeProfile
+    relationship:
+      source:
+        type: aggregation
+        attribute:
+          addressClassProfile:
+      target:
+        type: direct
+        attribute:
+          attributeProfile:
+            cardinality:
+              min: 0
+              max: "*"
+    # direction: down
+
+
+  - source: AddressProfile
+    target: AddressComponentProfile
+    direction: up
+    relationship:
+      source:
+        type: aggregation
+        attribute:
+          componentProfile:
+            cardinality:
+              min: 0
+              max: "*"
+
+
+  - source: AddressClassProfile
+    target: AttributeProfile
+    relationship:
+      source:
+        type: aggregation
+        attribute:
+          addressClassProfile:
+      target:
+        type: direct
+        attribute:
+          attributeProfile:
+            cardinality:
+              min: 0
+              max: "*"
+        type: direct
+    direction: up
 
   - source: AddressProfile
     target: AddressClassProfile
-    direction: '[hidden]down'
+    direction: down
+    relationship:
+      source:
+        type: aggregation
+        attribute:
+          addressProfile:
+            cardinality:
+              min: 0
+              max: "*"
+    action:
+      verb: defines
+      direction: target
+
+  - source: InterchangeAddressClassProfile
+    target: AddressClassProfile
+    direction: up
+    relationship:
+      target:
+        type: inheritance
+
+  - source: ProfileCompliantAddress
+    target: ProfileCompliantAddressComponent
+    relationship:
+      source:
+        type: aggregation
+      target:
+        type: direct
+      association: AddressComponentSpecification
+    action:
+      verb: comprises
+      direction: target
+
+  - source: AddressComponentProfile
+    target: AddressClassProfile
+    relationship:
+      target:
+        type: aggregation
+        attribute:
+          componentProfile:
+            cardinality:
+              min: 0
+              max: "*"
+      association: AddressComponentSpecification
+    action:
+      verb: uses
+      direction: source
+
+  - source: ProfileCompliantAddress
+    target: Address
+    direction: up
+    relationship:
+      target:
+        type: inheritance
+
   - source: AddressClassProfile
     target: ProfileCompliantAddress
+    direction: left
+    relationship:
+      source:
+        attribute:
+          profile:
+      target:
+        type: direct
+    action:
+      verb: compliesWith
+      direction: source
+
+  # Placement directives (hidden associations)
+
+  - source: Address
+    target: AddressProfile
     direction: '[hidden]down'
-  - source: AddressComponentProfile
+
+  - source: AddressProfile
+    target: AddressComponent
+    direction: '[hidden]down'
+
+  - source: AddressProfile
+    target: AddressClassProfile
+    direction: '[hidden]left'
+
+  - source: AddressClassProfile
+    target: AddressComponentProfile
+    direction: '[hidden]down'
+
+  - source: AddressClassProfile
     target: AddressComponentSpecification
     direction: '[hidden]down'
+
+  - source: AddressComponentProfile
+    target: AttributeProfile
+    direction: '[hidden]down'
+
+  - source: Address
+    target: ProfileCompliantAddressComponent
+    direction: '[hidden]left'
+
   - source: AddressComponentSpecification
     target: ProfileCompliantAddressComponent
     direction: '[hidden]down'
+
+  - source: AddressComponentProfile
+    target: AttributeProfile
+    direction: '[hidden]left'
+
   - source: ProfileCompliantAddress
-    target: Address
-    direction: '[hidden]down'
-  - source: ProfileCompliantAddressComponent
-    target: AddressComponent
-    direction: '[hidden]down'
+    target: AddressClassProfile
+    direction: '[hidden]left'
+
+  # - source: AddressClassProfile
+  #   target: AddressComponentProfile
+  #   direction: '[hidden]up'
+
+  # - source: AddressComponentSpecification
+  #   target: AddressClassProfile
+  #   direction: '[hidden]down'
+
+  # - source: AddressComponentProfile
+  #   target: AddressProfile
+  #   direction: '[hidden]down'
+
+
+  #
+  # - source: AddressClassProfile
+  #   target: InterchangeAddressClassProfile
+  #   direction: '[hidden]left'
+  # - source: AddressComponentProfile
+  #   target: AddressClassProfile
+  #   direction: '[hidden]left'
+  #
+  # - source: ProfileCompliantAddress
+  #   target: ProfileCompliantAddressComponent
+  #   direction: '[hidden]right'
+  #
+  # - source: Address
+  #   target: AddressComponent
+  #   direction: '[hidden]right'
+  #
+  # - source: AddressProfile
+  #   target: AddressClassProfile
+  #   direction: '[hidden]down'
+  # - source: AddressClassProfile
+  #   target: ProfileCompliantAddress
+  #   direction: '[hidden]down'
+  # - source: AddressComponentProfile
+  #   target: AddressComponentSpecification
+  #   direction: '[hidden]down'
+  # - source: AddressComponentSpecification
+  #   target: ProfileCompliantAddressComponent
+  #   direction: '[hidden]down'
+  # - source: ProfileCompliantAddress
+  #   target: Address
+  #   direction: '[hidden]down'
+  # - source: ProfileCompliantAddressComponent
+  #   target: AddressComponent
+  #   direction: '[hidden]down'
 
 fidelity:
   hideMembers: true
   hideOtherClasses: true
+diagram_options:
+  - skinparam nodesep 120
+  - skinparam ranksep 120
+  - skinparam linetype ortho
+  - skinparam minClassWidth 200
+# bottom:
+#   - (ProfileCompliantAddress, ProfileCompliantAddressComponent) . AddressComponentSpecification
+#   - (AddressComponentProfile, AddressClassProfile) . AddressComponentSpecification

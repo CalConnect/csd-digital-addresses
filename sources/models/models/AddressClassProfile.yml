@@ -76,6 +76,7 @@ relations:
               max: '*'
 
   - target: ProfileCompliantAddress
+    direction: down
     relationship:
       source:
         attribute:

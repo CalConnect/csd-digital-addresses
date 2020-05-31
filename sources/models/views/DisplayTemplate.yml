@@ -10,3 +10,7 @@ imports:
   TextElement:
 fidelity:
   hideOtherClasses: true
+relations:
+  - source: TextElement
+    target: DisplayLine:"                  "
+    direction: '[hidden]left'

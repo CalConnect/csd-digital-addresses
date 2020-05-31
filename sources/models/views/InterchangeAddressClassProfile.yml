@@ -25,7 +25,7 @@ groups:
 relations:
   - source: InterchangeAddressClassProfile
     target: AddressClassProfile
-    direction: '[hidden]right'
+    direction: '[hidden]up'
 
   - source: FormTemplate
     target: DisplayTemplate
@@ -50,3 +50,6 @@ relations:
 fidelity:
   # hideMembers: true
   hideOtherClasses: true
+diagram_options:
+  - skinparam nodesep 30
+  - skinparam ranksep 30

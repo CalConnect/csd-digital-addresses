@@ -3,16 +3,15 @@
 :partnumber: 6
 :tc-document-number: 9999
 :edition: 1
-:ref-docnumber: ISO 19160-6:2018(E)
-:copyright-year: 2019
+:copyright-year: 2020
 :language: en
 :title-intro-en: Addressing
 :title-main-en: Digital interchange models
 :title-intro-fr: Adressage
 :title-main-fr: Modèles d'échange numérique
 :doctype: international-standard
-:docstage: 20
-:docsubstage: 92
+:docstage: 30
+:docsubstage: 00
 :technical-committee-type: TC
 :technical-committee-number: 211
 :technical-committee: Geographic information / Geomantics
@@ -21,9 +20,6 @@
 :workgroup: Information communities
 :secretariat: SN
 :language: en
-:draft:
-:toc:
-:stem:
 :docfile: iso-19160-6.adoc
 :mn-document-class: iso
 :mn-output-extensions: xml,doc,html,pdf,rxl
