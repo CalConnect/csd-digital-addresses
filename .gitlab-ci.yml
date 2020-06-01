@@ -1,5 +1,5 @@
 image:
-  name: ribose/metanorma
+  name: metanorma/metanorma
   entrypoint: [""]
 
 cache:
@@ -8,7 +8,8 @@ cache:
 build:
   stage: build
   script:
-    - bundle install --redownload
+    - bundle add metanorma-standoc --git metanorma/metanorma-standoc --branch 827f78bf6bac8a62c2ac9b6ea68a89f7f55db2a4
+    - bundle
     - curl -sSL https://raw.githubusercontent.com/kata-containers/runtime/master/.ci/install-yq.sh | bash
     - cp ~/go/bin/yq /usr/local/bin/
     - make clean all
