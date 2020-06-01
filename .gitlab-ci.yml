@@ -10,7 +10,6 @@ build:
   script:
     - cat Gemfile
     - gem uninstall -I metanorma-standoc
-    - bundle
     - curl -sSL https://raw.githubusercontent.com/kata-containers/runtime/master/.ci/install-yq.sh | bash
     - cp ~/go/bin/yq /usr/local/bin/
     - make clean all
