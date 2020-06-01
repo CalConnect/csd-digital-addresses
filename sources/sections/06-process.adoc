@@ -115,21 +115,21 @@ display template.
 The recipient or service could process the address, such as to further
 clean up the address by improving the conformance level by fully
 deducing the address structure, which would add an address feature
-"https://standards.iso.org/19160/-6/features/specified" to the
+`https://standards.isotc211.org/19160/-6/features/specified` to the
 address instance.
 
 To ensure that the resulting interchange address with a fully-specified
 structure is correct, the processor may wish to confirm with the user
 the resulting address, such as in the case where the address is used
 for shipping information. This would add the `AddressFeature`
-"https://standards.iso.org/19160/-6/features/confirmed" to the
+`https://standards.isotc211.org/19160/-6/features/confirmed` to the
 address instance.
 
 ===== Verifying an interchange address
 
 The recipient or service could further validate the address, such as
 with a postal or addressing authority. This would add the
-`AddressFeature` "https://verifyingauthority/verified" to the interchange address
+`AddressFeature` `https://verifyingauthority/verified` to the interchange address
 written by the verifying authority.
 
 ==== Adding associated data to an interchange address
@@ -143,5 +143,5 @@ address features could be added into the interchange address.
 
 ==== Discarding an interchange address
 
-When a service no longer needs the address, it should be disposed of.
+When a service no longer needs an address, the address should be disposed of.
 
