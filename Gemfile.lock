@@ -1,7 +1,5 @@
-GIT
-  remote: https://github.com/metanorma/metanorma-standoc
-  revision: 827f78bf6bac8a62c2ac9b6ea68a89f7f55db2a4
-  branch: feature/datamodel
+PATH
+  remote: ../../mn/metanorma-standoc
   specs:
     metanorma-standoc (1.3.29)
       asciidoctor (~> 2.0.0)

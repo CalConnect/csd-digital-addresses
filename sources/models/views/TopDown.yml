@@ -3,15 +3,15 @@ title: Address profile model overview
 caption: Address profile model overview in UML
 imports:
   iso19160-1/Address:
-#   iso19160-1/AddressComponent:
-#   ProfileCompliantAddress:
-#   ProfileCompliantAddressComponent:
-#   AddressProfile:
-#   AddressClassProfile:
-#   InterchangeAddressClassProfile:
-#   AddressComponentProfile:
-#   AddressComponentSpecification:
-#   AttributeProfile:
+  # iso19160-1/AddressComponent:
+  # ProfileCompliantAddress:
+  # ProfileCompliantAddressComponent:
+  # AddressProfile:
+  # AddressClassProfile:
+  # InterchangeAddressClassProfile:
+  # AddressComponentProfile:
+  # AddressComponentSpecification:
+  # AttributeProfile:
 groups:
   - - AddressComponent
   - - Address
@@ -42,6 +42,10 @@ relations:
       source:
         type: inheritance
 
+  - source: Address
+    target: ProfileCompliantAddressComponent
+    direction: '[hidden]right'
+
   - source: ProfileCompliantAddressComponent
     target: AddressComponentProfile
     relationship:
@@ -50,7 +54,7 @@ relations:
       target:
         attribute:
           profile:
-    # direction: right
+    direction: right
     action:
       verb: compliesWith
       direction: target
@@ -69,7 +73,7 @@ relations:
             cardinality:
               min: 0
               max: "*"
-    # direction: down
+    direction: down
 
 
   - source: AddressProfile
@@ -173,58 +177,54 @@ relations:
 
   # Placement directives (hidden associations)
 
-  - source: Address
-    target: AddressProfile
-    direction: '[hidden]down'
-
-  - source: AddressProfile
-    target: AddressComponent
-    direction: '[hidden]down'
-
-  - source: AddressProfile
-    target: AddressClassProfile
-    direction: '[hidden]left'
-
-  - source: AddressClassProfile
-    target: AddressComponentProfile
-    direction: '[hidden]down'
-
-  - source: AddressClassProfile
-    target: AddressComponentSpecification
-    direction: '[hidden]down'
-
-  - source: AddressComponentProfile
-    target: AttributeProfile
-    direction: '[hidden]down'
-
-  - source: Address
-    target: ProfileCompliantAddressComponent
-    direction: '[hidden]left'
-
   - source: AddressComponentSpecification
     target: ProfileCompliantAddressComponent
     direction: '[hidden]down'
 
   - source: AddressComponentProfile
     target: AttributeProfile
-    direction: '[hidden]left'
+    direction: '[hidden]right'
 
   - source: ProfileCompliantAddress
     target: AddressClassProfile
-    direction: '[hidden]left'
+    direction: '[hidden]right'
+
+  - source: AddressClassProfile
+    target: AddressComponentProfile
+    direction: '[hidden]up'
+
+  - source: AddressComponentSpecification
+    target: AddressClassProfile
+    direction: '[hidden]down'
+
+  - source: AddressComponentProfile
+    target: AddressProfile
+    direction: '[hidden]down'
+
+
+  # - source: Address
+  #   target: AddressProfile
+  #   direction: '[hidden]down'
+  #
+  # - source: AddressProfile
+  #   target: AddressComponent
+  #   direction: '[hidden]down'
+  #
+  # - source: AddressProfile
+  #   target: AddressClassProfile
+  #   direction: '[hidden]left'
+  #
+  # - source: AddressClassProfile
+  #   target: AddressComponentSpecification
+  #   direction: '[hidden]down'
+  #
+  # - source: AddressComponentProfile
+  #   target: AttributeProfile
+  #   direction: '[hidden]left'
 
   # - source: AddressClassProfile
   #   target: AddressComponentProfile
   #   direction: '[hidden]up'
-
-  # - source: AddressComponentSpecification
-  #   target: AddressClassProfile
-  #   direction: '[hidden]down'
-
-  # - source: AddressComponentProfile
-  #   target: AddressProfile
-  #   direction: '[hidden]down'
-
 
   #
   # - source: AddressClassProfile
@@ -264,6 +264,13 @@ relations:
 fidelity:
   hideMembers: true
   hideOtherClasses: true
+  classes:
+    - AttributeProfileSignature
+    - AttributeProfileAddressFeature
+    - AttributeProfileValidity
+    - FormTemplate
+    - DisplayTemplate
+
 diagram_options:
   - skinparam nodesep 120
   - skinparam ranksep 120

@@ -124,9 +124,9 @@ What does a profile contain?
 ----
 profile = {
 
-  id: "http://www.iso.org/tc211/tc211-minimal.adp",
+  id: "http://standards.isotc211.org/19160/-6/tc211-minimal.adp",
   type: "iso-19160-address-profile",
-  publisher: "http://www.iso.org/tc211/",
+  publisher: "http://standards.isotc211.org/19160/-6/",
   signature: "...",
 
   name: "TC 211 Minimal Address Profile",
@@ -169,7 +169,7 @@ profile = {
 
 ----
 addressInstance1 = {
-  profile: "http://www.iso.org/tc211/tc211-minimal.adp",
+  profile: "http://standards.isotc211.org/19160/-6/tc211-minimal.adp",
   components: [
     {
       type: addressLine,
@@ -187,7 +187,7 @@ addressInstance1 = {
 }
 
 addressInstance2 = {
-  profile: "http://www.iso.org/tc211/tc211-minimal.adp",
+  profile: "http://standards.isotc211.org/19160/-6/tc211-minimal.adp",
   components: [
     {
       type: addressLine,
@@ -216,9 +216,9 @@ addressInstance2 = {
 ----
 profile = {
 
-  id: "http://www.iso.org/tc211/tc211-sample.adp",
+  id: "http://standards.isotc211.org/19160/-6/tc211-sample.adp",
   type: "iso-19160-address-profile",
-  publisher: "http://www.iso.org/tc211/",
+  publisher: "http://standards.isotc211.org/19160/-6/",
   signature: "...",
 
   name: "TC 211 Minimal Address Profile",
@@ -351,7 +351,7 @@ profile = {
 
 ----
 addressInstance1 = {
-  profile: "http://www.iso.org/tc211/tc211-sample.adp#streetAddress",
+  profile: "http://standards.isotc211.org/19160/-6/tc211-sample.adp#streetAddress",
   components: [
     {
       type: addressNumber,
@@ -380,7 +380,7 @@ addressInstance1 = {
 }
 
 boxInstance1 = {
-  profile: "http://www.iso.org/tc211/tc211-sample.adp#boxAddress",
+  profile: "http://standards.isotc211.org/19160/-6/tc211-sample.adp#boxAddress",
   components: [
     {
       type: boxNumber,

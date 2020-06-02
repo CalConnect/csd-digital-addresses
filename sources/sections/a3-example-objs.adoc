@@ -11,9 +11,9 @@ object structures, including in XML <<ISO19139>> and in JSON.
 [source,json]
 ----
 {
-  "id": "http://www.iso.org/tc211/tc211-sample.adp",
+  "id": "http://standards.isotc211.org/19160/-6/tc211-sample.adp",
   "type": "iso-19160-address-profile",
-  "publisher": "http://www.iso.org/tc211/",
+  "publisher": "http://standards.isotc211.org/19160/-6/",
   "signature": "...",
 
   "name": "TC 211 Minimal Address Profile",
@@ -26,7 +26,7 @@ object structures, including in XML <<ISO19139>> and in JSON.
     "countries": ["uk"]
   },
 
-  "dataTypes": {
+  "valueTypes": {
     "addressedObjectIdentifier": {
       "primitiveType": "Integer"
     }
@@ -113,7 +113,7 @@ object structures, including in XML <<ISO19139>> and in JSON.
 
 [source,json]
 ----
-"dataTypes": [{
+"valueTypes": [{
   "name": "addressNumberValue",
   "coreType": "Integer",
   "constraints": [ ... ],
@@ -146,7 +146,7 @@ object structures, including in XML <<ISO19139>> and in JSON.
 [source,json]
 ----
 "address": {
-  "profileId": "https://standards.iso.org/19160/-6/profiles/uk.adp",
+  "profileId": "https://standards.isotc211.org/19160/-6/profiles/uk.adp",
   "components": [ ... ],
   "signature": { ... },
   "features": [ ... ]
@@ -168,7 +168,7 @@ object structures, including in XML <<ISO19139>> and in JSON.
 [source,json]
 ----
 "addressFeature": {
-  "feature": "https://standards.iso.org/19160/-6/features/specified",
+  "feature": "https://standards.isotc211.org/19160/-6/features/specified",
   "signature": [ ... ]
 }
 ----

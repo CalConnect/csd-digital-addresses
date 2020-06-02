@@ -1,17 +1,16 @@
 
 == Address profile model overview
 
-The address profile model defined in this standard consists of three major
-layers:
+The address profile model defined in this document consists of three major layers:
 
-* the AddressProfile model as a container of profiles of addresses and
+* the `AddressProfile` model as a container of profiles of addresses and
 address components,
 * the profiles of addresses and address components, and
 * the addresses and address components conforming to the profiles of addresses
 and address components.
 
 The `AddressProfile` model acts as a container of `AddressClassProfiles` and
-AddressComponentProfiles. In general, an `AddressProfile` contains the
+`AddressComponentProfiles`. In general, an `AddressProfile` contains the
 `AddressClassProfiles` and `AddressComponentProfiles` of a single country or
 region, which can be represented as country code in <<ISO3166-1>>.
 
@@ -38,3 +37,7 @@ humans, devices and systems with interoperability.
 ....
 include::../models/views/TopDown.yml[]
 ....
+
+NOTE: This clause defines a number of composite data models,
+integrates and thereby requires coordination between complex precedent
+standards, including <<ISO19115-1>>, <<ISO19160-1>> amongst others.

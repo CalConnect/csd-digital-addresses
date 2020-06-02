@@ -1,11 +1,6 @@
 [[ix-data-types]]
 == Data types
 
-[datamodel]
-....
-include::../models/views/DataTypes.yml[]
-....
-
 === Primitive and core data types
 
 These are the common data types used within this document.
@@ -20,3 +15,9 @@ including:
 * `Boolean`
 
 Core data types (`CoreTypes`) are defined in <<ISO19103,clause=A.2>>.
+
+
+[datamodel]
+....
+include::../models/views/DataTypes.yml[]
+....

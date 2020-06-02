@@ -1,14 +1,14 @@
 name: Validity
 modelType: class
 definition: |
-  The time interval where this interchange address profile is determined valid, and the revision number (represented as a date).
+  The time interval where an object is considered valid, with a revision number for issuance date/time.
 attributes:
   validityBegins:
-    definition: The date and time when this object becomes valid.
+    definition: The date and time when validity starts.
     type: iso19115CI_Date
   validityEnds:
-    definition: The date and time when this object becomes invalid.
+    definition: The date and time when validity ends.
     type: iso19115CI_Date
   revision:
-    definition: Issuance date/time of this object.
+    definition: Issuance date/time.
     type: iso19115CI_Date
