@@ -22,8 +22,8 @@ definition: |
   // TODO: define "render" in terms and definition
 
   [example]
-  A postal mail label can be considered an interchange address instance
-  rendered according to a layout template.
+  A postal mail label can be conceptually considered as an
+  interchange address instance rendered according to a layout template.
 attributes:
   id:
     definition: Unique identifier for the layout template.
@@ -48,7 +48,7 @@ attributes:
     type: LayoutOrientation
     cardinality:
       min: 0
-      max: "*"
+      max: 1
   lines:
     definition: The constituent parts of this LayoutTemplate.
     type: LayoutLine

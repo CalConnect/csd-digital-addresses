@@ -3,9 +3,10 @@ title: Data types
 caption: Data types to be used in this standard
 directive: data-types
 imports:
-  iso15924Code:
   iso639Code:
   iso3166Code:
+  iso15924Code:
+  iso24229Code:
   iso19115CI_Date:
   iso19115PT_Locale:
   iso19115EX_Extent:
@@ -13,3 +14,7 @@ imports:
   iso14888Oid:
 fidelity:
   hideOtherClasses: true
+diagram_options:
+  - skinparam nodesep 20
+  - skinparam ranksep 10
+  - left to right direction

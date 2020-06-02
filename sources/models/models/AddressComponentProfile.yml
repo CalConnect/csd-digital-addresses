@@ -61,3 +61,11 @@ relations:
     action:
       verb: compliesWith
       direction: source
+
+  - target: AddressClassProfile
+    relationship:
+      target:
+        type:
+        direction: "[hidden]left"
+      association: AddressComponentSpecification
+

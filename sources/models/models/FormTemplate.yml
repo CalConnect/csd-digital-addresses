@@ -7,13 +7,11 @@ definition: |
   The form template should use should also provide an example for display
   purposes in input (e.g., Help section).
 
-  The form template is used for displaying an
-  input form for entry of address data into an
+  The form template is used for displaying an input form for entry of address data into an
   interchange address instance.
-  Generally, one address class is represented
-  by just one input template.
+  Generally, one address class is represented by one input template.
 
-  NOTE: this part has no equivalence in PATDL.
+  NOTE: This part has no equivalence in PATDL.
 relations:
   - target: LayoutTemplate
     relationship:

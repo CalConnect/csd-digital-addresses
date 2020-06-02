@@ -5,21 +5,23 @@
 
 === Example of address profiles defined in ISO 19160-1
 
-==== ISO 19160-1 C2
+==== ISO 19160-1 C.2 Example 1: Minimal address profile
+
+===== Address profile (JSON)
 
 [source,json]
 ----
-profile = {
+{
 
-  "id": "http://www.iso.org/tc211/tc211-minimal.adp",
+  "id": "http://standards.isotc211.org/19160/-6/tc211-minimal.adp",
   "type": "iso-19160-address-profile",
-  "publisher": "http://www.iso.org/tc211/",
+  "publisher": "http://standards.isotc211.org/19160/-6/",
   "signature": "...",
 
   "name": "TC 211 Minimal Address Profile",
   "locale": {
     "language": "en",
-    "script": "en",
+    "script": "Latn"
   },
 
   "addressComponents": {
@@ -34,16 +36,46 @@ profile = {
       "addressComponentSpecifications": [
         {
           "componentType": "addressLine",
-          "min": 1,
-          "description": "One line of this address",
+          "description": "Address line",
           "require": true
         }
       ],
       "displayTemplates": [
         {
-          /* TODO */
+          "id": "basic",
+          "name": "Basic",
+          "description": "Rendering of the minimal address profile",
           "orientation": "horizontal",
-          "text": "({{ addressLine }}\n)*"
+          "localization": {
+            "script": "Latn",
+            "language": "en"
+          },
+          "lines": [
+            {
+              "componenet": "addressLine",
+              "cardinality": "*"
+            }
+          ]
+        }
+      ],
+      "formTemplates": [
+        {
+          "id": "basic",
+          "name": "Basic",
+          "description": "Address input form for the minimal address profile",
+          "orientation": "horizontal",
+          "localization": {
+            "script": "Latn",
+            "language": "en"
+          },
+          "formLines": [
+            {
+              "fields": [
+                { "component": "addressLine" }
+              ],
+              "cardinality": "*"
+            }
+          ]
         }
       ]
     }
@@ -51,13 +83,12 @@ profile = {
 }
 ----
 
-Profile-compliant addresses
+===== Profile-compliant address (ISO 19160-1, Figure C.3, South African street address) (JSON)
 
 [source,json]
 ----
-/* South African address */
-profileCompliantAddress1 = {
-  "profile": "http://www.iso.org/tc211/tc211-minimal.adp",
+{
+  "profile": "http://standards.isotc211.org/19160/-6/tc211-minimal.adp",
   "components": [
     {
       "type": "addressLine",
@@ -73,10 +104,14 @@ profileCompliantAddress1 = {
     }
   ]
 }
+----
 
-/* US address */
-profileCompliantAddress2 = {
-  "profile": "http://www.iso.org/tc211/tc211-minimal.adp",
+===== Profile-compliant address (ISO 19160-1, Figure C.4, US landmark address) (JSON)
+
+[source,json]
+----
+{
+  "profile": "http://standards.isotc211.org/19160/-6/tc211-minimal.adp",
   "components": [
     {
       "type": "addressLine",
@@ -98,62 +133,113 @@ profileCompliantAddress2 = {
 }
 ----
 
-==== ISO 19160-1 C3
+===== Profile-compliant address (ISO 19160-1, Figure C.5, UK address) (JSON)
+
+[source,json]
+----
+{
+  "profile": "http://standards.isotc211.org/19160/-6/tc211-minimal.adp",
+  "components": [
+    {
+      "type": "addressLine",
+      "value": "Multi-storey car park at Southampton Magistrates Court"
+    },
+    {
+      "type": "addressLine",
+      "value": "Carlton Crescent"
+    },
+    {
+      "type": "addressLine",
+      "value": "Southampton, Bevois"
+    },
+    {
+      "type": "addressLine",
+      "value": "S017 1EY"
+    },
+    {
+      "type": "addressLine",
+      "value": "United Kingdom"
+    }
+  ]
+}
+----
+
+
+
+==== ISO 19160-1 C.3 Example 2: Sample address profile
+
+===== Address profile (JSON)
 
 [source,json]
 ----
 profile = {
 
-  "id": "http://www.iso.org/tc211/tc211-sample.adp",
+  "id": "http://standards.isotc211.org/19160/-6/tc211-sample.adp",
   "type": "iso-19160-address-profile",
-  "publisher": "http://www.iso.org/tc211/",
+  "publisher": "http://standards.isotc211.org/19160/-6/",
   "signature": "...",
 
   "name": "TC 211 Minimal Address Profile",
   "locale": {
     "language": "en",
-    "script": "en",
+    "script": "en"
   },
 
-  "dataTypes": {
-    "addressNumberValue": {
+  "valueTypes": {
+    "addressedObjectIdentiferValue": {
       "primitiveType": "Integer",
       "maxValue": 10000,
       "minValue": 1
     },
-    "boxNumberValue": {
-      "primitiveType": "Integer",
-      "maxValue": 100000,
-      "minValue": 1
+    "thoroughfareNameValue": {
+      "type": "Object",
+      "value": {
+        "prefix": {
+          "primitiveType": "CharacterString"
+        },
+        "name": {
+          "primitiveType": "CharacterString"
+        },
+        "suffix": {
+          "primitiveType": "CharacterString"
+        },
+        "type": {
+          "primitiveType": "CharacterString"
+        }
+      }
     }
   }
 
   "addressComponents": {
     "addressNumber": {
-      "dataType": "addressNumberValue"
+      "dataType": "addressedObjectIdentiferValue",
+      "description": "Address number"
     },
     "boxNumber": {
-      "dataType": "boxNumberValue"
+      "dataType": "addressedObjectIdentiferValue",
+      "description": "PO Box number"
     },
 
     /* Table C.4. Address component type */
     "thoroughfareName": {
-      "dataType": "thoroughfareNameValue"
+      "dataType": "thoroughfareNameValue",
+      "description": "Thoroughfare name"
     },
     "localityName": {
-      "dataType": "CharacterString"
+      "dataType": "CharacterString",
+      "description": "Locality name"
     },
     "postOfficeName": {
-      "dataType": "CharacterString"
+      "dataType": "CharacterString",
+      "description": "Post office name"
     },
     "postCode": {
-      "dataType": "CharacterString"
+      "dataType": "CharacterString",
+      "description": "Post code"
     },
     "countryName": {
-      "dataType": "thoroughfareName"
-    }
-    "addressNumber": {
-      "dataType": "addressedObjectIdentifier"
+      "dataType": "CharacterString",
+      "description": "Country"
     }
   },
 
@@ -195,9 +281,62 @@ profile = {
       ],
       "displayTemplates": [
         {
-          /* TODO */
+          "id": "basic",
+          "name": "Basic",
+          "description": "Rendering of the minimal address profile",
+          "orientation": "horizontal",
+          "localization": {
+            "script": "Latn",
+            "language": "en"
+          },
+          "lines": [
+            {
+              "type": "template",
+              "value": "{{ addressNumber }} {{ thoroughfareName.name }} {{ thoroughfareName.type }}"
+            },
+            {
+              "type": "template",
+              "value": "{{ placeName }} {{ postCode }}"
+            },
+            {
+              "type": "component",
+              "value": "countryName"
+            }
+          ]
+        }
+      ],
+      "formTemplates": [
+        {
+          "id": "basic",
+          "name": "Basic",
+          "description": "Address input form for the sample address profile",
+          "orientation": "horizontal",
+          "localization": {
+            "script": "Latn",
+            "language": "en"
+          },
+          "formLines": [
+            {
+              "fields": [
+                { "component": "addressNumber" },
+                { "component": "thoroughfareName" }
+              ]
+            },
+            {
+              "fields": [
+                { "component": "placeName" },
+                { "component": "postCode" }
+              ]
+            },
+            {
+              "fields": [
+                { "component": "countryName" }
+              ]
+            }
+          ]
         }
       ]
+
     },
     "boxAddress": {
       "addressComponentSpecifications": [
@@ -229,22 +368,69 @@ profile = {
       ],
       "displayTemplates": [
         {
-          /* TODO */
+          "id": "basic",
+          "name": "Basic",
+          "description": "Rendering of the minimal address profile",
+          "orientation": "horizontal",
+          "localization": {
+            "script": "Latn",
+            "language": "en"
+          },
+          "lines": [
+            {
+              "type": "template",
+              "value": "PO Box {{ boxNumber }}"
+            },
+            {
+              "type": "component",
+              "value": "postOfficeName"
+            },
+            {
+              "type": "component",
+              "value": "postCode"
+            },
+            {
+              "type": "component",
+              "value": "countryName"
+            }
+          ]
+        }
+      ],
+      "formLines": [
+        {
+          "fields": [
+            { "component": "boxNumber" }
+          ]
+        },
+        {
+          "fields": [
+            { "component": "postOfficeName" }
+          ]
+        },
+        {
+          "fields": [
+            { "component": "postCode" }
+          ]
+        },
+        {
+          "fields": [
+            { "component": "countryName" }
+          ]
         }
       ]
+
     }
   }
 }
 ----
 
-Profile-compliant addresses
+===== Profile-compliant address (ISO 19160-1, Figure C.14, Street address) (JSON)
 
 [source,json]
 ----
 /* streetAddress */
-
-profileCompliantAddress1 = {
-  "profile": "http://www.iso.org/tc211/tc211-sample.adp#streetAddress",
+{
+  "profile": "http://standards.isotc211.org/19160/-6/tc211-sample.adp#streetAddress",
   "components": [
     {
       "type": "addressNumber",
@@ -271,10 +457,15 @@ profileCompliantAddress1 = {
     }
   ]
 }
+----
 
+===== Profile-compliant address (ISO 19160-1, Figure C.15, Box address) (JSON)
+
+[source,json]
+----
 /* boxAddress */
-profileCompliantAddress2 = {
-  "profile": "http://www.iso.org/tc211/tc211-sample.adp#boxAddress",
+{
+  "profile": "http://standards.isotc211.org/19160/-6/tc211-sample.adp#boxAddress",
   "components": [
     {
       "type": "boxNumber",

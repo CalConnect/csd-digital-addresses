@@ -9,3 +9,6 @@ imports:
   Geolocation:
   SpecificationLevelValue:
   QualityCode:
+diagram_options:
+  - skinparam nodesep 20
+  - skinparam ranksep 20

@@ -4,7 +4,7 @@ definition: |
   The display template is used for displaying an
   interchange address instance belonging to an interchange
   address class. Generally, one address class is represented
-  by just one display template.
+  by one display template.
 relations:
   - target: LayoutTemplate
     relationship:
