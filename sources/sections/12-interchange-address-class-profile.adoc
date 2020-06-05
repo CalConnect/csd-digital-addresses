@@ -1,4 +1,16 @@
 [[ix-address-class-profile]]
 == InterchangeAddressClassProfile overview
 
-[datamodel,./models/views/InterchangeAddressClassProfile.yml]
+[datamodel_diagram,./models/views/InterchangeAddressClassProfile.yml]
+
+[datamodel_attributes_table,./models/models/InterchangeAddressClassProfile.yml]
+
+[datamodel_attributes_table,./models/models/DisplayTemplate.yml]
+
+[datamodel_attributes_table,./models/models/FormTemplate.yml]
+
+[datamodel_attributes_table,./models/models/AttributeProfile/Signature.yml]
+
+[datamodel_attributes_table,./models/models/AttributeProfile/AddressFeature.yml]
+
+[datamodel_attributes_table,./models/models/AttributeProfile/Validity.yml]

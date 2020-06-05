@@ -1,5 +1,20 @@
 [[form-template]]
 == Form template
 
-[datamodel,./models/views/FormTemplate.yml]
+[datamodel_diagram,./models/views/FormTemplate.yml]
 
+[datamodel_attributes_table,./models/models/FormTemplate.yml]
+
+[datamodel_attributes_table,./models/models/FormLine.yml]
+
+[datamodel_attributes_table,./models/models/FormLineElement.yml]
+
+[datamodel_attributes_table,./models/models/SelectionPair.yml]
+
+[datamodel_attributes_table,./models/models/SelectionElement.yml]
+
+[datamodel_attributes_table,./models/models/DataElement.yml]
+
+[datamodel_attributes_table,./models/models/StaticTextElement.yml]
+
+[datamodel_attributes_table,./models/models/DataElementWithConditions.yml]

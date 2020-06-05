@@ -1,4 +1,14 @@
 [[display-template]]
 == Display template
 
-[datamodel,./models/views/DisplayTemplate.yml]
+[datamodel_diagram,./models/views/DisplayTemplate.yml]
+
+[datamodel_attributes_table,./models/models/DisplayTemplate.yml]
+
+[datamodel_attributes_table,./models/models/DisplayLine.yml]
+
+[datamodel_attributes_table,./models/models/DisplayLineElement.yml]
+
+[datamodel_attributes_table,./models/models/DataElement.yml]
+
+[datamodel_attributes_table,./models/models/TextElement.yml]

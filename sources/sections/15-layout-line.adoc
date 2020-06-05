@@ -2,4 +2,6 @@
 [[layout-line]]
 == LayoutLine
 
-[datamodel,./models/views/LayoutLine.yml]
+[datamodel_diagram,./models/views/LayoutLine.yml]
+
+[datamodel_attributes_table,./models/models/LayoutLine.yml]

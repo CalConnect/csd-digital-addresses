@@ -33,7 +33,7 @@ GEM
       addressable (~> 2.5)
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
-    ffi (1.12.2)
+    ffi (1.13.0)
     ffi-compiler2 (2.0.0)
       ffi (>= 1.0.0)
       rake

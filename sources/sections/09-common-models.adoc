@@ -1,4 +1,12 @@
 [[ix-common]]
 == Common models
 
-[datamodel,./models/views/CommonModels.yml]
+[datamodel_diagram,./models/views/CommonModels.yml]
+
+[datamodel_attributes_table,./models/models/Localization.yml]
+
+[datamodel_attributes_table,./models/models/Validity.yml]
+
+[datamodel_attributes_table,./models/models/Signature.yml]
+
+[datamodel_attributes_table,./models/models/TextDirectionCode.yml]
