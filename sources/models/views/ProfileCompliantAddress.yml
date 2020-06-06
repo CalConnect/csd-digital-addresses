@@ -25,7 +25,7 @@ groups:
     - AddressComponent
 relations:
   - source: AddressClassProfile
-    target: AddressComponentProfile
+    target: AddressComponentProfile:"                     "
     direction: '[hidden]right'
 
   - source: ProfileCompliantAddress
@@ -36,22 +36,26 @@ relations:
     target: AddressComponent
     direction: '[hidden]right'
 
-  - source: AddressClassProfile
-    target: ProfileCompliantAddress
-    direction: '[hidden]down'
-  - source: AddressComponentProfile
-    target: AddressComponentSpecification
-    direction: '[hidden]down'
-  - source: AddressComponentSpecification
-    target: ProfileCompliantAddressComponent
-    direction: '[hidden]down'
-  - source: ProfileCompliantAddress
-    target: Address
-    direction: '[hidden]down'
-  - source: ProfileCompliantAddressComponent
-    target: AddressComponent
-    direction: '[hidden]down'
+  # - source: AddressClassProfile
+  #   target: ProfileCompliantAddress
+  #   direction: '[hidden]down'
+  # - source: AddressComponentProfile
+  #   target: AddressComponentSpecification
+  #   direction: '[hidden]down'
+  # - source: AddressComponentSpecification
+  #   target: ProfileCompliantAddressComponent
+  #   direction: '[hidden]down'
+  # - source: ProfileCompliantAddress
+  #   target: Address
+  #   direction: '[hidden]down'
+  # - source: ProfileCompliantAddressComponent
+  #   target: AddressComponent
+  #   direction: '[hidden]down'
 
 fidelity:
   # hideMembers: true
   hideOtherClasses: true
+diagram_options:
+  - skinparam nodesep 40
+  - skinparam ranksep 35
+  - skinparam linetype ortho

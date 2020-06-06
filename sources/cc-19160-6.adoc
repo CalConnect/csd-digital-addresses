@@ -12,16 +12,9 @@
 :fullname: Ronald Tse
 :surname: Tse
 :givenname: Ronald
-:fullname_2: Peter Tam
-:surname_2: Tam
-:givenname_2: Peter
-:draft:
-:toc:
-:stem:
-:xrefstyle: short
 :docfile: cc-19160-6.adoc
 :mn-document-class: csd
-:mn-output-extensions: xml,html,rxl
+:mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
 

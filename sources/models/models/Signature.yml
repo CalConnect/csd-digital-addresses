@@ -12,9 +12,9 @@ attributes:
   signature:
     definition: The actual digital signature value encoded in Base64 format.
     type: CharacterString
-relations:
-  - target: Localization
-    relationship:
-      target:
-        type: direct
-    direction: "[hidden]"
+# relations:
+#   - target: Localization
+#     relationship:
+#       target:
+#         type: direct
+#     direction: "[hidden]"

@@ -29,8 +29,8 @@ contact exchange.
 
 This address represents a complete textual address instance.
 
-[source]
-----
+.Fully expanded sample address
+====
 Suite 1109,
 Floor 11,
 Central Building,
@@ -39,7 +39,7 @@ Central,
 Central & Western District,
 Hong Kong Island,
 Hong Kong
-----
+====
 
 And this address represents the identical address as above,
 with a reduction of information that is already implied,
@@ -47,13 +47,13 @@ which that does not reduce its correctness. This can be
 achieved by supplying a `displayTemplate` in the
 interchange address.
 
-[source]
-----
+.Shortened sample address
+====
 Suite 1109,
 1 Pedder Street,
 Central,
 Hong Kong
-----
+====
 
 
 === Address as destination

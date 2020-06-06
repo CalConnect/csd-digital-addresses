@@ -2,20 +2,8 @@
 .swp
 .tmp.xml
 
-# ISO files
-iso-*.html
-iso-*.doc
-iso-*.xml
-iso-*_files
-~*.doc
-~*.docx
-
-# compiled documents
-documents/*
-
 # compiled files of plantuml models
 sources/models/plantuml2/**/*
-sources/images/*
 
 # relaton cache
 relaton/cache/*

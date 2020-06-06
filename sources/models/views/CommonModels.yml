@@ -7,3 +7,7 @@ imports:
   Validity:
   Signature:
   TextDirectionCode:
+diagram_options:
+  - skinparam nodesep 20
+  - skinparam ranksep 10
+  - left to right direction

@@ -1,10 +1,11 @@
 name: Localization
 modelType: class
 definition: |
-  The language and script used within the parent object.
+  Represents localization metadata of the parent object.
 
-  Represented by the `PT_Locale` object defined in <<ISO19115-1>> and an
-  <<ISO15924>> script code.
+  Realized using a `PT_Locale` object defined in <<ISO19115-1>>,
+  a script code from <<ISO15924>>, a writing system code
+  from <<ISO24229>>, and indication of text direction.
 attributes:
   locale:
     definition: The locale of the parent object.
@@ -12,12 +13,15 @@ attributes:
   script:
     definition: The type of written script used in the parent object.
     type: iso15924Code
+  writingSystem:
+    definition: The type of writing system used in the parent object.
+    type: iso24229Code
   textDirection:
     definition: Indicating in which direction the text of the parent should be read.
     type: TextDirectionCode
-relations:
-  - target: Validity
-    relationship:
-      target:
-        type: direct
-    direction: "[hidden]"
+# relations:
+#   - target: Validity
+#     relationship:
+#       target:
+#         type: direct
+#     direction: "[hidden]"

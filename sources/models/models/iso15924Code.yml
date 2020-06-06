@@ -2,8 +2,8 @@ name: iso15924Code
 modelType: class
 definition: The type of written script as defined in <<ISO15924>>.
 relations:
-  - target: CoreType
-    relationship:
-      target:
-        type: direct
-    direction: "[hidden]"
+  # - target: CoreType
+  #   relationship:
+  #     target:
+  #       type: direct
+  #   direction: "[hidden]"

@@ -10,31 +10,39 @@ imports:
   AttributeProfile:
 groups:
   - - AddressProfile
-  - - AddressClassProfile
-    - AddressComponentProfile
-  - - AttributeProfile
-    - AddressComponentSpecification
+    - AddressClassProfile
+  - - AddressComponentProfile
+  - - AddressComponentSpecification
+    - AttributeProfile
 relations:
-  - source: AddressClassProfile
-    target: AddressComponentProfile
-    direction: '[hidden]right'
-
-  - source: AttributeProfile
-    target: AddressComponentSpecification
-    direction: '[hidden]right'
-
   - source: AddressProfile
     target: AddressClassProfile
-    direction: '[hidden]down'
-
-  - source: AddressClassProfile
-    target: AttributeProfile
-    direction: '[hidden]down'
+    direction: '[hidden]left'
 
   - source: AddressComponentProfile
-    target: AddressComponentSpecification
-    direction: '[hidden]down'
+    target: AddressClassProfile
+    direction: '[hidden]left'
+  #
+  # - source: AttributeProfile
+  #   target: AddressComponentSpecification
+  #   # direction: '[hidden]right'
+  #
+  # - source: AddressProfile
+  #   target: AddressClassProfile
+  #   # direction: '[hidden]down'
+  #
+  # - source: AddressClassProfile
+  #   target: AttributeProfile
+  #   # direction: '[hidden]down'
+  #
+  # - source: AddressComponentProfile
+  #   target: AddressComponentSpecification
+  #   # direction: '[hidden]down'
 
 fidelity:
   # hideMembers: true
   hideOtherClasses: true
+diagram_options:
+  - skinparam nodesep 80
+  - skinparam ranksep 40
+  - skinparam linetype ortho

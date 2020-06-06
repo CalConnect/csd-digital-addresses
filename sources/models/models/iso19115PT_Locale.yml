@@ -2,8 +2,8 @@ name: iso19115PT_Locale
 modelType: class
 definition: The type of `PT_Locale` as defined in <<ISO19115-1>>.
 relations:
-  - target: CoreType
-    relationship:
-      target:
-        type: direct
-    direction: "[hidden]"
+  # - target: CoreType
+  #   relationship:
+  #     target:
+  #       type: direct
+  #   direction: "[hidden]"

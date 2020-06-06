@@ -4,11 +4,11 @@
 === General
 
 The ISO address profile registry will be managed with version control software,
-publicly available with an API and/or a graphical user interface, such as a web-based interface,
+publicly available with an API and a graphical user interface, such as a web-based interface,
 to satisfy both programatic and human use for the dissemination, display and management
 of the registry.
 
-The ISO address profile register is a non-hierarchical register. References to principal registers and sub registers are excluded from this document.
+The ISO address profile register is a non-hierarchical register. References to principal registers and sub-registers are excluded from this document.
 
 This address profile registry follows the requirements specified in
 <<ISO19135-1>>, and additional requirements specified in this standard.

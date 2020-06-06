@@ -1,12 +1,18 @@
 
 == Process of address profile and address interchange
 
+=== General
+
 Practical usage of AXO models relies on the establishment of an
 address profile registry.
 
 This clause sets out specific requirements in relation with <<ISO19135-1>>.
 
 The roles and responsibilities of the register owner, register manager, submitting organizations, control body, registry manager and register user are set out in <<ISO19135-1,clause=5>>.
+
+Data structures that are shared on the address profile registry include address profiles and their metadata in machine-readable format.
+
+A control body is setup to manage creation of and changes to registered items at the registration authority.
 
 === Address profiles
 
@@ -31,12 +37,12 @@ specified in <<address-profile>>.
 
 ==== Publishing address profiles
 
-Publishers distribute their address profiles to others
+Submitting organizations distribute their address profiles to others
 through direct exchange or through a registry.
 
 ==== Updating address profiles
 
-Publishers can update an address profile and profiles associated with it,
+Submitting organizations can update an address profile and profiles associated with it,
 and re-distribute it by publishing using a new version number that
 supersedes the previously published one.
 
@@ -51,17 +57,17 @@ profile-specified form template; or
 * display addresses according to the profile-specified display template.
 
 Applications shall consider the validity period of an address class profile,
-and shall periodically check with the publisher (or a registry that
-the publisher distributes via) the latest version of the address
+and shall periodically check with the submitting organization (or the registry that
+the submitting organization distributes via) the latest version of the address
 profile.
 
 ==== Retiring address profiles
 
-Publisher can indicate the validity period of an address class profile in the
+Submitting organizations can indicate the validity period of an address class profile in the
 profile itself, which if the validity end date has passed, would indicate
 that the profile is retired.
 
-To immediately retire an address class profile, the publisher shall
+To immediately retire an address class profile, the submitting organization shall
 distribute a new version of the address profile with an expired
 validity period.
 
@@ -80,7 +86,7 @@ include::../models/AddressInstanceLifeCycle.wsd[]
 
 ==== Creating a profile-complaint address
 
-This section describes how a profile-compliant address is created. The desired
+This clause describes how a profile-compliant address is created. The desired
 address class profile shall be already retrieved for creating a profile-compliant
 address that conforms to it.
 
@@ -115,21 +121,21 @@ display template.
 The recipient or service could process the address, such as to further
 clean up the address by improving the conformance level by fully
 deducing the address structure, which would add an address feature
-"https://standards.iso.org/19160/-6/features/specified" to the
+`https://standards.isotc211.org/19160/-6/features/specified` to the
 address instance.
 
 To ensure that the resulting interchange address with a fully-specified
 structure is correct, the processor may wish to confirm with the user
 the resulting address, such as in the case where the address is used
 for shipping information. This would add the `AddressFeature`
-"https://standards.iso.org/19160/-6/features/confirmed" to the
+`https://standards.isotc211.org/19160/-6/features/confirmed` to the
 address instance.
 
 ===== Verifying an interchange address
 
 The recipient or service could further validate the address, such as
 with a postal or addressing authority. This would add the
-`AddressFeature` "https://verifyingauthority/verified" to the interchange address
+`AddressFeature` `https://verifyingauthority/verified` to the interchange address
 written by the verifying authority.
 
 ==== Adding associated data to an interchange address
@@ -143,4 +149,5 @@ address features could be added into the interchange address.
 
 ==== Discarding an interchange address
 
-When a service no longer needs the address, it should be disposed of.
+When a service no longer needs an address, the address should be disposed of.
+
