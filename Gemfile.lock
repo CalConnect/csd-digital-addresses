@@ -1,5 +1,7 @@
-PATH
-  remote: ../../mn/metanorma-standoc
+GIT
+  remote: https://github.com/metanorma/metanorma-standoc
+  revision: 2ea47c7af731c1cad789a30a96d6633b9863003c
+  branch: feature/datamodel
   specs:
     metanorma-standoc (1.3.29)
       asciidoctor (~> 2.0.0)
@@ -281,7 +283,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  byebug (~> 11.1)
   metanorma-cli
   metanorma-standoc!
 
