@@ -8,7 +8,6 @@ cache:
 build:
   stage: build
   script:
-    - bundle add metanorma-standoc --git https://github.com/metanorma/metanorma-standoc --branch 2d1b53c5318fc9584e84a681cfe8676f6d55f3c4
     - bundle
     - curl -sSL https://raw.githubusercontent.com/kata-containers/runtime/master/.ci/install-yq.sh | bash
     - cp ~/go/bin/yq /usr/local/bin/
