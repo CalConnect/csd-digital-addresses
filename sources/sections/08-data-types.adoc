@@ -17,7 +17,20 @@ including:
 Core data types (`CoreTypes`) are defined in <<ISO19103,clause=A.2>>.
 
 
-[datamodel]
-....
-include::../models/views/DataTypes.yml[]
-....
+[datamodel_diagram,./models/views/DataTypes.yml]
+
+[datamodel_attributes_table,./models/models/iso15924Code.yml]
+
+[datamodel_attributes_table,./models/models/iso639Code.yml]
+
+[datamodel_attributes_table,./models/models/iso3166Code.yml]
+
+[datamodel_attributes_table,./models/models/iso19115CI_Date.yml]
+
+[datamodel_attributes_table,./models/models/iso19115PT_Locale.yml]
+
+[datamodel_attributes_table,./models/models/iso19115EX_Extent.yml]
+
+[datamodel_attributes_table,./models/models/iso19115MD_Constraints.yml]
+
+[datamodel_attributes_table,./models/models/iso14888Oid.yml]

@@ -1,7 +1,16 @@
 [[address-feature]]
 == Address feature
 
-[datamodel]
-....
-include::../models/views/AddressFeature.yml[]
-....
+[datamodel_diagram,./models/views/AddressFeature.yml]
+
+[datamodel_attributes_table,./models/models/AddressFeature.yml]
+
+[datamodel_attributes_table,./models/models/SpecificationLevel.yml]
+
+[datamodel_attributes_table,./models/models/QualityStatus.yml]
+
+[datamodel_attributes_table,./models/models/Geolocation.yml]
+
+[datamodel_attributes_table,./models/models/SpecificationLevelValue.yml]
+
+[datamodel_attributes_table,./models/models/QualityCode.yml]
