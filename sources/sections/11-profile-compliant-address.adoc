@@ -1,7 +1,8 @@
 [[profile-compliant-address]]
 == Profile compliant address
 
-[datamodel]
-....
-include::../models/views/ProfileCompliantAddress.yml[]
-....
+[datamodel_diagram,./models/views/ProfileCompliantAddress.yml]
+
+[datamodel_attributes_table,./models/models/ProfileCompliantAddress.yml]
+
+[datamodel_attributes_table,./models/models/ProfileCompliantAddressComponent.yml]

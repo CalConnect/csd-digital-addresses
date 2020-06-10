@@ -1,7 +1,14 @@
 [[address-profile]]
 == Address profile
 
-[datamodel]
-....
-include::../models/views/AddressProfile.yml[]
-....
+[datamodel_diagram,./models/views/AddressProfile.yml]
+
+[datamodel_attributes_table,./models/models/AddressProfile.yml]
+
+[datamodel_attributes_table,./models/models/AddressClassProfile.yml]
+
+[datamodel_attributes_table,./models/models/AddressComponentProfile.yml]
+
+[datamodel_attributes_table,./models/models/AddressComponentSpecification.yml]
+
+[datamodel_attributes_table,./models/models/AttributeProfile.yml]

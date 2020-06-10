@@ -1,7 +1,10 @@
 [[layout-template]]
 == Layout template
 
-[datamodel]
-....
-include::../models/views/LayoutTemplate.yml[]
-....
+[datamodel_diagram,./models/views/LayoutTemplate.yml]
+
+[datamodel_attributes_table,./models/models/LayoutTemplate.yml]
+
+[datamodel_attributes_table,./models/models/LayoutDimension.yml]
+
+[datamodel_attributes_table,./models/models/LayoutOrientation.yml]
