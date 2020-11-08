@@ -1,0 +1,82 @@
+diagram ProfileCompliantAddress {
+  title 'Profile compliant address'
+  association {
+    owner AddressClassProfile
+    member_type direct
+    member AddressComponentProfile
+  }
+  association {
+    owner ProfileCompliantAddress
+    member_type direct
+    member ProfileCompliantAddressComponent
+  }
+  association {
+    owner Address
+    member_type direct
+    member AddressComponent
+  }
+  class AddressClassProfile {
+    +id: CharacterString
+    +type: CharacterString
+    +description: CharacterString
+    +localization: Localization
+    +signature: Signature [0..1]
+    +areaApplicability: iso19115MD_SpatialRepresentation [0..*]
+    +timeToLive: Integer
+    +validity: Validity
+  }
+  association {
+    owner_type aggregation
+    owner AddressClassProfile#addressClassProfile
+    member_type direct
+    member AttributeProfile#attributeProfile [0..*]
+  }
+  association {
+    owner AddressClassProfile
+    member_type direct
+    member ProfileCompliantAddress
+  }
+  class AddressComponentProfile {
+    +key: CharacterString
+    +description: CharacterString
+    +example: CharacterString [0..1]
+  }
+  association {
+    owner AddressComponentProfile
+    member_type aggregation
+    member AddressClassProfile#componentProfile [0..*]
+  }
+  association {
+    owner_type aggregation
+    owner AddressComponentProfile#addressClassProfile
+    member_type direct
+    member AttributeProfile#attributeProfile [0..*]
+  }
+  association {
+    owner AddressComponentProfile
+    member_type direct
+    member ProfileCompliantAddressComponent#profile [1..1]
+  }
+  class ProfileCompliantAddress {
+  }
+  association {
+    owner ProfileCompliantAddress
+    member_type inheritance
+    member Address
+  }
+  class ProfileCompliantAddressComponent {
+  }
+  association {
+    owner ProfileCompliantAddressComponent
+    member_type inheritance
+    member AddressComponent
+  }
+  class AddressComponentSpecification {
+    +maxCardinality: Integer
+    +minCardinality: Integer
+  }
+  class Address {
+  }
+  class AddressComponent {
+  }
+}

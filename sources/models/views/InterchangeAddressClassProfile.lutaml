@@ -1,0 +1,138 @@
+diagram InterchangeAddressClassProfile {
+  title 'InterchangeAddressClassProfile overview'
+  association {
+    owner InterchangeAddressClassProfile
+    member_type direct
+    member AddressClassProfile
+  }
+  association {
+    owner FormTemplate
+    member_type direct
+    member DisplayTemplate
+  }
+  association {
+    owner DisplayTemplate
+    member_type direct
+    member AttributeProfileSignature
+  }
+  association {
+    owner AttributeProfileSignature
+    member_type direct
+    member AttributeProfileAddressFeature
+  }
+  association {
+    owner AttributeProfileAddressFeature
+    member_type direct
+    member AttributeProfileValidity
+  }
+  association {
+    owner InterchangeAddressClassProfile
+    member_type direct
+    member AttributeProfileSignature
+  }
+  association {
+    owner AttributeProfileAddressFeature
+    member_type direct
+    member AttributeProfile
+  }
+  class AddressClassProfile {
+    +id: CharacterString 
+    +type: CharacterString 
+    +description: CharacterString 
+    +localization: Localization 
+    +signature: Signature [0..1]
+    +areaApplicability: iso19115MD_SpatialRepresentation [0..*]
+    +timeToLive: Integer 
+    +validity: Validity 
+  }
+  association {
+    owner_type aggregation
+    owner AddressClassProfile#addressClassProfile
+    member_type direct
+    member AttributeProfile#attributeProfile [0..*]
+  }
+  association {
+    owner AddressClassProfile
+    member_type direct
+    member ProfileCompliantAddress
+  }
+  class InterchangeAddressClassProfile {
+  }
+  association {
+    owner_type aggregation
+    owner InterchangeAddressClassProfile#attributeProfile
+    member_type direct
+    member AttributeProfileAddressFeature#addressClassProfile
+  }
+  association {
+    owner_type aggregation
+    owner InterchangeAddressClassProfile#attributeProfile
+    member_type direct
+    member AttributeProfileValidity#addressClassProfile
+  }
+  association {
+    owner_type aggregation
+    owner InterchangeAddressClassProfile
+    member_type direct
+    member FormTemplate#formTemplate [0..*]
+  }
+  association {
+    owner_type aggregation
+    owner InterchangeAddressClassProfile
+    member_type direct
+    member DisplayTemplate#displayTemplate [0..*]
+  }
+  class DisplayTemplate {
+  }
+  association {
+    owner DisplayTemplate
+    member_type inheritance
+    member LayoutTemplate
+  }
+  association {
+    owner_type composition
+    owner DisplayTemplate
+    member_type direct
+    member DisplayLine#formLine [1..*]
+  }
+  class FormTemplate {
+  }
+  association {
+    owner FormTemplate
+    member_type inheritance
+    member LayoutTemplate
+  }
+  association {
+    owner_type composition
+    owner FormTemplate
+    member_type direct
+    member FormLine#formLine [1..*]
+  }
+  class Signature {
+  }
+  association {
+    owner Signature
+    member_type inheritance
+    member AttributeProfile
+  }
+  class AddressFeature {
+  }
+  association {
+    owner AddressFeature
+    member_type inheritance
+    member AttributeProfile
+  }
+  class Validity {
+  }
+  association {
+    owner Validity
+    member_type inheritance
+    member AttributeProfile
+  }
+  class AttributeProfile {
+    +name: CharacterString 
+    +minCardinality: Integer [0..1]
+    +maxCardinality: Integer [0..1]
+    +valueType: CharacterString [0..1]
+  }
+}

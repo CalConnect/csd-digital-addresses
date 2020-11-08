@@ -1,0 +1,121 @@
+digraph G {
+  graph [splines="ortho" pad=0.5 ranksep="1.2.equally" nodesep="1.2.equally"]
+  edge [color="gray50"]
+  node [shape="box" fontname="Helvetica-bold"]
+
+  Localization [
+    shape="plain"
+    fontname="Helvetica"
+    label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10">
+    <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+    <TR><TD ALIGN="CENTER"><B>Localization</B></TD></TR>
+  </TABLE>
+  </TD>
+  </TR>
+  
+  <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+              <TR><TD ALIGN="LEFT">+locale : iso19115PT_Locale</TD></TR>
+            <TR><TD ALIGN="LEFT">+script : iso15924Code</TD></TR>
+            <TR><TD ALIGN="LEFT">+writingSystem : iso24229Code</TD></TR>
+            <TR><TD ALIGN="LEFT">+textDirection : TextDirectionCode</TD></TR>
+  </TABLE>
+        </TD>
+  </TR>
+  
+  <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+    <TR><TD ALIGN="LEFT"></TD></TR>
+  </TABLE></TD>
+  </TR>
+  
+  </TABLE>>]
+  
+  Validity [
+    shape="plain"
+    fontname="Helvetica"
+    label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10">
+    <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+    <TR><TD ALIGN="CENTER"><B>Validity</B></TD></TR>
+  </TABLE>
+  </TD>
+  </TR>
+  
+  <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+              <TR><TD ALIGN="LEFT">+validityBegins : iso19115CI_Date</TD></TR>
+            <TR><TD ALIGN="LEFT">+validityEnds : iso19115CI_Date</TD></TR>
+            <TR><TD ALIGN="LEFT">+revision : iso19115CI_Date</TD></TR>
+  </TABLE>
+        </TD>
+  </TR>
+  
+  <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+    <TR><TD ALIGN="LEFT"></TD></TR>
+  </TABLE></TD>
+  </TR>
+  
+  </TABLE>>]
+  
+  Signature [
+    shape="plain"
+    fontname="Helvetica"
+    label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10">
+    <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+    <TR><TD ALIGN="CENTER"><B>Signature</B></TD></TR>
+  </TABLE>
+  </TD>
+  </TR>
+  
+  <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+              <TR><TD ALIGN="LEFT">+algorithm : iso14888Oid</TD></TR>
+            <TR><TD ALIGN="LEFT">+publicKey : Uri</TD></TR>
+            <TR><TD ALIGN="LEFT">+signature : CharacterString</TD></TR>
+  </TABLE>
+        </TD>
+  </TR>
+  
+  <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+    <TR><TD ALIGN="LEFT"></TD></TR>
+  </TABLE></TD>
+  </TR>
+  
+  </TABLE>>]
+  
+  TextDirectionCode [
+    shape="plain"
+    fontname="Helvetica"
+    label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10">
+    <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+    <TR><TD ALIGN="CENTER">«enumeration»</TD></TR>\n<TR><TD ALIGN="CENTER"><B>TextDirectionCode</B></TD></TR>
+  </TABLE>
+  </TD>
+  </TR>
+  
+  <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+              <TR><TD ALIGN="LEFT">leftToRightTopToBottom</TD></TR>
+            <TR><TD ALIGN="LEFT">rightToLeftTopToBottom</TD></TR>
+            <TR><TD ALIGN="LEFT">leftToRightBottomToTop</TD></TR>
+            <TR><TD ALIGN="LEFT">rightToLeftBottomToTop</TD></TR>
+  </TABLE>
+        </TD>
+  </TR>
+  
+  <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+    <TR><TD ALIGN="LEFT"></TD></TR>
+  </TABLE></TD>
+  </TR>
+  
+  </TABLE>>]
+
+
+}

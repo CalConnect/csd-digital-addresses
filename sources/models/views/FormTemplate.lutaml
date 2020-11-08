@@ -1,0 +1,83 @@
+diagram FormTemplate {
+  title 'Form template'
+  association {
+    owner FormTemplate
+    member_type direct
+    member FormLineElement
+  }
+  association {
+    owner FormLineElement
+    member_type direct
+    member StaticTextElement
+  }
+  association {
+    owner DataElement
+    member_type direct
+    member StaticTextElement
+  }
+  class FormTemplate {
+  }
+  association {
+    owner FormTemplate
+    member_type inheritance
+    member LayoutTemplate
+  }
+  association {
+    owner_type composition
+    owner FormTemplate
+    member_type direct
+    member FormLine#formLine [1..*]
+  }
+  class FormLine {
+  }
+  association {
+    owner_type composition
+    owner FormLine
+    member_type direct
+    member FormLineElement#element [1..*]
+  }
+  class FormLineElement {
+  }
+  class SelectionPair {
+    +key: CharacterString
+    +displayAs: CharacterString
+  }
+  class SelectionElement {
+    +map: SelectionPair [1..*]
+  }
+  association {
+    owner SelectionElement
+    member_type inheritance
+    member FormLineElement
+  }
+  class DataElement {
+    +value: CharacterString
+  }
+  association {
+    owner DataElement
+    member_type inheritance
+    member DisplayLineElement
+  }
+  association {
+    owner DataElement
+    member_type inheritance
+    member FormLineElement
+  }
+  association {
+    owner_type inheritance
+    owner DataElement
+    member_type direct
+    member DataElementWithConditions
+  }
+  class StaticTextElement {
+    +value: CharacterString
+  }
+  association {
+    owner StaticTextElement
+    member_type inheritance
+    member FormLineElement
+  }
+  class DataElementWithConditions {
+    +value: iso19115MD_Constraints
+  }
+}

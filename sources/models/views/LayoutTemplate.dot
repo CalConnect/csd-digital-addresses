@@ -1,0 +1,146 @@
+digraph G {
+  graph [splines="ortho" pad=0.5 ranksep="1.2.equally" nodesep="1.2.equally"]
+  edge [color="gray50"]
+  node [shape="box" fontname="Helvetica-bold"]
+
+  LayoutTemplate [
+    shape="plain"
+    fontname="Helvetica"
+    label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10">
+    <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+    <TR><TD ALIGN="CENTER"><B>LayoutTemplate</B></TD></TR>
+  </TABLE>
+  </TD>
+  </TR>
+  
+  <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+              <TR><TD ALIGN="LEFT">+id : CharacterString</TD></TR>
+            <TR><TD ALIGN="LEFT">+name : CharacterString</TD></TR>
+            <TR><TD ALIGN="LEFT">+description : CharacterString</TD></TR>
+            <TR><TD ALIGN="LEFT">+localization : Localization</TD></TR>
+            <TR><TD ALIGN="LEFT">+dimension : LayoutDimension&#91;0..*&#93;</TD></TR>
+            <TR><TD ALIGN="LEFT">+orientation : LayoutOrientation&#91;0..1&#93;</TD></TR>
+            <TR><TD ALIGN="LEFT">+lines : LayoutLine&#91;0..*&#93;</TD></TR>
+  </TABLE>
+        </TD>
+  </TR>
+  
+  <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+    <TR><TD ALIGN="LEFT"></TD></TR>
+  </TABLE></TD>
+  </TR>
+  
+  </TABLE>>]
+  
+  LayoutDimension [
+    shape="plain"
+    fontname="Helvetica"
+    label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10">
+    <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+    <TR><TD ALIGN="CENTER"><B>LayoutDimension</B></TD></TR>
+  </TABLE>
+  </TD>
+  </TR>
+  
+  <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+              <TR><TD ALIGN="LEFT">+width : Integer&#91;0..1&#93;</TD></TR>
+            <TR><TD ALIGN="LEFT">+height : Integer&#91;0..1&#93;</TD></TR>
+  </TABLE>
+        </TD>
+  </TR>
+  
+  <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+    <TR><TD ALIGN="LEFT"></TD></TR>
+  </TABLE></TD>
+  </TR>
+  
+  </TABLE>>]
+  
+  DisplayTemplate [
+    shape="plain"
+    fontname="Helvetica"
+    label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10">
+    <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+    <TR><TD ALIGN="CENTER"><B>DisplayTemplate</B></TD></TR>
+  </TABLE>
+  </TD>
+  </TR>
+  
+  <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+    <TR><TD ALIGN="LEFT"></TD></TR>
+  </TABLE></TD>
+  </TR>
+  
+  <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+    <TR><TD ALIGN="LEFT"></TD></TR>
+  </TABLE></TD>
+  </TR>
+  
+  </TABLE>>]
+  
+  FormTemplate [
+    shape="plain"
+    fontname="Helvetica"
+    label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10">
+    <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+    <TR><TD ALIGN="CENTER"><B>FormTemplate</B></TD></TR>
+  </TABLE>
+  </TD>
+  </TR>
+  
+  <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+    <TR><TD ALIGN="LEFT"></TD></TR>
+  </TABLE></TD>
+  </TR>
+  
+  <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+    <TR><TD ALIGN="LEFT"></TD></TR>
+  </TABLE></TD>
+  </TR>
+  
+  </TABLE>>]
+  
+  LayoutOrientation [
+    shape="plain"
+    fontname="Helvetica"
+    label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10">
+    <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+    <TR><TD ALIGN="CENTER">«enumeration»</TD></TR>\n<TR><TD ALIGN="CENTER"><B>LayoutOrientation</B></TD></TR>
+  </TABLE>
+  </TD>
+  </TR>
+  
+  <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+              <TR><TD ALIGN="LEFT">horizontal</TD></TR>
+            <TR><TD ALIGN="LEFT">vertical</TD></TR>
+  </TABLE>
+        </TD>
+  </TR>
+  
+  <TR>
+    <TD><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+    <TR><TD ALIGN="LEFT"></TD></TR>
+  </TABLE></TD>
+  </TR>
+  
+  </TABLE>>]
+
+  DisplayTemplate -> LayoutTemplate [dir="direct" arrowtail="onormal" arrowhead="onormal"]
+  DisplayTemplate -> DisplayLine [dir="both" taillabel="+formLine" arrowtail="diamond" arrowhead="vee"]
+  FormTemplate -> LayoutTemplate [dir="direct" arrowtail="onormal" arrowhead="onormal"]
+  FormTemplate -> FormLine [dir="both" taillabel="+formLine" arrowtail="diamond" arrowhead="vee"]
+}

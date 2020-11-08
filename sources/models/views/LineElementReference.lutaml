@@ -1,0 +1,26 @@
+diagram LineElementReference {
+  title 'Line element reference'
+  class LineElementReference {
+    +target: ProfileCompliantAddressComponent 
+    +name: CharacterString 
+    +description: CharacterString 
+  }
+  association {
+    owner_type inheritance
+    owner LineElementReference
+    member_type direct
+    member DisplayLineElementReference
+  }
+  association {
+    owner_type inheritance
+    owner LineElementReference
+    member_type direct
+    member FormLineElementReference
+  }
+  class DisplayLineElementReference {
+    +values: DisplayLineElement [0..*]
+  }
+  class FormLineElementReference {
+    +values: FormLineElement [0..*]
+  }
+}

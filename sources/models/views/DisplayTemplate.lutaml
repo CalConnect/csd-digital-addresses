@@ -1,0 +1,59 @@
+diagram DisplayTemplate {
+  title 'Display template'
+
+  association {
+    owner TextElement
+    member_type direct
+    member DisplayLine
+  }
+  class DisplayTemplate {
+  }
+  association {
+    owner DisplayTemplate
+    member_type inheritance
+    member LayoutTemplate
+  }
+  association {
+    owner_type composition
+    owner DisplayTemplate
+    member_type direct
+    member DisplayLine#formLine [1..*]
+  }
+  class DisplayLine {
+  }
+  association {
+    owner_type composition
+    owner DisplayLine
+    member_type direct
+    member DisplayLineElement#element [1..*]
+  }
+  class DisplayLineElement {
+  }
+  class DataElement {
+    +value: CharacterString
+  }
+  association {
+    owner DataElement
+    member_type inheritance
+    member DisplayLineElement
+  }
+  association {
+    owner DataElement
+    member_type inheritance
+    member FormLineElement
+  }
+  association {
+    owner_type inheritance
+    owner DataElement
+    member_type direct
+    member DataElementWithConditions
+  }
+  class TextElement {
+    +text: CharacterString
+  }
+  association {
+    owner TextElement
+    member_type inheritance
+    member DisplayLineElement
+  }
+}

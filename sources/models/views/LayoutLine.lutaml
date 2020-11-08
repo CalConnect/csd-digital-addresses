@@ -1,0 +1,18 @@
+diagram LayoutLine {
+  title 'Layout line'
+  class LayoutLine {
+    +dimensions: LayoutDimension 
+  }
+  association {
+    owner_type inheritance
+    owner LayoutLine
+    member_type direct
+    member DisplayLine
+  }
+  association {
+    owner_type inheritance
+    owner LayoutLine
+    member_type direct
+    member FormLine
+  }
+}
