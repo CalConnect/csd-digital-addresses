@@ -1,0 +1,25 @@
+diagram CommonModels {
+  title 'Common models'
+  class Localization {
+    +locale: iso19115PT_Locale 
+    +script: iso15924Code 
+    +writingSystem: iso24229Code 
+    +textDirection: TextDirectionCode 
+  }
+  class Validity {
+    +validityBegins: iso19115CI_Date 
+    +validityEnds: iso19115CI_Date 
+    +revision: iso19115CI_Date 
+  }
+  class Signature {
+    +algorithm: iso14888Oid 
+    +publicKey: Uri 
+    +signature: CharacterString 
+  }
+  enum TextDirectionCode {
+    leftToRightTopToBottom
+    rightToLeftTopToBottom
+    leftToRightBottomToTop
+    rightToLeftBottomToTop
+  }
+}

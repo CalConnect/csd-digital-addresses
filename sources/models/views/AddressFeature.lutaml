@@ -1,0 +1,42 @@
+diagram AddressFeature {
+  title 'Address feature'
+  class AddressFeature {
+    +signature: Signature [0..1]
+  }
+  class SpecificationLevel {
+    +value: SpecificationLevelValue 
+  }
+  association {
+    owner SpecificationLevel
+    member_type inheritance
+    member AddressFeature
+  }
+  class QualityStatus {
+    +value: QualityCode 
+  }
+  association {
+    owner QualityStatus
+    member_type inheritance
+    member AddressFeature
+  }
+  class Geolocation {
+    +value: iso19115EX_Extent 
+  }
+  association {
+    owner Geolocation
+    member_type inheritance
+    member AddressFeature
+  }
+  enum SpecificationLevelValue {
+    unstructured
+    partial
+    full
+  }
+  enum QualityCode {
+    confirmedCorrect
+    mostlyCorrect
+    possiblyCorrect
+    structurallyCorrect
+    unknown
+  }
+}

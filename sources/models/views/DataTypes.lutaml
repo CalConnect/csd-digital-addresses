@@ -1,0 +1,21 @@
+diagram DataTypes {
+  title 'Data types'
+  class iso639Code {
+  }
+  class iso3166Code {
+  }
+  class iso15924Code {
+  }
+  class iso24229Code {
+  }
+  class iso19115CI_Date {
+  }
+  class iso19115PT_Locale {
+  }
+  class iso19115EX_Extent {
+  }
+  class iso19115MD_Constraints {
+  }
+  class iso14888Oid {
+  }
+}

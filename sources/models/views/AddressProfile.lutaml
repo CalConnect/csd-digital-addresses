@@ -1,0 +1,69 @@
+diagram AddressProfile {
+  title 'Address profile'
+  association {
+    owner AddressProfile
+    member_type direct
+    member AddressClassProfile
+  }
+  association {
+    owner AddressComponentProfile
+    member_type direct
+    member AddressClassProfile
+  }
+  class AddressProfile {
+    +country: iso3166Code [0..*]
+  }
+  association {
+    owner_type aggregation
+    owner AddressProfile#componentProfile [0..*]
+    member_type direct
+    member AddressComponentProfile
+  }
+  class AddressClassProfile {
+    +id: CharacterString 
+    +type: CharacterString 
+    +description: CharacterString 
+    +localization: Localization 
+    +signature: Signature [0..1]
+    +areaApplicability: iso19115MD_SpatialRepresentation [0..*]
+    +timeToLive: Integer 
+    +validity: Validity 
+  }
+  association {
+    owner_type aggregation
+    owner AddressClassProfile#addressClassProfile
+    member_type direct
+    member AttributeProfile#attributeProfile [0..*]
+  }
+  association {
+    owner AddressClassProfile
+    member_type direct
+    member ProfileCompliantAddress
+  }
+  class AddressComponentProfile {
+    +key: CharacterString 
+    +description: CharacterString 
+    +example: CharacterString [0..1]
+  }
+  association {
+    owner_type aggregation
+    owner AddressComponentProfile#addressClassProfile
+    member_type direct
+    member AttributeProfile#attributeProfile [0..*]
+  }
+  association {
+    owner AddressComponentProfile
+    member_type direct
+    member ProfileCompliantAddressComponent#profile [1..1]
+  }
+  class AddressComponentSpecification {
+    +maxCardinality: Integer 
+    +minCardinality: Integer 
+  }
+  class AttributeProfile {
+    +name: CharacterString 
+    +minCardinality: Integer [0..1]
+    +maxCardinality: Integer [0..1]
+    +valueType: CharacterString [0..1]
+  }
+}

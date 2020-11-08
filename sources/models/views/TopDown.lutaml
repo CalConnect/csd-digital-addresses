@@ -1,0 +1,109 @@
+diagram TopDown {
+  title 'Address profile model overview'
+  association {
+    owner_type direct
+    owner AddressComponent
+    member_type aggregation
+    member Address
+  }
+  association {
+    owner_type inheritance
+    owner AddressComponent
+    member_type direct
+    member ProfileCompliantAddressComponent
+  }
+  association {
+    owner Address
+    member_type direct
+    member ProfileCompliantAddressComponent
+  }
+  association {
+    owner_type direct
+    owner ProfileCompliantAddressComponent
+    member_type direct
+    member AddressComponentProfile#profile
+  }
+  association {
+    owner_type aggregation
+    owner AddressComponentProfile#addressClassProfile
+    member_type direct
+    member AttributeProfile#attributeProfile [0..*]
+  }
+  association {
+    owner_type aggregation
+    owner AddressProfile#componentProfile [0..*]
+    member_type direct
+    member AddressComponentProfile
+  }
+  association {
+    owner_type aggregation
+    owner AddressClassProfile#addressClassProfile
+    member_type direct
+    member AttributeProfile#attributeProfile [0..*]
+  }
+  association {
+    owner_type aggregation
+    owner AddressProfile#addressProfile [0..*]
+    member_type direct
+    member AddressClassProfile
+  }
+  association {
+    owner InterchangeAddressClassProfile
+    member_type inheritance
+    member AddressClassProfile
+  }
+  association {
+    owner_type aggregation
+    owner ProfileCompliantAddress
+    member_type direct
+    member ProfileCompliantAddressComponent
+  }
+  association {
+    owner AddressComponentProfile
+    member_type aggregation
+    member AddressClassProfile#componentProfile [0..*]
+  }
+  association {
+    owner ProfileCompliantAddress
+    member_type inheritance
+    member Address
+  }
+  association {
+    owner AddressClassProfile
+    member_type direct
+    member ProfileCompliantAddress
+  }
+  association {
+    owner AddressComponentSpecification
+    member_type direct
+    member ProfileCompliantAddressComponent
+  }
+  association {
+    owner ProfileCompliantAddress
+    member_type direct
+    member AddressClassProfile
+  }
+  association {
+    owner AddressClassProfile
+    member_type direct
+    member AddressComponentProfile
+  }
+  association {
+    owner AddressComponentSpecification
+    member_type direct
+    member AddressClassProfile
+  }
+  association {
+    owner AddressComponentProfile
+    member_type direct
+    member AddressProfile
+  }
+  class Address {
+  }
+  association {
+    owner_type aggregation
+    owner Address
+    member_type direct
+    member AddressComponent
+  }
+}

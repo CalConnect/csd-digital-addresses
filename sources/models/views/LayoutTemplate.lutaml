@@ -1,0 +1,46 @@
+diagram LayoutTemplate {
+  title 'Layout template'
+  class LayoutTemplate {
+    +id: CharacterString 
+    +name: CharacterString 
+    +description: CharacterString 
+    +localization: Localization 
+    +dimension: LayoutDimension [0..*]
+    +orientation: LayoutOrientation [0..1]
+    +lines: LayoutLine [0..*]
+  }
+  class LayoutDimension {
+    +width: Integer [0..1]
+    +height: Integer [0..1]
+  }
+  enum LayoutOrientation {
+    horizontal
+    vertical
+  }
+  class DisplayTemplate {
+  }
+  association {
+    owner DisplayTemplate
+    member_type inheritance
+    member LayoutTemplate
+  }
+  association {
+    owner_type composition
+    owner DisplayTemplate
+    member_type direct
+    member DisplayLine#formLine [1..*]
+  }
+  class FormTemplate {
+  }
+  association {
+    owner FormTemplate
+    member_type inheritance
+    member LayoutTemplate
+  }
+  association {
+    owner_type composition
+    owner FormTemplate
+    member_type direct
+    member FormLine#formLine [1..*]
+  }
+}
