@@ -17,20 +17,23 @@ including:
 Core data types (`CoreTypes`) are defined in <<ISO19103,clause=A.2>>.
 
 
-[datamodel_diagram,./models/views/DataTypes.yml]
+[lutaml_diagram]
+....
+include::../models/views/DataTypes.lutaml[]
+....
 
-[datamodel_attributes_table,./models/models/iso15924Code.yml]
+[lutaml_datamodel_attributes_table,./models/views/DataTypes.lutaml, iso15924Code]
 
-[datamodel_attributes_table,./models/models/iso639Code.yml]
+[lutaml_datamodel_attributes_table,./models/views/DataTypes.lutaml, iso639Code]
 
-[datamodel_attributes_table,./models/models/iso3166Code.yml]
+[lutaml_datamodel_attributes_table,./models/views/DataTypes.lutaml, iso3166Code]
 
-[datamodel_attributes_table,./models/models/iso19115CI_Date.yml]
+[lutaml_datamodel_attributes_table,./models/views/DataTypes.lutaml, iso19115CI_Date]
 
-[datamodel_attributes_table,./models/models/iso19115PT_Locale.yml]
+[lutaml_datamodel_attributes_table,./models/views/DataTypes.lutaml, iso19115PT_Locale]
 
-[datamodel_attributes_table,./models/models/iso19115EX_Extent.yml]
+[lutaml_datamodel_attributes_table,./models/views/DataTypes.lutaml, iso19115EX_Extent]
 
-[datamodel_attributes_table,./models/models/iso19115MD_Constraints.yml]
+[lutaml_datamodel_attributes_table,./models/views/DataTypes.lutaml, iso19115MD_Constraints]
 
-[datamodel_attributes_table,./models/models/iso14888Oid.yml]
+[lutaml_datamodel_attributes_table,./models/views/DataTypes.lutaml, iso14888Oid]

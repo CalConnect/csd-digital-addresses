@@ -1,12 +1,15 @@
 [[ix-common]]
 == Common models
 
-[datamodel_diagram,./models/views/CommonModels.yml]
+[lutaml_diagram]
+....
+include::../models/views/CommonModels.lutaml[]
+....
 
-[datamodel_attributes_table,./models/models/Localization.yml]
+[lutaml_datamodel_attributes_table,./models/views/CommonModels.lutaml, Localization]
 
-[datamodel_attributes_table,./models/models/Validity.yml]
+[lutaml_datamodel_attributes_table,./models/views/CommonModels.lutaml, Validity]
 
-[datamodel_attributes_table,./models/models/Signature.yml]
+[lutaml_datamodel_attributes_table,./models/views/CommonModels.lutaml, Signature]
 
-[datamodel_attributes_table,./models/models/TextDirectionCode.yml]
+[lutaml_datamodel_attributes_table,./models/views/CommonModels.lutaml, TextDirectionCode]

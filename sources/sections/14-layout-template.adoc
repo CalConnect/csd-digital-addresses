@@ -1,10 +1,13 @@
 [[layout-template]]
 == Layout template
 
-[datamodel_diagram,./models/views/LayoutTemplate.yml]
+[lutaml_diagram]
+....
+include::../models/views/LayoutTemplate.lutaml[]
+....
 
-[datamodel_attributes_table,./models/models/LayoutTemplate.yml]
+[lutaml_datamodel_attributes_table,./models/views/LayoutTemplate.lutaml,LayoutTemplate]
 
-[datamodel_attributes_table,./models/models/LayoutDimension.yml]
+[lutaml_datamodel_attributes_table,./models/views/LayoutTemplate.lutaml,LayoutDimension]
 
-[datamodel_attributes_table,./models/models/LayoutOrientation.yml]
+[lutaml_datamodel_attributes_table,./models/views/LayoutTemplate.lutaml,LayoutOrientation]

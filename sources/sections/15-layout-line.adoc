@@ -2,6 +2,9 @@
 [[layout-line]]
 == LayoutLine
 
-[datamodel_diagram,./models/views/LayoutLine.yml]
+[lutaml_diagram]
+....
+include::../models/views/LayoutLine.lutaml[]
+....
 
-[datamodel_attributes_table,./models/models/LayoutLine.yml]
+[lutaml_datamodel_attributes_table,./models/views/LayoutLine.lutaml,LayoutLine]

@@ -1,14 +1,17 @@
 [[address-profile]]
 == Address profile
 
-[datamodel_diagram,./models/views/AddressProfile.yml]
+[lutaml_diagram]
+....
+include::../models/views/AddressProfile.lutaml[]
+....
 
-[datamodel_attributes_table,./models/models/AddressProfile.yml]
+[lutaml_datamodel_attributes_table,./models/views/AddressProfile.lutaml, AddressProfile]
 
-[datamodel_attributes_table,./models/models/AddressClassProfile.yml]
+[lutaml_datamodel_attributes_table,./models/views/AddressProfile.lutaml, AddressClassProfile]
 
-[datamodel_attributes_table,./models/models/AddressComponentProfile.yml]
+[lutaml_datamodel_attributes_table,./models/views/AddressProfile.lutaml, AddressComponentProfile]
 
-[datamodel_attributes_table,./models/models/AddressComponentSpecification.yml]
+[lutaml_datamodel_attributes_table,./models/views/AddressProfile.lutaml, AddressComponentSpecification]
 
-[datamodel_attributes_table,./models/models/AttributeProfile.yml]
+[lutaml_datamodel_attributes_table,./models/views/AddressProfile.lutaml, AttributeProfile]

@@ -1,7 +1,19 @@
 diagram LayoutLine {
   title 'Layout line'
   class LayoutLine {
-    +dimensions: LayoutDimension 
+    definition
+  A layout line represents a line in a rendered address display
+or an address input form.
+
+It forms the basis of the address display line and
+address form line.
+
+end definition
+    +dimensions: LayoutDimension {
+  definition
+  Physical dimensions of the rectangular bounding box for the rendered Line.
+  end definition
+}
   }
   association {
     owner_type inheritance

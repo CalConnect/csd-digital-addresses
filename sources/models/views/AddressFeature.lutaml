@@ -1,10 +1,61 @@
 diagram AddressFeature {
   title 'Address feature'
   class AddressFeature {
-    +signature: Signature [0..1]
+    definition
+  Address feature represents the status of a particular aspect of an
+interchange address instance, as determined by an address processor.
+Each of the aspects may be differentiated by multiple statuses.
+
+This is an abstract class.
+To represent specific features, this class should be extended upon.
+
+end definition
+    +signature: Signature [0..1]{
+  definition
+  Cryptographic signature used to ensure that the
+feature is marked by an address process trusted for
+verification of this feature.
+The signature generated shall incorporate the `id` attribute
+of the interchange address instance that owns it.
+
+  end definition
+}
   }
   class SpecificationLevel {
-    +value: SpecificationLevelValue 
+    definition
+  When an address is first manually entered by a common person, it is
+unrealistic to expect this person to fully adhere to the defined
+structure.
+
+The allowed values of specification levels are:
+
+* Fully structured, all components are accurately separated and cannot
+be further split.
+
+* Partially structured, some components may be structurally
+correct, but some other components are still unstructured.
+
+* Unstructured, the user has entered free-form text with no regard of
+structuring them.
+
+[example]
+Digital addresses entered on e-commerce sites and address books
+are often partially structured, with defined country, region
+and city, but with street addresses often unstructured.
+
+[example]
+Digital addresses for utility installations
+(e.g. electricity, water supplies) are often fully structured.
+
+Therefore, an organization who accepts these addresses may wish to
+re-structure them or fill in any missing address components.
+
+end definition
+    +value: SpecificationLevelValue {
+  definition
+  Indicating the extent of specification of an address instance on its structure.
+  end definition
+}
   }
   association {
     owner SpecificationLevel
@@ -12,7 +63,18 @@ diagram AddressFeature {
     member AddressFeature
   }
   class QualityStatus {
-    +value: QualityCode 
+    definition
+  An address entered may not have been validated for correctness.
+An address processor, such as a postal handling entity,
+may decide to validate the address to a certain degree
+in order to determine the correctness of the address.
+
+end definition
+    +value: QualityCode {
+  definition
+  Indicating the quality of an address instance.
+  end definition
+}
   }
   association {
     owner QualityStatus
@@ -20,7 +82,18 @@ diagram AddressFeature {
     member AddressFeature
   }
   class Geolocation {
-    +value: iso19115EX_Extent 
+    definition
+  An address is commonly linked to one or more geolocations.
+The value of a location is given by `EX_Extent` defined
+in <<ISO19115-1,clause=6.6.1>>, which supports
+geographic, temporal and vertical specification.
+
+end definition
+    +value: iso19115EX_Extent {
+  definition
+  The geographic, temporal and vertical information of the location defined in <<ISO19115-1,clause=6.6.1>>.
+  end definition
+}
   }
   association {
     owner Geolocation
@@ -28,15 +101,47 @@ diagram AddressFeature {
     member AddressFeature
   }
   enum SpecificationLevelValue {
-    unstructured
-    partial
-    full
+    unstructured{
+  definition
+  The user has entered free-form text with no regard of structuring them.
+  end definition
+}
+    partial{
+  definition
+  Some components may be structurally correct, but some other components are still unstructured.
+  end definition
+}
+    full{
+  definition
+  All components are accurately separated and cannot be further split.
+  end definition
+}
   }
   enum QualityCode {
-    confirmedCorrect
-    mostlyCorrect
-    possiblyCorrect
-    structurallyCorrect
-    unknown
+    confirmedCorrect{
+  definition
+  Indicating that the address is confirmed to be correct to the best of knowledge of the address processor.
+  end definition
+}
+    mostlyCorrect{
+  definition
+  Indicating with high confidence that the address is correct.
+  end definition
+}
+    possiblyCorrect{
+  definition
+  Indicating with confidence that the address is correct.
+  end definition
+}
+    structurallyCorrect{
+  definition
+  Indicating that the address components have the correct value types.
+  end definition
+}
+    unknown{
+  definition
+  Indicating that this address has not been validated in any way, and it cannot be assigned a quality.
+  end definition
+}
   }
 }

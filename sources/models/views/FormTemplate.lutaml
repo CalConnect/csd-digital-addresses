@@ -16,6 +16,20 @@ diagram FormTemplate {
     member StaticTextElement
   }
   class FormTemplate {
+    definition
+  This section shows how an input form can be rendered according to
+the interchange address class.
+
+The form template should use should also provide an example for display
+purposes in input (e.g., Help section).
+
+The form template is used for displaying an input form for entry of address data into an
+interchange address instance.
+Generally, one address class is represented by one input template.
+
+NOTE: This part has no equivalence in PATDL.
+
+end definition
   }
   association {
     owner FormTemplate
@@ -29,6 +43,14 @@ diagram FormTemplate {
     member FormLine#formLine [1..*]
   }
   class FormLine {
+    definition
+  A form line represents a line within a form layout.
+
+It extends from the `LineElementReference` model, and
+takes a set of elements that contain
+form line element references (`FormLineElementReference`).
+
+end definition
   }
   association {
     owner_type composition
@@ -37,13 +59,42 @@ diagram FormTemplate {
     member FormLineElement#element [1..*]
   }
   class FormLineElement {
+    definition
+  This represents an element within a form line.
+
+In an empty form with fields generated from data elements,
+if the `example` values of the associated interchange address component are specified,
+such values should be used as placeholders for form input.
+
+end definition
   }
   class SelectionPair {
-    +key: CharacterString
-    +displayAs: CharacterString
+    definition
+  Representing a key value pair of a selection, e.g. in the case of the US
+States, "Rhode Island" is represented as the displayAs attribute and the
+postal code "RI" is represented as the key attribute.
+
+end definition
+    +key: CharacterString {
+  definition
+  The mapping key as a unique identifier of the key value pair of this SelectionPair.
+  end definition
+}
+    +displayAs: CharacterString {
+  definition
+  The display value of the key value pair of this SelectionPair.
+  end definition
+}
   }
   class SelectionElement {
-    +map: SelectionPair [1..*]
+    definition
+  Representing a selectable mapping between display string to code, e.g. in the case of the US States, "Rhode Island" the state name is mapped to the "RI" postal code. Represented by `SelectionElement` and within `SelectionPair`.
+end definition
+    +map: SelectionPair [1..*]{
+  definition
+  Mapping between a display string to code for each instance of SelectionPair.
+  end definition
+}
   }
   association {
     owner SelectionElement
@@ -51,7 +102,15 @@ diagram FormTemplate {
     member FormLineElement
   }
   class DataElement {
-    +value: CharacterString
+    definition
+  Representing a variable data value that is contained in the interchange address component, such as the PO box number following the phrase "PO Box".
+
+end definition
+    +value: CharacterString {
+  definition
+  Representing a variable data value that is contained in the interchange address component, such as the PO box number following the phrase "PO Box". This element indicates that a form field is required, and the data values accepted shall adhere to the data value type defined in its associated interchange address component (through `FormLine`).
+  end definition
+}
   }
   association {
     owner DataElement
@@ -70,7 +129,14 @@ diagram FormTemplate {
     member DataElementWithConditions
   }
   class StaticTextElement {
-    +value: CharacterString
+    definition
+  Static text that can be a constituent part of an `ProfileCompliantAddress` that complies with an `InterchangeAddressClassProfile`.
+end definition
+    +value: CharacterString {
+  definition
+  Representing static text, such as the phrase "`PO Box`" preceding the actual PO box number, for form layouts for PO boxes. This element is meant to be shown in the form but not allow modification.
+  end definition
+}
   }
   association {
     owner StaticTextElement
@@ -78,6 +144,13 @@ diagram FormTemplate {
     member FormLineElement
   }
   class DataElementWithConditions {
-    +value: iso19115MD_Constraints
+    definition
+  DataElementWithConditions extends from DataElement to represent DataElement with additional constraints.
+end definition
+    +value: iso19115MD_Constraints {
+  definition
+  The constraint information of `MD_Constraint` as defined in <<ISO19115-1>>.
+  end definition
+}
   }
 }
