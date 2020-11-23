@@ -1,14 +1,17 @@
 [[display-template]]
 == Display template
 
-[datamodel_diagram,./models/views/DisplayTemplate.yml]
+[lutaml_diagram]
+....
+include::../models/views/DisplayTemplate.lutaml[]
+....
 
-[datamodel_attributes_table,./models/models/DisplayTemplate.yml]
+[lutaml_datamodel_attributes_table,./models/views/DisplayTemplate.lutaml,DisplayTemplate]
 
-[datamodel_attributes_table,./models/models/DisplayLine.yml]
+[lutaml_datamodel_attributes_table,./models/views/DisplayTemplate.lutaml,DisplayLine]
 
-[datamodel_attributes_table,./models/models/DisplayLineElement.yml]
+[lutaml_datamodel_attributes_table,./models/views/DisplayTemplate.lutaml,DisplayLineElement]
 
-[datamodel_attributes_table,./models/models/DataElement.yml]
+[lutaml_datamodel_attributes_table,./models/views/DisplayTemplate.lutaml,DataElement]
 
-[datamodel_attributes_table,./models/models/TextElement.yml]
+[lutaml_datamodel_attributes_table,./models/views/DisplayTemplate.lutaml,TextElement]

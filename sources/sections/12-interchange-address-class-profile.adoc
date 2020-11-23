@@ -1,16 +1,19 @@
 [[ix-address-class-profile]]
 == InterchangeAddressClassProfile overview
 
-[datamodel_diagram,./models/views/InterchangeAddressClassProfile.yml]
+[lutaml_diagram]
+....
+include::../models/views/InterchangeAddressClassProfile.lutaml[]
+....
 
-[datamodel_attributes_table,./models/models/InterchangeAddressClassProfile.yml]
+[lutaml_datamodel_attributes_table,./models/views/InterchangeAddressClassProfile.lutaml,InterchangeAddressClassProfile]
 
-[datamodel_attributes_table,./models/models/DisplayTemplate.yml]
+[lutaml_datamodel_attributes_table,./models/views/InterchangeAddressClassProfile.lutaml,DisplayTemplate]
 
-[datamodel_attributes_table,./models/models/FormTemplate.yml]
+[lutaml_datamodel_attributes_table,./models/views/InterchangeAddressClassProfile.lutaml,FormTemplate]
 
-[datamodel_attributes_table,./models/models/AttributeProfile/Signature.yml]
+[lutaml_datamodel_attributes_table,./models/views/InterchangeAddressClassProfile.lutaml,AttributeProfile.yml]
 
-[datamodel_attributes_table,./models/models/AttributeProfile/AddressFeature.yml]
+[lutaml_datamodel_attributes_table,./models/views/InterchangeAddressClassProfile.lutaml,AttributeProfile.yml]
 
-[datamodel_attributes_table,./models/models/AttributeProfile/Validity.yml]
+[lutaml_datamodel_attributes_table,./models/views/InterchangeAddressClassProfile.lutaml,AttributeProfile.yml]

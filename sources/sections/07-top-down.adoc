@@ -33,7 +33,10 @@ This document further defines `InterchangeAddressClassProfile` for defining
 compliant to `InterchangeAddressClassProfile` will be interchangeable among
 humans, devices and systems with interoperability.
 
-[datamodel_diagram,./models/views/TopDown.yml]
+[lutaml_diagram]
+....
+include::../models/views/TopDown.lutaml[]
+....
 
 NOTE: This clause defines a number of composite data models,
 integrates and thereby requires coordination between complex precedent

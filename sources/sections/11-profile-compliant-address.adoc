@@ -1,8 +1,11 @@
 [[profile-compliant-address]]
 == Profile compliant address
 
-[datamodel_diagram,./models/views/ProfileCompliantAddress.yml]
+[lutaml_diagram]
+....
+include::../models/views/ProfileCompliantAddress.lutaml[]
+....
 
-[datamodel_attributes_table,./models/models/ProfileCompliantAddress.yml]
+[lutaml_datamodel_attributes_table,./models/views/ProfileCompliantAddress.lutaml,ProfileCompliantAddress]
 
-[datamodel_attributes_table,./models/models/ProfileCompliantAddressComponent.yml]
+[lutaml_datamodel_attributes_table,./models/views/ProfileCompliantAddress.lutaml,ProfileCompliantAddressComponent]

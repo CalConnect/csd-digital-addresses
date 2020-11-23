@@ -1,20 +1,23 @@
 [[form-template]]
 == Form template
 
-[datamodel_diagram,./models/views/FormTemplate.yml]
+[lutaml_diagram]
+....
+include::../models/views/FormTemplate.lutaml[]
+....
 
-[datamodel_attributes_table,./models/models/FormTemplate.yml]
+[lutaml_datamodel_attributes_table,./models/views/FormTemplate.lutaml,FormTemplate]
 
-[datamodel_attributes_table,./models/models/FormLine.yml]
+[lutaml_datamodel_attributes_table,./models/views/FormTemplate.lutaml,FormLine]
 
-[datamodel_attributes_table,./models/models/FormLineElement.yml]
+[lutaml_datamodel_attributes_table,./models/views/FormTemplate.lutaml,FormLineElement]
 
-[datamodel_attributes_table,./models/models/SelectionPair.yml]
+[lutaml_datamodel_attributes_table,./models/views/FormTemplate.lutaml,SelectionPair]
 
-[datamodel_attributes_table,./models/models/SelectionElement.yml]
+[lutaml_datamodel_attributes_table,./models/views/FormTemplate.lutaml,SelectionElement]
 
-[datamodel_attributes_table,./models/models/DataElement.yml]
+[lutaml_datamodel_attributes_table,./models/views/FormTemplate.lutaml,DataElement]
 
-[datamodel_attributes_table,./models/models/StaticTextElement.yml]
+[lutaml_datamodel_attributes_table,./models/views/FormTemplate.lutaml,StaticTextElement]
 
-[datamodel_attributes_table,./models/models/DataElementWithConditions.yml]
+[lutaml_datamodel_attributes_table,./models/views/FormTemplate.lutaml,DataElementWithConditions]
