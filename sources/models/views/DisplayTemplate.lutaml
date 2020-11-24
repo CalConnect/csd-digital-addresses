@@ -1,5 +1,6 @@
 diagram DisplayTemplate {
   title 'Display template'
+  caption 'Display template data model'
   association {
     owner TextElement
     member_type direct

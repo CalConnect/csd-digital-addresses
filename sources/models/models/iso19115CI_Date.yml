@@ -1,9 +1,0 @@
-name: iso19115CI_Date
-modelType: class
-definition: The type of `CI_Date` as defined in <<ISO19115-1>>.
-relations:
-  # - target: CoreType
-  #   relationship:
-  #     target:
-  #       type: direct
-  #   direction: "[hidden]"

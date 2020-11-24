@@ -1,5 +1,6 @@
 diagram DataTypes {
   title 'Data types'
+  caption 'Data types to be used in this standard'
   class iso639Code {
     definition
   This is the value of language code as specified in <<ISO639-3>>.

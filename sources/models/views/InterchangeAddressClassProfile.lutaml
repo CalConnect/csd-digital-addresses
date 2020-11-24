@@ -1,5 +1,6 @@
 diagram InterchangeAddressClassProfile {
   title 'InterchangeAddressClassProfile overview'
+  caption 'InterchangeAddressClassProfile model'
   association {
     owner InterchangeAddressClassProfile
     member_type direct

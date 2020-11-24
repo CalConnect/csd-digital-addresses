@@ -1,5 +1,6 @@
 diagram LayoutLine {
   title 'Layout line'
+  caption 'Layout line data model'
   class LayoutLine {
     definition
   A layout line represents a line in a rendered address display

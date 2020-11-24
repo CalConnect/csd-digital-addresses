@@ -1,5 +1,6 @@
 diagram AddressFeature {
   title 'Address feature'
+  caption 'Address feature data model'
   class AddressFeature {
     definition
   Address feature represents the status of a particular aspect of an

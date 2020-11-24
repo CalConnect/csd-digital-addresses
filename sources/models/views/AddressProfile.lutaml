@@ -1,5 +1,6 @@
 diagram AddressProfile {
   title 'Address profile'
+  caption 'Address profile data model'
   association {
     owner AddressProfile
     member_type direct

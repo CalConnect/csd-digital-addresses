@@ -1,5 +1,6 @@
 diagram CommonModels {
   title 'Common models'
+  caption 'Common models to be used in this standard'
   class Localization {
     definition
   Represents localization metadata of the parent object.

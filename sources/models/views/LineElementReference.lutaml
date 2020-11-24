@@ -1,5 +1,6 @@
 diagram LineElementReference {
   title 'Line element reference'
+  caption 'Line element reference data model'
   class LineElementReference {
     definition
   A line element reference is used to link an abstract line element to
