@@ -1,5 +1,6 @@
 diagram FormTemplate {
   title 'Form template'
+  caption 'Form template data model'
   association {
     owner FormTemplate
     member_type direct

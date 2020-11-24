@@ -1,8 +1,0 @@
-name: LineElementReference
-title: Line element reference
-caption: Line element reference data model
-directive: line-element-reference
-imports:
-  LineElementReference:
-  DisplayLineElementReference:
-  FormLineElementReference:

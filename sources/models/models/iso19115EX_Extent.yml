@@ -1,9 +1,0 @@
-name: iso19115EX_Extent
-modelType: class
-definition: The geographic, temporal and vertical information of `EX_Extent` defined in <<ISO19115-1,clause=6.6.1>>.
-relations:
-  # - target: CoreType
-  #   relationship:
-  #     target:
-  #       type: direct
-  #   direction: "[hidden]"

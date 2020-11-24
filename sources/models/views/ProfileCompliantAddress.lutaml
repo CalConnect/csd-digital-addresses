@@ -1,5 +1,6 @@
 diagram ProfileCompliantAddress {
   title 'Profile compliant address'
+  caption 'Profile compliant address data model'
   association {
     owner AddressClassProfile
     member_type direct

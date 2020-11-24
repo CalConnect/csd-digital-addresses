@@ -1,9 +1,0 @@
-name: LayoutOrientation
-modelType: enum
-definition: The enumeration value to indicate the orientation of the address rendered by the LayoutTemplate.
-type: enumeration
-values:
-  horizontal:
-    definition: Indicating that the address will be rendered from left to right or right to left.
-  vertical:
-    definition: Indicating that the address will be rendered from top to bottom or bottom to top.

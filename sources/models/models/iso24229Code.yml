@@ -1,4 +1,0 @@
-name: iso24229Code
-modelType: class
-definition: The type of writing system as defined in <<ISO24229>>.
-relations:

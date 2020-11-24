@@ -1,5 +1,6 @@
 diagram LayoutTemplate {
   title 'Layout template'
+  caption 'Layout template data model'
   class LayoutTemplate {
     definition
   The interchange layout template serves as the basis of the

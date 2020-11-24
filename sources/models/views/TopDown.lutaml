@@ -1,5 +1,6 @@
 diagram TopDown {
   title 'Address profile model overview'
+  caption 'Address profile model overview in UML'
   association {
     owner_type direct
     owner AddressComponent
