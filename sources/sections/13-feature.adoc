@@ -6,14 +6,14 @@
 include::../models/views/AddressFeature.lutaml[]
 ....
 
-[lutaml_datamodel_attributes_table,./models/views/AddressFeature.lutaml,AddressFeature]
+[lutaml_uml_attributes_table,./models/views/AddressFeature.lutaml,AddressFeature]
 
-[lutaml_datamodel_attributes_table,./models/views/AddressFeature.lutaml,SpecificationLevel]
+[lutaml_uml_attributes_table,./models/views/AddressFeature.lutaml,SpecificationLevel]
 
-[lutaml_datamodel_attributes_table,./models/views/AddressFeature.lutaml,QualityStatus]
+[lutaml_uml_attributes_table,./models/views/AddressFeature.lutaml,QualityStatus]
 
-[lutaml_datamodel_attributes_table,./models/views/AddressFeature.lutaml,Geolocation]
+[lutaml_uml_attributes_table,./models/views/AddressFeature.lutaml,Geolocation]
 
-[lutaml_datamodel_attributes_table,./models/views/AddressFeature.lutaml,SpecificationLevelValue]
+[lutaml_uml_attributes_table,./models/views/AddressFeature.lutaml,SpecificationLevelValue]
 
-[lutaml_datamodel_attributes_table,./models/views/AddressFeature.lutaml,QualityCode]
+[lutaml_uml_attributes_table,./models/views/AddressFeature.lutaml,QualityCode]

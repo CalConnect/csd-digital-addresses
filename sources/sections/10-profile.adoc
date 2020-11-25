@@ -6,12 +6,12 @@
 include::../models/views/AddressProfile.lutaml[]
 ....
 
-[lutaml_datamodel_attributes_table,./models/views/AddressProfile.lutaml, AddressProfile]
+[lutaml_uml_attributes_table,./models/views/AddressProfile.lutaml, AddressProfile]
 
-[lutaml_datamodel_attributes_table,./models/views/AddressProfile.lutaml, AddressClassProfile]
+[lutaml_uml_attributes_table,./models/views/AddressProfile.lutaml, AddressClassProfile]
 
-[lutaml_datamodel_attributes_table,./models/views/AddressProfile.lutaml, AddressComponentProfile]
+[lutaml_uml_attributes_table,./models/views/AddressProfile.lutaml, AddressComponentProfile]
 
-[lutaml_datamodel_attributes_table,./models/views/AddressProfile.lutaml, AddressComponentSpecification]
+[lutaml_uml_attributes_table,./models/views/AddressProfile.lutaml, AddressComponentSpecification]
 
-[lutaml_datamodel_attributes_table,./models/views/AddressProfile.lutaml, AttributeProfile]
+[lutaml_uml_attributes_table,./models/views/AddressProfile.lutaml, AttributeProfile]

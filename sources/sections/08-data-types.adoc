@@ -22,18 +22,18 @@ Core data types (`CoreTypes`) are defined in <<ISO19103,clause=A.2>>.
 include::../models/views/DataTypes.lutaml[]
 ....
 
-[lutaml_datamodel_attributes_table,./models/views/DataTypes.lutaml, iso15924Code]
+[lutaml_uml_attributes_table,./models/views/DataTypes.lutaml, iso15924Code]
 
-[lutaml_datamodel_attributes_table,./models/views/DataTypes.lutaml, iso639Code]
+[lutaml_uml_attributes_table,./models/views/DataTypes.lutaml, iso639Code]
 
-[lutaml_datamodel_attributes_table,./models/views/DataTypes.lutaml, iso3166Code]
+[lutaml_uml_attributes_table,./models/views/DataTypes.lutaml, iso3166Code]
 
-[lutaml_datamodel_attributes_table,./models/views/DataTypes.lutaml, iso19115CI_Date]
+[lutaml_uml_attributes_table,./models/views/DataTypes.lutaml, iso19115CI_Date]
 
-[lutaml_datamodel_attributes_table,./models/views/DataTypes.lutaml, iso19115PT_Locale]
+[lutaml_uml_attributes_table,./models/views/DataTypes.lutaml, iso19115PT_Locale]
 
-[lutaml_datamodel_attributes_table,./models/views/DataTypes.lutaml, iso19115EX_Extent]
+[lutaml_uml_attributes_table,./models/views/DataTypes.lutaml, iso19115EX_Extent]
 
-[lutaml_datamodel_attributes_table,./models/views/DataTypes.lutaml, iso19115MD_Constraints]
+[lutaml_uml_attributes_table,./models/views/DataTypes.lutaml, iso19115MD_Constraints]
 
-[lutaml_datamodel_attributes_table,./models/views/DataTypes.lutaml, iso14888Oid]
+[lutaml_uml_attributes_table,./models/views/DataTypes.lutaml, iso14888Oid]

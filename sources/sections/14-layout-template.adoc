@@ -6,8 +6,8 @@
 include::../models/views/LayoutTemplate.lutaml[]
 ....
 
-[lutaml_datamodel_attributes_table,./models/views/LayoutTemplate.lutaml,LayoutTemplate]
+[lutaml_uml_attributes_table,./models/views/LayoutTemplate.lutaml,LayoutTemplate]
 
-[lutaml_datamodel_attributes_table,./models/views/LayoutTemplate.lutaml,LayoutDimension]
+[lutaml_uml_attributes_table,./models/views/LayoutTemplate.lutaml,LayoutDimension]
 
-[lutaml_datamodel_attributes_table,./models/views/LayoutTemplate.lutaml,LayoutOrientation]
+[lutaml_uml_attributes_table,./models/views/LayoutTemplate.lutaml,LayoutOrientation]

@@ -6,10 +6,10 @@
 include::../models/views/CommonModels.lutaml[]
 ....
 
-[lutaml_datamodel_attributes_table,./models/views/CommonModels.lutaml, Localization]
+[lutaml_uml_attributes_table,./models/views/CommonModels.lutaml, Localization]
 
-[lutaml_datamodel_attributes_table,./models/views/CommonModels.lutaml, Validity]
+[lutaml_uml_attributes_table,./models/views/CommonModels.lutaml, Validity]
 
-[lutaml_datamodel_attributes_table,./models/views/CommonModels.lutaml, Signature]
+[lutaml_uml_attributes_table,./models/views/CommonModels.lutaml, Signature]
 
-[lutaml_datamodel_attributes_table,./models/views/CommonModels.lutaml, TextDirectionCode]
+[lutaml_uml_attributes_table,./models/views/CommonModels.lutaml, TextDirectionCode]

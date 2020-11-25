@@ -6,6 +6,6 @@
 include::../models/views/ProfileCompliantAddress.lutaml[]
 ....
 
-[lutaml_datamodel_attributes_table,./models/views/ProfileCompliantAddress.lutaml,ProfileCompliantAddress]
+[lutaml_uml_attributes_table,./models/views/ProfileCompliantAddress.lutaml,ProfileCompliantAddress]
 
-[lutaml_datamodel_attributes_table,./models/views/ProfileCompliantAddress.lutaml,ProfileCompliantAddressComponent]
+[lutaml_uml_attributes_table,./models/views/ProfileCompliantAddress.lutaml,ProfileCompliantAddressComponent]

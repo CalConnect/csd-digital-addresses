@@ -6,14 +6,14 @@
 include::../models/views/InterchangeAddressClassProfile.lutaml[]
 ....
 
-[lutaml_datamodel_attributes_table,./models/views/InterchangeAddressClassProfile.lutaml,InterchangeAddressClassProfile]
+[lutaml_uml_attributes_table,./models/views/InterchangeAddressClassProfile.lutaml,InterchangeAddressClassProfile]
 
-[lutaml_datamodel_attributes_table,./models/views/InterchangeAddressClassProfile.lutaml,DisplayTemplate]
+[lutaml_uml_attributes_table,./models/views/InterchangeAddressClassProfile.lutaml,DisplayTemplate]
 
-[lutaml_datamodel_attributes_table,./models/views/InterchangeAddressClassProfile.lutaml,FormTemplate]
+[lutaml_uml_attributes_table,./models/views/InterchangeAddressClassProfile.lutaml,FormTemplate]
 
-[lutaml_datamodel_attributes_table,./models/views/InterchangeAddressClassProfile.lutaml,Signature]
+[lutaml_uml_attributes_table,./models/views/InterchangeAddressClassProfile.lutaml,Signature]
 
-[lutaml_datamodel_attributes_table,./models/views/InterchangeAddressClassProfile.lutaml,AddressFeature]
+[lutaml_uml_attributes_table,./models/views/InterchangeAddressClassProfile.lutaml,AddressFeature]
 
-[lutaml_datamodel_attributes_table,./models/views/InterchangeAddressClassProfile.lutaml,Validity]
+[lutaml_uml_attributes_table,./models/views/InterchangeAddressClassProfile.lutaml,Validity]

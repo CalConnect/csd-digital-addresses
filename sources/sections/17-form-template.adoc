@@ -6,18 +6,18 @@
 include::../models/views/FormTemplate.lutaml[]
 ....
 
-[lutaml_datamodel_attributes_table,./models/views/FormTemplate.lutaml,FormTemplate]
+[lutaml_uml_attributes_table,./models/views/FormTemplate.lutaml,FormTemplate]
 
-[lutaml_datamodel_attributes_table,./models/views/FormTemplate.lutaml,FormLine]
+[lutaml_uml_attributes_table,./models/views/FormTemplate.lutaml,FormLine]
 
-[lutaml_datamodel_attributes_table,./models/views/FormTemplate.lutaml,FormLineElement]
+[lutaml_uml_attributes_table,./models/views/FormTemplate.lutaml,FormLineElement]
 
-[lutaml_datamodel_attributes_table,./models/views/FormTemplate.lutaml,SelectionPair]
+[lutaml_uml_attributes_table,./models/views/FormTemplate.lutaml,SelectionPair]
 
-[lutaml_datamodel_attributes_table,./models/views/FormTemplate.lutaml,SelectionElement]
+[lutaml_uml_attributes_table,./models/views/FormTemplate.lutaml,SelectionElement]
 
-[lutaml_datamodel_attributes_table,./models/views/FormTemplate.lutaml,DataElement]
+[lutaml_uml_attributes_table,./models/views/FormTemplate.lutaml,DataElement]
 
-[lutaml_datamodel_attributes_table,./models/views/FormTemplate.lutaml,StaticTextElement]
+[lutaml_uml_attributes_table,./models/views/FormTemplate.lutaml,StaticTextElement]
 
-[lutaml_datamodel_attributes_table,./models/views/FormTemplate.lutaml,DataElementWithConditions]
+[lutaml_uml_attributes_table,./models/views/FormTemplate.lutaml,DataElementWithConditions]

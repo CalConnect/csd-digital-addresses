@@ -6,12 +6,12 @@
 include::../models/views/DisplayTemplate.lutaml[]
 ....
 
-[lutaml_datamodel_attributes_table,./models/views/DisplayTemplate.lutaml,DisplayTemplate]
+[lutaml_uml_attributes_table,./models/views/DisplayTemplate.lutaml,DisplayTemplate]
 
-[lutaml_datamodel_attributes_table,./models/views/DisplayTemplate.lutaml,DisplayLine]
+[lutaml_uml_attributes_table,./models/views/DisplayTemplate.lutaml,DisplayLine]
 
-[lutaml_datamodel_attributes_table,./models/views/DisplayTemplate.lutaml,DisplayLineElement]
+[lutaml_uml_attributes_table,./models/views/DisplayTemplate.lutaml,DisplayLineElement]
 
-[lutaml_datamodel_attributes_table,./models/views/DisplayTemplate.lutaml,DataElement]
+[lutaml_uml_attributes_table,./models/views/DisplayTemplate.lutaml,DataElement]
 
-[lutaml_datamodel_attributes_table,./models/views/DisplayTemplate.lutaml,TextElement]
+[lutaml_uml_attributes_table,./models/views/DisplayTemplate.lutaml,TextElement]

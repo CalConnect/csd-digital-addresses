@@ -7,4 +7,4 @@
 include::../models/views/LayoutLine.lutaml[]
 ....
 
-[lutaml_datamodel_attributes_table,./models/views/LayoutLine.lutaml,LayoutLine]
+[lutaml_uml_attributes_table,./models/views/LayoutLine.lutaml,LayoutLine]
