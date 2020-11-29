@@ -2,7 +2,7 @@ diagram LayoutTemplate {
   title 'Layout template'
   caption 'Layout template data model'
   class LayoutTemplate {
-    definition
+    definition {
   The interchange layout template serves as the basis of the
 interchange display template and
 the interchange form template.
@@ -27,82 +27,82 @@ address instance into a layout template is called "render".
 A postal mail label can be conceptually considered as an
 interchange address instance rendered according to a layout template.
 
-end definition
+}
     +id: CharacterString {
-  definition
+  definition {
   Unique identifier for the layout template.
-  end definition
+  }
 }
     +name: CharacterString {
-  definition
+  definition {
   Descriptive name of the layout template.
-  end definition
+  }
 }
     +description: CharacterString {
-  definition
+  definition {
   Textual description of the layout template.
-  end definition
+  }
 }
     +localization: Localization {
-  definition
+  definition {
   Locale and script information of the layout template.
-  end definition
+  }
 }
     +dimension: LayoutDimension [0..*]{
-  definition
+  definition {
   Physical dimensions of the rectangular bounding box for the rendered layout output.
-  end definition
+  }
 }
     +orientation: LayoutOrientation [0..1]{
-  definition
+  definition {
   Horizontal or vertical of the text orientation.
-  end definition
+  }
 }
     +lines: LayoutLine [0..*]{
-  definition
+  definition {
   The constituent parts of this LayoutTemplate.
-  end definition
+  }
 }
   }
   class LayoutDimension {
-    definition
+    definition {
   Physical dimensions of the rectangular bounding box for the rendered layout output.
 
-end definition
+}
     +width: Integer [0..1]{
-  definition
+  definition {
   The horizontal length of the rectangular bounding box for the rendered layout output.
-  end definition
+  }
 }
     +height: Integer [0..1]{
-  definition
+  definition {
   The vertical length of the rectangular bounding box for the rendered layout output.
-  end definition
+  }
 }
   }
   enum LayoutOrientation {
-    definition
+    definition {
   The enumeration value to indicate the orientation of the address rendered by the LayoutTemplate.
-end definition
+}
     horizontal{
-  definition
+  definition {
   Indicating that the address will be rendered from left to right or right to left.
-  end definition
+  }
 }
     vertical{
-  definition
+  definition {
   Indicating that the address will be rendered from top to bottom or bottom to top.
-  end definition
+  }
 }
   }
   class DisplayTemplate {
-    definition
+    definition {
   The display template is used for displaying an
 interchange address instance belonging to an interchange
 address class. Generally, one address class is represented
 by one display template.
 
-end definition
+}
   }
   association {
     owner DisplayTemplate
@@ -116,7 +116,7 @@ end definition
     member DisplayLine#formLine [1..*]
   }
   class FormTemplate {
-    definition
+    definition {
   This section shows how an input form can be rendered according to
 the interchange address class.
 
@@ -129,7 +129,7 @@ Generally, one address class is represented by one input template.
 
 NOTE: This part has no equivalence in PATDL.
 
-end definition
+}
   }
   association {
     owner FormTemplate

@@ -7,13 +7,13 @@ diagram DisplayTemplate {
     member DisplayLine
   }
   class DisplayTemplate {
-    definition
+    definition {
   The display template is used for displaying an
 interchange address instance belonging to an interchange
 address class. Generally, one address class is represented
 by one display template.
 
-end definition
+}
   }
   association {
     owner DisplayTemplate
@@ -27,10 +27,10 @@ end definition
     member DisplayLine#formLine [1..*]
   }
   class DisplayLine {
-    definition
+    definition {
   A display line represents a line within a display layout.
 
-end definition
+}
   }
   association {
     owner_type composition
@@ -39,20 +39,20 @@ end definition
     member DisplayLineElement#element [1..*]
   }
   class DisplayLineElement {
-    definition
+    definition {
   This represents an element within a display line.
 
-end definition
+}
   }
   class DataElement {
-    definition
+    definition {
   Representing a variable data value that is contained in the interchange address component, such as the PO box number following the phrase "PO Box".
 
-end definition
+}
     +value: CharacterString {
-  definition
+  definition {
   Representing a variable data value that is contained in the interchange address component, such as the PO box number following the phrase "PO Box". This element indicates that a form field is required, and the data values accepted shall adhere to the data value type defined in its associated interchange address component (through `FormLine`).
-  end definition
+  }
 }
   }
   association {
@@ -72,14 +72,14 @@ end definition
     member DataElementWithConditions
   }
   class TextElement {
-    definition
+    definition {
   Representing static text, such as the phrase "PO Box" preceding the actual PO box number, for display layouts for PO boxes.
 
-end definition
+}
     +text: CharacterString {
-  definition
+  definition {
   The actual value of the TextElement.
-  end definition
+  }
 }
   }
   association {

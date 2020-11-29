@@ -2,48 +2,48 @@ diagram DataTypes {
   title 'Data types'
   caption 'Data types to be used in this standard'
   class iso639Code {
-    definition
+    definition {
   This is the value of language code as specified in <<ISO639-3>>.
-end definition
+}
   }
   class iso3166Code {
-    definition
+    definition {
   This is the value of country code as specified in <<ISO3166-1>>.
-end definition
+}
   }
   class iso15924Code {
-    definition
+    definition {
   The type of written script as defined in <<ISO15924>>.
-end definition
+}
   }
   class iso24229Code {
-    definition
+    definition {
   The type of writing system as defined in <<ISO24229>>.
-end definition
+}
   }
   class iso19115CI_Date {
-    definition
+    definition {
   The type of `CI_Date` as defined in <<ISO19115-1>>.
-end definition
+}
   }
   class iso19115PT_Locale {
-    definition
+    definition {
   The type of `PT_Locale` as defined in <<ISO19115-1>>.
-end definition
+}
   }
   class iso19115EX_Extent {
-    definition
+    definition {
   The geographic, temporal and vertical information of `EX_Extent` defined in <<ISO19115-1,clause=6.6.1>>.
-end definition
+}
   }
   class iso19115MD_Constraints {
-    definition
+    definition {
   The constraint information of `MD_Constraints` as defined in <<ISO19115-1>>.
-end definition
+}
   }
   class iso14888Oid {
-    definition
+    definition {
   The public key cryptographic algorithm used for digital signature as defined in <<ISO14888-3>>.
-end definition
+}
   }
 }
