@@ -17,7 +17,7 @@ diagram ProfileCompliantAddress {
     member AddressComponent
   }
   class AddressClassProfile {
-    definition
+    definition {
   An `AddressClassProfile` represents a profile of a `ProfileCompliantAddress`.
 It corresponds to the concept of an `AddressClass` originally
 expressed in <<ISO19160-1>> as a referenced codelist.
@@ -36,57 +36,57 @@ is represented as an interchange address class.
 The US Numbered Thoroughfare Address with this syntax can be
 represented as an address class profile:
 
-*{sp}{ Complete Landmark Name or Complete Place Name } +
-*{sp}{ Complete Address Number * } +
-*{sp}{ Complete Street Name * } +
-*{sp}{ Complete Subaddress } +
-*{sp}{ Complete Place Name * } +
-*{sp}{ State Name * } +
-*{sp}{ Zip Code } +
-*{sp}{ Zip Plus 4 } +
-*{sp}{ Country Name }
+*\{sp\}\{ Complete Landmark Name or Complete Place Name \} +
+*\{sp\}\{ Complete Address Number * \} +
+*\{sp\}\{ Complete Street Name * \} +
+*\{sp\}\{ Complete Subaddress \} +
+*\{sp\}\{ Complete Place Name * \} +
+*\{sp\}\{ State Name * \} +
+*\{sp\}\{ Zip Code \} +
+*\{sp\}\{ Zip Plus 4 \} +
+*\{sp\}\{ Country Name \}
 --
 
-end definition
+}
     +id: CharacterString {
-  definition
+  definition {
   Unique identifier of this AddressClassProfile.
-  end definition
+  }
 }
     +type: CharacterString {
-  definition
+  definition {
   Intended usage of this profile.
-  end definition
+  }
 }
     +description: CharacterString {
-  definition
+  definition {
   Textual description of this profile.
-  end definition
+  }
 }
     +localization: Localization {
-  definition
+  definition {
   The language and script used within this profile.
-  end definition
+  }
 }
     +signature: Signature [0..1]{
-  definition
+  definition {
   The digital signature to verify the integrity of this profile, and the identity of the publishing authority.
-  end definition
+  }
 }
     +areaApplicability: iso19115MD_SpatialRepresentation [0..*]{
-  definition
+  definition {
   The geographic representation of which this AddressClassProfile applies to. Overlapping geographic areas are allowed across different profiles.
-  end definition
+  }
 }
     +timeToLive: Integer {
-  definition
+  definition {
   The maximum time interval between refreshing of this profile via an authoritative source, in seconds.
-  end definition
+  }
 }
     +validity: Validity {
-  definition
+  definition {
   The period of date and time that this profile should be considered as valid.
-  end definition
+  }
 }
   }
   association {
@@ -101,7 +101,7 @@ end definition
     member ProfileCompliantAddress
   }
   class AddressComponentProfile {
-    definition
+    definition {
   An `AddressComponentProfile` represents a profile of a `ProfileCompliantAddressComponent`,
 which is extended from the `AddressComponent` model defined in <<ISO19160-1>>.
 
@@ -109,21 +109,21 @@ It represents additional attributes and restrictions to the `Address` model
 of a `ProfileCompliantAddress`. It also represents metadata for the use of
 the profile.
 
-end definition
+}
     +key: CharacterString {
-  definition
+  definition {
   An identifier of this `AddressComponentProfile`, shall be unique within the `AddressProfile`.
-  end definition
+  }
 }
     +description: CharacterString {
-  definition
+  definition {
   Textual description of this component.
-  end definition
+  }
 }
     +example: CharacterString [0..1]{
-  definition
+  definition {
   A textual example to demonstrate the correct use of this component.
-  end definition
+  }
 }
   }
   association {
@@ -143,7 +143,7 @@ end definition
     member ProfileCompliantAddressComponent#profile [1..1]
   }
   class ProfileCompliantAddress {
-    definition
+    definition {
   ProfileCompliantAddress extends from the `Address` model defined in
 <<ISO19160-1>> to represent an `Address` complying with an
 `AddressClassProfile`.
@@ -152,7 +152,7 @@ A `ProfileCompliantAddress` MUST conform to the constraints and
 requirements specified in `AddressClassProfile`, and its associated
 profiles and specifications.
 
-end definition
+}
   }
   association {
     owner ProfileCompliantAddress
@@ -160,7 +160,7 @@ end definition
     member Address
   }
   class ProfileCompliantAddressComponent {
-    definition
+    definition {
   ProfileCompliantAddressComponent extends from the AddressComponent model
 defined in <<ISO19160-1>> to represent an Address complying with an
 AddressClassProfile.
@@ -169,7 +169,7 @@ A ProfileCompliantAddressComponent MUST conform to the constraints and
 requirements specified in AddressComponentProfile, and its associated
 profiles and specifications.
 
-end definition
+}
   }
   association {
     owner ProfileCompliantAddressComponent
@@ -177,23 +177,23 @@ end definition
     member AddressComponent
   }
   class AddressComponentSpecification {
-    definition
+    definition {
   An `AddressComponentSpecification` specifies the cardinalities between a
 `ProfileCompliantAddress` and `ProfileCompliantAddressComponents`.
 
 A `ProfileComplinatAddress` MUST conform to this
 `AddressComponentSpecification` to specifies its components.
 
-end definition
+}
     +maxCardinality: Integer {
-  definition
+  definition {
   The maximum number of instances of the specific `ProfileCompliantAddressComponent` of a `ProfileCompliantAddress`.
-  end definition
+  }
 }
     +minCardinality: Integer {
-  definition
+  definition {
   The minimum number of instances of the specific `ProfileCompliantAddressComponent` of a `ProfileCompliantAddress`.
-  end definition
+  }
 }
   }
   class Address {

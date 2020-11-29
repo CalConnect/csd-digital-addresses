@@ -2,103 +2,103 @@ diagram CommonModels {
   title 'Common models'
   caption 'Common models to be used in this standard'
   class Localization {
-    definition
-  Represents localization metadata of the parent object.
+    definition {
+      Represents localization metadata of the parent object.
 
-Realized using a `PT_Locale` object defined in <<ISO19115-1>>,
-a script code from <<ISO15924>>, a writing system code
-from <<ISO24229>>, and indication of text direction.
+      Realized using a `PT_Locale` object defined in <<ISO19115-1>>,
+      a script code from <<ISO15924>>, a writing system code
+      from <<ISO24229>>, and indication of text direction.
 
-end definition
+    }
     +locale: iso19115PT_Locale {
-  definition
-  The locale of the parent object.
-  end definition
-}
+        definition {
+        The locale of the parent object.
+        }
+      }
     +script: iso15924Code {
-  definition
+  definition {
   The type of written script used in the parent object.
-  end definition
+  }
 }
     +writingSystem: iso24229Code {
-  definition
+  definition {
   The type of writing system used in the parent object.
-  end definition
+  }
 }
     +textDirection: TextDirectionCode {
-  definition
+  definition {
   Indicating in which direction the text of the parent should be read.
-  end definition
+  }
 }
   }
   class Validity {
-    definition
+    definition {
   The time interval where an object is considered valid, with a revision number for issuance date/time.
 
-end definition
+}
     +validityBegins: iso19115CI_Date {
-  definition
+  definition {
   The date and time when validity starts.
-  end definition
+  }
 }
     +validityEnds: iso19115CI_Date {
-  definition
+  definition {
   The date and time when validity ends.
-  end definition
+  }
 }
     +revision: iso19115CI_Date {
-  definition
+  definition {
   Issuance date/time.
-  end definition
+  }
 }
   }
   class Signature {
-    definition
+    definition {
   A cryptographic signature used to determine data integrity and validity of the object it belongs to.
 
-end definition
+}
     +algorithm: iso14888Oid {
-  definition
+  definition {
   The public key cryptographic algorithm used for this digital signature.
-  end definition
+  }
 }
     +publicKey: Uri {
-  definition
+  definition {
   A reference to the actual public key used to verify the digital signature, a URI where the public key of the signer used for this signature is found.
-  end definition
+  }
 }
     +signature: CharacterString {
-  definition
+  definition {
   The actual digital signature value encoded in Base64 format.
-  end definition
+  }
 }
   }
   enum TextDirectionCode {
-    definition
+    definition {
   An enumeration value of TextDirectionCode represents the reading
 direction of textual data whether it is from left to right or right to
 left, and from top to bottom or bottom to top.
 
-end definition
+}
     leftToRightTopToBottom{
-  definition
+  definition {
   Indicating that text should be read left to right, and top to bottom.
-  end definition
+  }
 }
     rightToLeftTopToBottom{
-  definition
+  definition {
   Indicating that text should be read right to left, and top to bottom.
-  end definition
+  }
 }
     leftToRightBottomToTop{
-  definition
+  definition {
   Indicating that text should be read left to right, and bottom to top.
-  end definition
+  }
 }
     rightToLeftBottomToTop{
-  definition
+  definition {
   Indicating that text should be read right to left, and bottom to top.
-  end definition
+  }
 }
   }
 }

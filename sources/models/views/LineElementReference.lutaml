@@ -2,7 +2,7 @@ diagram LineElementReference {
   title 'Line element reference'
   caption 'Line element reference data model'
   class LineElementReference {
-    definition
+    definition {
   A line element reference is used to link an abstract line element to
 the interchange address component. The latter is used to
 retrieve metadata for the line element,
@@ -11,21 +11,21 @@ such as the schema to determine what data values are accepted.
 It is the basis of the display line element reference and the
 form line element reference.
 
-end definition
+}
     +target: ProfileCompliantAddressComponent {
-  definition
+  definition {
   The interchange address component this reference refers to.
-  end definition
+  }
 }
     +name: CharacterString {
-  definition
+  definition {
   Human readable name of what this line element reference refers to.
-  end definition
+  }
 }
     +description: CharacterString {
-  definition
+  definition {
   Human readable description of what this line element reference refers to.
-  end definition
+  }
 }
   }
   association {
@@ -41,23 +41,23 @@ end definition
     member FormLineElementReference
   }
   class DisplayLineElementReference {
-    definition
+    definition {
   Specialization of LineElementReference.
-end definition
+}
     +values: DisplayLineElement [0..*]{
-  definition
+  definition {
   The constituent parts of this DisplayLineElementReference.
-  end definition
+  }
 }
   }
   class FormLineElementReference {
-    definition
+    definition {
   Specialization of LineElementReference.
-end definition
+}
     +values: FormLineElement [0..*]{
-  definition
+  definition {
   The constituent parts of this FormLineElementReference.
-  end definition
+  }
 }
   }
 }

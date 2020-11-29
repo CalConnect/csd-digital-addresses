@@ -17,7 +17,7 @@ diagram FormTemplate {
     member StaticTextElement
   }
   class FormTemplate {
-    definition
+    definition {
   This section shows how an input form can be rendered according to
 the interchange address class.
 
@@ -30,7 +30,7 @@ Generally, one address class is represented by one input template.
 
 NOTE: This part has no equivalence in PATDL.
 
-end definition
+}
   }
   association {
     owner FormTemplate
@@ -44,14 +44,14 @@ end definition
     member FormLine#formLine [1..*]
   }
   class FormLine {
-    definition
+    definition {
   A form line represents a line within a form layout.
 
 It extends from the `LineElementReference` model, and
 takes a set of elements that contain
 form line element references (`FormLineElementReference`).
 
-end definition
+}
   }
   association {
     owner_type composition
@@ -60,41 +60,41 @@ end definition
     member FormLineElement#element [1..*]
   }
   class FormLineElement {
-    definition
+    definition {
   This represents an element within a form line.
 
 In an empty form with fields generated from data elements,
 if the `example` values of the associated interchange address component are specified,
 such values should be used as placeholders for form input.
 
-end definition
+}
   }
   class SelectionPair {
-    definition
+    definition {
   Representing a key value pair of a selection, e.g. in the case of the US
 States, "Rhode Island" is represented as the displayAs attribute and the
 postal code "RI" is represented as the key attribute.
 
-end definition
+}
     +key: CharacterString {
-  definition
+  definition {
   The mapping key as a unique identifier of the key value pair of this SelectionPair.
-  end definition
+  }
 }
     +displayAs: CharacterString {
-  definition
+  definition {
   The display value of the key value pair of this SelectionPair.
-  end definition
+  }
 }
   }
   class SelectionElement {
-    definition
+    definition {
   Representing a selectable mapping between display string to code, e.g. in the case of the US States, "Rhode Island" the state name is mapped to the "RI" postal code. Represented by `SelectionElement` and within `SelectionPair`.
-end definition
+}
     +map: SelectionPair [1..*]{
-  definition
+  definition {
   Mapping between a display string to code for each instance of SelectionPair.
-  end definition
+  }
 }
   }
   association {
@@ -103,14 +103,14 @@ end definition
     member FormLineElement
   }
   class DataElement {
-    definition
+    definition {
   Representing a variable data value that is contained in the interchange address component, such as the PO box number following the phrase "PO Box".
 
-end definition
+}
     +value: CharacterString {
-  definition
+  definition {
   Representing a variable data value that is contained in the interchange address component, such as the PO box number following the phrase "PO Box". This element indicates that a form field is required, and the data values accepted shall adhere to the data value type defined in its associated interchange address component (through `FormLine`).
-  end definition
+  }
 }
   }
   association {
@@ -130,13 +130,13 @@ end definition
     member DataElementWithConditions
   }
   class StaticTextElement {
-    definition
+    definition {
   Static text that can be a constituent part of an `ProfileCompliantAddress` that complies with an `InterchangeAddressClassProfile`.
-end definition
+}
     +value: CharacterString {
-  definition
+  definition {
   Representing static text, such as the phrase "`PO Box`" preceding the actual PO box number, for form layouts for PO boxes. This element is meant to be shown in the form but not allow modification.
-  end definition
+  }
 }
   }
   association {
@@ -145,13 +145,13 @@ end definition
     member FormLineElement
   }
   class DataElementWithConditions {
-    definition
+    definition {
   DataElementWithConditions extends from DataElement to represent DataElement with additional constraints.
-end definition
+}
     +value: iso19115MD_Constraints {
-  definition
+  definition {
   The constraint information of `MD_Constraint` as defined in <<ISO19115-1>>.
-  end definition
+  }
 }
   }
 }

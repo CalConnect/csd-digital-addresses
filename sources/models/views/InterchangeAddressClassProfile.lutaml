@@ -37,7 +37,7 @@ diagram InterchangeAddressClassProfile {
     member AttributeProfile
   }
   class AddressClassProfile {
-    definition
+    definition {
   An `AddressClassProfile` represents a profile of a `ProfileCompliantAddress`.
 It corresponds to the concept of an `AddressClass` originally
 expressed in <<ISO19160-1>> as a referenced codelist.
@@ -56,57 +56,57 @@ is represented as an interchange address class.
 The US Numbered Thoroughfare Address with this syntax can be
 represented as an address class profile:
 
-*{sp}{ Complete Landmark Name or Complete Place Name } +
-*{sp}{ Complete Address Number * } +
-*{sp}{ Complete Street Name * } +
-*{sp}{ Complete Subaddress } +
-*{sp}{ Complete Place Name * } +
-*{sp}{ State Name * } +
-*{sp}{ Zip Code } +
-*{sp}{ Zip Plus 4 } +
-*{sp}{ Country Name }
+*\{sp\}\{ Complete Landmark Name or Complete Place Name \} +
+*\{sp\}\{ Complete Address Number * \} +
+*\{sp\}\{ Complete Street Name * \} +
+*\{sp\}\{ Complete Subaddress \} +
+*\{sp\}\{ Complete Place Name * \} +
+*\{sp\}\{ State Name * \} +
+*\{sp\}\{ Zip Code \} +
+*\{sp\}\{ Zip Plus 4 \} +
+*\{sp\}\{ Country Name \}
 --
 
-end definition
+}
     +id: CharacterString {
-  definition
+  definition {
   Unique identifier of this AddressClassProfile.
-  end definition
+  }
 }
     +type: CharacterString {
-  definition
+  definition {
   Intended usage of this profile.
-  end definition
+  }
 }
     +description: CharacterString {
-  definition
+  definition {
   Textual description of this profile.
-  end definition
+  }
 }
     +localization: Localization {
-  definition
+  definition {
   The language and script used within this profile.
-  end definition
+  }
 }
     +signature: Signature [0..1]{
-  definition
+  definition {
   The digital signature to verify the integrity of this profile, and the identity of the publishing authority.
-  end definition
+  }
 }
     +areaApplicability: iso19115MD_SpatialRepresentation [0..*]{
-  definition
+  definition {
   The geographic representation of which this AddressClassProfile applies to. Overlapping geographic areas are allowed across different profiles.
-  end definition
+  }
 }
     +timeToLive: Integer {
-  definition
+  definition {
   The maximum time interval between refreshing of this profile via an authoritative source, in seconds.
-  end definition
+  }
 }
     +validity: Validity {
-  definition
+  definition {
   The period of date and time that this profile should be considered as valid.
-  end definition
+  }
 }
   }
   association {
@@ -121,7 +121,7 @@ end definition
     member ProfileCompliantAddress
   }
   class InterchangeAddressClassProfile {
-    definition
+    definition {
   This `InterchangeAddressClassProfile` extends from `AddressClassProfile` to
 enforce the existence of several subclasses of `AttributeProfile` for
 interchange.
@@ -131,7 +131,7 @@ to allow the display, entry of, and the interchange of an
 `ProfileCompliantAddress` (address
 instance complying with an `InterchangeAddressClassProfile`).
 
-end definition
+}
   }
   association {
     owner_type aggregation
@@ -158,13 +158,13 @@ end definition
     member DisplayTemplate#displayTemplate [0..*]
   }
   class DisplayTemplate {
-    definition
+    definition {
   The display template is used for displaying an
 interchange address instance belonging to an interchange
 address class. Generally, one address class is represented
 by one display template.
 
-end definition
+}
   }
   association {
     owner DisplayTemplate
@@ -178,7 +178,7 @@ end definition
     member DisplayLine#formLine [1..*]
   }
   class FormTemplate {
-    definition
+    definition {
   This section shows how an input form can be rendered according to
 the interchange address class.
 
@@ -191,7 +191,7 @@ Generally, one address class is represented by one input template.
 
 NOTE: This part has no equivalence in PATDL.
 
-end definition
+}
   }
   association {
     owner FormTemplate
@@ -205,11 +205,11 @@ end definition
     member FormLine#formLine [1..*]
   }
   class Signature {
-    definition
+    definition {
   AttributeProfileSignature extends from AttributeProfile to represent the signature
 attribute of the object it belongs to.
 
-end definition
+}
   }
   association {
     owner Signature
@@ -217,11 +217,11 @@ end definition
     member AttributeProfile
   }
   class AddressFeature {
-    definition
+    definition {
   AttributeProfileAddressFeature extends from AttributeProfile to represent the
 feature attribute of the object it belongs to.
 
-end definition
+}
   }
   association {
     owner AddressFeature
@@ -229,11 +229,11 @@ end definition
     member AttributeProfile
   }
   class Validity {
-    definition
+    definition {
   AttributeProfileValidity extends from AttributeProfile to represent the validity
 attribute of the object it belongs to.
 
-end definition
+}
   }
   association {
     owner Validity
@@ -241,7 +241,7 @@ end definition
     member AttributeProfile
   }
   class AttributeProfile {
-    definition
+    definition {
   An `AttributeProfile` represents name, cardinalities and value type of an
 attribute in a model that complies with a profile that includes this
 AttributeProfile.
@@ -251,26 +251,26 @@ attribute in Address model defined in <<ISO19160-1>>, it extends the
 definition of the attribute by redefining the name, cardinalities and value
 type.
 
-end definition
+}
     +name: CharacterString {
-  definition
+  definition {
   The name of the attribute represented by this AttributeProfile.
-  end definition
+  }
 }
     +minCardinality: Integer [0..1]{
-  definition
+  definition {
   The minimum number of occurrences of the attribute represented by this AttributeProfile.
-  end definition
+  }
 }
     +maxCardinality: Integer [0..1]{
-  definition
+  definition {
   The maximum number of occurences of the attribute represented by this AttributeProfile.
-  end definition
+  }
 }
     +valueType: CharacterString [0..1]{
-  definition
+  definition {
   The data type of values of the attribute represented by this AttributeProfile.
-  end definition
+  }
 }
   }
 }
