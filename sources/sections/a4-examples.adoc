@@ -172,7 +172,7 @@
 
 [source,json]
 ----
-profile = {
+{
 
   "id": "http://standards.isotc211.org/19160/-6/tc211-sample.adp",
   "type": "iso-19160-address-profile",
