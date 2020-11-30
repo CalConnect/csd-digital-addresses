@@ -220,7 +220,6 @@
       "description": "PO Box number"
     },
 
-    /* Table C.4. Address component type */
     "thoroughfareName": {
       "dataType": "thoroughfareNameValue",
       "description": "Thoroughfare name"
@@ -431,7 +430,6 @@
 
 [source,json]
 ----
-/* streetAddress */
 {
   "profile": "http://standards.isotc211.org/19160/-6/tc211-sample.adp#streetAddress",
   "components": [
@@ -466,7 +464,6 @@
 
 [source,json]
 ----
-/* boxAddress */
 {
   "profile": "http://standards.isotc211.org/19160/-6/tc211-sample.adp#boxAddress",
   "components": [
