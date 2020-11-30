@@ -26,10 +26,10 @@ interoperable with other systems, the user would need assistance from
 the application to enter the address in the correct format and structure.
 
 This document specifies a set of data models that focuses on enabling
-software applications the digital interchange of address profiles,
-address instances and instructions for their input and display
-suitable for machine encoding of address information. These models are
-called the "`Address Interchange Object`" ("AXO") models.
+software applications to digitally interchange address profiles,
+address instances and instructions for their input and display suitable
+for machine encoding of address information.
+These models are called the "`Address Interchange Object`" ("`AXO`") models.
 
 Furthermore, a registry mechanism is defined to ensure the address profiles
 can be made publicly available.
