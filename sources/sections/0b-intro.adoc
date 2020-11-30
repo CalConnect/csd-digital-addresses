@@ -18,12 +18,12 @@ Yet, addresses can mean much more than just geolocation information:
 
 *  as a delivery point.
 
-The interchange of addresses require a common structure of address data. For
-instance of a software application in need of user input of address
-information, users need assistance from the application to enter the correct
-format and structure of the address for it to be machine readable and
-interoperable among different machines or systems which process the address
-data.
+The interchange of address information requires a common structure of address data.
+
+For instance, if a software application needs a user to input address
+information, in order to produce a machine readable address that is
+interoperable with other systems, the user would need assistance from
+the application to enter the address in the correct format and structure.
 
 This document specifies a set of data models that focuses on enabling
 software applications the digital interchange of address profiles,
