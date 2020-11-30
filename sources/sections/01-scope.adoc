@@ -3,7 +3,7 @@
 == Scope
 
 This document specifies a set of data models suitable for machine encoding of address information, called the
-"`Address Interchange Object`" ("`AXO`") models, and the usage of them.
+"`Address Interchange Object`" ("`AXO`") models, and the use of them.
 
 Specifically, this document provides:
 
