@@ -96,4 +96,4 @@ other simliar models can easily be used together with the AXO models.
 
 [example]
 In a navigation map, an AXO address can point to an addressable object,
-in which provides a list of its extant facilities.
+which provides a list of its extant facilities.
