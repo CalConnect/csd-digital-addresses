@@ -1,6 +1,4 @@
 [[introduction]]
-
-:sectnums!:
 == Introduction
 
 === Purpose

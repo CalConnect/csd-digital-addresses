@@ -1,5 +1,4 @@
 
-:sectnums:
 == Scope
 
 This document specifies a set of data models suitable for machine encoding of address information, called the
