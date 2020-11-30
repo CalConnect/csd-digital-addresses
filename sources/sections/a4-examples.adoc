@@ -170,6 +170,9 @@
 
 ===== Address profile (JSON)
 
+ISO 19160-1, Table C.4 (Address component type) is also incorporated
+in this profile.
+
 [source,json]
 ----
 {
@@ -182,7 +185,7 @@
   "name": "TC 211 Minimal Address Profile",
   "locale": {
     "language": "en",
-    "script": "en"
+    "script": "Latn"
   },
 
   "valueTypes": {
@@ -341,6 +344,7 @@
     },
 
     "boxAddress": {
+      "description": "Box Address",
       "addressComponentSpecifications": [
         {
           "componentType": "boxNumber",
@@ -368,6 +372,7 @@
           "required": false
         },
       ],
+
       "displayTemplates": [
         {
           "id": "basic",
@@ -398,35 +403,47 @@
           ]
         }
       ],
-      "formLines": [
+
+      "formTemplates": [
         {
-          "fields": [
-            { "component": "boxNumber" }
-          ]
-        },
-        {
-          "fields": [
-            { "component": "postOfficeName" }
-          ]
-        },
-        {
-          "fields": [
-            { "component": "postCode" }
-          ]
-        },
-        {
-          "fields": [
-            { "component": "countryName" }
+          "id": "basic",
+          "name": "Basic",
+          "description": "Address input form for the minimal address profile",
+          "orientation": "horizontal",
+          "localization": {
+            "script": "Latn",
+            "language": "en"
+          },
+          "formLines": [
+            {
+              "fields": [
+                { "component": "boxNumber" }
+              ]
+            },
+            {
+              "fields": [
+                { "component": "postOfficeName" }
+              ]
+            },
+            {
+              "fields": [
+                { "component": "postCode" }
+              ]
+            },
+            {
+              "fields": [
+                { "component": "countryName" }
+              ]
+            }
           ]
         }
       ]
-
     }
   }
 }
 ----
 
-===== Profile-compliant address (ISO 19160-1, Figure C.14, Street address) (JSON)
+===== Profile-compliant address (representation of ISO 19160-1, Figure C.14, Street address) (JSON)
 
 [source,json]
 ----
@@ -460,7 +477,7 @@
 }
 ----
 
-===== Profile-compliant address (ISO 19160-1, Figure C.15, Box address) (JSON)
+===== Profile-compliant address (representation of ISO 19160-1, Figure C.15, Box address) (JSON)
 
 [source,json]
 ----

@@ -19,7 +19,7 @@ object structures, including in XML <<ISO19139>> and in JSON.
   "name": "TC 211 Minimal Address Profile",
   "localization": {
     "language": "en",
-    "script": "en"
+    "script": "Latn"
   },
 
   "area": {
@@ -177,7 +177,7 @@ object structures, including in XML <<ISO19139>> and in JSON.
 
 [source,json]
 ----
-DisplayTemplate: {
+"DisplayTemplate": {
 ...
 }
 ----
@@ -186,7 +186,7 @@ DisplayTemplate: {
 
 [source,json]
 ----
-FormTemplate: {
+"FormTemplate": {
 ...
 }
 ----
