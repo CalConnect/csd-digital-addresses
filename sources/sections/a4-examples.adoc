@@ -244,6 +244,7 @@ profile = {
   },
 
   "addressClassProfiles": {
+
     "streetAddress": {
       "description": "Street Address",
       "addressComponentSpecifications": [
@@ -279,6 +280,7 @@ profile = {
           "required": false,
         },
       ],
+
       "displayTemplates": [
         {
           "id": "basic",
@@ -305,6 +307,7 @@ profile = {
           ]
         }
       ],
+
       "formTemplates": [
         {
           "id": "basic",
@@ -336,8 +339,8 @@ profile = {
           ]
         }
       ]
-
     },
+
     "boxAddress": {
       "addressComponentSpecifications": [
         {
