@@ -48,7 +48,7 @@ suitable for digital interchange and storage.
 * <<ISO19160-4>> defines key terms for postal addressing, postal address
 components and constraints on their use. It focuses on use cases for postal
 applications, specifying the methods to write or detect addresses on mail items.
-This documents adapts models from <<ISO19160-1>>
+This document adapts models from <<ISO19160-1>>
 as address interchange models, to facilitate interchange and interaction
 of addresses between humans and applications, and between applications,
 and for applications to interact and interchange international addresses,
