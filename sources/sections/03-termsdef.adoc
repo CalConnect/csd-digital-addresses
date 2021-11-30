@@ -29,8 +29,7 @@ accomplishing a particular function
 
 === data type
 
-specification of a value domain with operations
-allowed on values in this domain
+specification of a value domain with operations allowed on values in this domain
 
 [.source]
 <<ISO19103,clause="4.14">>
@@ -54,13 +53,11 @@ into Note to entry.
 address data compliant to an {{interchange address}} class profile
 
 
-[[term-address-feature]]
 === address feature
 
 marking on an {{interchange address}} to indicate what it is capable of
 
 
-[[term-address-layout-template]]
 === address layout template
 
 specification of layout and positioning of address components for interchange
@@ -75,13 +72,11 @@ addresses
 {{address layout template}} of an input form for the entry of
 {{interchange address,interchange addresses}}
 
-[[term-address-processor]]
 === address processor
 
 entity that processes {{interchange address,interchange addresses}}
 
 
-[[term-address-profile-distributor]]
 === address profile distributor
 
 entity that distributes interchange address profiles
@@ -121,7 +116,6 @@ globally unique value associated with an object to unambiguously identify it
 [.source]
 <<ISO-IEC_29149-2012,clause="2.11">>
 
-[[term-language-id]]
 === language identifier
 alt:[language symbol]
 
@@ -130,7 +124,6 @@ symbol that uniquely identifies a particular language
 [.source]
 <<ISO639-3,clause="3.3">>
 
-[[term-script]]
 === script
 
 set of graphic characters used for the written form of one or more languages
@@ -138,7 +131,6 @@ set of graphic characters used for the written form of one or more languages
 [.source]
 <<ISO15924,clause="3.7">>
 
-[[term-script-code]]
 === script code
 
 combination of characters used to represent the name of a {{script}}
