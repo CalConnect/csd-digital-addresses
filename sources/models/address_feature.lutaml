@@ -1,0 +1,21 @@
+class AddressFeature {
+  definition {
+    Address feature represents the status of a particular aspect of an
+    interchange address instance, as determined by an address processor.
+    Each of the aspects may be differentiated by multiple statuses.
+
+    This is an abstract class.
+    To represent specific features, this class should be extended upon.
+
+  }
+
+  +signature: Signature [0..1]{
+    definition {
+      Cryptographic signature used to ensure that the
+      feature is marked by an address process trusted for
+      verification of this feature.
+      The signature generated shall incorporate the `id` attribute
+      of the interchange address instance that owns it.
+    }
+  }
+}

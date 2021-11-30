@@ -38,7 +38,7 @@ What do people do with addresses?
 
 Specific use cases:
 * electronic commerce : entering shipping address
-* business cards: 
+* business cards:
 
 Our office address:
 
@@ -121,8 +121,11 @@ What does a profile contain?
 
 19160-1 Example 1.
 
+Profile:
+
+[source,json]
 ----
-profile = {
+{
 
   id: "http://standards.isotc211.org/19160/-6/tc211-minimal.adp",
   type: "iso-19160-address-profile",
@@ -167,8 +170,11 @@ profile = {
 }
 ----
 
+addressInstance1:
+
+[source,json]
 ----
-addressInstance1 = {
+{
   profile: "http://standards.isotc211.org/19160/-6/tc211-minimal.adp",
   components: [
     {
@@ -185,8 +191,13 @@ addressInstance1 = {
     }
   ]
 }
+----
 
-addressInstance2 = {
+addressInstance2:
+
+[source,json]
+----
+{
   profile: "http://standards.isotc211.org/19160/-6/tc211-minimal.adp",
   components: [
     {
@@ -213,8 +224,11 @@ addressInstance2 = {
 
 19160-1 Example 2.
 
+Profile:
+
+[source,json]
 ----
-profile = {
+{
 
   id: "http://standards.isotc211.org/19160/-6/tc211-sample.adp",
   type: "iso-19160-address-profile",
@@ -349,8 +363,11 @@ profile = {
 }
 ----
 
+addressInstance1:
+
+[source,json]
 ----
-addressInstance1 = {
+{
   profile: "http://standards.isotc211.org/19160/-6/tc211-sample.adp#streetAddress",
   components: [
     {
@@ -378,8 +395,13 @@ addressInstance1 = {
     }
   ]
 }
+----
 
-boxInstance1 = {
+boxInstance1:
+
+[source,json]
+----
+{
   profile: "http://standards.isotc211.org/19160/-6/tc211-sample.adp#boxAddress",
   components: [
     {

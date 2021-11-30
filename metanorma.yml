@@ -1,8 +1,10 @@
 ---
 metanorma:
-  deploy:
-    email: "ci@metanorma.org"
-relaton:
+  source:
+    files:
+      - sources/iso-19160-6.adoc
+#      - sources/cc-19160-6.adoc
+
   collection:
-    name: Addressing -- Digital interchange models
     organization: CalConnect/ISO
+    name: Addressing -- Digital interchange models
