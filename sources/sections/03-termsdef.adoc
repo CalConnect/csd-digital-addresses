@@ -106,15 +106,13 @@ public key which defines the public verification transformation
 [.source]
 <<ISO-IEC_9798-1,clause="3.28">>
 
-[[term-oid]]
 === object identifier
-alt:[oid]
+alt:[OID]
 
-a value (distinguishable from all other such values) which is associated with an
-object
+globally unique value associated with an object to unambiguously identify it
 
 [.source]
-<<ISO15961-1,clause="3.1.16">>
+<<ISO-IEC_29149-2012,clause="2.11">>
 
 [[term-language-id]]
 === language identifier
