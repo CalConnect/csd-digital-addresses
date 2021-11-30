@@ -44,40 +44,40 @@ A data type that has no super type. The primitive data type of a data type is th
 
 === interchange address
 
-an address compliant to an interchange address class profile
+address data compliant to an {{interchange address}} class profile
+
 
 [[term-address-feature]]
 === address feature
 
-marking on a profile-compliant address to indicate what it is capable of
+marking on an {{interchange address}} to indicate what it is capable of
 
 
 [[term-address-layout-template]]
 === address layout template
 
-specification of layout and positioning of
-address components for interchange addresses
+specification of layout and positioning of address components for interchange
+addresses
 
 === address display template
 
-_address layout template_ (<<term-address-layout-template>>)
-for the display of interchange addresses
+{{address layout template}} for the display of {{interchange address,interchange addresses}}
 
 === address form template
 
-_address layout template_ (<<term-address-layout-template>>)
-of an input form for the entry of interchange addresses
+{{address layout template}} of an input form for the entry of
+{{interchange address,interchange addresses}}
 
 [[term-address-processor]]
 === address processor
 
-entity that processes profile-compliant addresses
+entity that processes {{interchange address,interchange addresses}}
 
 
 [[term-address-profile-distributor]]
 === address profile distributor
 
-entity that distributes {{address profile,address profiles}}
+entity that distributes interchange address profiles
 
 
 === digital signature
