@@ -90,23 +90,21 @@ unit
 [.source]
 <<ISO-IEC_9798-3,clause="3.3">>
 
-[[term-signature-key]]
-=== signature key
+=== private signature key
 
-a secret data item specific to an entity and usable only by this entity
-in the signature process
+private key which defines the private signature transformation
 
-[.source]
-<<ISO14888-3,clause="4.18">>
-
-[[term-verification-key]]
-=== verification key
-
-a data item which is mathematically related to an entity's {{signature key}} and
-which is used by the verifier in the verification process
+NOTE: This is sometimes referred to as a secret signature key.
 
 [.source]
-<<ISO14888-3,clause="4.15">>
+<<ISO-IEC_9798-1,clause="3.23">>
+
+=== public verification key
+
+public key which defines the public verification transformation
+
+[.source]
+<<ISO-IEC_9798-1,clause="3.28">>
 
 [[term-oid]]
 === object identifier
