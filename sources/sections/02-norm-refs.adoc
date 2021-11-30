@@ -1,15 +1,15 @@
 
 [bibliography]
-== Normative References
+== Normative references
 
-* [[[ISO19160-1,ISO 19160-1]]], _Addressing -- Part 1: Conceptual Model_
+* [[[ISO19160-1,ISO 19160-1:2015]]], _Addressing -- Part 1: Conceptual Model_
 
-* [[[ISO19103,ISO 19103]]], _Geographic information -- Conceptual schema language_
+* [[[ISO19160-3,ISO 19160-3:2020]]]
 
-* [[[ISO19106,ISO 19106]]], _Geographic information -- Profiles_
+* [[[ISO19103,ISO 19103:2015]]], _Geographic information -- Conceptual schema language_
 
-* [[[ISO19115-1,ISO 19115-1]]], _Geographic information -- Metadata -- Part 1: Fundamentals_
+* [[[ISO19106,ISO 19106:2004]]], _Geographic information -- Profiles_
 
-* [[[ISO19157,ISO 19157]]], _AUTOFILL_
+* [[[ISO19115-1,ISO 19115-1:2014]]], _Geographic information -- Metadata -- Part 1: Fundamentals_
 
-* [[[ISO19135-1,ISO 19135-1]]], _AUTOFILL_
+* [[[ISO19135-1,ISO 19135-1]]]
