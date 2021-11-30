@@ -27,11 +27,6 @@ accomplishing a particular function
 <<ISO19106,clause="4.5">>
 
 
-=== provenance
-
-organization or individual that created, accumulated, maintained
-and used records
-
 === data type
 
 specification of a value domain with operations
