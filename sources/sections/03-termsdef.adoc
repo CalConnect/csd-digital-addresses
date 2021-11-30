@@ -2,10 +2,70 @@
 [source=ISO19160-1]
 == Terms and definitions
 
+=== address display template
+
+{{address layout template}} for the display of {{interchange address,interchange addresses}}
+
+
+=== address feature
+
+marking on an {{interchange address}} to indicate what it is capable of
+
+
+=== address form template
+
+{{address layout template}} of an input form for the entry of
+{{interchange address,interchange addresses}}
+
+
 === address interchange object
 alt:[AXO]
 
 digital objects for address interchange defined in ISO 19160-6
+
+
+=== address layout template
+
+specification of layout and positioning of address components for interchange
+addresses
+
+
+=== address processor
+
+entity that processes {{interchange address,interchange addresses}}
+
+
+=== address profile distributor
+
+entity that distributes interchange address profiles
+
+
+=== data type
+
+specification of a value domain with operations allowed on values in this domain
+
+[.source]
+<<ISO19103,clause="4.14">>
+
+
+=== digital signature
+alt:[signature]
+
+data appended to, or a cryptographic transformation of, a data unit that allows
+the recipient of the data unit to verify the source and integrity of the data
+unit
+
+[.source]
+<<ISO-IEC_9798-3,clause="3.3">>
+
+
+=== language identifier
+alt:[language symbol]
+
+symbol that uniquely identifies a particular language
+
+[.source]
+<<ISO639-3,clause="3.3">>
 
 
 === lineage
@@ -16,23 +76,9 @@ provenance, source(s) and production process(es) used in producing a resource
 <<ISO19115-1,clause="4.9">>
 
 
-=== profile
+=== interchange address
 
-set of one or more base standards or subsets of base standards, and,
-where applicable, the identification of chosen clauses, classes,
-options and parameters of those base standards, that are necessary for
-accomplishing a particular function
-
-[.source]
-<<ISO19106,clause="4.5">>
-
-
-=== data type
-
-specification of a value domain with operations allowed on values in this domain
-
-[.source]
-<<ISO19103,clause="4.14">>
+address data compliant to an {{interchange address}} class profile
 
 
 === primitive data type
@@ -47,51 +93,6 @@ type of the data type.
 <<ISOIEC10179,clause="4.23">>, removal of initial "A", moved second sentence
 into Note to entry.
 
-
-=== interchange address
-
-address data compliant to an {{interchange address}} class profile
-
-
-=== address feature
-
-marking on an {{interchange address}} to indicate what it is capable of
-
-
-=== address layout template
-
-specification of layout and positioning of address components for interchange
-addresses
-
-=== address display template
-
-{{address layout template}} for the display of {{interchange address,interchange addresses}}
-
-=== address form template
-
-{{address layout template}} of an input form for the entry of
-{{interchange address,interchange addresses}}
-
-=== address processor
-
-entity that processes {{interchange address,interchange addresses}}
-
-
-=== address profile distributor
-
-entity that distributes interchange address profiles
-
-
-=== digital signature
-alt:[signature]
-
-data appended to, or a cryptographic transformation of, a data unit that allows
-the recipient of the data unit to verify the source and integrity of the data
-unit
-
-[.source]
-<<ISO-IEC_9798-3,clause="3.3">>
-
 === private signature key
 
 private key which defines the private signature transformation
@@ -101,12 +102,24 @@ NOTE: This is sometimes referred to as a secret signature key.
 [.source]
 <<ISO-IEC_9798-1,clause="3.23">>
 
+=== profile
+
+set of one or more base standards or subsets of base standards, and,
+where applicable, the identification of chosen clauses, classes,
+options and parameters of those base standards, that are necessary for
+accomplishing a particular function
+
+[.source]
+<<ISO19106,clause="4.5">>
+
+
 === public verification key
 
 public key which defines the public verification transformation
 
 [.source]
 <<ISO-IEC_9798-1,clause="3.28">>
+
 
 === object identifier
 alt:[OID]
@@ -116,13 +129,6 @@ globally unique value associated with an object to unambiguously identify it
 [.source]
 <<ISO-IEC_29149-2012,clause="2.11">>
 
-=== language identifier
-alt:[language symbol]
-
-symbol that uniquely identifies a particular language
-
-[.source]
-<<ISO639-3,clause="3.3">>
 
 === script
 
