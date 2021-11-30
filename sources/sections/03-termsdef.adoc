@@ -125,7 +125,7 @@ the verifier in the verification process
 
 [[term-oid]]
 === object identifier
-[alt]#oid#
+alt:[oid]
 
 a value (distinguishable from all other such values) which is associated with an object
 
@@ -134,7 +134,7 @@ a value (distinguishable from all other such values) which is associated with an
 
 [[term-language-id]]
 === language identifier
-[alt]#language symbol#
+alt:[language symbol]
 
 symbol that uniquely identifies a particular language
 
