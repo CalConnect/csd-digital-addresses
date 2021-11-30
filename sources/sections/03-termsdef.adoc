@@ -17,16 +17,6 @@ in producing a resource
 [.source]
 <<ISO19115-1,clause="4.9">>
 
-[[term-locale]]
-=== locale
-
-definition of the subset of a user's environment that depends on
-language and cultural conventions
-
-[.source]
-<<ISO9945,clause="4.211">>, The notes given in <<ISO9945>> for this
-entry have been omitted.
-
 
 [[term-profile]]
 === profile
