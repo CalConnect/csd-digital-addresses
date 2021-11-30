@@ -139,10 +139,15 @@ combination of characters used to represent the name of a {{script}}
 [.source]
 <<ISO15924,clause="3.8">>
 
-=== URI
 
-uniform resource identifier
+=== Uniform Resource Identifier
+alt:[URI]
+
+unique identifier for a resource, structured in conformance with IETF RFC 2396
+
+NOTE: The general syntax is `<scheme>::<scheme-specific-part>`. The hierarchical
+syntax with a namespace is `<scheme>://<authority><path>?<query>` — see RFC
+2396.
 
 [.source]
-<<ISO19103,clause="5.3">>
-
+<<ISO_19136-1,clause="3.1.62">>
