@@ -80,13 +80,15 @@ entity that processes profile-compliant addresses
 entity that distributes {{address profile,address profiles}}
 
 
-[[term-signature]]
-=== signature
+=== digital signature
+alt:[signature]
 
-the string of bits resulting from the signature process
+data appended to, or a cryptographic transformation of, a data unit that allows
+the recipient of the data unit to verify the source and integrity of the data
+unit
 
 [.source]
-<<ISO14888-3,clause="4.15">>
+<<ISO-IEC_9798-3,clause="3.3">>
 
 [[term-signature-key]]
 === signature key
