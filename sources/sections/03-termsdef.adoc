@@ -3,7 +3,12 @@
 [source=ISO19160-1]
 == Terms and definitions
 
-[[term-lineage]]
+=== address interchange object
+alt:[AXO]
+
+digital objects for address interchange defined in ISO 19160-6
+
+
 === lineage
 
 provenance, source(s) and production process(es) used
