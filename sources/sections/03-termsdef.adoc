@@ -35,12 +35,19 @@ allowed on values in this domain
 [.source]
 <<ISO19103,clause="4.14">>
 
+
 === primitive data type
 
-A data type that has no super type. The primitive data type of a data type is the data type itself, if the data type has no super type, and otherwise the primitive data type of the super type of the data type.
+{{data type}} that has no super type
+
+NOTE: The primitive data type of a data type is the data type itself, if the
+data type has no super type, and otherwise the primitive data type of the super
+type of the data type.
 
 [.source]
-<<ISOIEC10179,clause="4.23">>
+<<ISOIEC10179,clause="4.23">>, removal of initial "A", moved second sentence
+into Note to entry.
+
 
 === interchange address
 
